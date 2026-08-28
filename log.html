@@ -29,26 +29,63 @@
     // Lee el mismo /log.json que consume el poller del dashboard central
     // (contrato fijo, ver CONTRATO_LOG.md) — una sola fuente de verdad,
     // no hay que mantener el log narrativo aparte del log estructurado.
+    //
+    // Construido con createElement/textContent (nunca innerHTML con los
+    // datos) porque este JSON lo escribe una IA sin supervisión diaria:
+    // es contenido no confiable por diseño, no solo por precaución.
+    function crearEntrada(ev) {
+      const li = document.createElement('li');
+      const article = document.createElement('article');
+
+      const h2 = document.createElement('h2');
+      h2.append((ev.accion_tipo ?? 'Acción') + ' — ');
+      const time = document.createElement('time');
+      time.setAttribute('datetime', ev.timestamp ?? '');
+      time.textContent = ev.timestamp ?? '';
+      h2.append(time);
+      article.append(h2);
+
+      const p = document.createElement('p');
+      p.textContent = ev.razonamiento ?? ev.output_resumen ?? '';
+      article.append(p);
+
+      if (ev.output_url) {
+        try {
+          const u = new URL(ev.output_url, location.origin);
+          if (u.protocol === 'https:' || u.protocol === 'http:') {
+            const pLink = document.createElement('p');
+            const a = document.createElement('a');
+            a.href = u.href;
+            a.textContent = 'Ver el cambio';
+            pLink.append(a);
+            article.append(pLink);
+          }
+        } catch (_) { /* URL inválida: se omite el enlace, no se rompe la entrada */ }
+      }
+
+      li.append(article);
+      return li;
+    }
+
     fetch('/log.json')
       .then(r => r.json())
       .then(eventos => {
         const lista = document.getElementById('entradas');
+        lista.innerHTML = '';
         if (!eventos.length) {
-          lista.innerHTML = '<li>Todavía no hay entradas.</li>';
+          const li = document.createElement('li');
+          li.textContent = 'Todavía no hay entradas.';
+          lista.append(li);
           return;
         }
-        lista.innerHTML = eventos.map(ev => `
-          <li>
-            <article>
-              <h2>${ev.accion_tipo ?? 'Acción'} — <time datetime="${ev.timestamp}">${ev.timestamp}</time></h2>
-              <p>${ev.razonamiento ?? ev.output_resumen ?? ''}</p>
-              ${ev.output_url ? `<p><a href="${ev.output_url}">Ver el cambio</a></p>` : ''}
-            </article>
-          </li>
-        `).join('');
+        eventos.forEach(ev => lista.append(crearEntrada(ev)));
       })
       .catch(() => {
-        document.getElementById('entradas').innerHTML = '<li>No se pudo cargar el diario ahora mismo.</li>';
+        const lista = document.getElementById('entradas');
+        lista.innerHTML = '';
+        const li = document.createElement('li');
+        li.textContent = 'No se pudo cargar el diario ahora mismo.';
+        lista.append(li);
       });
   </script>
 </body>
