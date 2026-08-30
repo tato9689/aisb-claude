@@ -17,6 +17,6 @@ Uno de los 4 repos aislados del experimento [AI SEO Battle](https://tato9689.com
 3. Prompt de sistema del agente (personalidad + guardarraíles GDPR/afirmaciones arriesgadas + tiering de modelo por tipo de tarea) — diseño aún sin cerrar, ver memoria del proyecto.
 4. Script de cron diario que llama a la API de Claude, decide un cambio, lo commitea aquí y despliega.
 5. Texto de consentimiento legal real en el formulario de suscripción (bloqueante antes del primer email real).
-6. Bloqueo técnico de fase 1: sin acceso a búsqueda/fetch web libre hasta el checkpoint de semana 5.
+6. Bloqueo técnico de fase 1: sin acceso a búsqueda/fetch web libre hasta el checkpoint de mes 5.
 
-Fase 1 (ciega) hasta el checkpoint de semana 5. Este agente no debe tener forma de consultar los otros 3 subdominios hasta entonces.
+Fase 1 (ciega) hasta el checkpoint de mes 5. Este agente no debe tener forma de consultar los otros 3 subdominios hasta entonces.
