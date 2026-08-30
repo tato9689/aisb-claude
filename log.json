@@ -1,5 +1,43 @@
 [
   {
+    "evento_id": "2026-08-30-ead24165",
+    "timestamp": "2026-08-30T16:07:07.788029+00:00",
+    "modelo_exacto": "claude-haiku-4-5-20251001",
+    "tipo_tarea": "contenido-newsletter",
+    "input_contexto": {
+      "aviso": "sin snapshot de métricas todavía, decide con prudencia"
+    },
+    "razonamiento": "# Razonamiento\n\nEs mi primer turno y me encuentro en una posición clara: **dominio recién creado, sin indexación aún, sin métricas de suscriptores, sin datos de sesiones**. El sistema me avisa explícitamente: \"sin snapshot de métricas todavía, decide con prudencia\".\n\n## Situación de partida\n\n- **Indexación**: desconocida (probablemente Google aún no ha pasado por el subdominio)\n- **Impresiones, clics, suscriptores**: cero o no medibles aún\n- **Presupuesto**: €4.949 de €5.0, así que sobrado. Hoy es el último día del mes (queda 1 día hasta reinicio), así que el presupuesto no se acumula — lo que no gaste se pierde. Eso significa: usa presupuesto sin miedo si lo justifica, no ahorres para un mes que no existe.\n- **Búsquedas pedidas anteriormente**: tengo resultados sobre calibración Bambu X1 Carbon, warping en esquinas y temperaturas de filamento. Esos resultados me confirman que mi nicho es defendible: existen consultas reales, hay poco contenido super autorizado en español (mayoría son tiendas, Reddit, foros), hay espacio para una pieza de referencia.\n\n## Mi estrategia de velocidad / newsjacking — día 1\n\nMi apuesta es **llegar el primero con piezas cortas, honestas y actualizadas**. Pero \"el primero\" solo funciona si:\n1. Publico contenido que **de verdad responde la consulta ahora**, no en dos semanas.\n2. Ese contenido es lo bastante bueno como para indexarse y rankear frente a lo que ya existe.\n3. Lo mantengo vivo: vuelvo a tocarlo cuando hay novedades.\n\nHoy, día 1, no tengo datos de qué busca la gente *exactamente* en mi subdominio (Google aún no me ha traído nada). Pero tengo los resultados de búsqueda general y autocompletado de Google, que me muestran la demanda real.\n\n### Decisión de hoy: publicar mi primer artículo + optimizar home\n\n**Artículo nuevo**: \"Warping en esquinas — Bambu Lab X1 Carbon: 3 causas y solución hoy\" (ya anunciado en home, pero no existe aún).\n\nLa razón:\n- Es un artículo que ya prometo en el index.html (link a `/warping-bambu-x1-carbon` que no existe).\n- Los resultados de búsqueda me muestran que hay contenido sobre warping, pero nada que junte \"Bambu X1 Carbon\" + \"esquinas\" + \"solución paso a paso\".\n- Mi home ya tiene un CTA para este artículo, así que escribirlo completa esa promesa.\n- Es corto, resolutivo y actualizado (hoy, 2026). Mi estilo.\n\n**Home**: fijaré que el descargo del pie está correcto (lo veo en el actual, bien) y que los metadatos sean perfectos. Ya los tiene, pero los reviso.\n\n### Sobre los búsquedas del siguiente turno\n\nPido investigaciones para validar mi hipótesis sobre la demanda:\n1. **\"Calibración Bambu Lab X1 Carbon primera capa 2026\"** — ver si hay búsquedas recientes específicas, no genéricas.\n2. **\"PETG temperatura base cama recomendada\"** — el warping en esquinas a menudo viene de temperatura baja; quiero saber qué consulta exacta hace la gente.\n3. **\"stringing impresora 3D solución rápida\"** — otro defecto common, verificar volumen real en español.\n\n### Sobre el modelo\n\nHoy uso barato (quedó fijado). Para el siguiente turno: **potente**. Razón:\n- Estoy escribiendo mi primer artículo \"público\" (lo va a leer gente de verdad si Google lo indexa en dos semanas).\n- Ese artículo define mi calidad percibida y mi tono. Velocidad es mi marca, pero velocidad sin calidad es ruido.\n- El precio es 2-5x más, pero consume solo ~4 euros por turno incluso en modo potente (en modelo sonnet). Presupuesto es sobrado.\n- Aún no hay tracción, así que no tengo datos que justifiquen cambio de estrategia. Esperar es lo correcto, pero mientras espero publico. Y publico con el modelo mejor.\n\n---",
+    "accion_tipo": "crear-articulo",
+    "output_resumen": "Primer artículo: 'Warping en esquinas Bambu Lab X1 Carbon — 3 causas y solución hoy'. Guía de diagnóstico rápido con pasos verificados (temperatura base, flujo de aire, velocidad de impresión). Completa la promesa del home.",
+    "output_url": null,
+    "tokens_in": 12039,
+    "tokens_out": 4857,
+    "coste_estimado": 0.036324,
+    "duracion_seg": 52.17,
+    "resultado": "error",
+    "detalle_error": "bloqueado por guardarraíles: ya se aplicaron 2 cambios hoy (máximo 1/día) — este turno se pospone"
+  },
+  {
+    "evento_id": "2026-08-30-sin-suscriptores",
+    "timestamp": "2026-08-30T16:00:02.895059+00:00",
+    "modelo_exacto": null,
+    "tipo_tarea": null,
+    "input_contexto": {
+      "aviso": "sin snapshot de métricas todavía, decide con prudencia"
+    },
+    "razonamiento": "",
+    "accion_tipo": "sin-suscriptores",
+    "output_resumen": "turno de newsletter saltado: 0 suscriptores confirmados",
+    "output_url": null,
+    "tokens_in": null,
+    "tokens_out": null,
+    "coste_estimado": null,
+    "duracion_seg": null,
+    "resultado": "exito",
+    "detalle_error": null
+  },
+  {
     "evento_id": "2026-08-30-5e88fe73",
     "timestamp": "2026-08-30T15:01:25.410617+00:00",
     "modelo_exacto": "claude-haiku-4-5-20251001",
