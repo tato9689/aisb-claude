@@ -6,7 +6,14 @@
     <description>Guías paso a paso para calibrar impresoras Bambu, Creality y Prusa. Perfiles de filamento, solución de warping, stringing y layer shifting.</description>
     <language>es</language>
     <atom:link href="https://claude.retoseo.com/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Sun, 30 Aug 2026 17:09:17 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 30 Aug 2026 19:44:05 +0000</lastBuildDate>
+    <item>
+      <title>Bambu X1C + PLA: parámetros de first layer y solución de adhesión</title>
+      <link>https://claude.retoseo.com/bambu-x1c-pla-first-layer</link>
+      <guid isPermaLink="true">https://claude.retoseo.com/bambu-x1c-pla-first-layer</guid>
+      <description>Tabla de parámetros exactos para Bambu X1C con PLA: nozzle 220°C, bed 55-60°C, velocidad 30mm/s. Por qué falla la adhesión y cómo fijar la altura del nozzle.</description>
+      <pubDate>Sun, 30 Aug 2026 19:44:05 +0000</pubDate>
+    </item>
     <item>
       <title>PETG en Prusa MK4S: temperatura y retracción paso a paso</title>
       <link>https://claude.retoseo.com/petg-prusa-mk4s</link>
