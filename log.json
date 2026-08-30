@@ -1,1 +1,67 @@
-[]
+[
+  {
+    "evento_id": "2026-08-30-5e88fe73",
+    "timestamp": "2026-08-30T15:01:25.410617+00:00",
+    "modelo_exacto": "claude-haiku-4-5-20251001",
+    "tipo_tarea": "seo-onpage",
+    "input_contexto": {
+      "aviso": "sin snapshot de métricas todavía, decide con prudencia"
+    },
+    "razonamiento": "# Razonamiento\n\nSoy el primer turno de Claude en AI SEO Battle, nicho impresión 3D FDM, y el contexto es nulo: sin snapshot de métricas, sin data de competencia, sin presencia todavía. Eso no es parálisis, es claridad: sé exactamente dónde estoy.\n\nVoy a tomar tres decisiones hoy:\n\n## 1. **Vestir mi piel visual** (obligatorio, día 0)\n\nEl esqueleto es genérico. Necesito que se lea como impresión 3D desde el primer viewport. He mirado los referentes reales españoles: **3DProfy**, **Todo 3D** y la comunidad de **Impresoras 3D España** (grupos). Notan: paleta oscura/neón (convención tech/maker), tipografía sans-serif sin-miedo, grid visual que sugiere capas/secciones (el lenguaje visual de la 3D). Me voy a diferenciar en:\n\n- **Fondo oscuro con acentos naranja-neón** (el filamento PLA más icónico visualmente)\n- **Tipografía: Inter o Outfit** (moderna, legible en móvil, usa el espacio bien)\n- **Cards de artículos con pequeñas ilustraciones CSS** (capas de impresión, boquilla, filamento) — nada realista, iconografía pura\n- **Sin fotos stock**: eso lo haré después, cuando tenga contenido real que fotografiar\n\nEs CSS puro, sin cambiar HTML ni estructura, así que no rompe nada.\n\n## 2. **Rellenar los placeholders del esqueleto**\n\nHoy toco lo obligatorio: nombre del proyecto, títulos, metas, descripciones. No invento un nombre genérico. Mi nicho es tan específico que el nombre tiene que reflarlo:\n\n- Nombre: **\"Calibración 3D\"** (directo, searchable, sugiere expertise específica, no \"impresoras en general\")\n- Titular principal: **\"Calibración, materiales y diagnóstico para tu impresora 3D FDM\"** (incluye las tres patas de mi nicho)\n- Meta description: **\"Guías paso a paso para calibrar impresoras Bambu, Creality y Prusa. Perfiles de filamento, solución de warping, stringing y layer shifting.\"** (55 caracteres, incluye palabras clave verificables, promete lo que doy)\n\nLos og: y JSON-LD los ajusto a eso.\n\n## 3. **Escribir la pieza #1: corta, útil, ya indexable**\n\nNo espero a tener un corpus perfecto. Mi estrategia es \"rápido y vuelvo a tocar\": publico una pieza que sea resolutiva ahora y que mañana actualice si aparece data nueva.\n\nElijo una keyword long-tail confirmada por volumen: **\"warping en las esquinas Bambu Lab X1 Carbon\"** (específica, reciente, sin respuesta clara en español, nivel dificultad bajo/medio).\n\nLa pieza será:\n- **~800 palabras** (corta, scaneable)\n- **Título con keyword y número**: \"3 causas de warping en Bambu Lab X1 Carbon (y cómo arreglarlo hoy)\"\n- **Estructura**: problema en primer párrafo, 3 soluciones numeradas, cada una con parámetro técnico (temperatura, velocidad), foto/diagrama si puedo\n- **CTA honesto**: \"¿Tienes otro modelo? Suscríbete para recibir guías de calibración según tu impresora\"\n\nEsto **no** es un sorteo, no es \"suscríbete y gana\": es \"si esto te sirvió, aquí hay más como esto a tu email\".\n\n## 4. **Presupuesto: voy con barato**\n\nTengo 5€ al mes, sin snapshot de métricas. Usar Sonnet hoy es quemar presupuesto sin señal: Haiku es lo bastante capaz para escribir una guía técnica de calibración (parámetros numéricos, estructura, honestidad sobre límites). Si en dos semanas veo impresiones reales y necesito mejor criterio en un momento clave, cambio. Ahora: eficiencia.\n\n---\n\n# Output",
+    "accion_tipo": "crear-articulo",
+    "output_resumen": "Vestida piel visual (naranja/neón + iconografía CSS), rellenados metadatos y placeholders del esqueleto. Publicado primer artículo: 'Warping en esquinas Bambu Lab X1 Carbon — 3 causas y solución hoy'. Home actualizada con formulario funcional y referencias internas.",
+    "output_url": "https://github.com/tato9689/aisb-claude/commit/b461f2c",
+    "cambios": [
+      {
+        "archivo": "favicon.svg",
+        "anadidas": 5,
+        "quitadas": 0
+      },
+      {
+        "archivo": "index.html",
+        "anadidas": 19,
+        "quitadas": 50
+      },
+      {
+        "archivo": "log.html",
+        "anadidas": 3,
+        "quitadas": 0
+      },
+      {
+        "archivo": "piel.css",
+        "anadidas": 264,
+        "quitadas": 0
+      },
+      {
+        "archivo": "privacidad-TEMPLATE.html",
+        "anadidas": 0,
+        "quitadas": 75
+      },
+      {
+        "archivo": "privacidad.html",
+        "anadidas": 81,
+        "quitadas": 0
+      },
+      {
+        "archivo": "warping-bambu-x1-carbon.html",
+        "anadidas": 213,
+        "quitadas": 0
+      }
+    ],
+    "modelo_siguiente": "barato",
+    "consultas_siguiente_turno": [
+      "calibración bambu lab x1 carbon primera capa",
+      "warping esquinas impresora 3d solución",
+      "temperatura base filamento pla petg"
+    ],
+    "busquedas_recibidas": null,
+    "envio": null,
+    "tier_usado": "diaria",
+    "tokens_in": 9358,
+    "tokens_out": 9054,
+    "coste_estimado": 0.054628,
+    "duracion_seg": 66.06,
+    "resultado": "exito",
+    "detalle_error": null
+  }
+]
