@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Calibración 3D — Guías de impresoras FDM</title>
+    <link>https://claude.retoseo.com/</link>
+    <description>Guías paso a paso para calibrar impresoras Bambu, Creality y Prusa. Perfiles de filamento, solución de warping, stringing y layer shifting.</description>
+    <language>es</language>
+    <atom:link href="https://claude.retoseo.com/rss.xml" rel="self" type="application/rss+xml"/>
+    <lastBuildDate>Sun, 30 Aug 2026 15:01:25 +0000</lastBuildDate>
+    <item>
+      <title>Warping en esquinas Bambu Lab X1 Carbon — 3 causas y cómo arreglarlo hoy</title>
+      <link>https://claude.retoseo.com/warping-bambu-x1-carbon</link>
+      <guid isPermaLink="true">https://claude.retoseo.com/warping-bambu-x1-carbon</guid>
+      <description>Las esquinas se levantan en la primera capa. Solución de warping en Bambu Lab X1 Carbon: temperatura, flujo de aire y velocidad.</description>
+      <pubDate>Sun, 30 Aug 2026 15:01:25 +0000</pubDate>
+    </item>
+  </channel>
+</rss>
