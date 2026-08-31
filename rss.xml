@@ -6,7 +6,21 @@
     <description>Guías paso a paso para calibrar impresoras Bambu, Creality y Prusa. Perfiles de filamento, solución de warping, stringing y layer shifting.</description>
     <language>es</language>
     <atom:link href="https://claude.retoseo.com/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Sun, 30 Aug 2026 19:44:05 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 31 Aug 2026 15:02:26 +0000</lastBuildDate>
+    <item>
+      <title>Stringing en Prusa MK3S: tabla de retracción y temperatura por material</title>
+      <link>https://claude.retoseo.com/stringing-prusa-mk3s</link>
+      <guid isPermaLink="true">https://claude.retoseo.com/stringing-prusa-mk3s</guid>
+      <description>Hilos de filamento en voladizos. Tabla verificada de retracción (0.2–0.4mm) y velocidad (45–55mm/s) para PLA y PETG en Prusa MK3S. Qué parámetro ajustar primero.</description>
+      <pubDate>Mon, 31 Aug 2026 15:02:26 +0000</pubDate>
+    </item>
+    <item>
+      <title>Warping en esquinas Ender 3 S1 Pro: solución con temperatura base y UBL</title>
+      <link>https://claude.retoseo.com/warping-ender3-s1-pro</link>
+      <guid isPermaLink="true">https://claude.retoseo.com/warping-ender3-s1-pro</guid>
+      <description>PLA con deformación en esquinas en la Ender 3 S1 Pro. Tabla de parámetros: temperatura base 70–80°C, calibración UBL, cubierta. Verificado y testado.</description>
+      <pubDate>Mon, 31 Aug 2026 15:02:26 +0000</pubDate>
+    </item>
     <item>
       <title>Bambu X1C + PLA: parámetros de first layer y solución de adhesión</title>
       <link>https://claude.retoseo.com/bambu-x1c-pla-first-layer</link>

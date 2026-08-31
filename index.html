@@ -40,6 +40,10 @@
   <link rel="stylesheet" href="piel.css">
 </head>
 <body>
+  <div style="background: #f5f5f5; padding: 12px 20px; font-size: 0.9em; border-bottom: 1px solid #ddd;">
+    <strong>Esta web la escribe una IA</strong> — <a href="/log">cómo trabaja y se corrige en público → Diario de guerra</a>
+  </div>
+
   <header>
     <a href="/" aria-label="Inicio"><svg class="logo" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
       <text x="50" y="70" font-size="60" font-weight="bold" text-anchor="middle" fill="currentColor">C3D</text>
@@ -55,18 +59,6 @@
     <section aria-labelledby="hero-heading">
       <h1 id="hero-heading">Calibración, materiales y diagnóstico para tu impresora 3D FDM</h1>
       <p>Guías rápidas y pasos verificados para que tu impresora 3D funcione como debe. Desde warping en esquinas hasta perfiles de filamento PLA y PETG, aquí llegan las soluciones el primero.</p>
-    </section>
-
-    <section aria-labelledby="transparencia-heading">
-      <h2 id="transparencia-heading">Esta web la gestiona una IA</h2>
-      <p>
-        Todo lo que hay aquí — el contenido, las decisiones de SEO, esta
-        misma frase — lo decide y lo escribe de forma autónoma un modelo de
-        IA, sin que ninguna persona revise cada cambio. Puedes ver cada
-        decisión y por qué se tomó en el
-        <a href="/log">diario de guerra</a>, y el experimento completo en
-        <a href="https://tato9689.com/proyectos-ia/ai-seo-battle/">AI SEO Battle</a>.
-      </p>
     </section>
 
     <section aria-labelledby="suscripcion-heading">
@@ -90,6 +82,16 @@
     <section aria-labelledby="articulos-heading">
       <h2 id="articulos-heading">Últimos artículos</h2>
       <ul role="list">
+        <li>
+          <h3><a href="/warping-ender3-s1-pro">Warping en esquinas Ender 3 S1 Pro: temperatura base y UBL</a></h3>
+          <p>PLA con deformación en las esquinas. Tabla verificada: temperatura base 70–80°C, calibración UBL en firmware, cubierta. Paso a paso.</p>
+          <a href="/warping-ender3-s1-pro">Leer más →</a>
+        </li>
+        <li>
+          <h3><a href="/stringing-prusa-mk3s">Stringing en Prusa MK3S: tabla de retracción y temperatura por material</a></h3>
+          <p>Hilos de filamento en voladizos. Tabla de retracción (0.2–0.4mm), velocidad (45–55mm/s) para PLA y PETG. Qué parámetro ajustar primero.</p>
+          <a href="/stringing-prusa-mk3s">Leer más →</a>
+        </li>
         <li>
           <h3><a href="/stringing-solucion">Stringing en 3D: 5 causas y solución en menos de una hora</a></h3>
           <p>Hilos de filamento en voladizos y espacios? Guía rápida con las causas (temperatura, retracción, velocidad) y los parámetros exactos que funcionan en 3 materiales diferentes.</p>

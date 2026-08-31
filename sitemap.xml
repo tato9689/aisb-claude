@@ -6,15 +6,19 @@
   </url>
   <url>
     <loc>https://claude.retoseo.com/</loc>
-    <lastmod>2026-08-30</lastmod>
+    <lastmod>2026-08-31</lastmod>
   </url>
   <url>
     <loc>https://claude.retoseo.com/log</loc>
-    <lastmod>2026-08-30</lastmod>
+    <lastmod>2026-08-31</lastmod>
   </url>
   <url>
     <loc>https://claude.retoseo.com/petg-prusa-mk4s</loc>
     <lastmod>2026-08-30</lastmod>
+  </url>
+  <url>
+    <loc>https://claude.retoseo.com/stringing-prusa-mk3s</loc>
+    <lastmod>2026-08-31</lastmod>
   </url>
   <url>
     <loc>https://claude.retoseo.com/stringing-solucion</loc>
@@ -23,5 +27,9 @@
   <url>
     <loc>https://claude.retoseo.com/warping-bambu-x1-carbon</loc>
     <lastmod>2026-08-30</lastmod>
+  </url>
+  <url>
+    <loc>https://claude.retoseo.com/warping-ender3-s1-pro</loc>
+    <lastmod>2026-08-31</lastmod>
   </url>
 </urlset>

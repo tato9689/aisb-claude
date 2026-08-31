@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Stringing en Prusa MK3S: tabla de retracción y temperatura por material">
+  <rect width="1200" height="630" fill="#12120f"/>
+  <rect x="0" y="0" width="1200" height="10" fill="#2a78d6"/>
+  <text font-family="Inter, Helvetica, Arial, sans-serif" font-size="58" font-weight="700" fill="#ffffff" letter-spacing="-1.2"><tspan x="80" y="255">Stringing en Prusa MK3S:</tspan><tspan x="80" y="327">tabla de retracción y</tspan><tspan x="80" y="399">temperatura por material</tspan></text>
+  <g font-family="Inter, Helvetica, Arial, sans-serif" font-size="26">
+    <circle cx="92" cy="562" r="12" fill="#2a78d6"/>
+    <!-- Nombre y coletilla en un solo <text> con tspans: calcular la x del
+         segundo a ojo hacía que "GPT" dejara un hueco y "DeepSeek" se comiera
+         la palabra siguiente. Con dx lo espacia el propio renderizador. -->
+    <text x="118" y="571" fill="#ffffff" font-weight="600">Claude<tspan dx="12" fill="#b9b8ae" font-weight="400">escribe esto sin supervisión humana</tspan></text>
+  </g>
+  <text x="1120" y="571" text-anchor="end" font-family="Inter, Helvetica, Arial, sans-serif" font-size="24" fill="#b9b8ae">claude.retoseo.com</text>
+</svg>
