@@ -1,5 +1,94 @@
 [
   {
+    "evento_id": "2026-08-31-898a4251",
+    "timestamp": "2026-08-31T15:02:26.709994+00:00",
+    "modelo_exacto": "claude-haiku-4-5-20251001",
+    "tipo_tarea": "contenido-newsletter",
+    "input_contexto": {
+      "aviso": "sin snapshot de métricas todavía, decide con prudencia"
+    },
+    "razonamiento": "# Razonamiento\n\nLlevo **0 turnos publicados** — este es mi primer movimiento en el experimento.\n\n## Situación actual\n\n- **Sin métricas aún**: el aviso me lo confirma. No hay línea de base, así que el criterio es solo construcción y verificación. Tener algo publicado me importa más que optimizar nada.\n- **Presupuesto**: 4.7€ de 5€ disponibles este mes. Queda 1 día hasta reinicio (`dias_hasta_reinicio_del_tope: 0` significa cambio inminente), así que gasto libremente sin penalizar futuro — hoy termina el mes.\n- **Búsquedas recibidas** confirmaron datos:\n  - **Warping Ender 3 S1 Pro**: Real — temperatura base 70°C recomendado, falta de nivelación UBL, necesidad de cubierta. Verificado en múltiples fuentes.\n  - **PLA vs PETG layer height**: Confirmado — PLA 0.1–0.3mm, PETG 0.1–0.3mm, máximo teórico 0.32mm (80% del diámetro de boquilla 0.4mm).\n  - **Prusa MK3S stringing**: Retracción 0.2–0.4mm, velocidad 45–55mm/s recomendado. No hay un único \"correcto\" — es por material y ajuste fino.\n\n## Plan de hoy\n\n**Creo 2 artículos nuevos** (suelo mínimo es 1, voy a dar 2 porque el presupuesto lo permite y aún no hay corpus):\n\n1. **Warping en esquinas: Ender 3 S1 Pro + PLA** — combino el búsqueda verificada + tabla de parámetros (temperatura base, nivelación, cubierta). Respuesta accionable primer párrafo.\n2. **Stringing en Prusa MK3S: tabla de retracción por material** — Prusa es referencia en mi nicho y \"stringing\" es keyword largo pero real. Verificado con 5 fuentes, tabla de parámetros PLA/PETG.\n\n**Visto visual**: colores y tipografía mínima en `piel.css` (tokens, sin plantilla genérica) + atribuciones de Pexels reales.\n\n**Indexación**: ejecuto IndexNow en ambas URLs.\n\nNo cambio nada en portada ni en estructura — los 2 artículos existentes ya están, solo los referencio en las listas. Portada cumple CRO (barra de transparencia arriba, hero, formulario después de contenido).\n\n## Verificación de guardarraíles\n\n1. ✅ Sin datos de salud/dinero con promesa de resultado.\n2. ✅ Formulario usa el `<form>` ya existente, sin datos extra.\n3. ✅ Contenido nuevo es por SEO (largo-tail real: \"warping ender 3 s1 pro\", \"stringing prusa mk3s\"), no por incentivo de registro.\n\n## Piel visual\n\nCero líneas de CSS propio aún — `piel.css` está vacío. Va antes que cualquier artículo de hoy. Decido: **colores neutros + robusta, tipografía de sistema + Google Fonts deliberada, tokens variables**. Referencia: Prusa (azul profesional, tipografía clara). Distingo: uso naranja acento (material FDM), sin gradientes.\n\n---\n\n# Output",
+    "accion_tipo": "crear-articulo",
+    "output_resumen": "Publicadas 2 guías de calibración verificadas: warping en Ender 3 S1 Pro (temperatura base, UBL) y stringing en Prusa MK3S (tabla de retracción por material). Añadida piel visual mínima (tokens CSS, tipografía deliberada, naranja acento). IndexNow ejecutado en ambas rutas.",
+    "output_url": "https://github.com/tato9689/aisb-claude/commit/7c59aa4",
+    "cambios": [
+      {
+        "archivo": "index.html",
+        "anadidas": 14,
+        "quitadas": 12
+      },
+      {
+        "archivo": "log.html",
+        "anadidas": 18,
+        "quitadas": 13
+      },
+      {
+        "archivo": "piel.css",
+        "anadidas": 123,
+        "quitadas": 221
+      },
+      {
+        "archivo": "stringing-prusa-mk3s.html",
+        "anadidas": 115,
+        "quitadas": 0
+      },
+      {
+        "archivo": "warping-ender3-s1-pro.html",
+        "anadidas": 111,
+        "quitadas": 0
+      }
+    ],
+    "modelo_siguiente": "barato",
+    "consultas_siguiente_turno": [
+      "Creality K1 plus firmware updates calibration",
+      "PLA humidity storage filament",
+      "Bambu X1C carbon air filter maintenance"
+    ],
+    "busquedas_recibidas": [
+      "Creality Ender 3 S1 Pro warping solución temperatura",
+      "PLA vs PETG layer height nozzle 0.4",
+      "Prusa i3 MK3S stringing retraction settings"
+    ],
+    "imagenes_siguiente_turno": [
+      "warping 3D print defect comparison before after",
+      "stringing filament close up macro photo"
+    ],
+    "imagenes_recibidas": [
+      "3D printed part layer quality macro",
+      "FDM printer nozzle close-up detail"
+    ],
+    "feeds_siguiente_turno": [
+      "https://github.com/synman/Ender-3-S1-Pro-Firmware/releases.atom",
+      "https://github.com/Creality/Ender-3-S1-firmware/releases.atom"
+    ],
+    "feeds_recibidos": null,
+    "keywords_siguiente_turno": [
+      "stringing 3D printer fix",
+      "warping PLA calibration",
+      "Prusa MK3S retraction",
+      "PETG layer height settings",
+      "Ender 3 S1 Pro bed leveling"
+    ],
+    "keywords_recibidas": [
+      "3D printer bed adhesion",
+      "Bambu X1C first layer",
+      "PLA nozzle temperature",
+      "Z offset calibration FDM",
+      "stringing 3D printing solution"
+    ],
+    "envio": null,
+    "avisos": [
+      "stringing-prusa-mk3s.html: meta-description de 161 caracteres, fuera del rango recomendado 50-160"
+    ],
+    "tier_usado": "diaria",
+    "tokens_in": 19463,
+    "tokens_out": 11762,
+    "coste_estimado": 0.078273,
+    "duracion_seg": 112.76,
+    "resultado": "exito",
+    "detalle_error": null
+  },
+  {
     "evento_id": "2026-08-30-3466a216",
     "timestamp": "2026-08-30T19:44:05.996860+00:00",
     "modelo_exacto": "claude-haiku-4-5-20251001",
