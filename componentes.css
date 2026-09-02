@@ -1,0 +1,228 @@
+/* componentes.css — sistema de componentes reutilizables para fichas de
+   defecto y calibración (impresión 3D FDM). Turno de diseño semanal.
+   Autocontenido a propósito: no depende de las variables de piel.css para
+   poder cargarse en cualquier página sin acoplarse a su paleta. Usa
+   currentColor y color-mix() para heredar el tono de texto de cada página,
+   así funciona igual en claro y en oscuro sin duplicar reglas. */
+
+/* === Tabla de parámetros (5 columnas canónicas) === */
+
+.tabla-parametros-wrap {
+  margin: 1.75rem 0;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  position: relative;
+}
+
+.tabla-parametros-wrap[tabindex="0"]:focus-visible {
+  outline: none;
+  box-shadow: inset 0 0 0 2px currentColor;
+}
+
+.tabla-parametros {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.94rem;
+  line-height: 1.4;
+}
+
+.tabla-parametros caption {
+  text-align: left;
+  font-size: 0.82rem;
+  opacity: 0.75;
+  margin-bottom: 0.5rem;
+}
+
+.tabla-parametros th,
+.tabla-parametros td {
+  padding: 0.6rem 0.75rem;
+  border-bottom: 1px solid color-mix(in srgb, currentColor 18%, transparent);
+  text-align: left;
+  vertical-align: top;
+}
+
+.tabla-parametros thead th {
+  position: sticky;
+  top: 0;
+  background: color-mix(in srgb, currentColor 6%, Canvas);
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.tabla-parametros tbody tr:hover td {
+  background: color-mix(in srgb, currentColor 4%, transparent);
+}
+
+.tabla-parametros tbody th[scope="row"] {
+  font-weight: 600;
+}
+
+.tabla-parametros .valor {
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.tabla-parametros .sin-verificar {
+  font-style: italic;
+  opacity: 0.7;
+}
+
+.tabla-parametros .sin-verificar::before {
+  content: "— ";
+}
+
+/* primera columna fija cuando hay más de 4 columnas */
+.tabla-parametros--sticky-col th:first-child,
+.tabla-parametros--sticky-col td:first-child {
+  position: sticky;
+  left: 0;
+  background: Canvas;
+}
+
+/* pista visual de que hay más tabla a los lados */
+.tabla-parametros-wrap.tiene-overflow {
+  background:
+    linear-gradient(to right, Canvas 0%, transparent 2%),
+    linear-gradient(to left, Canvas 0%, transparent 2%) right;
+  background-size: 24px 100%, 24px 100%;
+  background-repeat: no-repeat;
+  background-attachment: local, local;
+}
+
+/* Vista móvil: tarjeta por fila. El HTML no cambia, solo la maqueta,
+   así sigue siendo copiable e indexable igual que en escritorio. */
+@media (max-width: 640px) {
+  .tabla-parametros-wrap {
+    overflow-x: visible;
+  }
+  .tabla-parametros thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+  }
+  .tabla-parametros,
+  .tabla-parametros tbody,
+  .tabla-parametros tr,
+  .tabla-parametros td {
+    display: block;
+    width: 100%;
+  }
+  .tabla-parametros tr {
+    border: 1px solid color-mix(in srgb, currentColor 18%, transparent);
+    border-radius: 0.5rem;
+    margin-bottom: 0.85rem;
+    padding: 0.4rem 0.6rem;
+  }
+  .tabla-parametros td {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    border-bottom: 1px dashed color-mix(in srgb, currentColor 14%, transparent);
+    padding: 0.45rem 0;
+  }
+  .tabla-parametros td:last-child {
+    border-bottom: none;
+  }
+  .tabla-parametros td::before {
+    content: attr(data-th);
+    font-weight: 600;
+    opacity: 0.75;
+    flex-shrink: 0;
+    padding-right: 0.75rem;
+  }
+}
+
+/* botón copiar tabla — mejora progresiva opcional, sin JS la tabla
+   se selecciona con el dedo igual */
+.tabla-parametros-copiar {
+  font-size: 0.82rem;
+  margin: 0.4rem 0 0;
+  padding: 0.3rem 0.7rem;
+  border: 1px solid color-mix(in srgb, currentColor 30%, transparent);
+  border-radius: 0.35rem;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+.tabla-parametros-copiar:hover,
+.tabla-parametros-copiar:focus-visible {
+  background: color-mix(in srgb, currentColor 8%, transparent);
+  border-color: currentColor;
+}
+
+/* === Diagrama SVG con su tabla equivalente === */
+
+.diagrama {
+  margin: 1.75rem 0;
+}
+.diagrama svg {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+.diagrama figcaption {
+  font-size: 0.85rem;
+  opacity: 0.75;
+  margin-top: 0.5rem;
+}
+.diagrama details {
+  margin-top: 0.6rem;
+  border: 1px solid color-mix(in srgb, currentColor 18%, transparent);
+  border-radius: 0.4rem;
+  padding: 0.5rem 0.75rem;
+}
+.diagrama details summary {
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+.diagrama details[open] summary {
+  margin-bottom: 0.5rem;
+}
+
+/* === Bloque de última revisión + changelog === */
+
+.revision {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  opacity: 0.9;
+  margin: 0.75rem 0 1.25rem;
+  padding: 0.4rem 0.7rem;
+  border-left: 3px solid currentColor;
+  background: color-mix(in srgb, currentColor 5%, transparent);
+}
+.revision strong {
+  font-weight: 700;
+  opacity: 1;
+}
+
+.changelog {
+  margin: 1.5rem 0;
+  padding: 0.9rem 1rem;
+  border-top: 1px dashed color-mix(in srgb, currentColor 25%, transparent);
+  font-size: 0.88rem;
+}
+.changelog h2,
+.changelog h3 {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  opacity: 0.7;
+  margin-bottom: 0.4rem;
+}
+.changelog ul {
+  padding-left: 1.1rem;
+}
+.changelog li {
+  margin-bottom: 0.3rem;
+}
+.changelog time {
+  opacity: 0.7;
+}
