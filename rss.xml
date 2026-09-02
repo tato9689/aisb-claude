@@ -6,20 +6,34 @@
     <description>Guías paso a paso para calibrar impresoras Bambu, Creality y Prusa. Perfiles de filamento, solución de warping, stringing y layer shifting.</description>
     <language>es</language>
     <atom:link href="https://claude.retoseo.com/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Wed, 02 Sep 2026 12:07:42 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 02 Sep 2026 12:46:25 +0000</lastBuildDate>
     <item>
-      <title>PETG en Prusa MK4S: temperatura y retracción paso a paso</title>
+      <title>PETG Prusa MK4S — temperatura y retracción verificadas</title>
       <link>https://claude.retoseo.com/petg-prusa-mk4s</link>
       <guid isPermaLink="true">https://claude.retoseo.com/petg-prusa-mk4s</guid>
-      <description>Guía de calibración PETG para Prusa MK4S. Parámetros exactos: nozzle 250°C, base 80–90°C, retracción 5.5mm. Evita stringing y blobbing.</description>
-      <pubDate>Wed, 02 Sep 2026 07:17:41 +0000</pubDate>
+      <description>PETG en MK4S: tabla de parámetros 250°C nozzle, 80–90°C cama. Cómo evitar stringing y blobbing. Paso a paso verificado.</description>
+      <pubDate>Wed, 02 Sep 2026 12:46:25 +0000</pubDate>
     </item>
     <item>
-      <title>Stringing en Prusa MK3S: tabla de retracción y temperatura por material</title>
+      <title>Stringing en impresión 3D — 5 causas y solución en una hora</title>
+      <link>https://claude.retoseo.com/stringing-solucion</link>
+      <guid isPermaLink="true">https://claude.retoseo.com/stringing-solucion</guid>
+      <description>Hilos en voladizos: 5 causas reales (temperatura, retracción, humedad, velocidad). Tabla de parámetros y cómo ajustarlos sin aventurar.</description>
+      <pubDate>Wed, 02 Sep 2026 12:46:25 +0000</pubDate>
+    </item>
+    <item>
+      <title>Stringing Prusa MK3S — tabla de retracción por material</title>
       <link>https://claude.retoseo.com/stringing-prusa-mk3s</link>
       <guid isPermaLink="true">https://claude.retoseo.com/stringing-prusa-mk3s</guid>
-      <description>Hilos de filamento en voladizos. Tabla verificada de retracción (0.2–0.4mm) y velocidad (45–55mm/s) para PLA y PETG en Prusa MK3S. Qué parámetro ajustar primero.</description>
-      <pubDate>Wed, 02 Sep 2026 07:17:41 +0000</pubDate>
+      <description>Hilos en voladizos: tabla de retracción (0.2–0.4 mm), velocidad (45–55 mm/s). Valores verificados PLA, PETG. Qué ajustar primero.</description>
+      <pubDate>Wed, 02 Sep 2026 12:46:25 +0000</pubDate>
+    </item>
+    <item>
+      <title>Warping esquinas Ender 3 S1 Pro — calibración UBL y temperatura</title>
+      <link>https://claude.retoseo.com/warping-ender3-s1-pro</link>
+      <guid isPermaLink="true">https://claude.retoseo.com/warping-ender3-s1-pro</guid>
+      <description>Deformación en esquinas: temperaturas 70–80°C cama, calibración UBL. Tabla verificada para Ender 3 S1 Pro, PLA y PETG. Paso a paso sin complicaciones.</description>
+      <pubDate>Wed, 02 Sep 2026 12:46:25 +0000</pubDate>
     </item>
     <item>
       <title>Bambu X1C + PLA: parámetros de first layer y solución de adhesión</title>
@@ -33,20 +47,6 @@
       <link>https://claude.retoseo.com/warping-bambu-x1-carbon</link>
       <guid isPermaLink="true">https://claude.retoseo.com/warping-bambu-x1-carbon</guid>
       <description>Las esquinas se levantan antes de terminar la primera capa. Guía paso a paso: temperatura de base, flujo de aire y velocidad de impresión.</description>
-      <pubDate>Wed, 02 Sep 2026 07:17:41 +0000</pubDate>
-    </item>
-    <item>
-      <title>Warping en esquinas Ender 3 S1 Pro: solución con temperatura base y UBL</title>
-      <link>https://claude.retoseo.com/warping-ender3-s1-pro</link>
-      <guid isPermaLink="true">https://claude.retoseo.com/warping-ender3-s1-pro</guid>
-      <description>PLA con deformación en esquinas en la Ender 3 S1 Pro. Tabla de parámetros: temperatura base 70–80°C, calibración UBL, cubierta. Verificado y testado.</description>
-      <pubDate>Wed, 02 Sep 2026 07:17:41 +0000</pubDate>
-    </item>
-    <item>
-      <title>Stringing en 3D: 5 causas y solución en menos de una hora</title>
-      <link>https://claude.retoseo.com/stringing-solucion</link>
-      <guid isPermaLink="true">https://claude.retoseo.com/stringing-solucion</guid>
-      <description>Guía práctica para eliminar stringing (hilos de filamento) en impresión 3D. Temperatura, retracción, velocidad: parámetros exactos para PLA, PETG y ABS.</description>
       <pubDate>Wed, 02 Sep 2026 07:17:41 +0000</pubDate>
     </item>
   </channel>
