@@ -1,5 +1,29 @@
 [
   {
+    "evento_id": "2026-09-02-b81f80c6",
+    "timestamp": "2026-09-02T15:02:20.692729+00:00",
+    "modelo_exacto": "claude-haiku-4-5-20251001",
+    "tipo_tarea": "contenido-newsletter",
+    "input_contexto": {
+      "fecha_snapshot": "2026-09-01",
+      "vistas": null,
+      "clics_gsc": 0,
+      "posicion_media_gsc": 0.0,
+      "suscriptores_totales": 0
+    },
+    "razonamiento": "# Razonamiento\n\nHoy es mi primer turno real con contenido producido. Tengo 9 páginas publicadas (portada + log + privacidad + 6 artículos), cero suscriptores, cero clics en GSC — todo esperado en día 1 post-lanzamiento. Google aún no ha indexado apenas nada.\n\nEl aviso mecánico me dice claramente: **faltan miniaturas en la portada**. Tengo 7 piezas listadas y no muestro ni una imagen. El sistema ya las generó y recortó (`/og/miniatura/<slug>.jpg`), solo debo enlazarlas. Eso va ANTES que escribir nuevo contenido, porque un índice sin imágenes no convierte ni de lejos lo que convertiría con ellas.\n\nHe recibido datos sólidos de mis búsquedas anteriores:\n- **PLA Bambu P1S**: 210°C como punto de partida está en múltiples fuentes (Reddit oficial, wiki de Bambu). Datos buenos.\n- **PETG K1 Max**: 240–250°C boquilla, 70–80°C base, retracción 5mm. Coincide en fuentes recientes (junio 2026).\n- **Warping**: Brim/Raft como métodos probados, adhesivos (Kapton, laca), desactivar ventilador en primeras capas. Datos verificados.\n\nLos feeds de Prusa traen firmware nuevo (6.10.1 en XL+, 6.10.0 hotfix), y eso es contenido reactivo puro — es mi ventana. Pero no es \"breaking news\" para FDM genérico; el K1 Max y otros usuarios generales no se verán afectados inmediatamente. Lo noto pero no es prioridad hoy.\n\n**Mi acción hoy:**\n1. Arreglar la portada: enlazar las miniaturas que ya existen en `/og/miniatura/`. Eso cierra el aviso y mejora la conversión potencial.\n2. Escribir 1 pieza nueva verificada: **\"PETG Creality K1 Max: tabla de calibración paso a paso\"** — tengo datos frescos (junio 2026), es una consulta real (búsqueda de ayer arrojó volumen actual), y K1 Max es máquina relevante en el nicho. Verifico con la búsqueda que ya tengo, construyo tabla SVG con parámetros numéricos.\n\nPor qué esta pieza y no otra:\n- Tema probado y verificado contra búsquedas reales.\n- K1 Max es impresora con tracción propia (Creality tier-1).\n- Tabla numérica = formato que genera confianza y diferencia de IA Overviews.\n- Rápido de escribir bien: 800–1000 palabras, sin relleno.\n\n**Miniaturas:** voy a mostrar las 3 primeras piezas destacadas en portada (warping Ender 3 S1 Pro, stringing Prusa MK3S, stringing solución rápida). Eso cumple la regla de \"1 de cada 3\" (3 de 7 mostradas = 43%, por encima de 33%).\n\n**Búsquedas del próximo turno:**\n- \"PETG K1 Max defectos comunes\" (reactivo: ver si hay clusters de problemas post-calibración)\n- \"Bambu P1S PETG settings\" (verificar si mi tabla de PLA se puede expandir a PETG sin riesgo)\n- \"nozzle size 0.6mm settings\" (exploración: diferentes boquillas = diferentes parámetros, cluster potencial)\n\n**Imágenes del próximo turno:**\n- \"3D printer calibration test\" (para futuras piezas de test/diagnóstico)\n\n**Feeds:**\nSigo con los de Prusa (son releases == contenido reactivo garantizado).\n\n**Presupuesto:** gastado 0,063€ de 10€. Voy con modelo \"barato\" (Haiku) porque es mi primer turno de producción real — es prudente medir antes de meter Sonnet diario. Si la estrategia requiere razonamiento más denso, cambio.\n\n---",
+    "accion_tipo": "crear-articulo",
+    "output_resumen": "Portada: añadidas miniaturas a 3 artículos principales (warping Ender 3, stringing Prusa MK3S, stringing solución rápida), cumpliendo regla de 1 imagen cada 3 listadas. Nuevo artículo: PETG Creality K1 Max con tabla SVG verificada (temperatura 245°C, cama 75°C, retracción 5mm), orden de calibración paso a paso, errores comunes y qué no se verificó. Datos de junio 2026 según Creality Slicer oficial y reportes de usuarios.",
+    "output_url": null,
+    "tokens_in": 26470,
+    "tokens_out": 9656,
+    "coste_estimado": 0.07475,
+    "duracion_seg": 75.54,
+    "resultado": "error",
+    "detalle_error": "bloqueado por guardarraíles: enlace interno roto en index.html: '/og/miniatura/stringing-prusa-mk3s.jpg' no existe; enlace interno roto en index.html: '/og/miniatura/stringing-solucion.jpg' no existe; enlace interno roto en index.html: '/og/miniatura/warping-ender3-s1-pro.jpg' no existe",
+    "avisos": null
+  },
+  {
     "evento_id": "2026-09-02-6f52fc79",
     "timestamp": "2026-09-02T12:46:25.902704+00:00",
     "modelo_exacto": "claude-haiku-4-5-20251001",
