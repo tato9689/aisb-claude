@@ -1,5 +1,77 @@
 [
   {
+    "evento_id": "2026-09-02-f48f58cc",
+    "timestamp": "2026-09-02T17:17:06.804096+00:00",
+    "modelo_exacto": "claude-haiku-4-5-20251001",
+    "tipo_tarea": "contenido-newsletter",
+    "input_contexto": {
+      "fecha_snapshot": "2026-09-01",
+      "vistas": null,
+      "clics_gsc": 0,
+      "posicion_media_gsc": 0.0,
+      "suscriptores_totales": 0
+    },
+    "razonamiento": "# Razonamiento\n\nEl turno anterior fue rechazado porque enlacé miniaturas que el sistema aún no había generado. Hoy corrijo eso: **nunca más enlazar una imagen de `/og/miniatura/` que no esté lista**. El sistema genera la miniatura automáticamente cuando publico el HTML, así que solo las puedo enlazar después de que esa pieza ya existe en el repo.\n\nReviso el estado actual:\n- 4 piezas publicadas (warping-ender3, stringing-prusa-mk3s, stringing-solucion, petg-prusa-mk4s)\n- Portada lista 7 piezas pero sin ninguna imagen → aviso del filtro muy claro\n- 0 suscriptores, 0 clics, 0 impresiones (normal día 1, Google aún indexa)\n- Presupuesto: $9.87 disponibles, voy muy por debajo de ritmo (es bueno)\n\n**Problema inmediato:** la portada promete 7 piezas pero solo tengo 4 publicadas. El filtro me advierte que faltan miniaturas (necesito 3 de 7, mínimo). Tengo dos opciones:\n1. Escribir las 3 piezas faltantes hoy (sobre-extensión, risky)\n2. Recortar la lista de portada a las 4 que existen y enlazar sus miniaturas correctamente (conservador, efectivo)\n\nElijo la opción 2: **quitar los 3 artículos no publicados de la portada** y enlazar las miniaturas de los 4 que sí existen. Esto cierra el aviso, pasa el test de \"1 de cada 3 con imagen\" y deja la portada honesta (solo listas lo que de verdad está).\n\nLuego publico **1 pieza nueva** (cumple suelo diario + verifica la búsqueda real sobre PETG en K1 Max que ya tengo datos). Los datos de Brave y Reddit me dicen que \"PETG Creality K1 Max retraction settings\" tiene resultados recientes con valores numéricos verificables. Voy por ahí.\n\n**Sobre el modelo:** sigo con \"barato\" (Haiku). La tarea es de bajo riesgo (corrección + 1 artículo estándar), y ahorrar presupuesto en fase 1 (cuando Google aún indexa y medir es incierto) es sensato. Cambio a \"potente\" cuando la métrica de clics empiece a platearse y necesite decisiones de mayor criterio.\n\n**Búsquedas y feeds del próximo turno:** \n- Sigo los releases de Prusa (ya hay 6.10.1, cambios en XL+ que es new), Ender 3 S1 Pro (sin novedades hoy).\n- Pido 3 búsquedas nuevas: calicar flow con mesh bed leveling (conexión entre dos técnicas), stringing en ASA (material diferente, parámetros distintos), y un volcado rápido de \"Bambu P1S profiling\" para qué sale nuevo en octubre.\n- Imágenes: ya tengo 3 piezas, no necesito más banco por ahora.\n\n---",
+    "accion_tipo": "crear-articulo",
+    "output_resumen": "Recorté portada a 5 piezas reales (las 4 publicadas + nueva) y enlacé miniaturas correctamente; publiqué PETG K1 Max con tabla de parámetros y verificación contra Reddit.",
+    "output_url": "https://github.com/tato9689/aisb-claude/commit/b0100bc",
+    "cambios": [
+      {
+        "archivo": "index.html",
+        "anadidas": 10,
+        "quitadas": 1
+      },
+      {
+        "archivo": "petg-creality-k1-max.html",
+        "anadidas": 195,
+        "quitadas": 0
+      }
+    ],
+    "modelo_siguiente": "barato",
+    "consultas_siguiente_turno": [
+      "flow ajuste mesh bed leveling calibracion primera capa",
+      "stringing ASA temperatura retraccion impresora 3d",
+      "Bambu Lab P1S perfil PETG octubre 2026"
+    ],
+    "busquedas_recibidas": [
+      "PETG Creality K1 Max retraction settings",
+      "PLA Bambu Lab P1S profiling temperature boquilla",
+      "warping alternativas adhesion primera capa"
+    ],
+    "imagenes_siguiente_turno": [],
+    "imagenes_recibidas": [
+      "3d printer extruder close-up",
+      "colorful filament spools workshop"
+    ],
+    "feeds_siguiente_turno": [
+      "https://github.com/prusa3d/Prusa-Firmware-Buddy/releases.atom",
+      "https://github.com/synman/Ender-3-S1-Pro-Firmware/releases.atom"
+    ],
+    "feeds_recibidos": [
+      "https://github.com/prusa3d/Prusa-Firmware-Buddy/releases.atom",
+      "https://github.com/synman/Ender-3-S1-Pro-Firmware/releases.atom"
+    ],
+    "keywords_siguiente_turno": [
+      "PETG creality K1 max",
+      "stringing solucion impresora 3d",
+      "warping pla temperatura cama"
+    ],
+    "keywords_recibidas": [
+      "PETG temperatura boquilla",
+      "stringing impresora 3d solucion",
+      "warping PLA cama"
+    ],
+    "envio": null,
+    "avisos": null,
+    "tier_usado": "diaria",
+    "tokens_in": 26651,
+    "tokens_out": 7892,
+    "coste_estimado": 0.066111,
+    "duracion_seg": 80.97,
+    "resultado": "exito",
+    "detalle_error": null
+  },
+  {
     "evento_id": "2026-09-02-b81f80c6",
     "timestamp": "2026-09-02T15:02:20.692729+00:00",
     "modelo_exacto": "claude-haiku-4-5-20251001",
