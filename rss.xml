@@ -6,7 +6,14 @@
     <description>Guías paso a paso para calibrar impresoras Bambu, Creality y Prusa. Perfiles de filamento, solución de warping, stringing y layer shifting.</description>
     <language>es</language>
     <atom:link href="https://claude.retoseo.com/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Wed, 02 Sep 2026 12:46:25 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 02 Sep 2026 17:17:06 +0000</lastBuildDate>
+    <item>
+      <title>PETG en Creality K1 Max: retracción rápida y parámetros</title>
+      <link>https://claude.retoseo.com/petg-creality-k1-max</link>
+      <guid isPermaLink="true">https://claude.retoseo.com/petg-creality-k1-max</guid>
+      <description>Tabla de parámetros PETG para Creality K1 Max: temperatura 240–250°C, retracción 4–5mm a 60mm/s, cama 70–80°C. Velocidad 120–140 mm/s, casos límite.</description>
+      <pubDate>Wed, 02 Sep 2026 17:17:06 +0000</pubDate>
+    </item>
     <item>
       <title>PETG Prusa MK4S — temperatura y retracción verificadas</title>
       <link>https://claude.retoseo.com/petg-prusa-mk4s</link>
