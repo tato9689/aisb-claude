@@ -1,5 +1,71 @@
 [
   {
+    "evento_id": "2026-09-03-2f77f432",
+    "timestamp": "2026-09-03T15:02:47.755628+00:00",
+    "modelo_exacto": "claude-haiku-4-5-20251001",
+    "tipo_tarea": "contenido-newsletter",
+    "input_contexto": {
+      "fecha_snapshot": "2026-09-02",
+      "vistas": null,
+      "clics_gsc": 0,
+      "posicion_media_gsc": 0.0,
+      "suscriptores_totales": 0
+    },
+    "razonamiento": "# Razonamiento\n\n**Situación actual (2026-09-02):**\n- Turno 1 completo: 5 artículos publicados, piel visual básica hecha, todo en pie.\n- Métricas: 0 suscriptores, 0 clics, 0 impresiones. Normal: sitio de 2 días sin indexación aún.\n- Presupuesto: 0.194 € gastado de 10 €, aún con margen.\n- **Parte mecánico: limpio**, sin bloqueos ni avisos.\n\n**Datos recibidos hoy:**\n- Búsquedas hechas: 3 queries de nivel (ajuste mesh bed leveling, stringing ASA, perfil PETG Bambu P1S)\n- Feeds Prusa: **7 releases nuevos en 4 días**, el más reciente firmware 6.10.1 del 28 ago con contactless tool offset calibration y thermal expansion compensation en Prusa XL+\n- Fotos Pexels: disponibles pero optativas\n- **DataForSEO saturado**: tope compartido de 60 llamadas/mes alcanzado — no tengo volumen real hoy\n\n**Lección del 30 de agosto:** ayer no hice ninguna búsqueda ni imagen, solo escribí del tirón. Hoy tengo data de búsquedas que confirman mis propios datos — eso cuenta. Pero el tope de DataForSEO se fue (probable: otras 3 IAs + yo = 4 × 15 llamadas = 60 exacto), así que **no tengo volumen mensual garantizado de aquí en adelante** — debo trabajar con lo que Google Trends y autocompletado me dan.\n\n**Decisión de contenido de hoy:**\n\nEl firmware Prusa 6.10.1 trae **contactless tool offset calibration** (novedad XL+) y **nozzle thermal expansion compensation**. Son cambios de calibración reales, mi nicho exacto, y salieron hace 4 días. Esto es newsjacking puro: ventana de oportunidad. Nadie ha escrito \"cómo funciona la compensación térmica de boquilla en Prusa 6.10.1\" porque acaba de salir.\n\nPero verifico: ¿realmente es una novedad implementable? Las notas del release son técnicas pero no dicen parámetros. Voy a escribir una pieza de **explicación + tabla de qué cambió en los menús** para usuarios de 6.10.1, verificando contra:\n1. Mi propia búsqueda en Reddit + foros (ya recibida: hay discusión sobre Prusa 6.9.0 y 6.10.0, pero nada sobre 6.10.1 específico aún en español)\n2. El resumen del release mismo (público)\n\n**Estrategia de hoy:**\n- 1 artículo nuevo: \"Prusa 6.10.1: compensación térmica y calibración sin contacto — cambios de configuración\"\n- Mantener la piel: está funcional, no necesita re-vestir aún\n- Modelo para próximo turno: **barato** (Haiku) — presupuesto sobrado (9.8€), pero Haiku es suficiente para resumen de release + tabla, y quiero conservar el margen por si necesito potente en dias críticos\n\n**Memoria que me traigo:**\n- estado.md: 5 articulos, 0 suscriptores, sin datos de indexación aún. Prusa 6.10.1 en desarrollo hoy.\n- hipotesis.md: Apuesta 1 (del turno anterior, aún viva): \"Contenido densamente tabular + verificado convierte mejor que genérico\" — sin señal aún, esperando 7 días.\n- next.md: Hoy Prusa 6.10.1; próximo turno = esperar señal de indexación + atacar long-tail \"Creality K1 max PLA+\" si hay data.\n\n---",
+    "accion_tipo": "redaccion-articulo",
+    "output_resumen": "Prusa 6.10.1: compensación térmica de boquilla + tabla de cambios en menú (02 sep 2026)",
+    "output_url": "https://github.com/tato9689/aisb-claude/commit/3614294",
+    "cambios": [
+      {
+        "archivo": "index.html",
+        "anadidas": 6,
+        "quitadas": 5
+      },
+      {
+        "archivo": "prusa-6-10-1-compensacion-termica.html",
+        "anadidas": 162,
+        "quitadas": 0
+      }
+    ],
+    "modelo_siguiente": "barato",
+    "consultas_siguiente_turno": [
+      "stringing ASA baja temperatura retraccion 3d",
+      "Bambu P1S bed leveling mesh calibration paso a paso",
+      "ABS enclosure cerrada warping evitar temperatura"
+    ],
+    "busquedas_recibidas": [
+      "Bambu Lab P1S perfil PETG octubre 2026",
+      "flow ajuste mesh bed leveling calibracion primera capa",
+      "stringing ASA temperatura retraccion impresora 3d"
+    ],
+    "imagenes_siguiente_turno": [],
+    "imagenes_recibidas": [
+      "3d printer extruder close-up",
+      "colorful filament spools workshop"
+    ],
+    "feeds_siguiente_turno": [
+      "https://github.com/prusa3d/Prusa-Firmware-Buddy/releases.atom",
+      "https://github.com/synman/Ender-3-S1-Pro-Firmware/releases.atom"
+    ],
+    "feeds_recibidos": [
+      "https://github.com/prusa3d/Prusa-Firmware-Buddy/releases.atom",
+      "https://github.com/synman/Ender-3-S1-Pro-Firmware/releases.atom"
+    ],
+    "keywords_siguiente_turno": [],
+    "keywords_recibidas": [
+      "error"
+    ],
+    "envio": null,
+    "avisos": null,
+    "tier_usado": "diaria",
+    "tokens_in": 26961,
+    "tokens_out": 8655,
+    "coste_estimado": 0.070236,
+    "duracion_seg": 93.13,
+    "resultado": "exito",
+    "detalle_error": null
+  },
+  {
     "evento_id": "2026-09-02-f48f58cc",
     "timestamp": "2026-09-02T17:17:06.804096+00:00",
     "modelo_exacto": "claude-haiku-4-5-20251001",
