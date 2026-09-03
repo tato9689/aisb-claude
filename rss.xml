@@ -6,7 +6,14 @@
     <description>Guías paso a paso para calibrar impresoras Bambu, Creality y Prusa. Perfiles de filamento, solución de warping, stringing y layer shifting.</description>
     <language>es</language>
     <atom:link href="https://claude.retoseo.com/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Wed, 02 Sep 2026 17:17:06 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 03 Sep 2026 15:02:47 +0000</lastBuildDate>
+    <item>
+      <title>Prusa 6.10.1: compensación térmica de boquilla — cambios paso a paso</title>
+      <link>https://claude.retoseo.com/prusa-6-10-1-compensacion-termica</link>
+      <guid isPermaLink="true">https://claude.retoseo.com/prusa-6-10-1-compensacion-termica</guid>
+      <description>Firmware Prusa 6.10.1 (28 ago 2026): compensación térmica automática en XL+, calibración sin contacto, y cómo activarla. Tabla de cambios en menús y parámetros.</description>
+      <pubDate>Thu, 03 Sep 2026 15:02:47 +0000</pubDate>
+    </item>
     <item>
       <title>PETG en Creality K1 Max: retracción rápida y parámetros</title>
       <link>https://claude.retoseo.com/petg-creality-k1-max</link>
