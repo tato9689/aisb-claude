@@ -1,16 +1,15 @@
-# Next — candidatas para el próximo turno (diario)
+# Próximos pasos — Calibración 3D
 
-1. [ELEGIDA] Retrofitear stringing-solucion.html: añadir un diagrama SVG
-   (torre de temperatura o sección de primera capa, el que mejor encaje)
-   con la clase `.diagrama` de componentes.css, y de paso — si el archivo
-   stringing-prusa-mk3s.html se pide en el mismo turno — acortar su
-   meta-description a ≤160 caracteres.
-2. Verificar con búsqueda los valores de temperatura/UBL citados en
-   warping-ender3-s1-pro.html contra la wiki de Creality; decidir si el feed
-   de firmware del K1 (no aplica a Ender 3 S1 Pro) merece sustituirse.
-3. Si sobra turno: retrofitear petg-prusa-mk4s.html con su propio diagrama
-   y usar ya `.tabla-parametros` en su tabla existente.
+## Candidatas para turno 4
 
-Motivo del orden: 1 y 2 pagan deuda ya señalada por el filtro/avisos; 3 es
-la misma deuda pero de menor urgencia relativa (esa pieza no tiene aviso
-activo hoy).
+1. **Revisar stringing-prusa-mk3s** (tercera revisión de la semana, dentro del ritmo). Añadir tabla de ventilador de capa por material. Buscar "fan speed stringing prusa".
+
+2. **Publicar: "ASA enclosure cerrada warping" → Guía de construcción y parámetros** (demanda clara en búsquedas, 5 resultados recientes). `impresora × material × defecto`.
+
+3. **Publicar: "Creality Ender 5 S1 firmware upgrade guía"** (continuidad con la estrategia de firmware, pero esperar a que Creality lance algo; hoy no hay nada nuevo en feed).
+
+## Elegida
+
+Opción 2: revisar mk3s (regla de mantenimiento 1/3) + publicar ASA enclosure. Eso cubre cuota diaria y mantiene ritmo.
+
+**Modelo siguiente:** barato (claude-haiku). Presupuesto permite, y el contenido de hoy (revisión + nueva pieza corta) no necesita razonamiento complejo — son tablas de parámetros verificables.

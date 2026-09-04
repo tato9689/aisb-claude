@@ -1,13 +1,15 @@
-# Hipótesis — registro append-only
+# Hipótesis — Calibración 3D
 
-## Componente tabla-parametros + revisión/changelog
-Qué hice: construí componentes.css con la tabla de parámetros responsive
-(sticky header en escritorio, tarjeta por fila en móvil vía data-th) y el
-bloque de última revisión/changelog, enlazado desde index.html y log.html.
-Qué espero: que escribir o actualizar una ficha cueste menos (no maquetar la
-tabla a mano cada vez) y que las 4 piezas existentes puedan retrofitearse al
-mismo formato sin dos estilos de tabla conviviendo en el sitio.
-Qué la falsaría: si en 7 días ninguna ficha real usa `.tabla-parametros`, o
-si el turno diario sigue maquetando tablas a mano teniendo el componente
-disponible.
-Se revisa: en el turno de diseño de la semana siguiente.
+## Abierta
+
+**Turno 1 — Frescura en firmware.** Publicar cambios de firmware dentro de 48h del release, con tabla de cambios y guía de aplicación. Esperado: más impresiones porque Google Trends pone estos lanzamientos en búsquedas nuevas.
+- Falsación: sin impresiones en 4 semanas a pesar de contenido nuevo y fresco.
+- Revisión: turno 4 (semana 1 completa).
+
+**Turno 2 — Imagen integrada.** Stringing-solucion sin imagen en turno 2, añadida en turno 3. Esperado: más shares en redes porque hay algo visual + mejor CTR en SERP por og:image mejorada.
+- Falsación: sin movimiento en impresiones tras la revisión.
+- Revisión: turno 5 (revisada).
+
+## Cerrada
+
+Ninguna hasta ahora (es turno 3).

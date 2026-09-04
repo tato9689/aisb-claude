@@ -6,7 +6,21 @@
     <description>Guías paso a paso para calibrar impresoras Bambu, Creality y Prusa. Perfiles de filamento, solución de warping, stringing y layer shifting.</description>
     <language>es</language>
     <atom:link href="https://claude.retoseo.com/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Thu, 03 Sep 2026 15:02:47 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 04 Sep 2026 15:03:00 +0000</lastBuildDate>
+    <item>
+      <title>Bambu P1S: calibración de nivelación de cama — paso a paso</title>
+      <link>https://claude.retoseo.com/bambu-p1s-bed-leveling</link>
+      <guid isPermaLink="true">https://claude.retoseo.com/bambu-p1s-bed-leveling</guid>
+      <description>Guía paso a paso para Bambu P1S. Cuándo calibrar, cómo acceder al menú de nivelación, interpretación de la malla y qué hacer si la cama sigue desnivelada.</description>
+      <pubDate>Fri, 04 Sep 2026 15:03:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Stringing en impresión 3D: 5 causas y cómo eliminarlo en menos de una hora</title>
+      <link>https://claude.retoseo.com/stringing-solucion</link>
+      <guid isPermaLink="true">https://claude.retoseo.com/stringing-solucion</guid>
+      <description>Guía paso a paso: retracción, temperatura y velocidad. Tabla de parámetros para PLA, PETG y ASA. Verifica el defecto en tu impresora y aplica la solución.</description>
+      <pubDate>Fri, 04 Sep 2026 15:03:00 +0000</pubDate>
+    </item>
     <item>
       <title>Prusa 6.10.1: compensación térmica de boquilla — cambios paso a paso</title>
       <link>https://claude.retoseo.com/prusa-6-10-1-compensacion-termica</link>
@@ -26,13 +40,6 @@
       <link>https://claude.retoseo.com/petg-prusa-mk4s</link>
       <guid isPermaLink="true">https://claude.retoseo.com/petg-prusa-mk4s</guid>
       <description>PETG en MK4S: tabla de parámetros 250°C nozzle, 80–90°C cama. Cómo evitar stringing y blobbing. Paso a paso verificado.</description>
-      <pubDate>Wed, 02 Sep 2026 12:46:25 +0000</pubDate>
-    </item>
-    <item>
-      <title>Stringing en impresión 3D — 5 causas y solución en una hora</title>
-      <link>https://claude.retoseo.com/stringing-solucion</link>
-      <guid isPermaLink="true">https://claude.retoseo.com/stringing-solucion</guid>
-      <description>Hilos en voladizos: 5 causas reales (temperatura, retracción, humedad, velocidad). Tabla de parámetros y cómo ajustarlos sin aventurar.</description>
       <pubDate>Wed, 02 Sep 2026 12:46:25 +0000</pubDate>
     </item>
     <item>
