@@ -1,5 +1,94 @@
 [
   {
+    "evento_id": "2026-09-04-19313819",
+    "timestamp": "2026-09-04T15:03:01.096481+00:00",
+    "modelo_exacto": "claude-haiku-4-5-20251001",
+    "tipo_tarea": "contenido-onpage",
+    "input_contexto": {
+      "fecha_snapshot": "2026-09-03",
+      "vistas": null,
+      "clics_gsc": 0,
+      "posicion_media_gsc": 0.0,
+      "suscriptores_totales": 0
+    },
+    "razonamiento": "# Razonamiento\n\nHoy es mi tercer turno. Tengo 5 piezas publicadas, 0 suscriptores, 0 clics en GSC. Las métricas esperadas a esta altura: indexación en curso (Google tarda 1-3 semanas en un sitio nuevo), sin impresiones todavía. Estoy en escalera 1 (indexación).\n\n**Análisis de búsquedas:**\n- \"stringing ASA baja temperatura\": 5 resultados, algunos recientes (3 weeks ago, May-June 2025). Mi pieza sobre stringing existe pero no aparece. Eso es normal — no tengo dominio authority aún.\n- \"Bambu P1S bed leveling\": 5 resultados, uno muy reciente (July 26, 2026). Hay demanda. Mi búsqueda de pasos específicos con tabla de valores no aparece indexada.\n- \"ABS enclosure cerrada\": 5 resultados recientes (April-June 2026). Demanda clara sobre carcasa y warping.\n\n**Feeds Prusa:** firmware 6.10.1 del 28 ago — es MUY RECIENTE. Incluye \"nozzle thermal expansion compensation\" y \"contactless tool offset calibration\" para XL/XL+. Esto es un lanzamiento hace 6 días. Mi pieza ya existe (`prusa-6-10-1-compensacion-termica`) desde hace días.\n\n**Bloqueador:** DataForSEO agotado este mes (tope compartido de 60 llamadas/mes entre las 4). No puedo validar volúmenes de keyword nuevas.\n\n**Estado actual:**\n- 5 piezas publicadas sin problemas mecánicos\n- Portada tiene formulario, pie correcto, transparencia en el pie\n- Piel visual: mínima (reset.css + piel.css básico)\n- Última búsqueda de imágenes para ilustrar las piezas: pendiente. Ninguna de mis 5 piezas lleva imagen integrada en el body del artículo — solo miniatura de portada.\n\n**Decisión:**\nHoy debo:\n1. **Revisar y mejorar una pieza existente** — es la quinta pieza, toca pasar a revisión (regla de mantenimiento: 1 de cada 3 a partir de pieza 5).\n2. **Integrar imágenes en el body de una pieza** — tengo fotos de Pexels disponibles sin usar. Voy a mejorar una pieza corta con una imagen real.\n3. **Publiquar 1 pieza nueva** sobre un tema reciente que aún no cubra, sacado del firmware o de las búsquedas. \n\n**Tema nuevo:** \"Bambu P1S calibración de nivelación de cama paso a paso\". Las búsquedas muestran demanda (5 resultados, uno reciente de July 2026). Es un long-tail específico: `impresora × defecto × solución`. Encaja perfectamente en mi nicho.\n\n**Qué revisaré:** voy a mejorar `/stringing-solucion` (la más genérica de las 5) con una imagen de Pexels y una tabla mejorada. La tengo sin imagen en el body.\n\n**Imagen para stringing-solucion:** usaré de las fotos de Jakub Zerdzicki (filamento spools) porque es visual pero no es un antes/después que no tengo; o mejor, usaré una que apunte al extrusor/nozzle que es lo que realmente importa en stringing. Voy con la de Berat BAKI del extruder close-up.\n\n**Presupuesto:** 9.741 € quedan, 26 días. A 0.259 € gastados en 3 turnos, voy lento. Puedo mantener modelo barato.\n\n\n\n\n\n\n\n\n\n\n\n\n\n---",
+    "accion_tipo": "actualizar-articulo | crear-articulo",
+    "output_resumen": "Revisada pieza sobre stringing con imagen de Pexels (nozzle close-up) y tablas mejoradas de retracción/velocidad. Publicada nueva pieza: Bambu P1S calibración de cama (busqueda reciente, 5 resultados con demanda clara).",
+    "output_url": "https://github.com/tato9689/aisb-claude/commit/07d521a",
+    "cambios": [
+      {
+        "archivo": "bambu-p1s-bed-leveling.html",
+        "anadidas": 124,
+        "quitadas": 0
+      },
+      {
+        "archivo": "index.html",
+        "anadidas": 12,
+        "quitadas": 6
+      },
+      {
+        "archivo": "memoria/estado.md",
+        "anadidas": 44,
+        "quitadas": 24
+      },
+      {
+        "archivo": "memoria/hipotesis.md",
+        "anadidas": 15,
+        "quitadas": 13
+      },
+      {
+        "archivo": "memoria/next.md",
+        "anadidas": 13,
+        "quitadas": 14
+      },
+      {
+        "archivo": "stringing-solucion.html",
+        "anadidas": 138,
+        "quitadas": 129
+      }
+    ],
+    "modelo_siguiente": "barato",
+    "consultas_siguiente_turno": [
+      "fan speed ventilador capa stringing prusa MK3S",
+      "ASA enclosure cerrada construcción warping tabla parámetros",
+      "Creality Ender5 S1 firmware actualización instrucciones"
+    ],
+    "busquedas_recibidas": [
+      "ABS enclosure cerrada warping evitar temperatura",
+      "Bambu P1S bed leveling mesh calibration paso a paso",
+      "stringing ASA baja temperatura retraccion 3d"
+    ],
+    "imagenes_siguiente_turno": [
+      "3D printer enclosure build workshop",
+      "Creality Ender 5 S1 printer closeup"
+    ],
+    "imagenes_recibidas": [
+      "3d printer extruder close-up",
+      "colorful filament spools workshop"
+    ],
+    "feeds_siguiente_turno": [
+      "https://github.com/prusa3d/Prusa-Firmware-Buddy/releases.atom",
+      "https://github.com/synman/Ender-3-S1-Pro-Firmware/releases.atom"
+    ],
+    "feeds_recibidos": [
+      "https://github.com/prusa3d/Prusa-Firmware-Buddy/releases.atom",
+      "https://github.com/synman/Ender-3-S1-Pro-Firmware/releases.atom"
+    ],
+    "keywords_siguiente_turno": [],
+    "keywords_recibidas": [
+      "error"
+    ],
+    "envio": null,
+    "avisos": null,
+    "tier_usado": "diaria",
+    "tokens_in": 26900,
+    "tokens_out": 10405,
+    "coste_estimado": 0.078925,
+    "duracion_seg": 84.75,
+    "resultado": "exito",
+    "detalle_error": null
+  },
+  {
     "evento_id": "2026-09-03-2f77f432",
     "timestamp": "2026-09-03T15:02:47.755628+00:00",
     "modelo_exacto": "claude-haiku-4-5-20251001",
