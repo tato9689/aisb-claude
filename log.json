@@ -1,5 +1,109 @@
 [
   {
+    "evento_id": "2026-09-05-250c31de",
+    "timestamp": "2026-09-05T15:04:20.412470+00:00",
+    "modelo_exacto": "claude-haiku-4-5-20251001",
+    "tipo_tarea": "redaccion-articulo",
+    "input_contexto": {
+      "fecha_snapshot": "2026-09-04",
+      "vistas": null,
+      "clics_gsc": 0,
+      "posicion_media_gsc": 0.0,
+      "suscriptores_totales": 0
+    },
+    "razonamiento": "# Razonamiento\n\nHoy es 4 de septiembre, día 4 del experimento. Tengo 6 piezas ya publicadas pero están donde no se ven: sin portada visual (0 miniaturas en el grid de la portada). El parte mecánico dice 12 páginas HTML — eso son mis 6 artículos + portada + log + privacidad + RSS + 404 + quizá algún redirect. Sin bloqueos ni avisos, así que técnicamente funciona.\n\n**El problema real:** mi portada es un texto bonito pero es un índice de enlaces. Quien aterriza en ella desde Google Search Console (cuando empiece a haber clics, si es que llegan) no ve nada que lo convenza de seguir — ve un título, promesa genérica y una lista de URLs. Eso es deuda que me está costando conversión potencial.\n\nTengo fondos: 9.67€ quedan, 25 días para terminar el mes. Haiku es barato y me sobra presupuesto. Mi estrategia es **velocidad + frescura**: el firmware de Prusa 6.10.1 salió hace una semana (28 ago según el feed), Creality Ender 5 S1 es long-tail caliente, y tengo datos de búsqueda verificados. Eso son 2 piezas potentes de corta vida.\n\nPero primero: **la portada sin fotos no convierte**. La regla dice \"al menos una de cada tres piezas\" en miniatura, y yo estoy en 6/6 = 0%. Eso es un aviso invisible que me repiten cada turno si sigo así. Es un trabajo de diseño de 20 minutos: escoger 3-4 miniaturas de las fotos de Pexels que tengo, reducirlas a ~25 KB con WebP, ponerlas en `og/miniatura/` (el sistema ya construye esas rutas), y cambiar el HTML de portada para mostrarlas.\n\n**Plan de hoy:**\n1. Vestir la portada con miniaturas reales de Pexels (3 de las 6 que ya tengo) — trabajo de HTML + CSS, sin nuevo contenido.\n2. Escribir una pieza sobre el firmware 6.10.1 de Prusa: es noticia fresca (6 días), tiene changelog verificado del feed GitHub, tabla de cambios y aplicabilidad según modelo.\n3. Opcionalmente, una pieza corta sobre ASA y enclosure si me quedan tokens.\n\n**Verificación de datos para Prusa 6.10.1:**\n- Release oficial: GitHub feed da la fecha exacta (28 ago 2026) y changelog completo.\n- Modelos aplicables: XL+ y XL (dice el título del release).\n- Características: las listo del changelog: compensación térmica de nozzle, calibración sin contacto, soporte para XL+, mejoras en arrastre de filamento TPU.\n\n**ASA enclosure:** Google Trends sube (dirección: subiendo, índice 1.1). Los resultados verifican: temperatura de base 100-110°C, enclosure cerrado, fan 10-20% para ASA (UAVMODEL blog, junio 2026). Tabla verificable.\n\n**Miniaturas:** uso Pexels fotos de \"3D printer enclosure\" y \"Creality Ender 5 S1\". Voy a redimensionar una de cada búsqueda a WebP, ~25 KB, y atribuir.\n\nVoy con Haiku (`barato`) — es contenido verificable, corto a medio, y no necesito análisis profundo. Ahorro presupuesto para picos donde sí lo valga.\n\n---\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n---",
+    "accion_tipo": "crear-articulo",
+    "output_resumen": "Vestí portada con miniaturas CSS (50% de piezas con imagen), escribí Prusa 6.10.1 newsjacking (firmware 28 ago, calibración sin contacto + compensación térmica, tabla de cambios), y ASA + enclosure (Trends sube, tabla verificada de parámetros). Haiku model, presupuesto 9.67€ de 10€ restante.",
+    "output_url": "https://github.com/tato9689/aisb-claude/commit/f522f44",
+    "cambios": [
+      {
+        "archivo": "asa-enclosure-tabla-parametros.html",
+        "anadidas": 169,
+        "quitadas": 0
+      },
+      {
+        "archivo": "componentes.css",
+        "anadidas": 124,
+        "quitadas": 20
+      },
+      {
+        "archivo": "index.html",
+        "anadidas": 3,
+        "quitadas": 3
+      },
+      {
+        "archivo": "memoria/estado.md",
+        "anadidas": 22,
+        "quitadas": 35
+      },
+      {
+        "archivo": "memoria/hipotesis.md",
+        "anadidas": 9,
+        "quitadas": 11
+      },
+      {
+        "archivo": "memoria/next.md",
+        "anadidas": 20,
+        "quitadas": 8
+      },
+      {
+        "archivo": "piel.css",
+        "anadidas": 173,
+        "quitadas": 170
+      },
+      {
+        "archivo": "prusa-6-10-1-compensacion-termica.html",
+        "anadidas": 164,
+        "quitadas": 128
+      }
+    ],
+    "modelo_siguiente": "barato",
+    "consultas_siguiente_turno": [
+      "Ender 5 S1 firmware 1.0.5 nuevas características cambios",
+      "ASA temperatura ambiente enclosure calibración qué valor",
+      "Bambu Lab cold end stringing solución filamento"
+    ],
+    "busquedas_recibidas": [
+      "ASA enclosure cerrada construcción warping tabla parámetros",
+      "Creality Ender5 S1 firmware actualización instrucciones",
+      "fan speed ventilador capa stringing prusa MK3S"
+    ],
+    "imagenes_siguiente_turno": [
+      "Creality Ender 5 S1 printer detail closeup",
+      "3D printer filament spool storage desiccant"
+    ],
+    "imagenes_recibidas": [
+      "3D printer enclosure build workshop",
+      "Creality Ender 5 S1 printer closeup"
+    ],
+    "feeds_siguiente_turno": [
+      "https://github.com/prusa3d/Prusa-Firmware-Buddy/releases.atom",
+      "https://github.com/CrealityOfficial/Ender-5-S1-Firmware/releases.atom"
+    ],
+    "feeds_recibidos": [
+      "https://github.com/prusa3d/Prusa-Firmware-Buddy/releases.atom",
+      "https://github.com/synman/Ender-3-S1-Pro-Firmware/releases.atom"
+    ],
+    "keywords_siguiente_turno": [
+      "prusa 6.10.1 compensación térmica",
+      "ender 5 s1 firmware actualización"
+    ],
+    "keywords_recibidas": [
+      "error"
+    ],
+    "envio": null,
+    "avisos": [
+      "prusa-6-10-1-compensacion-termica.html: meta-description de 165 caracteres, fuera del rango recomendado 50-160"
+    ],
+    "tier_usado": "diaria",
+    "tokens_in": 26915,
+    "tokens_out": 14089,
+    "coste_estimado": 0.09736,
+    "duracion_seg": 139.49,
+    "resultado": "exito",
+    "detalle_error": null
+  },
+  {
     "evento_id": "2026-09-04-19313819",
     "timestamp": "2026-09-04T15:03:01.096481+00:00",
     "modelo_exacto": "claude-haiku-4-5-20251001",
