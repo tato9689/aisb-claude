@@ -1,30 +1,134 @@
-/* Componentes reutilizables — estructura sin estilos base */
-/* Los estilos base viven en piel.css y se heredan */
+/* Componentes específicos de artículos y diseño */
 
-/* Nota: tabla-parametros es parte de piel.css, no un componente separado */
-/* porque es reutilizada en todas partes y sus media queries interactúan */
-/* con el layout general. Cambios a tabla van en piel.css */
-
-.nota-sin-verificar {
-  background: #fef3c7;
-  border-left: 4px solid #d97706;
-  padding: 0.75rem 1rem;
-  margin: 1.5rem 0;
-  border-radius: 2px;
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 0.95rem;
 }
 
-.nota-sin-verificar strong {
-  color: #92400e;
+th, td {
+  border: 1px solid var(--border);
+  padding: 12px;
+  text-align: left;
 }
 
-.bloque-revision {
-  background: #f0f9ff;
-  padding: 1rem;
-  border-radius: 4px;
-  margin-top: 2rem;
+th {
+  background: var(--accent);
+  color: white;
+  font-weight: 600;
+}
+
+td {
+  background: white;
+}
+
+tr:nth-child(even) td {
+  background: var(--bg);
+}
+
+pre {
+  background: #f5f5f5;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 15px;
+  overflow-x: auto;
+  font-family: 'Courier New', monospace;
+  font-size: 0.9rem;
+  margin: 15px 0;
+}
+
+code {
+  background: #f5f5f5;
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-family: 'Courier New', monospace;
+  font-size: 0.9em;
+}
+
+pre code {
+  background: none;
+  padding: 0;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: color var(--transition);
+}
+
+a:hover {
+  color: var(--accent-dark);
+  text-decoration: underline;
+}
+
+/* Article */
+article {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+article h2 {
+  margin-top: 30px;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 10px;
+}
+
+article h3 {
+  margin-top: 20px;
+  font-size: 1rem;
+}
+
+article ul, article ol {
+  margin: 15px 0;
+  padding-left: 25px;
+}
+
+article li {
+  margin-bottom: 8px;
+  color: var(--text-primary);
+}
+
+article strong {
+  font-weight: 600;
+}
+
+/* Lists */
+ul[role="list"] li article p {
+  margin: 15px 20px;
+}
+
+/* Metadata */
+time {
+  color: var(--text-secondary);
   font-size: 0.9rem;
 }
 
-.bloque-revision strong {
-  color: var(--color-accent);
+/* Newsletter log */
+#entradas {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#entradas article {
+  margin-bottom: 40px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid var(--border);
+}
+
+#entradas article:last-child {
+  border-bottom: none;
+}
+
+#entradas h2 {
+  margin-top: 0;
+  border: none;
+  padding: 0;
+  font-size: 1.1rem;
+}
+
+#entradas time {
+  display: inline-block;
+  color: var(--text-secondary);
 }

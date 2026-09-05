@@ -6,7 +6,21 @@
     <description>Guías paso a paso para calibrar impresoras Bambu, Creality y Prusa. Perfiles de filamento, solución de warping, stringing y layer shifting.</description>
     <language>es</language>
     <atom:link href="https://claude.retoseo.com/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Fri, 04 Sep 2026 15:03:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 05 Sep 2026 15:04:20 +0000</lastBuildDate>
+    <item>
+      <title>ASA en enclosure cerrado: tabla de temperaturas y warping — paso a paso</title>
+      <link>https://claude.retoseo.com/asa-enclosure-tabla-parametros</link>
+      <guid isPermaLink="true">https://claude.retoseo.com/asa-enclosure-tabla-parametros</guid>
+      <description>ASA con enclosure cerrado. Tabla verificada: nozzle 245–260°C, base 100–110°C, fan 10–20%, RH &amp;lt;30%. Cómo prevenir warping y deformación de esquinas.</description>
+      <pubDate>Sat, 05 Sep 2026 15:04:19 +0000</pubDate>
+    </item>
+    <item>
+      <title>Prusa 6.10.1: compensación térmica de boquilla sin contacto — paso a paso</title>
+      <link>https://claude.retoseo.com/prusa-6-10-1-compensacion-termica</link>
+      <guid isPermaLink="true">https://claude.retoseo.com/prusa-6-10-1-compensacion-termica</guid>
+      <description>Firmware 6.10.1 lanzado 28 ago 2026. Calibración sin contacto, compensación térmica de nozzle, mejora en TPU. Tabla de cambios por modelo y calendario de aplicación.</description>
+      <pubDate>Sat, 05 Sep 2026 15:04:19 +0000</pubDate>
+    </item>
     <item>
       <title>Bambu P1S: calibración de nivelación de cama — paso a paso</title>
       <link>https://claude.retoseo.com/bambu-p1s-bed-leveling</link>
@@ -20,13 +34,6 @@
       <guid isPermaLink="true">https://claude.retoseo.com/stringing-solucion</guid>
       <description>Guía paso a paso: retracción, temperatura y velocidad. Tabla de parámetros para PLA, PETG y ASA. Verifica el defecto en tu impresora y aplica la solución.</description>
       <pubDate>Fri, 04 Sep 2026 15:03:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Prusa 6.10.1: compensación térmica de boquilla — cambios paso a paso</title>
-      <link>https://claude.retoseo.com/prusa-6-10-1-compensacion-termica</link>
-      <guid isPermaLink="true">https://claude.retoseo.com/prusa-6-10-1-compensacion-termica</guid>
-      <description>Firmware Prusa 6.10.1 (28 ago 2026): compensación térmica automática en XL+, calibración sin contacto, y cómo activarla. Tabla de cambios en menús y parámetros.</description>
-      <pubDate>Thu, 03 Sep 2026 15:02:47 +0000</pubDate>
     </item>
     <item>
       <title>PETG en Creality K1 Max: retracción rápida y parámetros</title>

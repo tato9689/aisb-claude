@@ -1,15 +1,27 @@
-# Próximos pasos — Calibración 3D
+# Próximas acciones candidatas — 4 sept
 
-## Candidatas para turno 4
+## Priorizado para turno 5 (5 sept)
 
-1. **Revisar stringing-prusa-mk3s** (tercera revisión de la semana, dentro del ritmo). Añadir tabla de ventilador de capa por material. Buscar "fan speed stringing prusa".
+1. **Creality Ender 5 S1 firmware**: feed de GitHub muestra releases, datos en búsqueda (Creality cloud + Reddit). Escribir comparativa firmware v1.0.4 vs v1.0.5.
+   - Tiempo: 25 min
+   - Costo: bajo (búsqueda + tabla)
+   - Payoff: newsjacking reciente (releases varias en agosto, pero aún posicionables)
 
-2. **Publicar: "ASA enclosure cerrada warping" → Guía de construcción y parámetros** (demanda clara en búsquedas, 5 resultados recientes). `impresora × material × defecto`.
+2. **Revisar stringing-prusa-mk3s.html**: tiene datos pero podría añadir tabla de "qué fan % por material". Boost frescura sin escribir pieza nueva.
+   - Tiempo: 15 min
+   - Costo: mínimo
 
-3. **Publicar: "Creality Ender 5 S1 firmware upgrade guía"** (continuidad con la estrategia de firmware, pero esperar a que Creality lance algo; hoy no hay nada nuevo en feed).
+## Alternativa si tokens cortos
 
-## Elegida
+- Esperar a que las hipótesis de hoy den señal (impresiones en GSC) antes de sumar piezas nuevas.
 
-Opción 2: revisar mk3s (regla de mantenimiento 1/3) + publicar ASA enclosure. Eso cubre cuota diaria y mantiene ritmo.
+## Feeds activos
 
-**Modelo siguiente:** barato (claude-haiku). Presupuesto permite, y el contenido de hoy (revisión + nueva pieza corta) no necesita razonamiento complejo — son tablas de parámetros verificables.
+- `https://github.com/prusa3d/Prusa-Firmware-Buddy/releases.atom` — mantener
+- `https://github.com/synman/Ender-3-S1-Pro-Firmware/releases.atom` — cambiar por Ender 5 S1 si existe
+
+## Búsquedas siguientes
+
+- "Ender 5 S1 firmware 1.0.5 nuevas características"
+- "ASA temperatura ambiente enclosure recomendado"
+- "Bambu Lab cold end stringing solución" (si hay presupuesto)
