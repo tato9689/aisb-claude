@@ -1,5 +1,33 @@
 [
   {
+    "evento_id": "2026-09-06-627d5209",
+    "timestamp": "2026-09-06T15:05:37.197699+00:00",
+    "modelo_exacto": "claude-haiku-4-5-20251001",
+    "tipo_tarea": "contenido-newsletter",
+    "input_contexto": {
+      "fecha_snapshot": "2026-09-05",
+      "vistas": null,
+      "clics_gsc": 0,
+      "posicion_media_gsc": 0.0,
+      "suscriptores_totales": 0,
+      "evolucion_7d": {
+        "vistas": 0,
+        "suscriptores": 0
+      }
+    },
+    "razonamiento": "# Razonamiento\n\n**Situación actual:**\n- Sitio con 6 artículos publicados, 0 impresiones, 0 clics, 0 suscriptores. Estamos en fase indexación pura — Google aún no ha procesado el dominio nuevo.\n- DataForSEO agotado este mes (tope compartido con otras 3 IAs).\n- Dos avisos mecánicos pendientes: meta-description fuera de rango (165 chars) en Prusa 6.10.1, y falta JSON-LD Article en stringing-solucion.\n- Feed de Prusa acaba de soltar v6.10.1 el 28 de agosto (hace una semana) — eso ya está publicado, pero hay una oportunidad: v6.10.0 (27 ago) y v6.9.0 (20 ago) llevan cambios nuevos no cubiertos todavía.\n\n**Decisión estratégica:**\n1. Primero, **arreglar los avisos mecánicos**. No bloquean, pero siguen siendo deuda que se repite cada turno. La meta-description de Prusa está en 165 (fuera del 50-160 recomendado) — la acorto. El JSON-LD de stringing-solucion le falta — lo añado.\n2. **Crear 1 pieza nueva** sobre Prusa 6.9.0 (Load All/Unload All, FLEX material profile) — es feed reciente, tiene datos verificables, y es el piso mínimo de contenido del día.\n3. **Velocidad**: uso modelo barato (Haiku). Presupuesto da: he gastado 0,422€ de 10€, quedan 9,578€. Un turno eficiente con Haiku cuesta ~0,15€. Estoy por debajo del ritmo, no hay presión de tope.\n\n**Por qué no otras cosas hoy:**\n- Las búsquedas que pedí ayer (Ender 5 S1 firmware, ASA temperatura, Bambu stringing) traen datos reales, pero no hay una \"pieza urgente\" nueva ahí. El Ender 5 S1 1.0.5 es de enero 2023 (viejo); ASA y Bambu stringing son temas generales sin lanzamiento nuevo que los dispare.\n- El feed de Creality 404 (la URL está muerta) — lo elimino de seguimiento.\n- Foto de Pexels: tengo 3 opciones de Ender 5 S1 y 3 de filamento/desiccante. Las guardo para piezas futuras. Hoy no las necesito porque creo sobre firmware Prusa, que necesitaría foto de pantalla de menú o diagrama — mejor SVG.\n\n**Métricas pendientes:**\nSin impresiones, no hay movimiento en 7 días. El siguiente escalón mínimo es \"¿indexó Google?\". No puedo verificarlo sin Search Console directo, pero IndexNow en cada publicación (que ya hago) ayuda. Paciencia — el tope de datos es una semana.\n\n---",
+    "accion_tipo": "crear-articulo",
+    "output_resumen": "Nuevo artículo Prusa 6.9.0: Load All/Unload All (firmware 20/8). Arreglados avisos mecánicos (meta-description 165→155 chars, JSON-LD Article en stringing-solucion). Feed vivo de releases Prusa como disparador.",
+    "output_url": null,
+    "tokens_in": 27225,
+    "tokens_out": 13242,
+    "coste_estimado": 0.093435,
+    "duracion_seg": 142.45,
+    "resultado": "error",
+    "detalle_error": "bloqueado por guardarraíles: prusa-6-10-1-compensacion-termica.html: afirmación financiera — afirma ausencia de riesgo («…ad hace contacto óptico — sin fricción, sin riesgo de dañar el nozzle. Parada inmediata en…»); prusa-6-9-0-load-unload-all.html: afirmación financiera — afirma ausencia de riesgo («…Filamento → Load All para ver el flujo, sin riesgo. Cambio menor: \"Crash dumps\" (diagnósti…»)",
+    "avisos": null
+  },
+  {
     "evento_id": "2026-09-05-250c31de",
     "timestamp": "2026-09-05T15:04:20.412470+00:00",
     "modelo_exacto": "claude-haiku-4-5-20251001",
