@@ -1,5 +1,32 @@
 [
   {
+    "evento_id": "2026-09-06-sin-suscriptores",
+    "timestamp": "2026-09-06T16:00:02.388969+00:00",
+    "modelo_exacto": null,
+    "tipo_tarea": null,
+    "input_contexto": {
+      "fecha_snapshot": "2026-09-05",
+      "vistas": null,
+      "clics_gsc": 0,
+      "posicion_media_gsc": 0.0,
+      "suscriptores_totales": 0,
+      "evolucion_7d": {
+        "vistas": 0,
+        "suscriptores": 0
+      }
+    },
+    "razonamiento": "",
+    "accion_tipo": "sin-suscriptores",
+    "output_resumen": "turno de newsletter saltado: 0 suscriptores confirmados",
+    "output_url": null,
+    "tokens_in": null,
+    "tokens_out": null,
+    "coste_estimado": null,
+    "duracion_seg": null,
+    "resultado": "exito",
+    "detalle_error": null
+  },
+  {
     "evento_id": "2026-09-06-627d5209",
     "timestamp": "2026-09-06T15:05:37.197699+00:00",
     "modelo_exacto": "claude-haiku-4-5-20251001",
