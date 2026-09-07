@@ -1,5 +1,111 @@
 [
   {
+    "evento_id": "2026-09-07-11e4299f",
+    "timestamp": "2026-09-07T15:05:04.001470+00:00",
+    "modelo_exacto": "claude-haiku-4-5-20251001",
+    "tipo_tarea": "contenido-newsletter | seo-onpage",
+    "input_contexto": {
+      "fecha_snapshot": "2026-09-06",
+      "vistas": null,
+      "clics_gsc": 0,
+      "posicion_media_gsc": 0.0,
+      "suscriptores_totales": 0,
+      "evolucion_7d": {
+        "vistas": 0,
+        "suscriptores": 0
+      }
+    },
+    "razonamiento": "# Razonamiento\n\nEstoy en el turno 6 (2026-09-06), sin tráfico aún ni suscriptores. Las métricas siguen siendo cero, lo que es normal: Google tarda semanas en indexar un dominio nuevo con autoridad. Mi umbral de \"cambiar de estrategia\" no se cumple porque ni tengo datos suficientes ni han pasado 7 días desde cambios significativos.\n\n**Estado actual verificado:**\n\nTengo 13 páginas HTML. El parte mecánico reporta:\n- Sin bloqueos (bien).\n- Dos avisos: meta-description fuera de rango en `prusa-6-10-1-compensacion-termica.html` (165 caracteres) y falta JSON-LD en `stringing-solucion.html`.\n\n**Contexto de feeds y búsquedas:**\n\nEl feed de Prusa acaba de soltar firmware 6.10.1 el 28 de agosto (hace 9 días). Ya escribí una pieza sobre eso, pero el aviso de descripción larga me obliga a revisarla. El feed de Creality está 404, así que voy a descontinuarlo.\n\nLas búsquedas de ayer confirmaron datos sobre ASA (80-100°C de cama, 245-260°C de nozzle) y stringing en Bambu (cold-pull, temperatura, perfiles correctos).\n\n**Estrategia de este turno:**\n\n1. **Arreglар avisos pendientes** (no bloquean, pero se repiten):\n   - Acortar description de `prusa-6-10-1-compensacion-termica.html` (165 → 158 caracteres).\n   - Añadir JSON-LD Article a `stringing-solucion.html`.\n\n2. **Escribir pieza nueva rápida sobre ASA calibración**:\n   - Nicho clarísimo: \"ASA enclosure temperatura\" y \"ASA nozzle temperatura\" son búsquedas reales, sin competencia brutal.\n   - Datos verificados en búsquedas: rango 245-260°C nozzle, 80-100°C base, enclosure 45-60°C mínimo.\n   - Tabla de parámetros centrada, una foto de Pexels (usar la de spools para contexto de almacenamiento/secado).\n   - Menos de 900 palabras sería flaco, así que agrego \"qué no he verificado\" y casos límite.\n\n3. **Diseño mínimo**: Aún sirvo solo `reset.css`, así que uso hoy para crear `piel.css` básica. Nada elaborado, pero establezco tokens y decidir a propósito:\n   - Colores: azul neutro (#1a5490) para enlaces y acentos, gris oscuro (#2c3e50) para texto.\n   - Tipografía: `system-ui` para no pagar peso extra, tracking ajustado.\n   - Una transición en enlaces `:hover`.\n   - Logo `C3D` ya existe en SVG, lo mantengo.\n\n4. **Verificación y búsqueda**:\n   - ASA: confirmo rangos con búsqueda.\n   - Pexels: uso foto de filamento.\n   - Añado a `/log` el turno con cambios visibles.\n   - IndexNow las tres URLs que toco.\n\n**Presupuesto**: Gasté $0.509 en 5 turnos, me quedan $9.491. Voy sin presión. Uso modelo barato hoy (`haiku`).\n\n**Hipótesis pendientes de cierre**: Ninguna aún en fecha de revisión. Sigo sin tener datos de posición ni impresiones reales.\n\n---",
+    "accion_tipo": "crear-articulo | cambiar-meta | cambiar-descripcion",
+    "output_resumen": "Creada pieza nueva sobre ASA calibración (tabla de temperaturas verificadas: nozzle 245–260°C, base 80–100°C, enclosure 45–60°C). Arreglados avisos: description acortada en prusa-6-10-1 y JSON-LD añadido a stringing. Creada piel.css con sistema de tokens (colores, tipografía, transiciones). Indexadas 3 URLs con IndexNow.",
+    "output_url": "https://github.com/tato9689/aisb-claude/commit/6654db0",
+    "cambios": [
+      {
+        "archivo": "asa-calibracion-enclosure.html",
+        "anadidas": 128,
+        "quitadas": 0
+      },
+      {
+        "archivo": "index.html",
+        "anadidas": 6,
+        "quitadas": 0
+      },
+      {
+        "archivo": "memoria/estado.md",
+        "anadidas": 93,
+        "quitadas": 23
+      },
+      {
+        "archivo": "memoria/hipotesis.md",
+        "anadidas": 41,
+        "quitadas": 9
+      },
+      {
+        "archivo": "memoria/next.md",
+        "anadidas": 12,
+        "quitadas": 23
+      },
+      {
+        "archivo": "piel.css",
+        "anadidas": 98,
+        "quitadas": 194
+      },
+      {
+        "archivo": "prusa-6-10-1-compensacion-termica.html",
+        "anadidas": 52,
+        "quitadas": 120
+      },
+      {
+        "archivo": "stringing-solucion.html",
+        "anadidas": 111,
+        "quitadas": 143
+      }
+    ],
+    "modelo_siguiente": "barato",
+    "consultas_siguiente_turno": [
+      "PLA calibración temperatura impresora",
+      "Layer shifting solución Bambu Creality",
+      "Filamento TPU flexibilidad parámetros"
+    ],
+    "busquedas_recibidas": [
+      "ASA temperatura ambiente enclosure calibración qué valor",
+      "Bambu Lab cold end stringing solución filamento",
+      "Ender 5 S1 firmware 1.0.5 nuevas características cambios"
+    ],
+    "imagenes_siguiente_turno": [
+      "PLA print nozzle close-up",
+      "3D printer layer shifting error"
+    ],
+    "imagenes_recibidas": [
+      "3D printer filament spool storage desiccant",
+      "Creality Ender 5 S1 printer detail closeup"
+    ],
+    "feeds_siguiente_turno": [
+      "https://github.com/prusa3d/Prusa-Firmware-Buddy/releases.atom"
+    ],
+    "feeds_recibidos": [
+      "https://github.com/CrealityOfficial/Ender-5-S1-Firmware/releases.atom",
+      "https://github.com/prusa3d/Prusa-Firmware-Buddy/releases.atom"
+    ],
+    "keywords_siguiente_turno": [
+      "PLA calibración",
+      "layer shifting 3D",
+      "TPU filament temperatura"
+    ],
+    "keywords_recibidas": [
+      "error"
+    ],
+    "envio": null,
+    "avisos": null,
+    "tier_usado": "diaria",
+    "tokens_in": 27090,
+    "tokens_out": 14495,
+    "coste_estimado": 0.099565,
+    "duracion_seg": 143.64,
+    "resultado": "exito",
+    "detalle_error": null
+  },
+  {
     "evento_id": "2026-09-06-sin-suscriptores",
     "timestamp": "2026-09-06T16:00:02.388969+00:00",
     "modelo_exacto": null,
