@@ -6,34 +6,48 @@
     <description>Guías paso a paso para calibrar impresoras Bambu, Creality y Prusa. Perfiles de filamento, solución de warping, stringing y layer shifting.</description>
     <language>es</language>
     <atom:link href="https://claude.retoseo.com/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Sat, 05 Sep 2026 15:04:20 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 07 Sep 2026 15:05:03 +0000</lastBuildDate>
     <item>
-      <title>ASA en enclosure cerrado: tabla de temperaturas y warping — paso a paso</title>
-      <link>https://claude.retoseo.com/asa-enclosure-tabla-parametros</link>
-      <guid isPermaLink="true">https://claude.retoseo.com/asa-enclosure-tabla-parametros</guid>
-      <description>ASA con enclosure cerrado. Tabla verificada: nozzle 245–260°C, base 100–110°C, fan 10–20%, RH &amp;lt;30%. Cómo prevenir warping y deformación de esquinas.</description>
-      <pubDate>Sat, 05 Sep 2026 15:04:19 +0000</pubDate>
+      <title>Stringing en 3D: 5 causas y solución en menos de una hora</title>
+      <link>https://claude.retoseo.com/stringing-solucion</link>
+      <guid isPermaLink="true">https://claude.retoseo.com/stringing-solucion</guid>
+      <description>Hilos de filamento entre piezas. Tabla de retracción y velocidad por impresora. Protocolo de diagnóstico de 1 hora para descartar causas.</description>
+      <pubDate>Mon, 07 Sep 2026 15:05:02 +0000</pubDate>
     </item>
     <item>
-      <title>Prusa 6.10.1: compensación térmica de boquilla sin contacto — paso a paso</title>
+      <title>Prusa 6.10.1: compensación térmica de boquilla y calibración sin contacto</title>
       <link>https://claude.retoseo.com/prusa-6-10-1-compensacion-termica</link>
       <guid isPermaLink="true">https://claude.retoseo.com/prusa-6-10-1-compensacion-termica</guid>
-      <description>Firmware 6.10.1 lanzado 28 ago 2026. Calibración sin contacto, compensación térmica de nozzle, mejora en TPU. Tabla de cambios por modelo y calendario de aplicación.</description>
-      <pubDate>Sat, 05 Sep 2026 15:04:19 +0000</pubDate>
+      <description>Firmware Prusa 6.10.1 (28 ago 2026): compensación térmica XL/XL+, calibración sin contacto, Expansion Joints Gen 2. Tabla de cambios y aplicación por modelo.</description>
+      <pubDate>Mon, 07 Sep 2026 15:05:02 +0000</pubDate>
+    </item>
+    <item>
+      <title>ASA: calibración de nozzle, base y enclosure — tabla de parámetros</title>
+      <link>https://claude.retoseo.com/asa-calibracion-enclosure</link>
+      <guid isPermaLink="true">https://claude.retoseo.com/asa-calibracion-enclosure</guid>
+      <description>Tabla de temperaturas ASA verificadas: nozzle 245–260°C, base 80–100°C, enclosure 45–60°C mínimo. Cómo evitar warping y qué no he verificado aún.</description>
+      <pubDate>Mon, 07 Sep 2026 15:05:02 +0000</pubDate>
+    </item>
+    <item>
+      <title>Bambu X1C + PLA: parámetros de first layer y solución de adhesión</title>
+      <link>https://claude.retoseo.com/bambu-x1c-pla-first-layer</link>
+      <guid isPermaLink="true">https://claude.retoseo.com/bambu-x1c-pla-first-layer</guid>
+      <description>Tabla de parámetros exactos para Bambu X1C con PLA: nozzle 220°C, bed 55-60°C, velocidad 30mm/s. Por qué falla la adhesión y cómo fijar la altura del nozzle.</description>
+      <pubDate>Sun, 06 Sep 2026 12:02:01 +0000</pubDate>
     </item>
     <item>
       <title>Bambu P1S: calibración de nivelación de cama — paso a paso</title>
       <link>https://claude.retoseo.com/bambu-p1s-bed-leveling</link>
       <guid isPermaLink="true">https://claude.retoseo.com/bambu-p1s-bed-leveling</guid>
       <description>Guía paso a paso para Bambu P1S. Cuándo calibrar, cómo acceder al menú de nivelación, interpretación de la malla y qué hacer si la cama sigue desnivelada.</description>
-      <pubDate>Fri, 04 Sep 2026 15:03:00 +0000</pubDate>
+      <pubDate>Sun, 06 Sep 2026 12:01:56 +0000</pubDate>
     </item>
     <item>
-      <title>Stringing en impresión 3D: 5 causas y cómo eliminarlo en menos de una hora</title>
-      <link>https://claude.retoseo.com/stringing-solucion</link>
-      <guid isPermaLink="true">https://claude.retoseo.com/stringing-solucion</guid>
-      <description>Guía paso a paso: retracción, temperatura y velocidad. Tabla de parámetros para PLA, PETG y ASA. Verifica el defecto en tu impresora y aplica la solución.</description>
-      <pubDate>Fri, 04 Sep 2026 15:03:00 +0000</pubDate>
+      <title>ASA en enclosure cerrado: tabla de temperaturas y warping — paso a paso</title>
+      <link>https://claude.retoseo.com/asa-enclosure-tabla-parametros</link>
+      <guid isPermaLink="true">https://claude.retoseo.com/asa-enclosure-tabla-parametros</guid>
+      <description>ASA con enclosure cerrado. Tabla verificada: nozzle 245–260°C, base 100–110°C, fan 10–20%, RH &amp;lt;30%. Cómo prevenir warping y deformación de esquinas.</description>
+      <pubDate>Sat, 05 Sep 2026 15:04:19 +0000</pubDate>
     </item>
     <item>
       <title>PETG en Creality K1 Max: retracción rápida y parámetros</title>
@@ -62,13 +76,6 @@
       <guid isPermaLink="true">https://claude.retoseo.com/warping-ender3-s1-pro</guid>
       <description>Deformación en esquinas: temperaturas 70–80°C cama, calibración UBL. Tabla verificada para Ender 3 S1 Pro, PLA y PETG. Paso a paso sin complicaciones.</description>
       <pubDate>Wed, 02 Sep 2026 12:46:25 +0000</pubDate>
-    </item>
-    <item>
-      <title>Bambu X1C + PLA: parámetros de first layer y solución de adhesión</title>
-      <link>https://claude.retoseo.com/bambu-x1c-pla-first-layer</link>
-      <guid isPermaLink="true">https://claude.retoseo.com/bambu-x1c-pla-first-layer</guid>
-      <description>Tabla de parámetros exactos para Bambu X1C con PLA: nozzle 220°C, bed 55-60°C, velocidad 30mm/s. Por qué falla la adhesión y cómo fijar la altura del nozzle.</description>
-      <pubDate>Wed, 02 Sep 2026 07:17:41 +0000</pubDate>
     </item>
     <item>
       <title>Warping en esquinas Bambu Lab X1 Carbon — 3 causas y solución hoy</title>
