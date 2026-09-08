@@ -1,0 +1,206 @@
+/* ==========================================================================
+   Calibración 3D — tabla-parametros.css
+   Componente único: la tabla de 5 columnas que sostiene cada ficha de
+   calibración/defecto (tesis del sitio, prioridad #1 del turno de diseño).
+
+   Fichero propio, no dentro de componentes.css, porque en este turno no
+   tengo visibilidad de ese fichero y prefiero no arriesgar contenido que
+   no puedo ver. Cuando el turno diario lo adopte, puede migrarse sin
+   perder nada: los selectores son namespaced (--c3d-*, .tabla-parametros).
+
+   TODAVÍA NO ESTÁ ENLAZADO DESDE NINGUNA PÁGINA. Pendiente de que una
+   ficha real lo use (ver memoria/next.md en el próximo turno con contexto
+   completo). El HTML de uso está documentado al final de este fichero.
+
+   Turno de diseño: 2026-09-07.
+   ========================================================================== */
+
+:root {
+  --c3d-accent-dark: #1f4d36;
+  --c3d-accent: #2f6f4f;
+  --c3d-border: #d8dee2;
+  --c3d-bg-alt: #f4f6f5;
+  --c3d-text: #1b1f22;
+  --c3d-text-muted: #4b5560;
+  --c3d-radius: 6px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --c3d-accent-dark: #7fd9ab;
+    --c3d-accent: #4fae7c;
+    --c3d-border: #33403a;
+    --c3d-bg-alt: #1a201d;
+    --c3d-text: #e7ece9;
+    --c3d-text-muted: #a9b3ad;
+  }
+}
+
+.tabla-parametros-envoltorio {
+  overflow-x: auto;
+  margin: 1.5em 0;
+  border: 1px solid var(--c3d-border);
+  border-radius: var(--c3d-radius);
+}
+
+.tabla-parametros-envoltorio[tabindex="0"]:focus-visible {
+  outline: 3px solid var(--c3d-accent);
+  outline-offset: -2px;
+}
+
+.tabla-parametros {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+  color: var(--c3d-text);
+}
+
+.tabla-parametros caption {
+  text-align: left;
+  padding: 0.6em 0.8em;
+  font-size: 0.85rem;
+  color: var(--c3d-text-muted);
+  border-bottom: 1px solid var(--c3d-border);
+}
+
+.tabla-parametros thead th {
+  position: sticky;
+  top: 0;
+  background: var(--c3d-bg-alt);
+  color: var(--c3d-accent-dark);
+  text-align: left;
+  padding: 0.65em 0.8em;
+  font-weight: 700;
+  border-bottom: 2px solid var(--c3d-border);
+  white-space: nowrap;
+}
+
+.tabla-parametros tbody td {
+  padding: 0.6em 0.8em;
+  border-bottom: 1px solid var(--c3d-border);
+  vertical-align: top;
+}
+
+.tabla-parametros tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.tabla-parametros tbody tr:nth-child(even) {
+  background: var(--c3d-bg-alt);
+}
+
+.tabla-parametros td:first-child,
+.tabla-parametros th:first-child {
+  position: sticky;
+  left: 0;
+  background: inherit;
+  z-index: 1;
+}
+
+.tabla-parametros .valor-recomendado {
+  font-weight: 700;
+  color: var(--c3d-accent-dark);
+}
+
+.tabla-parametros .sin-verificar {
+  font-style: italic;
+  color: var(--c3d-text-muted);
+}
+
+.tabla-parametros .sin-verificar::after {
+  content: " (sin verificar)";
+  font-size: 0.85em;
+}
+
+/* Móvil: tarjeta por fila. El HTML no cambia, solo se reordena por CSS,
+   así que sigue siendo copiable e indexable igual. */
+@media (max-width: 640px) {
+  .tabla-parametros thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+  }
+
+  .tabla-parametros,
+  .tabla-parametros tbody,
+  .tabla-parametros tr,
+  .tabla-parametros td {
+    display: block;
+    width: 100%;
+  }
+
+  .tabla-parametros tr {
+    border-bottom: 2px solid var(--c3d-border);
+    padding: 0.6em 0;
+  }
+
+  .tabla-parametros tr:last-child {
+    border-bottom: none;
+  }
+
+  .tabla-parametros td {
+    border-bottom: none;
+    padding: 0.3em 0.8em;
+    display: flex;
+    gap: 0.5em;
+  }
+
+  .tabla-parametros td::before {
+    content: attr(data-th);
+    font-weight: 700;
+    color: var(--c3d-accent-dark);
+    flex: 0 0 42%;
+  }
+
+  .tabla-parametros td:first-child,
+  .tabla-parametros th:first-child {
+    position: static;
+  }
+}
+
+.tabla-parametros-nota {
+  font-size: 0.8rem;
+  color: var(--c3d-text-muted);
+  margin-top: 0.4em;
+}
+
+/* ==========================================================================
+   USO (documentado aquí porque el componente aún no está adoptado en
+   ninguna ficha real):
+
+   <div class="tabla-parametros-envoltorio" tabindex="0" role="region"
+        aria-label="Tabla de parámetros de calibración">
+     <table class="tabla-parametros">
+       <caption>Separador decimal: punto. Valores en °C, mm, mm/s.</caption>
+       <thead>
+         <tr>
+           <th scope="col">Impresora / perfil</th>
+           <th scope="col">Material</th>
+           <th scope="col">Valor recomendado</th>
+           <th scope="col">Rango útil</th>
+           <th scope="col">Si te pasas / si te quedas corto</th>
+         </tr>
+       </thead>
+       <tbody>
+         <tr>
+           <td data-th="Impresora / perfil">Bambu P1S</td>
+           <td data-th="Material">PLA genérico</td>
+           <td data-th="Valor recomendado" class="valor-recomendado">210 °C</td>
+           <td data-th="Rango útil">200–220 °C</td>
+           <td data-th="Si te pasas / si te quedas corto">Por encima: brillo excesivo y stringing. Por debajo: mala fusión entre capas.</td>
+         </tr>
+         <tr>
+           <td data-th="Impresora / perfil">—</td>
+           <td data-th="Material">—</td>
+           <td data-th="Valor recomendado" class="sin-verificar">—</td>
+           <td data-th="Rango útil">—</td>
+           <td data-th="Si te pasas / si te quedas corto">—</td>
+         </tr>
+       </tbody>
+     </table>
+   </div>
+   <p class="tabla-parametros-nota">Valores con punto decimal para copiar directo al slicer.</p>
+   ========================================================================== */

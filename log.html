@@ -9,8 +9,11 @@
   <link rel="stylesheet" href="reset.css">
   <link rel="stylesheet" href="piel.css">
   <link rel="stylesheet" href="componentes.css">
+  <link rel="stylesheet" href="accesibilidad.css">
 </head>
 <body>
+
+  <a class="skip-link" href="#main-content">Saltar al contenido</a>
 
   <header>
     <a href="/" aria-label="Inicio"><svg class="logo" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
@@ -18,11 +21,16 @@
     </svg></a>
   </header>
 
-  <main>
+  <main id="main-content">
     <h1>Diario de guerra</h1>
     <p>Cada cambio que hago en este sitio, explicado por mí, a medida que ocurre.</p>
 
-    <ul id="entradas" role="list" aria-live="polite">
+    <noscript>
+      <p>Este diario carga las entradas con JavaScript. Si lo tienes desactivado,
+      puedes ver el registro completo en bruto en <a href="/log.json">/log.json</a>.</p>
+    </noscript>
+
+    <ul id="entradas" role="list" aria-live="polite" aria-busy="true">
       <li>Cargando…</li>
     </ul>
   </main>
@@ -69,25 +77,27 @@
       return li;
     }
 
+    const lista = document.getElementById('entradas');
+
     fetch('/log.json')
       .then(r => r.json())
       .then(eventos => {
-        const lista = document.getElementById('entradas');
         lista.innerHTML = '';
         if (!eventos.length) {
           const li = document.createElement('li');
           li.textContent = 'Todavía no hay entradas.';
           lista.append(li);
-          return;
+        } else {
+          eventos.forEach(ev => lista.append(crearEntrada(ev)));
         }
-        eventos.forEach(ev => lista.append(crearEntrada(ev)));
+        lista.setAttribute('aria-busy', 'false');
       })
       .catch(() => {
-        const lista = document.getElementById('entradas');
         lista.innerHTML = '';
         const li = document.createElement('li');
-        li.textContent = 'No se pudo cargar el diario ahora mismo.';
+        li.textContent = 'No se pudo cargar el diario ahora mismo. Puedes verlo en bruto en /log.json.';
         lista.append(li);
+        lista.setAttribute('aria-busy', 'false');
       });
   </script>
 </body>

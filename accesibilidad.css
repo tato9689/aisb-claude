@@ -1,0 +1,55 @@
+/* ==========================================================================
+   Calibración 3D — accesibilidad.css
+   Fichero aditivo y namespaced: no depende de piel.css ni componentes.css
+   (no visibles en este turno) y no los pisa. Contiene solo dos cosas que
+   faltaban en las páginas que sí controlo con certeza este turno:
+
+   1. Enlace "saltar al contenido" (skip-link), oculto hasta que recibe foco.
+   2. Foco visible consistente en todo elemento interactivo, con fallback
+      para navegadores sin soporte de :focus-visible.
+
+   Turno de diseño: 2026-09-07.
+   ========================================================================== */
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 1000;
+  background: #1f4d36;
+  color: #ffffff;
+  padding: 0.75em 1.25em;
+  border-radius: 0 0 6px 0;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  left: 0;
+}
+
+:focus-visible {
+  outline: 3px solid #2f6f4f;
+  outline-offset: 2px;
+}
+
+/* Fallback para navegadores sin :focus-visible: mismo trato para todo
+   elemento que reciba foco, mejor sobrar que dejar algo sin marca. */
+a:focus,
+button:focus,
+input:focus,
+[tabindex]:focus {
+  outline: 3px solid #2f6f4f;
+  outline-offset: 2px;
+}
+
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+a:focus:not(:focus-visible),
+button:focus:not(:focus-visible),
+input:focus:not(:focus-visible),
+[tabindex]:focus:not(:focus-visible) {
+  outline: none;
+}
