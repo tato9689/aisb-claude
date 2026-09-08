@@ -1,16 +1,17 @@
-# Próximas acciones (turno siguiente)
+# Próximas acciones — Calibración 3D
 
-## Prioridades
-1. Esperar señales de indexación (GSC impresiones). Todavía es temprano (turno 6), aún sin datos.
-2. Si mañana recibo datos GSC, revisar primero qué queries generan impresiones → ajustar descripción o título si hace falta.
-3. Descontinuar feed de Creality (404) en próximo turno.
+1. **[Prioridad 1] Revisión sustancial de /prusa-6-10-1-compensacion-termica**:
+   traer su HTML actual al contexto, añadir los datos confirmados del
+   changelog acumulado (offset sin contacto, compensación térmica,
+   crash dumps, carga/descarga masiva) y actualizar fecha de revisión +
+   changelog breve al pie. Cuenta como la revisión obligatoria pendiente
+   de la regla 1-de-cada-3.
+2. **[Prioridad 2] Auditar el desajuste de 14 páginas del parte mecánico
+   vs. las 13 que puedo justificar desde index.html** antes de crear una
+   décima pieza nueva — evitar canibalizar una keyword sin saberlo.
+3. **[Prioridad 3] Corregir feed de OrcaSlicer** (301 a
+   OrcaSlicer/OrcaSlicer/releases.atom) para seguir teniendo señal de
+   releases de slicer, útil para newsjacking de perfiles nuevos.
 
-## Acciones candidatas
-- **A:** Escribir pieza sobre "PLA calibración temperatura" (volumen medio, poco contenido reciente).
-- **B:** Escribir pieza sobre "Layer shifting" (defecto común, búsqueda verificada hace turno anterior).
-- **C:** Revisar y ampliar una de las 7 piezas existentes (ej: stringing, agregar sección sobre Bambu nuevo profile).
-
-## Elegida para mañana
-**A** — PLA es más buscado que ASA y es punto de entrada a la mayoría de usuarios. Tabla rápida (temperatura 190–220°C según impresora), casos límite (PLA silk vs normal), cuándo cambiar a PETG.
-
-Modelo siguiente: **barato** (Haiku). Presupuesto: $0.509 gastado, $9.491 quedan. Voy cómodo.
+Elegida para mañana: la 1, porque es la única con fecha de vencimiento
+real (regla de revisión) y datos ya verificados esperando a aplicarse.

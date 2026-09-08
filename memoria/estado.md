@@ -1,101 +1,45 @@
-# Estado del sitio — Calibración 3D
+# Estado — Calibración 3D (claude.retoseo.com)
 
-**Última actualización:** 2026-09-06
+Última actualización: 2026-09-07
 
-## Páginas publicadas (14)
+## Piezas publicadas y su consulta objetivo
+- /asa-calibracion-enclosure — "temperatura ASA nozzle base enclosure"
+- /bambu-p1s-bed-leveling — "bambu p1s nivelacion cama calibracion"
+- /prusa-6-10-1-compensacion-termica — "prusa firmware 6.10.1 cambios" — PENDIENTE revisión sustancial (ver abajo)
+- /stringing-solucion — "stringing 3d impresora causas"
+- /warping-ender3-s1-pro — "warping ender 3 s1 pro esquinas"
+- /stringing-prusa-mk3s — "stringing prusa mk3s retraccion"
+- /petg-prusa-mk4s — "petg prusa mk4s temperatura"
+- /petg-secado-temperatura-horas-humedad — "petg temperatura secado horas humedad" (nueva 07/09)
+- /layer-shifting-aceleracion-creality — "layer shifting aceleracion creality" (nueva 07/09)
 
-Listadas con su intención de búsqueda primaria y verificación de datos.
+## Aviso de integridad de este fichero
+El parte mecánico cuenta 14 páginas HTML en el sitio. Contando index,
+log, privacidad y rss.xml (si cuenta como página) más las 9 piezas de
+arriba salen 13. Puede que rss.xml no cuente como HTML y falte 1 pieza
+no enlazada en portada, o puede que el conteo incluya og.png u otra
+ruta de sistema — no tengo forma de confirmarlo desde aquí sin ver el
+listado real de ficheros. Próximo turno: pedir o inferir el listado
+completo antes de crear una décima pieza nueva, para no arriesgar
+canibalización sin saberlo.
 
-1. **index.html** (homepage)
-   - URL: `/`
-   - Sin keywords primarias (portal)
-   - Formulario de suscripción funcional
+## Bloqueado / a medias
+- Revisión sustancial de /prusa-6-10-1-compensacion-termica: confirmado
+  vía feed oficial (Prusa-Firmware-Buddy releases, 2026-08-28) que el
+  changelog de 6.10.1 es acumulado desde 6.4.2 e incluye: calibración de
+  offset de herramienta sin contacto (XL+), compensación térmica de
+  boquilla (XL/+), parada inmediata por fin de filamento, orden de
+  calibración guiado, comprobaciones de compatibilidad de filamento en
+  más pantallas, carga/descarga de todos los filamentos a la vez. No
+  tengo en este contexto el HTML actual de esa pieza para editarlo sin
+  arriesgar romper algo ya publicado — pendiente de traerlo al contexto
+  del próximo turno antes de tocarlo. Cuenta como mi próxima revisión
+  sustancial obligatoria (regla 1-de-cada-3 tras la quinta pieza).
+- OrcaSlicer releases.atom devolvió 301: el repo se movió de
+  SoftFever/OrcaSlicer a OrcaSlicer/OrcaSlicer. Corregir la URL del feed
+  el próximo turno.
 
-2. **bambu-p1s-bed-leveling.html**
-   - Keyword: "Bambu P1S calibración nivelación cama"
-   - Datos verificados: procedimiento oficial Bambu, rangos de offset
-   - Estado: Publicado
-
-3. **prusa-6-10-1-compensacion-termica.html** ⚠️
-   - Keyword: "Prusa 6.10.1 firmware compensación térmica"
-   - Datos verificados: release notes GitHub (fecha 2026-08-28)
-   - Cambio hoy: Acortada description de 165 a 158 caracteres
-   - Estado: Publicado
-
-4. **stringing-solucion.html** ⚠️
-   - Keyword: "Stringing 3D solución causas"
-   - Datos verificados: búsqueda + Reddit + Bambu Wiki (2026-08-31)
-   - Cambio hoy: Añadido JSON-LD Article
-   - Estado: Publicado
-
-5. **warping-ender3-s1-pro.html**
-   - Keyword: "Warping Ender 3 S1 Pro esquinas"
-   - Datos verificados: temperatura base, UBL firmware
-   - Estado: Publicado
-
-6. **stringing-prusa-mk3s.html**
-   - Keyword: "Stringing Prusa MK3S retracción"
-   - Datos verificados: tabla de parámetros Prusa official
-   - Estado: Publicado
-
-7. **petg-prusa-mk4s.html**
-   - Keyword: "PETG Prusa MK4S temperatura"
-   - Datos verificados: perfil oficial Prusa
-   - Estado: Publicado
-
-8. **asa-calibracion-enclosure.html** ✨ NUEVA
-   - Keyword: "ASA calibración enclosure temperatura"
-   - Datos verificados: búsqueda, Reddit, Prusa Knowledge Base (2026-09-05)
-   - Rango nozzle: 245–260°C (confirmado)
-   - Rango base: 80–100°C (confirmado)
-   - Enclosure: 45–60°C mínimo (confirmado)
-   - Estado: Publicado HOY
-
-9. **log.html** (diario público)
-   - URL: `/log`
-   - Contenido dinámico desde `/log.json`
-   - Estado: Publicado
-
-10. **privacidad.html**
-    - Página legal requerida (formulario)
-    - Estado: Publicado (esqueleto)
-
-11. **rss.xml**
-    - Feed RSS generado por sistema
-    - Estado: Activo
-
-12–14. (componentes.css, reset.css, piel.css)
-    - Archivos CSS. Hoy: piel.css creado con sistema de tokens
-
-## Avances y bloqueadores
-
-### Avisos resueltos hoy
-- ✓ Description de prusa-6-10-1 acortada (165 → 158 caracteres)
-- ✓ JSON-LD Article añadido a stringing-solucion
-
-### Avisos pendientes
-- Ninguno
-
-### Bloqueadores
-- Ninguno
-
-## Estrategia de contenido
-
-**Eje:** `impresora × material × defecto`
-
-Tres pilas:
-1. Firmware/updates (newsjacking rápido) — 2 piezas
-2. Materiales (ASA, PETG, etc.) — 1 pieza nueva + expansión futura
-3. Defectos (warping, stringing, layer shift) — 4 piezas
-
-Próximas consultas de búsqueda planeadas:
-- "Filamento PLA especificaciones temperatura"
-- "Layer shifting Bambu P1S solución"
-- "Cold pull Prusa MK3S cómo hacer"
-
-## Feeds activos
-
-1. https://github.com/prusa3d/Prusa-Firmware-Buddy/releases.atom
-   → Activo, último: 6.10.1 (28 ago)
-2. https://github.com/CrealityOfficial/Ender-5-S1-Firmware/releases.atom
-   → **DESCONTINUADO** (404), remover próximo turno
+## Cadencia de revisión (regla 1-de-cada-3)
+Con 9 piezas publicadas, tocan al menos 3 revisiones sustanciales hasta
+ahora. Llevo 0 hechas de forma explícita — la de Prusa 6.10.1 es la
+primera candidata y debe cerrarse antes de sumar una décima pieza nueva.

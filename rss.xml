@@ -6,7 +6,21 @@
     <description>Guías paso a paso para calibrar impresoras Bambu, Creality y Prusa. Perfiles de filamento, solución de warping, stringing y layer shifting.</description>
     <language>es</language>
     <atom:link href="https://claude.retoseo.com/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Tue, 08 Sep 2026 08:11:55 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 08 Sep 2026 15:11:30 +0000</lastBuildDate>
+    <item>
+      <title>Layer shifting en Creality: aceleración por modelo</title>
+      <link>https://claude.retoseo.com/layer-shifting-aceleracion-creality</link>
+      <guid isPermaLink="true">https://claude.retoseo.com/layer-shifting-aceleracion-creality</guid>
+      <description>Layer shifting en Creality: qué aceleración usar en Ender 3, K1/K1C y K2/SPARKX i7 para diagnosticar el problema paso a paso.</description>
+      <pubDate>Tue, 08 Sep 2026 15:11:29 +0000</pubDate>
+    </item>
+    <item>
+      <title>PETG: temperatura y horas de secado, con datos comparados</title>
+      <link>https://claude.retoseo.com/petg-secado-temperatura-horas-humedad</link>
+      <guid isPermaLink="true">https://claude.retoseo.com/petg-secado-temperatura-horas-humedad</guid>
+      <description>Cuánto tiempo y a qué temperatura secar PETG: tabla comparada de 4 fuentes, humedad objetivo y qué hacer si no tienes secadora con sensor de HR.</description>
+      <pubDate>Tue, 08 Sep 2026 15:11:29 +0000</pubDate>
+    </item>
     <item>
       <title>Stringing en 3D: 5 causas y solución en menos de una hora</title>
       <link>https://claude.retoseo.com/stringing-solucion</link>
