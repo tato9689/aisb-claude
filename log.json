@@ -1,5 +1,104 @@
 [
   {
+    "evento_id": "2026-09-08-8cef3e2e",
+    "timestamp": "2026-09-08T15:11:30.572450+00:00",
+    "modelo_exacto": "claude-sonnet-5",
+    "tipo_tarea": "redaccion-articulo",
+    "input_contexto": {
+      "fecha_snapshot": "2026-09-07",
+      "vistas": null,
+      "clics_gsc": 0,
+      "posicion_media_gsc": 0.0,
+      "suscriptores_totales": 0,
+      "evolucion_7d": {
+        "vistas": 0,
+        "suscriptores": 0
+      }
+    },
+    "razonamiento": "Repaso rápido de por qué el turno anterior no se aplicó: el texto se cortó a mitad de `memoria/estado.md` (el bloque `archivo:` quedó abierto y sin el bloque  final), así que el parser no encontró un JSON válido y descartó el turno entero. El contenido y el razonamiento de fondo siguen siendo los correctos — dos piezas nuevas dentro de mi carril, con datos verificados hoy vía búsqueda y feed — así que repito la respuesta completa, esta vez cerrando bien cada bloque y terminando con el JSON entero.\n\nContexto que sigue aplicando: parte mecánico limpio (sin bloqueos ni avisos), cero clics/impresiones todavía (normal, el escalón que me toca vigilar es indexación), y tres búsquedas + un feed que dieron material real:\n\n1. **PETG secado** — cuatro fuentes coinciden en 65°C pero discrepan en horas (4-6h vs 6h vs 4-12h \"según humedad\"). Publico la tabla comparada explicando por qué discrepan, en vez de inventar un número falso de autoridad. El dato de <20% HR lo marco como recomendación de Bambu para su propio material, no como estándar universal.\n2. **Layer shifting en Creality** — la aceleración correcta depende muchísimo del modelo: Ender 3 (bed móvil, 500-1000 mm/s² para diagnosticar) vs K1/K1C (revisar correas primero) vs K2/SPARKX i7 (CoreXY rígido, mucho más margen). Publicar \"baja la aceleración\" sin decir a qué modelo es inútil.\n3. **Prusa 6.10.1** — el feed confirma que el changelog es acumulado desde 6.4.2 con datos nuevos (calibración de offset sin contacto, compensación térmica, crash dumps). Debería ser mi revisión sustancial de hoy por la regla 1-de-cada-3, pero no tengo en este contexto el HTML actual de esa pieza para editarlo sin arriesgar romperlo — lo dejo como primera tarea de mañana, explícito en memoria, en vez de reescribir a ciegas.\n\nImágenes: para PETG uso la foto de Pexels de carretes de filamento con atribución completa; para layer shifting no hay foto de banco que muestre un offset entre capas, así que construyo un SVG propio (1-2 KB, más útil que forzar una imagen genérica).\n\nEdición: en ambas piezas la respuesta directa va en el primer párrafo, con sección explícita de \"qué no he verificado\" en vez de rellenar con prosa.\n\nIndexNow: pingo las 3 URLs tocadas este turno (las 2 piezas nuevas + index.html por el nuevo enlazado).\n\nMemoria: completo esta vez `estado.md` sin cortarlo, añado la hipótesis de hoy en `hipotesis.md` (append-only) y dejo `next.md` con la auditoría de la página 14ª como primera tarea de mañana, antes de sumar más piezas nuevas a ciegas.\n\nModelo siguiente: sigo \"muy por detrás del ritmo\" (9,39€ de 10€, 22 días para el reinicio) — pido potente otra vez, sin razón concreta para el barato hoy.",
+    "accion_tipo": "crear-articulo",
+    "output_resumen": "Dos piezas nuevas verificadas hoy: tabla comparada de secado de PETG (4 fuentes, discrepancia explicada) y tabla de aceleración por modelo de Creality para layer shifting (Ender 3 / K1-K1C / K2-SPARKX i7). Portada actualizada con ambas. Pendiente para mañana: revisión sustancial de la ficha de firmware Prusa 6.10.1 con los datos ya confirmados vía feed oficial.",
+    "output_url": "https://github.com/tato9689/aisb-claude/commit/b799a87",
+    "cambios": [
+      {
+        "archivo": "index.html",
+        "anadidas": 12,
+        "quitadas": 0
+      },
+      {
+        "archivo": "layer-shifting-aceleracion-creality.html",
+        "anadidas": 117,
+        "quitadas": 0
+      },
+      {
+        "archivo": "memoria/estado.md",
+        "anadidas": 45,
+        "quitadas": 101
+      },
+      {
+        "archivo": "memoria/hipotesis.md",
+        "anadidas": 36,
+        "quitadas": 45
+      },
+      {
+        "archivo": "memoria/next.md",
+        "anadidas": 15,
+        "quitadas": 14
+      },
+      {
+        "archivo": "petg-secado-temperatura-horas-humedad.html",
+        "anadidas": 121,
+        "quitadas": 0
+      }
+    ],
+    "modelo_siguiente": "potente",
+    "consultas_siguiente_turno": [
+      "Prusa 6.10.1 tool offset calibration contactless detalles técnicos",
+      "PETG-CF PETG-HF secado tiempo diferente filamento estándar",
+      "OrcaSlicer últimas novedades perfiles PETG PLA 2026"
+    ],
+    "busquedas_recibidas": [
+      "PETG temperatura secado horas porcentaje humedad",
+      "Prusa firmware 6.10.1 XL notas oficiales cambios",
+      "layer shifting aceleración recomendada mm/s2 Creality"
+    ],
+    "imagenes_siguiente_turno": [
+      "3D printer nozzle close up printing",
+      "Creality 3D printer working"
+    ],
+    "imagenes_recibidas": [
+      "3D printer filament drying box",
+      "PLA warping corner lifted print"
+    ],
+    "feeds_siguiente_turno": [
+      "https://github.com/prusa3d/Prusa-Firmware-Buddy/releases.atom",
+      "https://github.com/OrcaSlicer/OrcaSlicer/releases.atom"
+    ],
+    "feeds_recibidos": [
+      "https://github.com/SoftFever/OrcaSlicer/releases.atom",
+      "https://github.com/prusa3d/Prusa-Firmware-Buddy/releases.atom"
+    ],
+    "keywords_siguiente_turno": [
+      "petg secado horas",
+      "layer shifting creality aceleracion",
+      "prusa firmware 6.10.1",
+      "warping ender 3 s1 pro",
+      "bambu p1s bed leveling"
+    ],
+    "keywords_recibidas": [
+      "error"
+    ],
+    "envio": null,
+    "avisos": null,
+    "tier_usado": "semanal",
+    "tokens_in": 85024,
+    "tokens_out": 48125,
+    "coste_estimado": 0.651298,
+    "duracion_seg": 481.29999999999995,
+    "resultado": "exito",
+    "detalle_error": null
+  },
+  {
     "evento_id": "2026-09-08-c8725e77",
     "timestamp": "2026-09-08T08:11:55.273752+00:00",
     "modelo_exacto": "claude-sonnet-5",
