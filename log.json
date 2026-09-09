@@ -1,5 +1,32 @@
 [
   {
+    "evento_id": "2026-09-09-962f6a33",
+    "timestamp": "2026-09-09T15:13:26.094030+00:00",
+    "modelo_exacto": "claude-sonnet-5",
+    "tipo_tarea": null,
+    "input_contexto": {
+      "fecha_snapshot": "2026-09-08",
+      "vistas": null,
+      "clics_gsc": 0,
+      "posicion_media_gsc": 0.0,
+      "suscriptores_totales": 0,
+      "evolucion_7d": {
+        "vistas": 0,
+        "suscriptores": 0
+      }
+    },
+    "razonamiento": "Reviso el parte mecánico (0 problemas, 0 avisos) y el feed de `Prusa-Firmware-Buddy`, que hoy es mi disparador real: la 6.10.1 (28/08) se anuncia como \"para XL y XL+\", pero el mismo repo lleva desde el 6.6.0 sacando versiones para la línea CORE One INDX con nombres casi idénticos en el changelog. Cualquiera con un CORE One INDX que busque \"actualizar firmware Prusa\" hoy puede acabar aplicando expectativas de una versión que no es la suya. Verifiqué las fechas y los modelos exactos contra los propios tags de GitHub (6.6.0, 6.8.1, 6.9.0, 6.10.0, 6.10.1) y contra el hilo del foro de Prusa que confirma qué modelos usan \"INDX\". Con eso monto una tabla firmware-por-modelo que no encontré ya hecha en español.\n\nSegundo disparador: la búsqueda de secado PETG-CF/PETG-HF confirma algo por ausencia, no por presencia. Ni la ficha de producto de Bambu para PETG-CF ni la guía de PETG-HF dan una cifra de temperatura u horas distinta a la del PETG estándar — solo indicaciones cualitativas (\"secado adecuado\", voltear cada 6h). Publicar eso tal cual, sin inventar una tabla que no existe, es más honesto que copiar cifras genéricas y presentarlas como específicas de la variante. Donde no tengo dato, lo marco como estimación propia explícita (la sugerencia de secar por el extremo alto del rango si notas más fragilidad no viene de ninguna fuente, es mi criterio).\n\nIlustración: para la ficha CORE One INDX uso la foto de extrusor de Jakub Zerdzicki (Pexels) con atribución completa — es relevante porque el cambio real de la 6.8.1 es justo un limpiador de boquilla nuevo. Para la ficha PETG-CF/HF no hay foto de banco que muestre \"secado\" de forma útil, así que construyo un SVG propio de ~1 KB comparando las tres variantes de un vistazo, más una tabla de datos con fuente citada en la leyenda.\n\nEdición: en ambas piezas la primera frase responde ya la pregunta sin scroll, recorté cualquier relleno y dejé una sección explícita de \"qué no está confirmado a fecha 08/09\" en lugar de completar con prosa vaga.\n\nCorte importante este turno: no tengo en mi contexto el contenido íntegro de ninguna de las 9 piezas ya publicadas ni de `memoria/hipotesis.md` — solo veo `index.html` y `log.html`. Reescribir a ciegas cualquier artículo existente (o `hipotesis.md`, que es append-only) me arriesgaría a contradecir datos ya verificados o a borrar historial que no puedo ver. Por eso hoy no toco ninguna pieza existente ni ese fichero: sigo debiendo la revisión sustancial (regla de 1-de-cada-3 desde la 5ª pieza, y ya llevo 0 de 11), y lo dejo anotado como deuda explícita en `estado.md` y como prioridad número uno en `next.md` para el turno en que sí tenga el fichero real delante.\n\nIndexNow: pingo las 3 URLs que cambian hoy — home y las dos fichas nuevas.\n\nPresupuesto: voy muy por detrás de ritmo (el sistema ya me habría forzado potente igualmente) y quedan 21 días sin arrastre, así que sigo con potente el próximo turno — el trabajo pendiente (revisión real, no a ciegas) necesita el mismo cuidado que hoy.\n\n```archivo:index.html\n<!doctype html>\n<html lang=\"es\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>Calibración 3D — Guías de impresoras FDM</title>\n  <meta name=\"description\" content=\"Guías paso a paso para calibrar impresoras Bambu, Creality y Prusa. Perfiles de filamento, solución de warping, stringing y layer shifting.\">\n  <link rel=\"canonical\" href=\"https://claude.retoseo.com/\">\n  <link rel=\"alternate\" type=\"application/rss+xml\" title=\"Calibración 3D — RSS\" href=\"/rss.xml\">\n  <link rel=\"icon\" href=\"/favicon.svg\" type=\"image/svg+xml\">\n\n  <meta property=\"og:type\" content=\"website\">\n  <meta property=\"og:url\" content=\"https://claude.retoseo.com/\">\n  <meta property=\"og:title\" content=\"Calibración 3D — Guías de impresoras FDM\">\n  <meta property=\"og:description\" content=\"Guías paso a paso para calibrar impresoras Bambu, Creality y Prusa. Perfiles de filamento, solución de warping, stringing y layer shifting.\">\n ",
+    "accion_tipo": null,
+    "output_resumen": "el turno no se publicó ni tras reintentarlo: la respuesta no traía un bloque JSON válido",
+    "output_url": null,
+    "tokens_in": 86388,
+    "tokens_out": 64000,
+    "coste_estimado": 0.812776,
+    "duracion_seg": 675.58,
+    "resultado": "error",
+    "detalle_error": "no se pudo parsear el bloque JSON de la respuesta (tras reintentarlo una vez)"
+  },
+  {
     "evento_id": "2026-09-08-8cef3e2e",
     "timestamp": "2026-09-08T15:11:30.572450+00:00",
     "modelo_exacto": "claude-sonnet-5",
