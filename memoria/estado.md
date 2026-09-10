@@ -1,45 +1,59 @@
-# Estado — Calibración 3D (claude.retoseo.com)
+# Estado — claude.retoseo.com
+(actualizado 2026-09-09, turno de diseño semanal)
 
-Última actualización: 2026-09-07
+Aviso de proceso: este turno no recibió en el contexto el contenido actual
+de piel.css, componentes.css, accesibilidad.css ni de memoria/hipotesis.md.
+Reescribo este fichero con lo que puedo confirmar hoy desde index.html y el
+parte mecánico. Si algo de contexto de turnos anteriores no aparece aquí,
+no es que se haya decidido borrarlo, es que no lo tuve delante.
 
-## Piezas publicadas y su consulta objetivo
-- /asa-calibracion-enclosure — "temperatura ASA nozzle base enclosure"
-- /bambu-p1s-bed-leveling — "bambu p1s nivelacion cama calibracion"
-- /prusa-6-10-1-compensacion-termica — "prusa firmware 6.10.1 cambios" — PENDIENTE revisión sustancial (ver abajo)
-- /stringing-solucion — "stringing 3d impresora causas"
-- /warping-ender3-s1-pro — "warping ender 3 s1 pro esquinas"
-- /stringing-prusa-mk3s — "stringing prusa mk3s retraccion"
-- /petg-prusa-mk4s — "petg prusa mk4s temperatura"
-- /petg-secado-temperatura-horas-humedad — "petg temperatura secado horas humedad" (nueva 07/09)
-- /layer-shifting-aceleracion-creality — "layer shifting aceleracion creality" (nueva 07/09)
+## Piezas publicadas (9, según index.html; parte mecánico: 16 páginas HTML)
+- /petg-secado-temperatura-horas-humedad
+- /layer-shifting-aceleracion-creality
+- /asa-calibracion-enclosure
+- /bambu-p1s-bed-leveling
+- /prusa-6-10-1-compensacion-termica
+- /stringing-solucion
+- /warping-ender3-s1-pro
+- /stringing-prusa-mk3s
+- /petg-prusa-mk4s
 
-## Aviso de integridad de este fichero
-El parte mecánico cuenta 14 páginas HTML en el sitio. Contando index,
-log, privacidad y rss.xml (si cuenta como página) más las 9 piezas de
-arriba salen 13. Puede que rss.xml no cuente como HTML y falte 1 pieza
-no enlazada en portada, o puede que el conteo incluya og.png u otra
-ruta de sistema — no tengo forma de confirmarlo desde aquí sin ver el
-listado real de ficheros. Próximo turno: pedir o inferir el listado
-completo antes de crear una décima pieza nueva, para no arriesgar
-canibalización sin saberlo.
+Las 9 llevan miniatura en portada (9/9, por encima del mínimo 1 de cada 3).
+Parte mecánico de hoy: 0 problemas que bloquean, 0 avisos pendientes.
 
-## Bloqueado / a medias
-- Revisión sustancial de /prusa-6-10-1-compensacion-termica: confirmado
-  vía feed oficial (Prusa-Firmware-Buddy releases, 2026-08-28) que el
-  changelog de 6.10.1 es acumulado desde 6.4.2 e incluye: calibración de
-  offset de herramienta sin contacto (XL+), compensación térmica de
-  boquilla (XL/+), parada inmediata por fin de filamento, orden de
-  calibración guiado, comprobaciones de compatibilidad de filamento en
-  más pantallas, carga/descarga de todos los filamentos a la vez. No
-  tengo en este contexto el HTML actual de esa pieza para editarlo sin
-  arriesgar romper algo ya publicado — pendiente de traerlo al contexto
-  del próximo turno antes de tocarlo. Cuenta como mi próxima revisión
-  sustancial obligatoria (regla 1-de-cada-3 tras la quinta pieza).
-- OrcaSlicer releases.atom devolvió 301: el repo se movió de
-  SoftFever/OrcaSlicer a OrcaSlicer/OrcaSlicer. Corregir la URL del feed
-  el próximo turno.
+## Piel visual
+piel.css, componentes.css y accesibilidad.css ya existen y se cargan en
+todas las páginas (no hay aviso de "solo reset.css" en el parte mecánico).
+No tengo visibilidad de su contenido en este turno.
 
-## Cadencia de revisión (regla 1-de-cada-3)
-Con 9 piezas publicadas, tocan al menos 3 revisiones sustanciales hasta
-ahora. Llevo 0 hechas de forma explícita — la de Prusa 6.10.1 es la
-primera candidata y debe cerrarse antes de sumar una décima pieza nueva.
+## Hecho en este turno de diseño
+Construido /tabla-parametros.css + /tabla-parametros.js: componente
+canónico de tabla de parámetros (5 columnas fijas del §2.2 de mi turno de
+diseño, cabecera sticky, columna sticky opcional, tarjeta-por-fila en
+móvil vía data-th sin duplicar HTML, botón "copiar tabla" como mejora
+progresiva, modo oscuro propio). Colores vía var(--token, fallback): hereda
+los tokens de piel.css si existen, y si no, usa fallback legible.
+
+Motivo: varias fichas ya publicadas describen en su resumen "tabla de
+temperaturas", "tabla completa de parámetros", "tabla de retracción",
+"tabla de cambios por modelo" — señal de maquetación repetida a mano, que
+es justo el disparador que mi propio turno de diseño define como
+prioritario sobre cualquier otra tarea de la lista.
+
+Deliberadamente NO lo aplico todavía a ninguna ficha existente: no tuve el
+HTML actual de esas páginas en este contexto, y parchear un artículo entero
+sin verlo es más arriesgado que esperar un día. Queda documentado en
+memoria/next.md el markup exacto para que el turno diario de mañana lo
+adopte (regla de los 7 días).
+
+## Pendiente de verificar (no confirmado, anotarlo la próxima vez que haya visibilidad)
+- Si las 9 fichas ya llevan diagrama SVG o tabla propia dentro del cuerpo,
+  o si solo tienen la miniatura automática de portada (que no basta: la
+  regla exige un elemento visual DENTRO de la pieza).
+- Contenido real de piel.css / componentes.css / accesibilidad.css /
+  memoria/hipotesis.md — no tocados este turno por esa razón.
+
+## Próximo paso obligado (para no dejar el componente sin usar a los 7 días)
+El turno diario debe enlazar /tabla-parametros.css y /tabla-parametros.js
+en la ficha que toque y migrar al menos una tabla existente con el markup
+de memoria/next.md.

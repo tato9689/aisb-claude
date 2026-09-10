@@ -1,206 +1,185 @@
-/* ==========================================================================
-   Calibración 3D — tabla-parametros.css
-   Componente único: la tabla de 5 columnas que sostiene cada ficha de
-   calibración/defecto (tesis del sitio, prioridad #1 del turno de diseño).
+/*
+  Componente: tabla-parametros
+  ------------------------------------------------------------
+  Tabla canónica de parámetros de calibración/material.
+  Columnas fijas: Impresora o perfil | Material | Valor recomendado
+  | Rango útil | Si te pasas / si te quedas corto.
+  Variante permitida: "Parámetro" sustituye a la primera columna en
+  fichas de una sola impresora. Columna opcional "Verificado el" al
+  final cuando el valor viene de fuente externa fechada.
 
-   Fichero propio, no dentro de componentes.css, porque en este turno no
-   tengo visibilidad de ese fichero y prefiero no arriesgar contenido que
-   no puedo ver. Cuando el turno diario lo adopte, puede migrarse sin
-   perder nada: los selectores son namespaced (--c3d-*, .tabla-parametros).
+  Markup esperado (ver memoria/next.md para el ejemplo completo):
 
-   TODAVÍA NO ESTÁ ENLAZADO DESDE NINGUNA PÁGINA. Pendiente de que una
-   ficha real lo use (ver memoria/next.md en el próximo turno con contexto
-   completo). El HTML de uso está documentado al final de este fichero.
+  <div class="tabla-parametros-wrap">
+    <div class="tabla-scroll" tabindex="0" role="region" aria-label="...">
+      <table class="tabla-parametros">
+        <caption class="vo">...</caption>
+        <thead>
+          <tr><th scope="col">...</th>...</tr>
+        </thead>
+        <tbody>
+          <tr><td data-th="Impresora / perfil">...</td>...</tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="tabla-nota">Los decimales usan punto, no coma...</p>
+  </div>
 
-   Turno de diseño: 2026-09-07.
-   ========================================================================== */
+  El atributo data-th en cada <td> es obligatorio: es lo que convierte
+  la fila en tarjeta por debajo de 640px sin duplicar contenido.
 
-:root {
-  --c3d-accent-dark: #1f4d36;
-  --c3d-accent: #2f6f4f;
-  --c3d-border: #d8dee2;
-  --c3d-bg-alt: #f4f6f5;
-  --c3d-text: #1b1f22;
-  --c3d-text-muted: #4b5560;
-  --c3d-radius: 6px;
+  Se apoya en las variables de piel.css si existen, vía var(--x, fallback).
+  Si esas variables no existen todavía, usa los valores de fallback y
+  sigue siendo legible en claro y oscuro.
+*/
+
+.tabla-parametros-wrap {
+  --tp-border: var(--border, #d8d4cc);
+  --tp-fg: var(--fg, #1d1a15);
+  --tp-bg: var(--surface, #fffdf8);
+  --tp-bg-alt: var(--surface-alt, #f6f2e9);
+  --tp-accent: var(--accent, #b5502f);
+  --tp-radius: var(--radius, 0.5rem);
+  --tp-shadow: var(--shadow, 0 1px 3px rgba(0, 0, 0, .08));
+  margin: 1.75rem 0;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --c3d-accent-dark: #7fd9ab;
-    --c3d-accent: #4fae7c;
-    --c3d-border: #33403a;
-    --c3d-bg-alt: #1a201d;
-    --c3d-text: #e7ece9;
-    --c3d-text-muted: #a9b3ad;
-  }
-}
-
-.tabla-parametros-envoltorio {
+.tabla-scroll {
   overflow-x: auto;
-  margin: 1.5em 0;
-  border: 1px solid var(--c3d-border);
-  border-radius: var(--c3d-radius);
+  border-radius: var(--tp-radius);
+  border: 1px solid var(--tp-border);
+  position: relative;
 }
 
-.tabla-parametros-envoltorio[tabindex="0"]:focus-visible {
-  outline: 3px solid var(--c3d-accent);
-  outline-offset: -2px;
+.tabla-scroll:focus-visible {
+  outline: 2px solid var(--tp-accent);
+  outline-offset: 2px;
 }
 
-.tabla-parametros {
+table.tabla-parametros {
   width: 100%;
   border-collapse: collapse;
   font-size: 0.95rem;
-  color: var(--c3d-text);
+  background: var(--tp-bg);
+  color: var(--tp-fg);
+  min-width: 640px; /* fuerza scroll en vez de aplastar columnas en tablet */
 }
 
 .tabla-parametros caption {
   text-align: left;
-  padding: 0.6em 0.8em;
-  font-size: 0.85rem;
-  color: var(--c3d-text-muted);
-  border-bottom: 1px solid var(--c3d-border);
+  padding: 0.5rem 0.75rem;
+  font-weight: 600;
+}
+
+.tabla-parametros th,
+.tabla-parametros td {
+  padding: 0.6rem 0.85rem;
+  border-bottom: 1px solid var(--tp-border);
+  text-align: left;
+  vertical-align: top;
+  line-height: 1.4;
 }
 
 .tabla-parametros thead th {
   position: sticky;
   top: 0;
-  background: var(--c3d-bg-alt);
-  color: var(--c3d-accent-dark);
-  text-align: left;
-  padding: 0.65em 0.8em;
+  background: var(--tp-bg-alt);
   font-weight: 700;
-  border-bottom: 2px solid var(--c3d-border);
+  z-index: 1;
+  border-bottom: 2px solid var(--tp-accent);
+}
+
+/* columna fija (primera) cuando hay más de 4 columnas: se activa
+   añadiendo la clase .tp-sticky-col a la propia tabla desde la ficha */
+.tabla-parametros.tp-sticky-col th:first-child,
+.tabla-parametros.tp-sticky-col td:first-child {
+  position: sticky;
+  left: 0;
+  background: var(--tp-bg);
+  box-shadow: 1px 0 0 var(--tp-border);
+}
+.tabla-parametros.tp-sticky-col thead th:first-child {
+  background: var(--tp-bg-alt);
+  z-index: 2;
+}
+
+.tabla-parametros tbody tr:nth-child(even) td {
+  background: color-mix(in srgb, var(--tp-bg-alt) 45%, transparent);
+}
+
+.tabla-nota {
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  opacity: 0.75;
+}
+
+.vo {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
   white-space: nowrap;
 }
 
-.tabla-parametros tbody td {
-  padding: 0.6em 0.8em;
-  border-bottom: 1px solid var(--c3d-border);
-  vertical-align: top;
+/* botón de copiar: mejora progresiva, solo existe si tabla-parametros.js lo inyecta */
+.tp-copiar {
+  margin: 0.5rem 0 0;
+  font-size: 0.85rem;
+  padding: 0.35rem 0.75rem;
+  border-radius: var(--tp-radius);
+  border: 1px solid var(--tp-border);
+  background: var(--tp-bg);
+  color: var(--tp-fg);
+  cursor: pointer;
+  transition: background-color .15s ease, border-color .15s ease;
 }
+.tp-copiar:hover { border-color: var(--tp-accent); }
+.tp-copiar:focus-visible { outline: 2px solid var(--tp-accent); outline-offset: 2px; }
+.tp-copiar[data-estado="copiado"] { border-color: var(--tp-accent); color: var(--tp-accent); }
 
-.tabla-parametros tbody tr:last-child td {
-  border-bottom: none;
-}
-
-.tabla-parametros tbody tr:nth-child(even) {
-  background: var(--c3d-bg-alt);
-}
-
-.tabla-parametros td:first-child,
-.tabla-parametros th:first-child {
-  position: sticky;
-  left: 0;
-  background: inherit;
-  z-index: 1;
-}
-
-.tabla-parametros .valor-recomendado {
-  font-weight: 700;
-  color: var(--c3d-accent-dark);
-}
-
-.tabla-parametros .sin-verificar {
-  font-style: italic;
-  color: var(--c3d-text-muted);
-}
-
-.tabla-parametros .sin-verificar::after {
-  content: " (sin verificar)";
-  font-size: 0.85em;
-}
-
-/* Móvil: tarjeta por fila. El HTML no cambia, solo se reordena por CSS,
-   así que sigue siendo copiable e indexable igual. */
+/* -------- móvil: tarjeta por fila -------- */
 @media (max-width: 640px) {
-  .tabla-parametros thead {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    clip: rect(0 0 0 0);
-    white-space: nowrap;
-  }
+  .tabla-scroll { overflow-x: visible; border: none; }
 
-  .tabla-parametros,
-  .tabla-parametros tbody,
-  .tabla-parametros tr,
-  .tabla-parametros td {
+  table.tabla-parametros {
+    min-width: 0;
     display: block;
-    width: 100%;
   }
-
+  .tabla-parametros thead { display: none; }
+  .tabla-parametros tbody { display: block; }
   .tabla-parametros tr {
-    border-bottom: 2px solid var(--c3d-border);
-    padding: 0.6em 0;
+    display: block;
+    margin-bottom: 0.9rem;
+    border: 1px solid var(--tp-border);
+    border-radius: var(--tp-radius);
+    box-shadow: var(--tp-shadow);
+    overflow: hidden;
   }
-
-  .tabla-parametros tr:last-child {
-    border-bottom: none;
-  }
-
+  .tabla-parametros tbody tr:nth-child(even) td { background: var(--tp-bg); }
   .tabla-parametros td {
-    border-bottom: none;
-    padding: 0.3em 0.8em;
-    display: flex;
-    gap: 0.5em;
+    display: grid;
+    grid-template-columns: 42% 1fr;
+    gap: 0.5rem;
+    border-bottom: 1px solid var(--tp-border);
+    padding: 0.5rem 0.75rem;
   }
-
+  .tabla-parametros td:last-child { border-bottom: none; }
   .tabla-parametros td::before {
     content: attr(data-th);
-    font-weight: 700;
-    color: var(--c3d-accent-dark);
-    flex: 0 0 42%;
-  }
-
-  .tabla-parametros td:first-child,
-  .tabla-parametros th:first-child {
-    position: static;
+    font-weight: 600;
+    font-size: 0.8rem;
+    opacity: 0.7;
   }
 }
 
-.tabla-parametros-nota {
-  font-size: 0.8rem;
-  color: var(--c3d-text-muted);
-  margin-top: 0.4em;
+@media (prefers-color-scheme: dark) {
+  .tabla-parametros-wrap {
+    --tp-border: var(--border, #423d33);
+    --tp-fg: var(--fg, #efe9dd);
+    --tp-bg: var(--surface, #201d18);
+    --tp-bg-alt: var(--surface-alt, #2a251f);
+    --tp-accent: var(--accent, #e08a5c);
+    --tp-shadow: var(--shadow, 0 1px 3px rgba(0, 0, 0, .4));
+  }
 }
-
-/* ==========================================================================
-   USO (documentado aquí porque el componente aún no está adoptado en
-   ninguna ficha real):
-
-   <div class="tabla-parametros-envoltorio" tabindex="0" role="region"
-        aria-label="Tabla de parámetros de calibración">
-     <table class="tabla-parametros">
-       <caption>Separador decimal: punto. Valores en °C, mm, mm/s.</caption>
-       <thead>
-         <tr>
-           <th scope="col">Impresora / perfil</th>
-           <th scope="col">Material</th>
-           <th scope="col">Valor recomendado</th>
-           <th scope="col">Rango útil</th>
-           <th scope="col">Si te pasas / si te quedas corto</th>
-         </tr>
-       </thead>
-       <tbody>
-         <tr>
-           <td data-th="Impresora / perfil">Bambu P1S</td>
-           <td data-th="Material">PLA genérico</td>
-           <td data-th="Valor recomendado" class="valor-recomendado">210 °C</td>
-           <td data-th="Rango útil">200–220 °C</td>
-           <td data-th="Si te pasas / si te quedas corto">Por encima: brillo excesivo y stringing. Por debajo: mala fusión entre capas.</td>
-         </tr>
-         <tr>
-           <td data-th="Impresora / perfil">—</td>
-           <td data-th="Material">—</td>
-           <td data-th="Valor recomendado" class="sin-verificar">—</td>
-           <td data-th="Rango útil">—</td>
-           <td data-th="Si te pasas / si te quedas corto">—</td>
-         </tr>
-       </tbody>
-     </table>
-   </div>
-   <p class="tabla-parametros-nota">Valores con punto decimal para copiar directo al slicer.</p>
-   ========================================================================== */
