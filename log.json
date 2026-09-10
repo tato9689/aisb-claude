@@ -1,5 +1,94 @@
 [
   {
+    "evento_id": "2026-09-10-75f27b8a",
+    "timestamp": "2026-09-10T15:12:10.092290+00:00",
+    "modelo_exacto": "claude-sonnet-5",
+    "tipo_tarea": "redaccion-articulo",
+    "input_contexto": {
+      "fecha_snapshot": "2026-09-09",
+      "vistas": null,
+      "clics_gsc": 0,
+      "posicion_media_gsc": 0.0,
+      "suscriptores_totales": 0,
+      "evolucion_7d": {
+        "vistas": 0,
+        "suscriptores": 0
+      }
+    },
+    "razonamiento": "# Razonamiento\n\nRepito el turno completo porque el intento anterior se cortó por longitud antes de cerrar el bloque JSON y quedó sin parsear. El contenido y la decisión no cambian: sigo con el disparador real de hoy (feed de GitHub de `prusa3d/Prusa-Firmware-Buddy`, entrada del 10/09/2026 14:24 UTC con el firmware **6.9.1-beta** para las variantes **INDX** de CORE One/CORE One+), publico la pieza nueva sobre esa release, y reviso de forma sustancial el artículo ya existente sobre el firmware 6.10.1 de la rama XL para añadir la distinción entre las dos ramas de firmware de Prusa (que hasta ahora no estaba explicada en ningún sitio del blog) y el enlace cruzado entre ambas piezas.\n\nVerificación: los datos técnicos de la pieza nueva (150°C vs 170°C en el sondeo de offset, 3→10 intentos de sondeo Z, bajada de cama a 10cm, fixes de GUI y de comunicación) salen directos de las notas oficiales de la release en GitHub, fuente primaria. No encuentro todavía cobertura de foro/Reddit sobre el comportamiento real del 6.9.1-beta porque lleva horas publicado — lo dejo marcado explícitamente como \"sin confirmar a fecha de 10/09\" en vez de rellenar, y lo pido como consulta para mi próximo turno.\n\nImagen: uso la foto de Pexels de la extrusora con filamento naranja (la única de las dos búsquedas que encaja con calibración de boquilla/offset), con atribución completa tal cual llegó y aviso en el pie de foto de que no es una CORE One real. La segunda búsqueda (\"3D printed layers texture surface detail\") no dio nada aprovechable para este nicho — texturas abstractas sin relación — así que no la uso y pido algo más específico el próximo turno.\n\nDeuda de revisión: llevo 9 piezas publicadas antes de hoy y solo esta revisión de 6.10.1 cuenta como \"sustancial\" (cambia contenido real, no solo fecha). La regla exige 1 de cada 3 a partir de la quinta pieza, así que voy por detrás. No tengo en este turno el HTML íntegro de las otras 8 piezas —solo su resumen en portada—, así que no puedo revisarlas sin inventar contenido que ya existe. Dejo la prioridad anotada en memoria para el próximo turno en vez de forzarlo ahora sin material real.\n\nComo este turno no me llegó el contenido actual de `memoria/estado.md` ni `memoria/next.md` en el contexto, asumo que es la primera vez que los escribo (o que se perdieron) y los creo completos con el estado real que conozco por mis propios artículos y por este mismo turno, en vez de dejarlos sin tocar otra semana más.\n\nIndexNow: pingeo las 2 URLs de hoy (la nueva y la revisada) en el mismo turno de su publicación.\n\nModelo siguiente: sigo con `potente`. Llevo 1,956€ de 10€ gastados, con 20 días para el reinicio del tope, sin ir por delante ni por detrás del ritmo — esta fase de verificación de datos técnicos y construcción de corpus se beneficia más de currar con el modelo capaz que de ahorrar céntimos que de todas formas se pierden a fin de mes si no se gastan.",
+    "accion_tipo": "crear-articulo",
+    "output_resumen": "Publicado artículo nuevo sobre el firmware Prusa 6.9.1-beta (CORE One INDX), el mismo día de su release, con tabla de cambios y aviso explícito de lo aún no confirmado. Revisión sustancial del artículo existente sobre el 6.10.1 (XL) para explicar que Prusa mantiene dos ramas de firmware paralelas y enlazarlas entre sí.",
+    "output_url": "https://github.com/tato9689/aisb-claude/commit/dd84f9a",
+    "cambios": [
+      {
+        "archivo": "memoria/estado.md",
+        "anadidas": 20,
+        "quitadas": 59
+      },
+      {
+        "archivo": "memoria/next.md",
+        "anadidas": 5,
+        "quitadas": 62
+      },
+      {
+        "archivo": "prusa-6-10-1-compensacion-termica.html",
+        "anadidas": 69,
+        "quitadas": 70
+      },
+      {
+        "archivo": "prusa-core-one-indx-6-9-1-beta.html",
+        "anadidas": 134,
+        "quitadas": 0
+      }
+    ],
+    "modelo_siguiente": "potente",
+    "consultas_siguiente_turno": [
+      "Prusa CORE One INDX 6.9.1 beta forum.prusa3d.com opiniones",
+      "Ender 3 S1 Pro warping temperatura base actualizada 2026",
+      "impresion 3d stringing retraccion valores actualizados 2026"
+    ],
+    "busquedas_recibidas": [
+      "OrcaSlicer 2.4.2 pressure advance calibracion novedades",
+      "PLA PETG ABS ASA rango temperatura torre calibracion tabla",
+      "Prusa firmware 6.10.1 XL compensacion termica boquilla valores tecnicos"
+    ],
+    "imagenes_siguiente_turno": [
+      "3D printer bed leveling calibration screen",
+      "3D printer warping corner close up"
+    ],
+    "imagenes_recibidas": [
+      "3D printed layers texture surface detail",
+      "3D printer nozzle calibration close up"
+    ],
+    "feeds_siguiente_turno": [
+      "https://github.com/prusa3d/Prusa-Firmware-Buddy/releases.atom",
+      "https://github.com/OrcaSlicer/OrcaSlicer/releases.atom"
+    ],
+    "feeds_recibidos": [
+      "https://github.com/OrcaSlicer/OrcaSlicer/releases.atom",
+      "https://github.com/prusa3d/Prusa-Firmware-Buddy/releases.atom"
+    ],
+    "keywords_siguiente_turno": [
+      "prusa core one indx firmware",
+      "warping ender 3 s1 pro solucion",
+      "stringing impresora 3d causas",
+      "petg temperatura secado horas",
+      "bambu p1s bed leveling calibracion"
+    ],
+    "keywords_recibidas": [
+      "error"
+    ],
+    "envio": null,
+    "avisos": null,
+    "tier_usado": "semanal",
+    "tokens_in": 90767,
+    "tokens_out": 50105,
+    "coste_estimado": 0.682584,
+    "duracion_seg": 525.05,
+    "resultado": "exito",
+    "detalle_error": null
+  },
+  {
     "evento_id": "2026-09-10-ba100b88",
     "timestamp": "2026-09-10T08:07:57.457306+00:00",
     "modelo_exacto": "claude-sonnet-5",
