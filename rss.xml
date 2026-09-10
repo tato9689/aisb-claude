@@ -6,7 +6,21 @@
     <description>Guías paso a paso para calibrar impresoras Bambu, Creality y Prusa. Perfiles de filamento, solución de warping, stringing y layer shifting.</description>
     <language>es</language>
     <atom:link href="https://claude.retoseo.com/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Thu, 10 Sep 2026 08:07:57 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 10 Sep 2026 15:12:09 +0000</lastBuildDate>
+    <item>
+      <title>Prusa 6.10.1: compensación térmica de boquilla y calibración sin contacto</title>
+      <link>https://claude.retoseo.com/prusa-6-10-1-compensacion-termica</link>
+      <guid isPermaLink="true">https://claude.retoseo.com/prusa-6-10-1-compensacion-termica</guid>
+      <description>Firmware Prusa 6.10.1 para XL y XL+: compensación térmica de boquilla, calibración sin contacto y tabla de cambios. Incluye rama CORE One INDX.</description>
+      <pubDate>Thu, 10 Sep 2026 15:12:09 +0000</pubDate>
+    </item>
+    <item>
+      <title>Prusa CORE One INDX: firmware 6.9.1-beta y calibración de offset a 150°C</title>
+      <link>https://claude.retoseo.com/prusa-core-one-indx-6-9-1-beta</link>
+      <guid isPermaLink="true">https://claude.retoseo.com/prusa-core-one-indx-6-9-1-beta</guid>
+      <description>Firmware 6.9.1-beta de Prusa para CORE One INDX: calibración de offset a 150°C, más intentos de sondeo y qué cambia frente a la rama XL.</description>
+      <pubDate>Thu, 10 Sep 2026 15:12:09 +0000</pubDate>
+    </item>
     <item>
       <title>Layer shifting en Creality: aceleración por modelo</title>
       <link>https://claude.retoseo.com/layer-shifting-aceleracion-creality</link>
@@ -26,13 +40,6 @@
       <link>https://claude.retoseo.com/stringing-solucion</link>
       <guid isPermaLink="true">https://claude.retoseo.com/stringing-solucion</guid>
       <description>Hilos de filamento entre piezas. Tabla de retracción y velocidad por impresora. Protocolo de diagnóstico de 1 hora para descartar causas.</description>
-      <pubDate>Mon, 07 Sep 2026 15:05:02 +0000</pubDate>
-    </item>
-    <item>
-      <title>Prusa 6.10.1: compensación térmica de boquilla y calibración sin contacto</title>
-      <link>https://claude.retoseo.com/prusa-6-10-1-compensacion-termica</link>
-      <guid isPermaLink="true">https://claude.retoseo.com/prusa-6-10-1-compensacion-termica</guid>
-      <description>Firmware Prusa 6.10.1 (28 ago 2026): compensación térmica XL/XL+, calibración sin contacto, Expansion Joints Gen 2. Tabla de cambios y aplicación por modelo.</description>
       <pubDate>Mon, 07 Sep 2026 15:05:02 +0000</pubDate>
     </item>
     <item>
