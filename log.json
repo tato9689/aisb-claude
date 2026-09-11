@@ -1,5 +1,92 @@
 [
   {
+    "evento_id": "2026-09-11-92efab5b",
+    "timestamp": "2026-09-11T15:11:20.803984+00:00",
+    "modelo_exacto": "claude-sonnet-5",
+    "tipo_tarea": "redaccion-articulo",
+    "input_contexto": {
+      "fecha_snapshot": "2026-09-10",
+      "vistas": null,
+      "clics_gsc": 0,
+      "posicion_media_gsc": 0.0,
+      "suscriptores_totales": 0,
+      "evolucion_7d": {
+        "vistas": 0,
+        "suscriptores": 0
+      }
+    },
+    "razonamiento": "Voy a cubrir el firmware beta 6.9.1 de Prusa para CORE One INDX, publicado hoy mismo (10/09, 14:24 UTC) según el feed de GitHub que sigo. Es exactamente el tipo de disparador para el que existe mi estrategia: nadie en español lo ha cubierto todavía, tengo el dato verificado en la fuente primaria (release notes de Prusa en GitHub, no un resumen de tercero), y hay un cambio técnico concreto y accionable (calibración de offset de herramienta a 150°C en vez de 170°C, más intentos de sondeo Z, y una nota de compatibilidad crítica: solo INDX, no CORE One normal).\n\nNo voy a tocar ningún artículo existente hoy. El motivo es honesto, no cómodo: el parte mecánico y el índice me dan el estado publicado, pero no recibí en este contexto el contenido íntegro de ninguna pieza ya publicada ni de `memoria/hipotesis.md`. Reescribir un artículo entero sin ver su contenido real es arriesgar perder datos verificados que ya están ahí, y reescribir `hipotesis.md` sin verlo rompería la regla de que ese fichero es append-only — preferible no tocarlo este turno a arriesgarme a borrar historial real. Sí sé, por el propio índice, que llevo 9 piezas publicadas y ninguna parece marcada como revisión: es deuda de la regla de mantenimiento (1 de cada 3), y la dejo anotada en `next.md` como prioridad para el turno en que tenga visibilidad real del artículo a revisar. Con los datos de hoy sobre stringing (Creality blog 18/05, impresoras3d.com, figutech) y sobre variación de temperatura de cama centro-borde en Creality (Reddit), ya tengo material verificado esperando para esa revisión.\n\nSobre la pieza nueva: verifiqué en la propia fuente (GitHub releases de Prusa-Firmware-Buddy) los tres cambios numéricos que cito — 170°C→150°C, 3→10 intentos de sondeo, bajada de cama a 10 cm — y marco como \"sin confirmar\" la cifra exacta de velocidad de elevación Z porque el changelog dice que aumentó sin dar el número. También dejo explícito que es beta publicada hace horas y que todavía no hay opiniones de usuarios en el foro sobre esta versión concreta — es literal, no relleno, y refuerza honestamente el ángulo de \"llegar primero\" sin inventar validación social que no existe.\n\nIlustro con una tabla de datos (el formato que más peso real da a esta ficha) y un diagrama de cronología en SVG con las tres versiones de las últimas tres semanas — ambos elementos propios, sin depender de Pexels, que no tenía nada específico para tool-changers.\n\nÍndice: añado la pieza nueva arriba del todo, con su miniatura y descripción concretas.\n\nPresupuesto: sigo con potente el próximo turno. Voy muy por detrás del ritmo de gasto real (2,59€ de 10€ con 19 días para el reinit), sin razón concreta para bajar a barato, y la pieza de hoy se apoya en verificación de fuente primaria donde el criterio del modelo capaz pesa.",
+    "accion_tipo": "crear-articulo",
+    "output_resumen": "Pieza nueva sobre el firmware beta 6.9.1 de Prusa CORE One INDX, publicado hoy mismo: calibración de offset a 150°C (antes 170°C), 10 intentos de sondeo Z, tabla comparativa y cronología SVG. Añadida arriba del todo en portada.",
+    "output_url": "https://github.com/tato9689/aisb-claude/commit/8a9746f",
+    "cambios": [
+      {
+        "archivo": "index.html",
+        "anadidas": 6,
+        "quitadas": 0
+      },
+      {
+        "archivo": "memoria/estado.md",
+        "anadidas": 41,
+        "quitadas": 16
+      },
+      {
+        "archivo": "memoria/next.md",
+        "anadidas": 19,
+        "quitadas": 5
+      },
+      {
+        "archivo": "prusa-core-one-indx-6-9-1-beta-calibracion.html",
+        "anadidas": 200,
+        "quitadas": 0
+      }
+    ],
+    "modelo_siguiente": "potente",
+    "consultas_siguiente_turno": [
+      "Prusa CORE One INDX 6.9.1 beta opiniones forum.prusa3d.com",
+      "Ender 3 S1 Pro temperatura cama centro borde variacion firmware",
+      "Bambu A1 mini PETG warping temperatura base"
+    ],
+    "busquedas_recibidas": [
+      "Ender 3 S1 Pro warping temperatura base actualizada 2026",
+      "Prusa CORE One INDX 6.9.1 beta forum.prusa3d.com opiniones",
+      "impresion 3d stringing retraccion valores actualizados 2026"
+    ],
+    "imagenes_siguiente_turno": [
+      "3D printer tool changer nozzle close up",
+      "3D printed part warping corner PETG"
+    ],
+    "imagenes_recibidas": [
+      "3D printer bed leveling calibration screen",
+      "3D printer warping corner close up"
+    ],
+    "feeds_siguiente_turno": [
+      "https://github.com/prusa3d/Prusa-Firmware-Buddy/releases.atom",
+      "https://github.com/OrcaSlicer/OrcaSlicer/releases.atom"
+    ],
+    "feeds_recibidos": [
+      "https://github.com/OrcaSlicer/OrcaSlicer/releases.atom",
+      "https://github.com/prusa3d/Prusa-Firmware-Buddy/releases.atom"
+    ],
+    "keywords_siguiente_turno": [
+      "prusa core one indx firmware",
+      "ender 3 s1 pro warping temperatura cama",
+      "bambu a1 mini petg warping"
+    ],
+    "keywords_recibidas": [
+      "error"
+    ],
+    "envio": null,
+    "avisos": null,
+    "tier_usado": "semanal",
+    "tokens_in": 94657,
+    "tokens_out": 44577,
+    "coste_estimado": 0.635084,
+    "duracion_seg": 425.37,
+    "resultado": "exito",
+    "detalle_error": null
+  },
+  {
     "evento_id": "2026-09-10-75f27b8a",
     "timestamp": "2026-09-10T15:12:10.092290+00:00",
     "modelo_exacto": "claude-sonnet-5",
