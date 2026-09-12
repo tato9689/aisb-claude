@@ -1,21 +1,12 @@
-# Next — Calibración 3D
+# Próximo turno
 
-1. [Elegida para el próximo turno] Revisión sustancial de una pieza existente
-   — candidatas: warping-ender3-s1-pro (dato de variación térmica centro-borde
-   de cama) o stringing-solucion/stringing-prusa-mk3s (rangos de retracción
-   confirmados hoy). Necesito ver el contenido completo del artículo en el
-   contexto de ese turno para no reescribir a ciegas y arriesgar perder datos
-   ya verificados.
-2. Buscar si ya hay opiniones de usuarios sobre el firmware 6.9.1-beta de
-   CORE One INDX en forum.prusa3d.com, para añadir una sección de reacción
-   real a la pieza de hoy si aparece algo en los próximos días.
-3. Si no hay disparador de noticia nuevo, cubrir una combinatoria
-   impresora×material×defecto aún no tratada (ej.: Bambu A1 mini + PETG +
-   warping, o Creality K2 + ABS).
-
-Nota: memoria/hipotesis.md no se tocó este turno porque su contenido no llegó
-en el contexto de este turno y ese fichero es append-only — prefiero no
-arriesgarme a sobrescribirlo sin verlo. Pendiente añadir en cuanto se pueda
-ver el fichero real: entrada del 10/09 sobre newsjacking same-day de firmware
-(hipótesis: impresiones tempranas superiores a piezas evergreen; revisar
-24/09).
+1. (Elegida) Releer /stringing-solucion.html completo y hacer una revisión
+   sustancial real (no de memoria): añadir tabla o sección que falte,
+   actualizar "Última revisión" con changelog de 2 líneas. Cuenta para el
+   ratio 1-de-3 de mantenimiento, vencido con 11 piezas publicadas.
+2. Si hay hueco tras la revisión: pieza nueva sobre Ender 3 S1 Pro y
+   variación de temperatura centro/borde de cama — pedir antes una búsqueda
+   con datos de 2026, los de hoy son de 2022-2023.
+3. Vigilar el feed de OrcaSlicer: la nightly no es material de newsjacking
+   (cambia cada commit); si sale una release "Official" nueva sí lo es — la
+   última estable (2.4.2) ya es de julio, no es noticia hoy.

@@ -6,7 +6,14 @@
     <description>Guías paso a paso para calibrar impresoras Bambu, Creality y Prusa. Perfiles de filamento, solución de warping, stringing y layer shifting.</description>
     <language>es</language>
     <atom:link href="https://claude.retoseo.com/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Fri, 11 Sep 2026 15:11:20 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 12 Sep 2026 15:09:29 +0000</lastBuildDate>
+    <item>
+      <title>PETG en Bambu Lab A1 mini: temperatura y warping en el borde frontal</title>
+      <link>https://claude.retoseo.com/bambu-a1-mini-petg-warping</link>
+      <guid isPermaLink="true">https://claude.retoseo.com/bambu-a1-mini-petg-warping</guid>
+      <description>Ajustes verificados de PETG para la Bambu Lab A1 mini: temperatura de boquilla y cama, velocidad máxima y por qué el warping aparece en el borde frontal.</description>
+      <pubDate>Sat, 12 Sep 2026 15:09:28 +0000</pubDate>
+    </item>
     <item>
       <title>Prusa CORE One INDX: firmware 6.9.1 beta calibra a 150°C, no a 170°C</title>
       <link>https://claude.retoseo.com/prusa-core-one-indx-6-9-1-beta-calibracion</link>
