@@ -1,5 +1,99 @@
 [
   {
+    "evento_id": "2026-09-12-bba6501c",
+    "timestamp": "2026-09-12T15:09:29.291068+00:00",
+    "modelo_exacto": "claude-sonnet-5",
+    "tipo_tarea": "redaccion-articulo",
+    "input_contexto": {
+      "fecha_snapshot": "2026-09-11",
+      "vistas": null,
+      "clics_gsc": 0,
+      "posicion_media_gsc": 0.0,
+      "suscriptores_totales": 0,
+      "evolucion_7d": {
+        "vistas": 0,
+        "suscriptores": 0
+      }
+    },
+    "razonamiento": "Reviso el parte mecánico: cero problemas, cero avisos pendientes — la piel ya está vestida y el pie ya cumple, así que hoy no tengo que pelearme con eso y puedo ir directo a contenido.\n\nDe las tres búsquedas de ayer, la que da carne nueva de verdad es la de Bambu A1 mini + PETG: FilamentPicks (hace 4 semanas, dato de comunidad, no oficial de Bambu Lab) da una base concreta — 255°C boquilla, 70°C cama, 8 mm³/s de velocidad volumétrica máxima, ratio de flujo 0.95, ventilación 40-90%. Y la wiki oficial de Bambu Lab aporta el dato que de verdad explica el patrón que reporta un usuario en el foro (warping solo en el borde frontal, no en toda la pieza): con temperatura ambiente por debajo de 20°C aparece warping incluso en PLA/PETG en impresoras sin recinto como la A1. Esa combinación impresora×material×defecto no la tenía cubierta todavía, así que es la pieza de hoy. Marco explícitamente que el 0.95 de flujo es de fuente comunitaria, no de documentación oficial de Bambu Lab — no lo presento como si lo fuera.\n\nSobre Prusa: el firmware 6.9.1-beta que confirma el feed de GitHub es exactamente el mismo dato que ya tengo publicado (calibración a 150°C en vez de 170°C), así que no hace falta tocar esa pieza — sería cambiar la fecha sin cambiar nada, y eso está prohibido. La mención en el foro sobre el Core One L INDX de 8 herramientas es un producto distinto, no aporta a mi pieza actual.\n\nSobre Ender 3 S1 Pro: los datos de temperatura centro/borde que salieron son de 2022-2023, demasiado viejos para escribir un valor nuevo con confianza — lo dejo para pedir una búsqueda más reciente el próximo turno en vez de publicar con datos de hace tres años.\n\nCon 11 piezas ya en portada tengo la regla de mantenimiento vencida (1 de cada 3 debe ser revisión), pero no tengo en este contexto el contenido real de ningún artículo antiguo para editarlo con seguridad — reescribirlo a ciegas sin ver qué dice hoy es el mismo error que \"cambiar la fecha sin cambiar el contenido\", solo que al revés. Prefiero dejarlo anotado como prioridad número uno del próximo turno (con la pieza elegida: `stringing-solucion`, la más genérica del catálogo) que fingir una revisión que no puedo verificar.\n\nImagen: uso la del extrusor con filamento naranja de Pexels (encaja con el tema de extrusión/calibración) con su atribución completa, más una tabla de datos propia como elemento visual principal — cumple el orden de preferencia (tabla primero, foto de apoyo después). Enlazo internamente a las piezas de secado de PETG, warping de Ender 3 y ASA/enclosure, que ya existen.\n\nGasto: voy en 3.176€ de 10€, sin presión de tope ni de ritmo. Sigo con el modelo potente: la revisión que dejo pendiente para mañana exige leer con cuidado un artículo entero antes de tocarlo, y ahí el criterio del modelo caro pesa más que en una pieza nueva desde cero.",
+    "accion_tipo": "crear-articulo",
+    "output_resumen": "Nueva ficha: PETG en Bambu A1 mini (temperatura, velocidad volumétrica, flujo) y por qué el warping se concentra en el borde frontal por temperatura ambiente, no por la cama. Añadida a portada.",
+    "output_url": "https://github.com/tato9689/aisb-claude/commit/36e99c8",
+    "cambios": [
+      {
+        "archivo": "bambu-a1-mini-petg-warping.html",
+        "anadidas": 120,
+        "quitadas": 0
+      },
+      {
+        "archivo": "index.html",
+        "anadidas": 7,
+        "quitadas": 1
+      },
+      {
+        "archivo": "memoria/estado.md",
+        "anadidas": 26,
+        "quitadas": 40
+      },
+      {
+        "archivo": "memoria/hipotesis.md",
+        "anadidas": 16,
+        "quitadas": 34
+      },
+      {
+        "archivo": "memoria/next.md",
+        "anadidas": 11,
+        "quitadas": 20
+      }
+    ],
+    "modelo_siguiente": "potente",
+    "consultas_siguiente_turno": [
+      "Ender 3 S1 Pro temperatura cama centro borde variación 2026",
+      "stringing 3D impresión causas retracción 2026",
+      "Bambu Lab A1 mini enclosure advertencia oficial fuente"
+    ],
+    "busquedas_recibidas": [
+      "Bambu A1 mini PETG warping temperatura base",
+      "Ender 3 S1 Pro temperatura cama centro borde variacion firmware",
+      "Prusa CORE One INDX 6.9.1 beta opiniones forum.prusa3d.com"
+    ],
+    "imagenes_siguiente_turno": [
+      "3D printer enclosure temperature warping",
+      "3D printer bed leveling calibration screen"
+    ],
+    "imagenes_recibidas": [
+      "3D printed part warping corner PETG",
+      "3D printer tool changer nozzle close up"
+    ],
+    "feeds_siguiente_turno": [
+      "https://github.com/prusa3d/Prusa-Firmware-Buddy/releases.atom",
+      "https://github.com/OrcaSlicer/OrcaSlicer/releases.atom"
+    ],
+    "feeds_recibidos": [
+      "https://github.com/OrcaSlicer/OrcaSlicer/releases.atom",
+      "https://github.com/prusa3d/Prusa-Firmware-Buddy/releases.atom"
+    ],
+    "keywords_siguiente_turno": [
+      "bambu a1 mini petg warping",
+      "stringing 3d impresora solución",
+      "ender 3 s1 pro temperatura cama variación",
+      "prusa core one l indx",
+      "petg secado horas humedad"
+    ],
+    "keywords_recibidas": [
+      "error"
+    ],
+    "envio": null,
+    "avisos": null,
+    "tier_usado": "semanal",
+    "tokens_in": 41676,
+    "tokens_out": 26771,
+    "coste_estimado": 0.351062,
+    "duracion_seg": 280.5,
+    "resultado": "exito",
+    "detalle_error": null
+  },
+  {
     "evento_id": "2026-09-11-92efab5b",
     "timestamp": "2026-09-11T15:11:20.803984+00:00",
     "modelo_exacto": "claude-sonnet-5",
