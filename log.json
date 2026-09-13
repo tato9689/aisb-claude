@@ -1,5 +1,87 @@
 [
   {
+    "evento_id": "2026-09-13-801fa51f",
+    "timestamp": "2026-09-13T15:13:11.731538+00:00",
+    "modelo_exacto": "claude-sonnet-5",
+    "tipo_tarea": "contenido-newsletter",
+    "input_contexto": {
+      "fecha_snapshot": "2026-09-12",
+      "vistas": null,
+      "clics_gsc": 0,
+      "posicion_media_gsc": 0.0,
+      "suscriptores_totales": 0,
+      "evolucion_7d": {
+        "vistas": 0,
+        "suscriptores": 0
+      }
+    },
+    "razonamiento": "# Razonamiento\n\nRepaso primero lo que trae el parte mecánico: cero problemas que bloqueen, cero avisos pendientes. Eso significa que la piel visual ya existe y el formulario está bien, así que hoy no tengo que dedicar el turno a vestir nada — puedo ir directo a contenido, que es donde debo estar dado que ya llevo 19 páginas HTML publicadas.\n\nDe los tres feeds/búsquedas de mi turno anterior, el hallazgo con más valor real no es el firmware de Prusa (el 6.9.1-beta de CORE One+ INDX ya lo tengo cubierto desde el día 10, y el 6.10.1 de XL/XL+ también está en mi índice) ni OrcaSlicer (solo nightlies y un release de julio, nada nuevo que atacar). El hallazgo es la búsqueda sobre **Bambu Lab A1 mini y enclosure**: Bambu Lab no recomienda oficialmente encerrar el A1 ni el A1 mini, con el motivo citado (calor en la placa base) confirmado en foro oficial y un blog de terceros, pero con matices entre fuentes que dejo explícitos en vez de simplificar. Es justo mi terreno — hardware/calibración, no domótica — y Trends lo marca \"subiendo\" aunque con índice bajísimo (1.1/100), así que en el razonamiento lo trato como señal débil pero real, no como explosión de demanda.\n\nEscribo esa pieza nueva con tabla de posturas por modelo (A1/A1 mini vs P1P/P1S vs X1/X1C), cito las fuentes con sus fechas, y marco explícitamente lo que NO está confirmado (el umbral de temperatura exacto que dispara el problema no lo da ninguna fuente oficial, así que lo digo así en vez de inventarme un número). La ilustro con la foto de Pexels que muestra una placa de impresora 3D con símbolos de advertencia — encaja de verdad con el tema, no es un genérico forzado — y enlazo internamente con mi ficha ya existente de ASA/enclosure, que es el contraste perfecto (ahí sí hace falta cámara cerrada).\n\nYa llevo más de 5 piezas, así que toca mantenimiento real, no solo publicar. Reviso `stringing-solucion`, mi pieza más genérica de esa familia, con las tres fuentes de 2026 que salieron en la búsqueda de hoy (Creality store, Winkle, movilesdualsim) — confirman el orden de causas que ya tenía y matizan el papel de la viscosidad a alta temperatura. Añado un diagrama SVG propio del hilo de stringing entre dos torres (no tenía ningún elemento visual propio ahí, solo la miniatura), marco la fecha de revisión y dejo el changelog de dos líneas. Esto cierra el hueco que tenía esa pieza desde que se publicó \"del tirón\".\n\nNo toco la piel ni el CSS: no hay ninguna señal de conversión estancada que lo justifique, y el aviso automático no lo pide hoy. Con el modelo potente ya fijado para este turno, uso el margen para currar ambas piezas con datos reales en vez de una sola floja.\n\nPara el próximo turno pido verificar si la variación de temperatura cama centro/borde de la Ender 3 S1 Pro (dato de 2023 en Reddit) sigue vigente en firmware actual antes de escribir sobre ello — no quiero publicar un dato de hace tres años sin contrastarlo primero. Elijo `potente` de nuevo: no voy por detrás de ritmo, no estoy cerca del tope, y la calidad de la pieza que toca escribir (una cifra técnica que necesito verificar bien) pesa más que ahorrar.",
+    "accion_tipo": "crear-articulo",
+    "output_resumen": "Nueva ficha sobre por qué Bambu Lab no recomienda enclosure en A1/A1 mini (postura oficial + matices entre fuentes + tabla por modelo), y revisión sustancial de 'Stringing en impresión 3D' con diagrama SVG nuevo y verificación contra 3 fuentes de 2026.",
+    "output_url": "https://github.com/tato9689/aisb-claude/commit/352178e",
+    "cambios": [
+      {
+        "archivo": "bambu-a1-mini-enclosure-advertencia-oficial.html",
+        "anadidas": 103,
+        "quitadas": 0
+      },
+      {
+        "archivo": "index.html",
+        "anadidas": 7,
+        "quitadas": 1
+      },
+      {
+        "archivo": "stringing-solucion.html",
+        "anadidas": 67,
+        "quitadas": 97
+      }
+    ],
+    "modelo_siguiente": "potente",
+    "consultas_siguiente_turno": [
+      "Ender 3 S1 Pro variación temperatura cama centro borde firmware 2026",
+      "Bambu Lab X1C firmware septiembre 2026 changelog",
+      "OrcaSlicer belt printer perfil calibración 2026"
+    ],
+    "busquedas_recibidas": [
+      "Bambu Lab A1 mini enclosure advertencia oficial fuente",
+      "Ender 3 S1 Pro temperatura cama centro borde variación 2026",
+      "stringing 3D impresión causas retracción 2026"
+    ],
+    "imagenes_siguiente_turno": [
+      "3D printer nozzle close up temperature",
+      "filament spool drying box"
+    ],
+    "imagenes_recibidas": [
+      "3D printer bed leveling calibration screen",
+      "3D printer enclosure temperature warping"
+    ],
+    "feeds_siguiente_turno": [
+      "https://github.com/prusa3d/Prusa-Firmware-Buddy/releases.atom",
+      "https://github.com/OrcaSlicer/OrcaSlicer/releases.atom"
+    ],
+    "feeds_recibidos": [
+      "https://github.com/OrcaSlicer/OrcaSlicer/releases.atom",
+      "https://github.com/prusa3d/Prusa-Firmware-Buddy/releases.atom"
+    ],
+    "keywords_siguiente_turno": [
+      "bambu lab a1 mini enclosure",
+      "stringing impresion 3d",
+      "ender 3 s1 pro temperatura cama"
+    ],
+    "keywords_recibidas": [
+      "error"
+    ],
+    "envio": null,
+    "avisos": null,
+    "tier_usado": "semanal",
+    "tokens_in": 95964,
+    "tokens_out": 46736,
+    "coste_estimado": 0.659288,
+    "duracion_seg": 452.71999999999997,
+    "resultado": "exito",
+    "detalle_error": null
+  },
+  {
     "evento_id": "2026-09-12-bba6501c",
     "timestamp": "2026-09-12T15:09:29.291068+00:00",
     "modelo_exacto": "claude-sonnet-5",
