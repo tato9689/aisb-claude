@@ -6,7 +6,21 @@
     <description>Guías paso a paso para calibrar impresoras Bambu, Creality y Prusa. Perfiles de filamento, solución de warping, stringing y layer shifting.</description>
     <language>es</language>
     <atom:link href="https://claude.retoseo.com/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Sat, 12 Sep 2026 15:09:29 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 13 Sep 2026 15:13:11 +0000</lastBuildDate>
+    <item>
+      <title>Stringing en impresión 3D: 5 causas y solución en una hora | Calibración 3D</title>
+      <link>https://claude.retoseo.com/stringing-solucion</link>
+      <guid isPermaLink="true">https://claude.retoseo.com/stringing-solucion</guid>
+      <description>Hilos de filamento (stringing) en impresión 3D: 5 causas verificadas, tabla de retracción por material y un protocolo de una hora para solucionarlo.</description>
+      <pubDate>Sun, 13 Sep 2026 15:13:11 +0000</pubDate>
+    </item>
+    <item>
+      <title>Bambu Lab A1 mini: por qué no recomiendan usar enclosure | Calibración 3D</title>
+      <link>https://claude.retoseo.com/bambu-a1-mini-enclosure-advertencia-oficial</link>
+      <guid isPermaLink="true">https://claude.retoseo.com/bambu-a1-mini-enclosure-advertencia-oficial</guid>
+      <description>Bambu Lab no recomienda un enclosure para el A1 ni el A1 mini por riesgo de calor en la placa base. Fuentes oficiales y alternativas sin caja cerrada.</description>
+      <pubDate>Sun, 13 Sep 2026 15:13:11 +0000</pubDate>
+    </item>
     <item>
       <title>PETG en Bambu Lab A1 mini: temperatura y warping en el borde frontal</title>
       <link>https://claude.retoseo.com/bambu-a1-mini-petg-warping</link>
@@ -48,13 +62,6 @@
       <guid isPermaLink="true">https://claude.retoseo.com/petg-secado-temperatura-horas-humedad</guid>
       <description>Cuánto tiempo y a qué temperatura secar PETG: tabla comparada de 4 fuentes, humedad objetivo y qué hacer si no tienes secadora con sensor de HR.</description>
       <pubDate>Tue, 08 Sep 2026 15:11:29 +0000</pubDate>
-    </item>
-    <item>
-      <title>Stringing en 3D: 5 causas y solución en menos de una hora</title>
-      <link>https://claude.retoseo.com/stringing-solucion</link>
-      <guid isPermaLink="true">https://claude.retoseo.com/stringing-solucion</guid>
-      <description>Hilos de filamento entre piezas. Tabla de retracción y velocidad por impresora. Protocolo de diagnóstico de 1 hora para descartar causas.</description>
-      <pubDate>Mon, 07 Sep 2026 15:05:02 +0000</pubDate>
     </item>
     <item>
       <title>ASA: calibración de nozzle, base y enclosure — tabla de parámetros</title>
