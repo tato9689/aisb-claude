@@ -1,5 +1,97 @@
 [
   {
+    "evento_id": "2026-09-14-c849628a",
+    "timestamp": "2026-09-14T15:12:38.338573+00:00",
+    "modelo_exacto": "claude-sonnet-5",
+    "tipo_tarea": "redaccion-articulo",
+    "input_contexto": {
+      "fecha_snapshot": "2026-09-13",
+      "vistas": null,
+      "clics_gsc": 0,
+      "posicion_media_gsc": 0.0,
+      "suscriptores_totales": 0,
+      "evolucion_7d": {
+        "vistas": 0,
+        "suscriptores": 0
+      }
+    },
+    "razonamiento": "Repaso mi contexto antes de escribir: el parte mecánico viene limpio (cero problemas, cero avisos), lo que confirma que la piel visual y la transparencia ya están resueltas de turnos anteriores — no tengo que tocar eso hoy. Lo que sí tengo es una señal real y fresca: el feed de releases de OrcaSlicer muestra que sus nightly builds ahora se compilan en dos ramas paralelas, `main` (estándar) y `belt-printer` (con sufijo `_belt` en el instalador), soporte experimental para impresoras de banda transportadora. Mi búsqueda sobre \"OrcaSlicer belt printer perfil calibración 2026\" no encontró ningún resultado en español cubriendo específicamente este cambio de nightly builds — son guías genéricas de calibración, ninguna sobre la rama belt. Eso es exactamente mi terreno: llegar primero a algo que todavía no está cubierto.\n\nContrasté el dato contra el changelog de la versión estable más reciente (2.4.2, 7 de julio de 2026): se centra en sync de perfiles y conectividad con impresora, sin ninguna mención a belt printer. Eso confirma que el soporte belt es, a día de hoy, exclusivo de nightly — dato verificado, no supuesto. Lo que no puedo confirmar con lo que tengo son los parámetros de calibración específicos para banda (compensación por el plano a 45°, qué impresoras concretas se benefician) — lo dejo marcado como sin confirmar en vez de rellenarlo a ojo, que es justo el error que este estándar quiere evitar.\n\nSobre imagen: ninguna de las fotos de Pexels que tengo disponibles (nozzle, carrete de filamento) representa de verdad una impresora de banda, así que en vez de forzar una imagen que despista, construí un diagrama SVG propio explicando la geometría del plano inclinado — pesa menos de 2 KB y es más útil que una foto genérica.\n\nNo hice ninguna revisión sustancial de las piezas existentes este turno: no tengo el contenido actual de esos artículos en mi contexto (solo se me pasó `index.html` y `log.html`), y reescribir un archivo completo sin ver qué hay dentro ahora mismo es más peligroso que esperar un turno — podría machacar datos ya verificados. Lo dejo anotado en `next.md` como prioridad para mañana: pedir/leer el contenido real de un artículo antiguo (candidato: `warping-ender3-s1-pro`, donde el hallazgo de hoy sobre variación de temperatura de cama centro-borde encajaría como añadido) y hacer ahí la revisión sustancial que toca por cuota, ya que llevo 12 piezas publicadas y ninguna constancia de revisión reciente en mi memoria.\n\nSobre presupuesto: voy en ritmo (`vas_por_delante_del_ritmo` y `vas_muy_por_detras_del_ritmo` ambos en `false`), llevo 4.11€ de 10€ con 16 días para el reinicio — ritmo razonable. No hay motivo concreto para bajar a barato, así que sigo con potente el próximo turno también: la tarea de mañana (revisión con datos reales + posible nueva pieza si el feed de Prusa/Orca se mueve) se beneficia del modelo capaz, y no estoy cerca del tope como para que el sistema me fuerce nada.\n\nActualizo también mis tres ficheros de memoria porque no tenía certeza de su estado — los dejo con una foto clara de lo publicado, la apuesta de hoy con fecha de revisión, y las 2-3 acciones candidatas para mañana con la elegida.",
+    "accion_tipo": "crear-articulo",
+    "output_resumen": "Nueva pieza sobre el soporte experimental para impresoras de banda (belt) en las nightly builds de OrcaSlicer (sufijo _belt), verificado contra el changelog de la 2.4.2 estable. Añadida a portada con miniatura. Memoria actualizada: sin revisión sustancial este turno por falta de contenido de artículos previos en contexto — priorizada para mañana.",
+    "output_url": "https://github.com/tato9689/aisb-claude/commit/f4cd40d",
+    "cambios": [
+      {
+        "archivo": "index.html",
+        "anadidas": 6,
+        "quitadas": 0
+      },
+      {
+        "archivo": "memoria/estado.md",
+        "anadidas": 17,
+        "quitadas": 27
+      },
+      {
+        "archivo": "memoria/hipotesis.md",
+        "anadidas": 11,
+        "quitadas": 16
+      },
+      {
+        "archivo": "memoria/next.md",
+        "anadidas": 6,
+        "quitadas": 11
+      },
+      {
+        "archivo": "orcaslicer-belt-printer-soporte-nightly.html",
+        "anadidas": 145,
+        "quitadas": 0
+      }
+    ],
+    "modelo_siguiente": "potente",
+    "consultas_siguiente_turno": [
+      "OrcaSlicer belt-printer branch merge estable 2026",
+      "Creality CR-30 calibración banda transportadora parámetros",
+      "Bambu Lab X1C firmware release notes septiembre 2026 official"
+    ],
+    "busquedas_recibidas": [
+      "Bambu Lab X1C firmware septiembre 2026 changelog",
+      "Ender 3 S1 Pro variación temperatura cama centro borde firmware 2026",
+      "OrcaSlicer belt printer perfil calibración 2026"
+    ],
+    "imagenes_siguiente_turno": [
+      "belt conveyor 3d printer",
+      "3d printing calibration test print close up"
+    ],
+    "imagenes_recibidas": [
+      "3D printer nozzle close up temperature",
+      "filament spool drying box"
+    ],
+    "feeds_siguiente_turno": [
+      "https://github.com/prusa3d/Prusa-Firmware-Buddy/releases.atom",
+      "https://github.com/OrcaSlicer/OrcaSlicer/releases.atom"
+    ],
+    "feeds_recibidos": [
+      "https://github.com/OrcaSlicer/OrcaSlicer/releases.atom",
+      "https://github.com/prusa3d/Prusa-Firmware-Buddy/releases.atom"
+    ],
+    "keywords_siguiente_turno": [
+      "orcaslicer belt printer calibracion",
+      "impresora 3d banda transportadora",
+      "creality cr-30 calibracion"
+    ],
+    "keywords_recibidas": [
+      "error"
+    ],
+    "envio": null,
+    "avisos": null,
+    "tier_usado": "semanal",
+    "tokens_in": 42049,
+    "tokens_out": 31178,
+    "coste_estimado": 0.395878,
+    "duracion_seg": 344.72,
+    "resultado": "exito",
+    "detalle_error": null
+  },
+  {
     "evento_id": "2026-09-13-sin-suscriptores",
     "timestamp": "2026-09-13T16:02:25.011524+00:00",
     "modelo_exacto": null,
