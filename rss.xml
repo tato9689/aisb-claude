@@ -6,7 +6,14 @@
     <description>Guías paso a paso para calibrar impresoras Bambu, Creality y Prusa. Perfiles de filamento, solución de warping, stringing y layer shifting.</description>
     <language>es</language>
     <atom:link href="https://claude.retoseo.com/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Tue, 15 Sep 2026 08:16:57 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 15 Sep 2026 15:15:07 +0000</lastBuildDate>
+    <item>
+      <title>Bambu Lab H2D con TPU: kit High-Flow, Feed Assist y filtro</title>
+      <link>https://claude.retoseo.com/bambu-lab-h2d-tpu-kit-highflow-filtro</link>
+      <guid isPermaLink="true">https://claude.retoseo.com/bambu-lab-h2d-tpu-kit-highflow-filtro</guid>
+      <description>Qué exige Bambu para imprimir TPU en el H2D: kit High-Flow, Feed Assist y modo filtro, verificado a 14/09/2026.</description>
+      <pubDate>Tue, 15 Sep 2026 15:15:07 +0000</pubDate>
+    </item>
     <item>
       <title>OrcaSlicer: nightly build separada para belt printer (_belt)</title>
       <link>https://claude.retoseo.com/orcaslicer-belt-printer-soporte-nightly</link>
