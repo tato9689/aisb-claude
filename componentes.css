@@ -1,134 +1,391 @@
-/* Componentes específicos de artículos y diseño */
+/* ============================================================
+   componentes.css — Calibración 3D (claude.retoseo.com)
+   Sistema de componentes reutilizables sobre los tokens de piel.css.
+   Usa var(--token, fallback) en todo el fichero para no depender
+   ciegamente de nombres exactos de piel.css.
+   ============================================================ */
 
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 20px 0;
-  font-size: 0.95rem;
+/* ---------- Accesibilidad de navegación ---------- */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  background: var(--color-fondo, #fff);
+  color: var(--color-texto, #1b1b1b);
+  padding: 0.6rem 1rem;
+  z-index: 100;
+  border-radius: var(--radio, 8px);
+}
+.skip-link:focus {
+  left: 0.5rem;
+  top: 0.5rem;
 }
 
-th, td {
-  border: 1px solid var(--border);
-  padding: 12px;
-  text-align: left;
+/* ---------- Cabecera y logo ---------- */
+header {
+  display: flex;
+  align-items: center;
+  padding: 1rem clamp(1rem, 4vw, 2.5rem);
 }
-
-th {
-  background: var(--accent);
-  color: white;
-  font-weight: 600;
+header .logo {
+  width: 2.25rem;
+  height: 2.25rem;
+  color: var(--color-acento, #c1440e);
 }
-
-td {
-  background: white;
-}
-
-tr:nth-child(even) td {
-  background: var(--bg);
-}
-
-pre {
-  background: #f5f5f5;
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 15px;
-  overflow-x: auto;
-  font-family: 'Courier New', monospace;
-  font-size: 0.9rem;
-  margin: 15px 0;
-}
-
-code {
-  background: #f5f5f5;
-  padding: 2px 6px;
-  border-radius: 3px;
-  font-family: 'Courier New', monospace;
-  font-size: 0.9em;
-}
-
-pre code {
-  background: none;
-  padding: 0;
-}
-
-a {
-  color: var(--accent);
+header a[aria-label="Inicio"] {
+  display: inline-flex;
   text-decoration: none;
-  transition: color var(--transition);
 }
 
-a:hover {
-  color: var(--accent-dark);
+/* ---------- Listado de artículos (portada) ---------- */
+section[aria-labelledby="articulos-heading"] ul[role="list"] {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.5rem;
+  padding: 0;
+  margin: 1.5rem 0;
+}
+section[aria-labelledby="articulos-heading"] li {
+  border: 1px solid var(--color-borde, #ddd8cd);
+  border-radius: var(--radio, 8px);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background: var(--color-superficie, #f4f2ee);
+}
+section[aria-labelledby="articulos-heading"] li img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 640 / 336;
+  object-fit: cover;
+  display: block;
+}
+section[aria-labelledby="articulos-heading"] li h3 {
+  margin: 0.9rem 0.9rem 0.4rem;
+  font-size: 1.05rem;
+  line-height: 1.3;
+}
+section[aria-labelledby="articulos-heading"] li h3 a {
+  color: var(--color-texto, #1b1b1b);
+  text-decoration: none;
+}
+section[aria-labelledby="articulos-heading"] li h3 a:hover,
+section[aria-labelledby="articulos-heading"] li h3 a:focus-visible {
+  color: var(--color-acento, #c1440e);
+  text-decoration: underline;
+}
+section[aria-labelledby="articulos-heading"] li p {
+  margin: 0 0.9rem 0.9rem;
+  font-size: 0.92rem;
+  color: var(--color-texto-suave, #555);
+  flex-grow: 1;
+}
+section[aria-labelledby="articulos-heading"] li > a:last-child {
+  margin: 0 0.9rem 0.9rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-acento, #c1440e);
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+section[aria-labelledby="articulos-heading"] li > a:last-child:hover,
+section[aria-labelledby="articulos-heading"] li > a:last-child:focus-visible {
+  color: var(--color-acento-oscuro, #8f3409);
   text-decoration: underline;
 }
 
-/* Article */
-article {
-  max-width: 800px;
-  margin: 0 auto;
+/* ---------- Formulario de suscripción ---------- */
+section[aria-labelledby="suscripcion-heading"] form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  max-width: 32rem;
+  margin-top: 1rem;
 }
-
-article h2 {
-  margin-top: 30px;
-  border-bottom: 1px solid var(--border);
-  padding-bottom: 10px;
-}
-
-article h3 {
-  margin-top: 20px;
-  font-size: 1rem;
-}
-
-article ul, article ol {
-  margin: 15px 0;
-  padding-left: 25px;
-}
-
-article li {
-  margin-bottom: 8px;
-  color: var(--text-primary);
-}
-
-article strong {
+section[aria-labelledby="suscripcion-heading"] label {
   font-weight: 600;
+  font-size: 0.95rem;
+}
+section[aria-labelledby="suscripcion-heading"] input[type="email"] {
+  padding: 0.65rem 0.8rem;
+  border: 1px solid var(--color-borde, #ccc4b5);
+  border-radius: var(--radio, 8px);
+  font-size: 1rem;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+section[aria-labelledby="suscripcion-heading"] input[type="email"]:focus-visible {
+  outline: none;
+  border-color: var(--color-acento, #c1440e);
+  box-shadow: 0 0 0 3px var(--color-acento-suave, rgba(193, 68, 14, 0.2));
+}
+section[aria-labelledby="suscripcion-heading"] p {
+  font-size: 0.85rem;
+  color: var(--color-texto-suave, #555);
+  display: flex;
+  gap: 0.5rem;
+  align-items: flex-start;
+}
+section[aria-labelledby="suscripcion-heading"] input[type="checkbox"] {
+  margin-top: 0.2rem;
+  flex-shrink: 0;
+}
+section[aria-labelledby="suscripcion-heading"] button {
+  align-self: flex-start;
+  padding: 0.7rem 1.4rem;
+  background: var(--color-acento, #c1440e);
+  color: #fff;
+  border: none;
+  border-radius: var(--radio, 8px);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s ease, transform 0.1s ease;
+}
+section[aria-labelledby="suscripcion-heading"] button:hover {
+  background: var(--color-acento-oscuro, #8f3409);
+}
+section[aria-labelledby="suscripcion-heading"] button:active {
+  transform: translateY(1px);
+}
+section[aria-labelledby="suscripcion-heading"] button:focus-visible {
+  outline: 3px solid var(--color-acento, #c1440e);
+  outline-offset: 2px;
 }
 
-/* Lists */
-ul[role="list"] li article p {
-  margin: 15px 20px;
+/* ---------- Pie de página ---------- */
+footer {
+  border-top: 1px solid var(--color-borde, #ddd8cd);
+  margin-top: 3rem;
+  padding: 1.5rem clamp(1rem, 4vw, 2.5rem) 2.5rem;
+  font-size: 0.85rem;
+  color: var(--color-texto-suave, #555);
+}
+footer a {
+  color: var(--color-acento, #c1440e);
+}
+footer .descargo {
+  margin-top: 0.75rem;
+  font-size: 0.78rem;
+  opacity: 0.8;
 }
 
-/* Metadata */
-time {
-  color: var(--text-secondary);
-  font-size: 0.9rem;
+/* ============================================================
+   TABLA DE PARÁMETROS — componente canónico del sitio.
+   Cinco columnas fijas (o variantes documentadas en el manual
+   de diseño): Impresora/Parámetro | Material | Valor recomendado
+   | Rango útil | Si te pasas / si te quedas corto.
+   ============================================================ */
+
+.tabla-parametros-wrap {
+  margin: 1.75rem 0;
+  border: 1px solid var(--color-borde, #ddd8cd);
+  border-radius: var(--radio, 8px);
+  overflow: hidden;
 }
 
-/* Newsletter log */
-#entradas {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+.tabla-scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  position: relative;
+}
+.tabla-scroll:focus-visible {
+  outline: 2px solid var(--color-acento, #c1440e);
+  outline-offset: -2px;
+}
+/* Sombra lateral que avisa de contenido oculto por scroll horizontal */
+.tabla-scroll {
+  background:
+    linear-gradient(to right, var(--color-superficie, #f4f2ee) 0, rgba(0,0,0,0) 0) left,
+    linear-gradient(to left, var(--color-superficie, #f4f2ee) 0, rgba(0,0,0,0) 0) right;
+  background-repeat: no-repeat;
+  background-size: 14px 100%;
+  background-attachment: local, local;
 }
 
-#entradas article {
-  margin-bottom: 40px;
-  padding-bottom: 30px;
-  border-bottom: 1px solid var(--border);
+.tabla-parametros {
+  width: 100%;
+  min-width: 480px;
+  border-collapse: collapse;
+  font-size: 0.92rem;
+  background: var(--color-fondo, #fff);
 }
 
-#entradas article:last-child {
+.tabla-parametros caption {
+  caption-side: top;
+  text-align: left;
+  font-size: 0.82rem;
+  color: var(--color-texto-suave, #666);
+  padding: 0.6rem 0.9rem 0;
+}
+
+.tabla-parametros thead th {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background: var(--color-superficie, #f4f2ee);
+  text-align: left;
+  padding: 0.65rem 0.9rem;
+  border-bottom: 2px solid var(--color-borde, #ccc4b5);
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.tabla-parametros tbody td {
+  padding: 0.6rem 0.9rem;
+  border-bottom: 1px solid var(--color-borde, #e4e0d8);
+  vertical-align: top;
+}
+
+.tabla-parametros tbody tr:nth-child(even) {
+  background: var(--color-superficie-alt, #faf9f6);
+}
+
+.tabla-parametros tbody tr:last-child td {
   border-bottom: none;
 }
 
-#entradas h2 {
-  margin-top: 0;
-  border: none;
-  padding: 0;
-  font-size: 1.1rem;
+/* Primera columna fija en tablas anchas, solo a partir de escritorio */
+@media (min-width: 640px) {
+  .tabla-parametros th:first-child,
+  .tabla-parametros td:first-child {
+    position: sticky;
+    left: 0;
+    background: inherit;
+  }
 }
 
-#entradas time {
-  display: inline-block;
-  color: var(--text-secondary);
+/* Marcado de dato no confirmado o estimado, dentro de una celda */
+.dato-sin-verificar,
+.dato-estimado {
+  font-style: italic;
+}
+.dato-sin-verificar {
+  color: var(--color-aviso, #a35b00);
+}
+.dato-sin-verificar::before {
+  content: "⚠ ";
+  font-style: normal;
+}
+.dato-estimado {
+  color: var(--color-texto-suave, #666);
+}
+.dato-estimado::after {
+  content: " (estimado)";
+  font-style: normal;
+  font-size: 0.85em;
+}
+
+/* Vista tarjeta en móvil: mismo HTML, se reordena por CSS */
+@media (max-width: 639px) {
+  .tabla-scroll {
+    overflow-x: visible;
+    background: none;
+  }
+  .tabla-parametros {
+    min-width: 0;
+  }
+  .tabla-parametros thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+  }
+  .tabla-parametros,
+  .tabla-parametros tbody,
+  .tabla-parametros tr,
+  .tabla-parametros td {
+    display: block;
+    width: 100%;
+  }
+  .tabla-parametros tbody tr {
+    margin: 0 0 1rem;
+    border: 1px solid var(--color-borde, #e4e0d8);
+    border-radius: var(--radio, 8px);
+    padding: 0.5rem 0.9rem;
+    background: var(--color-fondo, #fff);
+  }
+  .tabla-parametros tbody tr:nth-child(even) {
+    background: var(--color-fondo, #fff);
+  }
+  .tabla-parametros td {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 0.45rem 0;
+    border-bottom: 1px dashed var(--color-borde, #e4e0d8);
+  }
+  .tabla-parametros td:last-child {
+    border-bottom: none;
+  }
+  .tabla-parametros td[data-th]::before {
+    content: attr(data-th);
+    display: block;
+    font-weight: 700;
+    font-size: 0.78rem;
+    color: var(--color-texto-suave, #666);
+    flex-shrink: 0;
+    width: 42%;
+  }
+}
+
+/* ============================================================
+   DIAGRAMA — envoltorio para SVG propios de diagnóstico/calibración.
+   El SVG en sí (viewBox, texto real, role="img", <title>/<desc>)
+   se escribe dentro de cada pieza; esto solo maqueta su marco.
+   ============================================================ */
+
+.diagrama {
+  margin: 1.75rem 0;
+}
+
+.diagrama svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  color: var(--color-texto, #1b1b1b); /* para currentColor en ejes/texto del SVG */
+  background: var(--color-fondo, #fff);
+  border: 1px solid var(--color-borde, #e4e0d8);
+  border-radius: var(--radio, 8px);
+}
+
+.diagrama figcaption {
+  margin-top: 0.6rem;
+  font-size: 0.85rem;
+  color: var(--color-texto-suave, #666);
+}
+
+.diagrama details {
+  margin-top: 0.85rem;
+  border: 1px solid var(--color-borde, #e4e0d8);
+  border-radius: var(--radio, 8px);
+  padding: 0.6rem 0.9rem;
+}
+
+.diagrama summary {
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.diagrama details[open] summary {
+  margin-bottom: 0.6rem;
+}
+
+.diagrama details .tabla-parametros-wrap {
+  margin: 0.5rem 0 0;
+  border: none;
+}
+
+/* ---------- Modo oscuro: los SVG heredan currentColor, solo hay
+   que reasegurar contraste del marco ---------- */
+@media (prefers-color-scheme: dark) {
+  .diagrama svg,
+  .tabla-parametros {
+    background: var(--color-fondo, #16140f);
+  }
 }
