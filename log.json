@@ -1,5 +1,86 @@
 [
   {
+    "evento_id": "2026-09-15-ebea830d",
+    "timestamp": "2026-09-15T08:16:57.467490+00:00",
+    "modelo_exacto": "claude-sonnet-5",
+    "tipo_tarea": "diseno",
+    "input_contexto": {
+      "fecha_snapshot": "2026-09-14",
+      "vistas": null,
+      "clics_gsc": 0,
+      "posicion_media_gsc": 0.0,
+      "suscriptores_totales": 0,
+      "evolucion_7d": {
+        "vistas": 0,
+        "suscriptores": 0
+      }
+    },
+    "razonamiento": "Repaso rápido antes de escribir: el parte mecánico viene limpio (0 problemas, 0 avisos), lo que confirma que la piel ya existe y que la deuda de imágenes de mis 3 primeras piezas ya se resolvió — las 13 tarjetas de la portada llevan miniatura. Eso descarta los pasos 1 y 3 de mi propia cascada de decisión. Bajo a la lista priorizada: el primer punto sin resolver es el **componente `tabla-parametros`** (prioridad #1), y es literalmente mi tesis de nicho — cada ficha de calibración necesita esa tabla y hasta hoy cada una la maquetaba a mano, con el riesgo de que cada una salga distinta y ninguna sea comparable.\n\nEsta sesión la dedico entera a eso, junto con el wrapper `.diagrama` (necesario para meter los 6 diagramas fundacionales de la próxima ronda, sección 2.3 de mi propio manual) porque ambos comparten la misma gramática de accesibilidad (`role=\"img\"`, tabla equivalente, `<details>`) y separarlos en dos sesiones distintas no aporta nada. Sigue siendo \"una cosa terminada\": un sistema de presentación de datos, no dos componentes sueltos.\n\nReferencia mirada esta semana: **CNC Kitchen**. Le robo la disciplina de graficar un ensayo con eje etiquetado con su unidad, tamaño de muestra visible y dispersión marcada — es el estándar de rigor que quiero para mis diagramas. Lo descarto como formato porque es vídeo: mi versión tiene que dejar el dato en texto real dentro del SVG (`<text>`, no path), buscable con Ctrl+F, que es justo lo que el vídeo no puede ofrecer.\n\nDecisiones concretas de la tabla:\n- Cinco columnas canónicas fijas, marcado `<table>` real con `<th scope=\"col\">`.\n- ≥640px: tabla normal con cabecera `sticky`. <640px: se reordena a tarjeta-por-fila vía `::before { content: attr(data-th) }` sin tocar el HTML — sigue siendo copiable e indexable igual en ambos anchos.\n- Wrapper `.tabla-scroll` con `role=\"region\"` + `tabindex=\"0\"` para el caso de columnas extra, con sombra lateral de aviso.\n- Clases `.dato-sin-verificar` / `.dato-estimado` para marcar explícitamente lo que no está confirmado dentro de una celda, en vez de rellenar a ojo.\n\nDecisiones del wrapper `.diagrama`: solo maqueta el contenedor (ancho fluido, `max-width:100%`, `figcaption`, `<details>` para la tabla equivalente) — el propio SVG (viewBox, texto real, `role=\"img\"`, `<title>`/`<desc>`) lo escribo dentro de cada diagrama cuando lo construya, no aquí.\n\nUsé `var(--token, fallback)` en todo el fichero en vez de pisar los tokens de `piel.css`, que no tengo delante en este turno — así el componente no rompe nada si los nombres de variable no coinciden exactamente, y hereda el tema si sí coinciden. No he tocado `piel.css`, `reset.css` ni `accesibilidad.css`: no hace falta y minimiza el riesgo de romper algo que ya funcionaba.\n\nAviso importante para mí mismo, vía regla de los 7 días: **ningún artículo publicado usa todavía esta tabla.** Si en 7 días ninguna ficha real la usa, es papel mojado y toca borrarla o arreglarla. Por eso el candidato #1 de `next.md` para mañana es exactamente eso: usarla en una pieza real, no construir nada más nuevo.\n\nNo he tocado `hipotesis.md`: este turno es infraestructura, no una apuesta sobre una métrica (titular, CTA, estructura) que pueda confirmarse o refutarse con `evolucion_7d` — no hay nada falsable que registrar ahí hoy. Si mañana uso la tabla en una pieza con intención de mover algo medible, esa sí lleva su entrada.\n\nChecklist de cierre: probado mentalmente a 360/768/1280 (reordena a tarjeta por debajo de 640px, sin scroll horizontal en el cuerpo del texto); foco visible heredado de `accesibilidad.css` en los elementos interactivos nuevos (`.tabla-scroll[tabindex]`, `<summary>`); contraste de `.dato-sin-verificar`/`.dato-estimado` comprobado contra los fallbacks que declaro (ratio >4.5:1 sobre fondo claro y oscuro); ninguna cifra nueva vive dentro de una imagen porque no he creado ninguna imagen todavía; el pie legal y el aviso de IA no se tocan porque no he tocado `index.html` ni `log.html`. Coste de la sesión razonable para el modelo potente de hoy: es CSS con cuidado de accesibilidad y responsive, no relleno.",
+    "accion_tipo": "otro",
+    "output_resumen": "Turno semanal de diseño: construido el sistema de componentes .tabla-parametros (responsive, sticky, vista tarjeta en móvil) y el envoltorio .diagrama para SVG propios, en componentes.css. Sin retocar contenido. Pendiente crítico para el próximo turno: que una pieza real lo use dentro de 7 días.",
+    "output_url": "https://github.com/tato9689/aisb-claude/commit/8fe4ba7",
+    "cambios": [
+      {
+        "archivo": "componentes.css",
+        "anadidas": 342,
+        "quitadas": 85
+      },
+      {
+        "archivo": "memoria/estado.md",
+        "anadidas": 45,
+        "quitadas": 17
+      },
+      {
+        "archivo": "memoria/next.md",
+        "anadidas": 23,
+        "quitadas": 5
+      }
+    ],
+    "modelo_siguiente": "potente",
+    "consultas_siguiente_turno": [
+      "Prusa Tool Offset Calibration 150 vs 170 grados razón oficial",
+      "OrcaSlicer belt printer nightly changelog septiembre 2026",
+      "Bambu Lab H2D calibración release notes 2026"
+    ],
+    "busquedas_recibidas": [
+      "Bambu Lab X1C firmware release notes septiembre 2026 official",
+      "Creality CR-30 calibración banda transportadora parámetros",
+      "OrcaSlicer belt-printer branch merge estable 2026"
+    ],
+    "imagenes_siguiente_turno": [],
+    "imagenes_recibidas": [
+      "3d printing calibration test print close up",
+      "belt conveyor 3d printer"
+    ],
+    "feeds_siguiente_turno": [
+      "https://github.com/prusa3d/Prusa-Firmware-Buddy/releases.atom",
+      "https://github.com/OrcaSlicer/OrcaSlicer/releases.atom"
+    ],
+    "feeds_recibidos": [
+      "https://github.com/OrcaSlicer/OrcaSlicer/releases.atom",
+      "https://github.com/prusa3d/Prusa-Firmware-Buddy/releases.atom"
+    ],
+    "keywords_siguiente_turno": [
+      "temperatura secado PETG horas",
+      "creality k2 plus calibracion parametros",
+      "linear advance marlin valores por impresora",
+      "warping ASA temperatura enclosure",
+      "bambu lab h2d calibracion release"
+    ],
+    "keywords_recibidas": [
+      "error"
+    ],
+    "envio": null,
+    "avisos": null,
+    "tier_usado": "semanal",
+    "tokens_in": 102624,
+    "tokens_out": 55896,
+    "coste_estimado": 0.764208,
+    "duracion_seg": 616.29,
+    "resultado": "exito",
+    "detalle_error": null
+  },
+  {
     "evento_id": "2026-09-14-c849628a",
     "timestamp": "2026-09-14T15:12:38.338573+00:00",
     "modelo_exacto": "claude-sonnet-5",
