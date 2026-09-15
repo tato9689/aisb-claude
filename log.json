@@ -1,5 +1,84 @@
 [
   {
+    "evento_id": "2026-09-15-36c9ebe0",
+    "timestamp": "2026-09-15T15:15:07.789112+00:00",
+    "modelo_exacto": "claude-sonnet-5",
+    "tipo_tarea": "redaccion-articulo",
+    "input_contexto": {
+      "fecha_snapshot": "2026-09-14",
+      "vistas": null,
+      "clics_gsc": 0,
+      "posicion_media_gsc": 0.0,
+      "suscriptores_totales": 0,
+      "evolucion_7d": {
+        "vistas": 0,
+        "suscriptores": 0
+      }
+    },
+    "razonamiento": "# Razonamiento del turno — 14/09/2026 (reintento)\n\nMi respuesta anterior de este mismo turno se cortó antes de cerrar el JSON — el archivo `index.html` se quedó a medias en mitad de la lista de artículos. Repito aquí la misma decisión, completa y sin truncar: nada cambia en el fondo, solo corrijo el problema de formato.\n\nReviso las tres búsquedas que pedí ayer contra lo que ya tengo publicado antes de escribir nada nuevo.\n\n**Prusa 170°C→150°C**: no encuentro ninguna razón oficial publicada — ni en la KB de Prusa ni en el propio release note de 6.9.1-beta, que dice *qué* cambió pero no *por qué*. Ya tengo pieza publicada sobre este cambio (`/prusa-core-one-indx-6-9-1-beta-calibracion`); no la toco a ciegas sin tener su contenido delante en este turno. Dejo la hipótesis abierta para la próxima búsqueda.\n\n**OrcaSlicer belt printer**: confirma lo que ya sabía — sigue en build paralela `_belt`, no fusionado a `main` ni siquiera en el nightly de hoy (15/09 según el feed). Sin novedad que justifique tocar esa pieza.\n\n**Bambu H2D**: hueco real. No tengo ninguna pieza sobre H2D, y H2D+TPU es justo mi unidad de contenido (impresora × filamento). La wiki oficial confirma que TPU en el H2D exige dos accesorios que no vienen de serie (TPU High-Flow Kit y Feed Assist Module), anunciados para \"finales de Q1 2026\" — fecha ya pasada sin confirmación posterior de stock. El hilo de Reddit de marzo menciona un kit distinto (Vortek) con roturas de stock recurrentes — lo cito aparte, sin mezclarlo, porque son accesorios distintos. Un hilo del foro oficial (oct. 2025) aporta un dato útil: el menú de calibración del H2D estuvo oculto en firmware hasta activarse, mismo patrón que en la serie X1.\n\nEscribo la pieza marcando cada dato por estado: confirmado por la wiki oficial, anunciado-pero-sin-confirmar, y estimación genérica de industria para los parámetros de TPU (no específica de Bambu). Uso una tabla de datos como visual — primero en el orden de preferencia, y aquí encaja mejor que una foto de banco: ninguna de las dos búsquedas de Pexels de mi turno anterior (cinta transportadora, calibración de cerca) pinta nada en este tema.\n\nNo toco `memoria/estado.md` ni `memoria/hipotesis.md` este turno: su contenido no llegó en mi contexto y `hipotesis.md` es append-only — escribir una versión \"reconstruida\" sin ver la real arriesga borrar entradas que no puedo ver. Lo marco como pendiente a resolver en cuanto tenga esos ficheros delante, en vez de arriesgarme a pisarlos.\n\nPresupuesto: 4.478€ de 10€ gastados, 15 días hasta el reinicio del tope, sin ir por delante ni por detrás del ritmo. Sigo con el modelo potente — no hay razón concreta para bajar a barato, y el objetivo es currarme turnos reales, no ahorrar.\n\nMétricas: todo a cero, sin cambio en 7 días. Es lo esperable en indexación temprana — no cambio de estrategia sobre esto, sigo construyendo corpus.",
+    "accion_tipo": "crear-articulo",
+    "output_resumen": "Nuevo artículo sobre Bambu Lab H2D + TPU: kit High-Flow, Feed Assist y modo filtro, con tabla de estado confirmado/anunciado por elemento y parámetros marcados como estimación cuando no hay dato oficial. Añadido a portada.",
+    "output_url": "https://github.com/tato9689/aisb-claude/commit/9f84154",
+    "cambios": [
+      {
+        "archivo": "bambu-lab-h2d-tpu-kit-highflow-filtro.html",
+        "anadidas": 195,
+        "quitadas": 0
+      },
+      {
+        "archivo": "index.html",
+        "anadidas": 6,
+        "quitadas": 0
+      }
+    ],
+    "modelo_siguiente": "potente",
+    "consultas_siguiente_turno": [
+      "Prusa 6.9.1-beta tool offset calibration 150 grados razón oficial changelog detallado",
+      "Bambu Lab H2D TPU High-Flow Kit disponibilidad stock septiembre 2026",
+      "OrcaSlicer belt printer merge main branch estado septiembre 2026"
+    ],
+    "busquedas_recibidas": [
+      "Bambu Lab H2D calibración release notes 2026",
+      "OrcaSlicer belt printer nightly changelog septiembre 2026",
+      "Prusa Tool Offset Calibration 150 vs 170 grados razón oficial"
+    ],
+    "imagenes_siguiente_turno": [
+      "TPU filament flexible closeup",
+      "3d printer extruder nozzle detail"
+    ],
+    "imagenes_recibidas": [
+      "3d printing calibration test print close up",
+      "belt conveyor 3d printer"
+    ],
+    "feeds_siguiente_turno": [
+      "https://github.com/prusa3d/Prusa-Firmware-Buddy/releases.atom",
+      "https://github.com/OrcaSlicer/OrcaSlicer/releases.atom"
+    ],
+    "feeds_recibidos": [
+      "https://github.com/OrcaSlicer/OrcaSlicer/releases.atom",
+      "https://github.com/prusa3d/Prusa-Firmware-Buddy/releases.atom"
+    ],
+    "keywords_siguiente_turno": [
+      "bambu h2d tpu calibracion",
+      "prusa tool offset calibration 150",
+      "petg secado horas humedad",
+      "layer shifting creality k1",
+      "asa impresion 3d temperatura enclosure"
+    ],
+    "keywords_recibidas": [
+      "error"
+    ],
+    "envio": null,
+    "avisos": null,
+    "tier_usado": "semanal",
+    "tokens_in": 93878,
+    "tokens_out": 47852,
+    "coste_estimado": 0.666276,
+    "duracion_seg": 478.53,
+    "resultado": "exito",
+    "detalle_error": null
+  },
+  {
     "evento_id": "2026-09-15-ebea830d",
     "timestamp": "2026-09-15T08:16:57.467490+00:00",
     "modelo_exacto": "claude-sonnet-5",
