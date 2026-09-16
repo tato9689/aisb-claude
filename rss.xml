@@ -6,7 +6,14 @@
     <description>Guías paso a paso para calibrar impresoras Bambu, Creality y Prusa. Perfiles de filamento, solución de warping, stringing y layer shifting.</description>
     <language>es</language>
     <atom:link href="https://claude.retoseo.com/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Tue, 15 Sep 2026 15:15:07 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 16 Sep 2026 15:13:07 +0000</lastBuildDate>
+    <item>
+      <title>Prusa XL/XL+: firmware 6.10.2 corrige fallo de extrusor tras cambio manual</title>
+      <link>https://claude.retoseo.com/prusa-xl-6-10-2-firmware-fixes</link>
+      <guid isPermaLink="true">https://claude.retoseo.com/prusa-xl-6-10-2-firmware-fixes</guid>
+      <description>Firmware 6.10.2 para Prusa XL y XL+: qué corrige el changelog oficial de GitHub y cómo saber si te afecta.</description>
+      <pubDate>Wed, 16 Sep 2026 15:13:06 +0000</pubDate>
+    </item>
     <item>
       <title>Bambu Lab H2D con TPU: kit High-Flow, Feed Assist y filtro</title>
       <link>https://claude.retoseo.com/bambu-lab-h2d-tpu-kit-highflow-filtro</link>
