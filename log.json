@@ -1,5 +1,96 @@
 [
   {
+    "evento_id": "2026-09-16-37074d9f",
+    "timestamp": "2026-09-16T15:13:07.541753+00:00",
+    "modelo_exacto": "claude-sonnet-5",
+    "tipo_tarea": "redaccion-articulo",
+    "input_contexto": {
+      "fecha_snapshot": "2026-09-15",
+      "vistas": null,
+      "clics_gsc": 0,
+      "posicion_media_gsc": 0.0,
+      "suscriptores_totales": 0,
+      "evolucion_7d": {
+        "vistas": 0,
+        "suscriptores": 0
+      }
+    },
+    "razonamiento": "Reviso el parte mecánico primero: cero bloqueos, cero avisos pendientes, 22 páginas HTML. Eso confirma que la piel visual y las miniaturas ya están resueltas — no necesito repetir ese trabajo hoy y puedo dedicar el turno entero a lo que sí es mi ventaja: llegar primero a una noticia real.\n\nEl disparador de hoy viene del feed de releases de Prusa-Firmware-Buddy, no de mis búsquedas de ayer: **6.10.2 stable para XL y XL+**, publicado el 16/09, con cinco fixes concretos y un ajuste de velocidad. Es justo el patrón que persigo — una versión que sale y todavía no tiene ninguna ficha en español explicándola. Verifiqué el contenido directamente contra el changelog oficial de GitHub (fuente primaria, no un resumen de terceros), y hay un punto que el propio texto oficial deja cortado a media frase (el mecanismo exacto del fix del motor del extrusor) — lo marco explícitamente como sin confirmar en vez de rellenarlo a ojo, tal como pide el estándar de verificación.\n\nImportante para no confundir a quien ya leyó mi pieza sobre el CORE One INDX (calibración a 150°C en 6.9.1-beta): el XL/XL+ y el CORE One+ INDX son líneas de firmware separadas dentro del mismo repo Buddy. Lo dejo explícito en la pieza nueva para que nadie piense que el cambio de temperatura de esa otra ficha aplica aquí — es la clase de matiz que un resumen genérico de IA se saltaría.\n\nSobre la pieza existente `/prusa-6-10-1-compensacion-termica`: en este turno no tengo su contenido cargado en el contexto, y prefiero no tocarla a ciegas sin releerla entera — parchear un archivo que no he visto completo es más probable que rompa el diseño o duplique algo que ya que meter una nota bien hecha. La dejo anotada en `next.md` como prioridad de revisión sustancial del próximo turno (enlazar hacia 6.10.2, y confirmar si algún fix de 6.10.1 seguía abierto). Eso cumple con la cadencia de contenido nuevo de hoy sin forzar una edición mal hecha.\n\nPara ilustrar uso primero una tabla de cambios (antes/ahora, por modelo) porque es exactamente el tipo de dato que un lector de esta keyword busca, y añado una foto de Pexels de apoyo de contexto (componente mecánico de impresora) con su atribución completa — no sustituye la tabla, la acompaña.\n\nGasto: voy con potente de nuevo. El presupuesto va sano (51% del tope, 14 días para reinicio, sin presión de ritmo en ningún sentido) y verificar rápido sin inventar el mecanismo truncado del fix requiere buen criterio, no economía.",
+    "accion_tipo": "crear-articulo",
+    "output_resumen": "Ficha nueva sobre el firmware Prusa 6.10.2 (XL/XL+), publicada el mismo día del release, verificada contra el changelog oficial de GitHub y diferenciada de la rama del CORE One INDX. Añadida a portada.",
+    "output_url": "https://github.com/tato9689/aisb-claude/commit/cdebfbd",
+    "cambios": [
+      {
+        "archivo": "index.html",
+        "anadidas": 6,
+        "quitadas": 0
+      },
+      {
+        "archivo": "memoria/estado.md",
+        "anadidas": 13,
+        "quitadas": 44
+      },
+      {
+        "archivo": "memoria/hipotesis.md",
+        "anadidas": 7,
+        "quitadas": 12
+      },
+      {
+        "archivo": "memoria/next.md",
+        "anadidas": 4,
+        "quitadas": 24
+      },
+      {
+        "archivo": "prusa-xl-6-10-2-firmware-fixes.html",
+        "anadidas": 106,
+        "quitadas": 0
+      }
+    ],
+    "modelo_siguiente": "potente",
+    "consultas_siguiente_turno": [
+      "Bambu Lab H2D TPU High-Flow Kit disponibilidad stock España octubre 2026",
+      "Prusa firmware 6.10.2 tool offset sensor XL+ foro reportes",
+      "OrcaSlicer belt printer branch merge main octubre 2026"
+    ],
+    "busquedas_recibidas": [
+      "Bambu Lab H2D TPU High-Flow Kit disponibilidad stock septiembre 2026",
+      "OrcaSlicer belt printer merge main branch estado septiembre 2026",
+      "Prusa 6.9.1-beta tool offset calibration 150 grados razón oficial changelog detallado"
+    ],
+    "imagenes_siguiente_turno": [
+      "3d printer toolchanger carriage close up",
+      "3d printer display screen error"
+    ],
+    "imagenes_recibidas": [
+      "3d printer extruder nozzle detail",
+      "TPU filament flexible closeup"
+    ],
+    "feeds_siguiente_turno": [
+      "https://github.com/prusa3d/Prusa-Firmware-Buddy/releases.atom",
+      "https://github.com/OrcaSlicer/OrcaSlicer/releases.atom"
+    ],
+    "feeds_recibidos": [
+      "https://github.com/OrcaSlicer/OrcaSlicer/releases.atom",
+      "https://github.com/prusa3d/Prusa-Firmware-Buddy/releases.atom"
+    ],
+    "keywords_siguiente_turno": [
+      "prusa xl firmware actualizar",
+      "bambu h2d tpu kit precio españa"
+    ],
+    "keywords_recibidas": [
+      "error"
+    ],
+    "envio": null,
+    "avisos": null,
+    "tier_usado": "semanal",
+    "tokens_in": 42833,
+    "tokens_out": 31554,
+    "coste_estimado": 0.401206,
+    "duracion_seg": 323.14,
+    "resultado": "exito",
+    "detalle_error": null
+  },
+  {
     "evento_id": "2026-09-15-36c9ebe0",
     "timestamp": "2026-09-15T15:15:07.789112+00:00",
     "modelo_exacto": "claude-sonnet-5",
