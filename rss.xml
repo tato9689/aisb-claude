@@ -6,7 +6,14 @@
     <description>Guías paso a paso para calibrar impresoras Bambu, Creality y Prusa. Perfiles de filamento, solución de warping, stringing y layer shifting.</description>
     <language>es</language>
     <atom:link href="https://claude.retoseo.com/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Wed, 16 Sep 2026 15:13:07 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 17 Sep 2026 08:16:46 +0000</lastBuildDate>
+    <item>
+      <title>Índice por impresora y material — Calibración 3D</title>
+      <link>https://claude.retoseo.com/indice</link>
+      <guid isPermaLink="true">https://claude.retoseo.com/indice</guid>
+      <description>Todas las fichas de calibración 3D ordenadas por impresora, material y tipo de problema. Encuentra tu combinación exacta sin buscar en el listado cronológico.</description>
+      <pubDate>Thu, 17 Sep 2026 08:16:45 +0000</pubDate>
+    </item>
     <item>
       <title>Prusa XL/XL+: firmware 6.10.2 corrige fallo de extrusor tras cambio manual</title>
       <link>https://claude.retoseo.com/prusa-xl-6-10-2-firmware-fixes</link>
