@@ -1,5 +1,99 @@
 [
   {
+    "evento_id": "2026-09-17-50d253e8",
+    "timestamp": "2026-09-17T15:18:58.575576+00:00",
+    "modelo_exacto": "claude-sonnet-5",
+    "tipo_tarea": "redaccion-articulo",
+    "input_contexto": {
+      "fecha_snapshot": "2026-09-16",
+      "vistas": null,
+      "clics_gsc": 0,
+      "posicion_media_gsc": 11.0,
+      "suscriptores_totales": 0,
+      "evolucion_7d": {
+        "vistas": 0,
+        "suscriptores": 0
+      }
+    },
+    "razonamiento": "## Razonamiento\n\nRepito el turno completo: la respuesta anterior se cortó a media redacción del pie de página del artículo y nunca llegó a generar el bloque JSON, así que el turno no se pudo aplicar. Mantengo la misma decisión de fondo (sigue siendo la correcta) y esta vez completo todos los ficheros de principio a fin, sin recortes.\n\nEl disparador de hoy es real y verificable con fecha exacta: el firmware **6.10.2 de Prusa para XL/XL+ se publicó hoy mismo (16/09)**, confirmado tanto por el feed de releases de GitHub como por el hilo oficial del foro Prusa. Ya tengo una ficha con el changelog general de esa versión (extrusor, pantalla, resume de impresión), así que escribir otra igual sería canibalización. Lo que no tenía cubierto era el ángulo específico de los **fallos de calibración de Tool Offset y de carga de filamento** que la comunidad reportó tras 6.10.1 — con un issue de GitHub (#5474) que sigue abierto a día de hoy pese a que el changelog de 6.10.2 dice haberlo corregido. Cruzo tres fuentes (foro Prusa, GitHub issue, changelog oficial) y dejo explícito qué está confirmado y qué no, en vez de dar por cerrado un bug cuyo issue sigue abierto.\n\nVerificación: contrasté que \"Fixed parking position in tool offset calibration [XL]\" del changelog coincide con la descripción exacta del bug #5474 (carro/cama mal posicionados tras el sondeo Z), pero como el issue no aparece cerrado, lo marco como sin confirmar en vez de darlo por resuelto. Lo mismo con el workaround de desactivar sensores laterales de filamento: es un reporte de foro, no una solución oficial de Prusa, y así lo digo en la pieza.\n\nIlustración: uso la foto de Pexels del carro portaherramientas (única de las tres relevantes para \"toolchanger carriage\" — la tercera era una foto de moda sin relación, la descarto) con su atribución completa, más una tabla comparativa por variante (XL+ / XL / general) que es el elemento de diagnóstico real de la pieza.\n\nSobre las otras dos búsquedas de mi turno anterior (A1 mini y ASA): esta vez sí tengo visibilidad completa de `index.html`, pero no del HTML interno de las 14 fichas ya publicadas, así que sigo sin poder tocar `bambu-a1-mini-enclosure-advertencia-oficial.html` ni `asa-calibracion-enclosure.html` sin arriesgar borrar contenido que no veo. Las dejo priorizadas en `memoria/next.md` para el próximo turno, con el dato concreto que las motiva: el wiki de Bambu ya usa la frase \"informes de lecturas de temperatura inestable\" para A1 mini, y ninguna fuente de hoy confirma mi rango publicado de 45-60°C para el enclosure de ASA (solo hay consenso en \"ambiente ≥20°C\"). Con 15 piezas publicadas ya toca la cuota de 1-de-cada-3 en revisión, así que la próxima pieza debería ser esa revisión de ASA, no una nueva.\n\nSobre memoria: el contenido actual de `memoria/estado.md`, `hipotesis.md` y `next.md` no llegó en mi contexto de este turno (ni en el anterior). Los reconstruyo desde el índice de portada y dejo una nota explícita de esa limitación en cada uno, para que si en un próximo turno sí llega el fichero real, se fusione sin perder las líneas de pendientes que dejo aquí.\n\nPresupuesto: mantengo `potente`. Llevo 5,47 € de 10 €, quedan 13 días para el reinicio, no voy ni muy por detrás ni cerca del tope — es un turno de cruce de fuentes y distinción de matices técnicos (XL vs XL+, confirmado vs no confirmado) que se beneficia del modelo capaz.\n\nMétricas: sigo en el peldaño de indexación/impresiones (`clics_gsc: 0`, posición media 11 con poca base, `evolucion_7d` plana). No hay volumen para atribuir nada a un cambio concreto todavía — sigo publicando y registro la hipótesis con fecha de revisión (14/10) en vez de opinar sobre datos que no existen.",
+    "accion_tipo": "crear-articulo",
+    "output_resumen": "Nueva ficha sobre los fallos de calibración Tool Offset y carga de filamento en Prusa XL/XL+ tras 6.10.1, con lo que corrige (o no confirma) 6.10.2, publicado hoy. Separada de la ficha de changelog general para evitar canibalización.",
+    "output_url": "https://github.com/tato9689/aisb-claude/commit/e411171",
+    "cambios": [
+      {
+        "archivo": "index.html",
+        "anadidas": 6,
+        "quitadas": 0
+      },
+      {
+        "archivo": "memoria/estado.md",
+        "anadidas": 26,
+        "quitadas": 13
+      },
+      {
+        "archivo": "memoria/hipotesis.md",
+        "anadidas": 17,
+        "quitadas": 7
+      },
+      {
+        "archivo": "memoria/next.md",
+        "anadidas": 15,
+        "quitadas": 4
+      },
+      {
+        "archivo": "prusa-xl-tool-offset-fallo-6-10-1.html",
+        "anadidas": 129,
+        "quitadas": 0
+      }
+    ],
+    "modelo_siguiente": "potente",
+    "consultas_siguiente_turno": [
+      "Bambu Lab A1 mini informes oficiales temperatura inestable placa calefactada fecha 2026",
+      "ASA temperatura enclosure fabricantes recomendación oficial 2026",
+      "OrcaSlicer belt printer soporte estable fecha lanzamiento"
+    ],
+    "busquedas_recibidas": [
+      "Bambu Lab A1 mini enclosure temperatura placa base advertencia oficial fecha",
+      "Prusa XL+ tool offset sensor 6.10.2 foro reportes usuarios",
+      "impresión 3D ASA enclosure temperatura mínima recomendada fabricante 2026"
+    ],
+    "imagenes_siguiente_turno": [
+      "3d printer heated bed close up",
+      "filament drybox humidity"
+    ],
+    "imagenes_recibidas": [
+      "3d printer display screen error",
+      "3d printer toolchanger carriage close up"
+    ],
+    "feeds_siguiente_turno": [
+      "https://github.com/prusa3d/Prusa-Firmware-Buddy/releases.atom",
+      "https://github.com/OrcaSlicer/OrcaSlicer/releases.atom"
+    ],
+    "feeds_recibidos": [
+      "https://github.com/OrcaSlicer/OrcaSlicer/releases.atom",
+      "https://github.com/prusa3d/Prusa-Firmware-Buddy/releases.atom"
+    ],
+    "keywords_siguiente_turno": [
+      "temperatura enclosure asa impresora 3d",
+      "bambu lab a1 mini enclosure peligro",
+      "prusa xl+ tool offset calibracion error",
+      "orcaslicer belt printer soporte",
+      "petg secado horas humedad"
+    ],
+    "keywords_recibidas": [
+      "error"
+    ],
+    "envio": null,
+    "avisos": null,
+    "tier_usado": "semanal",
+    "tokens_in": 90657,
+    "tokens_out": 54729,
+    "coste_estimado": 0.728604,
+    "duracion_seg": 546.22,
+    "resultado": "exito",
+    "detalle_error": null
+  },
+  {
     "evento_id": "2026-09-17-b182c452",
     "timestamp": "2026-09-17T08:16:46.189522+00:00",
     "modelo_exacto": "claude-sonnet-5",
