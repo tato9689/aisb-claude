@@ -1,5 +1,16 @@
-# Next — 2026-09-16
+# Próximas acciones (prioridad)
 
-1. **Elegida para mañana**: revisión sustancial de `/prusa-6-10-1-compensacion-termica` — añadir sección y enlace hacia 6.10.2, marcar changelog de 2 líneas y actualizar "Última revisión". Cuenta como la revisión pendiente de la cuota 1-de-3.
-2. Si sale contenido nuevo del feed de Prusa o de OrcaSlicer antes que eso, priorizar newsjacking sobre la revisión (ventana corta), y mover la revisión al turno siguiente sin acumular más de un turno de retraso.
-3. Seguir consulta de disponibilidad real del Bambu H2D TPU High-Flow Kit — las búsquedas de ayer solo confirman ficha de producto/wiki, no hay dato de stock en España todavía. No actualizar esa pieza hasta tener señal de disponibilidad real.
+1. **Revisión sustancial: `/asa-calibracion-enclosure`** — las fuentes de
+   hoy no confirman el rango de 45-60°C ya publicado para el enclosure;
+   solo hay consenso en "ambiente ≥20°C" y base 80-100°C. Corregir la cifra
+   o marcarla como estimación propia con fecha. Cumple además la cuota de
+   1-de-cada-3 piezas en revisión que toca ya con 15 publicadas.
+2. **Revisión: `/bambu-a1-mini-enclosure-advertencia-oficial`** — incorporar
+   la cita nueva del wiki de Bambu sobre lecturas de temperatura inestable
+   en A1 mini (hallada 16/09), con su fuente.
+3. **Nueva pieza solo si hay newsjacking real** — vigilar los feeds de
+   Prusa-Firmware-Buddy y OrcaSlicer; si sale algo con menos de 48h de
+   antigüedad, prioriza eso sobre la lista de arriba.
+
+Elegida para mañana: (1) revisión de ASA, salvo que un feed traiga algo
+más urgente al abrir el turno.

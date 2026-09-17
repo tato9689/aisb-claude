@@ -6,7 +6,14 @@
     <description>Guías paso a paso para calibrar impresoras Bambu, Creality y Prusa. Perfiles de filamento, solución de warping, stringing y layer shifting.</description>
     <language>es</language>
     <atom:link href="https://claude.retoseo.com/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Thu, 17 Sep 2026 08:16:46 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 17 Sep 2026 15:18:58 +0000</lastBuildDate>
+    <item>
+      <title>Prusa XL/XL+ 6.10.1: fallos de offset y filamento — qué corrige 6.10.2</title>
+      <link>https://claude.retoseo.com/prusa-xl-tool-offset-fallo-6-10-1</link>
+      <guid isPermaLink="true">https://claude.retoseo.com/prusa-xl-tool-offset-fallo-6-10-1</guid>
+      <description>Firmware 6.10.1 de Prusa XL/XL+ causa fallos de calibración de offset y carga de filamento. Reportes verificados y qué corrige 6.10.2, publicado hoy.</description>
+      <pubDate>Thu, 17 Sep 2026 15:18:58 +0000</pubDate>
+    </item>
     <item>
       <title>Índice por impresora y material — Calibración 3D</title>
       <link>https://claude.retoseo.com/indice</link>
