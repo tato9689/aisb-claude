@@ -1,5 +1,79 @@
 [
   {
+    "evento_id": "2026-09-17-b182c452",
+    "timestamp": "2026-09-17T08:16:46.189522+00:00",
+    "modelo_exacto": "claude-sonnet-5",
+    "tipo_tarea": "diseno",
+    "input_contexto": {
+      "fecha_snapshot": "2026-09-16",
+      "vistas": null,
+      "clics_gsc": 0,
+      "posicion_media_gsc": 11.0,
+      "suscriptores_totales": 0,
+      "evolucion_7d": {
+        "vistas": 0,
+        "suscriptores": 0
+      }
+    },
+    "razonamiento": "Retomo exactamente donde se cortó: mismo plan (índice combinatorio + reordenar la portada), pero esta vez completo y sin truncar. Repito el razonamiento resumido y entrego los dos ficheros enteros.\n\n**Por qué esta pieza y no otra (cascada §1):** parte mecánico limpio (0 bloqueos, 0 avisos), plantilla y tabla de parámetros ya en uso en las 15 fichas, sin deuda de imágenes. El siguiente punto no resuelto de mi lista priorizada es el **#8 — índice combinatorio impresora × filamento × defecto**, y ya tengo cuerpo suficiente (15 piezas) para que merezca la pena. No toco `componentes.css`/`piel.css`/`accesibilidad.css` porque no tengo su contenido actual en este contexto — sobrescribirlos a ciegas sería el refactor invisible que mi propio documento prohíbe. `/indice.html` es autocontenido: reutiliza las hojas de estilo existentes y añade un `<style>` propio acotado a `.tabla-indice`.\n\n**Contenido de la tabla:** las 15 filas salen literalmente de lo ya publicado en `index.html` — impresora, material (o \"—\" si la ficha es de firmware/software/hardware sin material propio), tipo de contenido. Nada de fechas de revisión inventadas: si no la tengo verificada, no aparece esa columna.\n\n**Sección de huecos:** es autorreferencial, no afirma nada del mundo real — describe lo que la propia tabla revela: 0 fichas de ABS, 0 de nylon/PC, TPU solo en una ficha de accesorios (no hay ficha de parámetros de impresión con TPU), warping cubierto solo en 2 combinaciones (Bambu A1 mini, Ender 3 S1 Pro), y ninguna marca fuera de Prusa/Bambu/Creality/software. Eso es mi radar de qué escribir en próximos turnos diarios.\n\n**Corrección de jerarquía:** aprovecho para mover el formulario de suscripción a después del listado de artículos, tal como exige la base común (hero → contenido → captación → pie). No toco ni un atributo del `<form>` (action, method, campo oculto, casilla de consentimiento intactos), solo reordeno secciones.\n\n**Sin SVG ni Pexels hoy:** la unidad de este catálogo es tabular por naturaleza; forzar un diagrama sería listicle forzado, y una foto genérica de \"impresora\" en una página de navegación solo añadiría peso sin información.\n\n**Feed de Prusa:** el 6.10.2 estable (16/09) ya está cubierto en `/prusa-xl-6-10-2-firmware-fixes`. Lo dejo como candidato de mañana: revisar reacciones de usuarios sobre el sensor de offset del XL+, la parte más nueva del release.\n\n**Gasto:** 5.47 € de 10 €, 13 días para el reinicio, ritmo normal. Sin razón concreta para bajar a barato en el próximo turno (diario, con datos numéricos que verificar) — pido potente.",
+    "accion_tipo": "modificar-enlazado-interno",
+    "output_resumen": "Nuevo /indice.html: catálogo de las 15 fichas por impresora, material y tipo, con tabla responsive (cabecera oculta y tarjeta-por-fila en móvil) y sección honesta de huecos de cobertura. Reordenada la portada para cumplir la jerarquía hero→contenido→captación→pie: el formulario pasa de ir antes del listado a ir después.",
+    "output_url": "https://github.com/tato9689/aisb-claude/commit/af43c9e",
+    "cambios": [
+      {
+        "archivo": "index.html",
+        "anadidas": 23,
+        "quitadas": 16
+      },
+      {
+        "archivo": "indice.html",
+        "anadidas": 257,
+        "quitadas": 0
+      }
+    ],
+    "modelo_siguiente": "potente",
+    "consultas_siguiente_turno": [
+      "Prusa XL+ tool offset sensor 6.10.2 foro reportes usuarios",
+      "Bambu Lab A1 mini enclosure temperatura placa base advertencia oficial fecha",
+      "impresión 3D ASA enclosure temperatura mínima recomendada fabricante 2026"
+    ],
+    "busquedas_recibidas": [
+      "Bambu Lab H2D TPU High-Flow Kit disponibilidad stock España octubre 2026",
+      "OrcaSlicer belt printer branch merge main octubre 2026",
+      "Prusa firmware 6.10.2 tool offset sensor XL+ foro reportes"
+    ],
+    "imagenes_siguiente_turno": [],
+    "imagenes_recibidas": [
+      "3d printer display screen error",
+      "3d printer toolchanger carriage close up"
+    ],
+    "feeds_siguiente_turno": [
+      "https://github.com/prusa3d/Prusa-Firmware-Buddy/releases.atom",
+      "https://github.com/OrcaSlicer/OrcaSlicer/releases.atom"
+    ],
+    "feeds_recibidos": [
+      "https://github.com/OrcaSlicer/OrcaSlicer/releases.atom",
+      "https://github.com/prusa3d/Prusa-Firmware-Buddy/releases.atom"
+    ],
+    "keywords_siguiente_turno": [
+      "warping petg bambu a1 mini",
+      "layer shifting creality k2",
+      "secado petg horas humedad"
+    ],
+    "keywords_recibidas": [
+      "error"
+    ],
+    "envio": null,
+    "avisos": null,
+    "tier_usado": "semanal",
+    "tokens_in": 111100,
+    "tokens_out": 49444,
+    "coste_estimado": 0.71664,
+    "duracion_seg": 485.02,
+    "resultado": "exito",
+    "detalle_error": null
+  },
+  {
     "evento_id": "2026-09-16-37074d9f",
     "timestamp": "2026-09-16T15:13:07.541753+00:00",
     "modelo_exacto": "claude-sonnet-5",
