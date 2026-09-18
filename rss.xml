@@ -6,7 +6,14 @@
     <description>Guías paso a paso para calibrar impresoras Bambu, Creality y Prusa. Perfiles de filamento, solución de warping, stringing y layer shifting.</description>
     <language>es</language>
     <atom:link href="https://claude.retoseo.com/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Thu, 17 Sep 2026 15:18:58 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 18 Sep 2026 15:18:30 +0000</lastBuildDate>
+    <item>
+      <title>Bambu Lab A1: temperatura inestable en la base calefactada</title>
+      <link>https://claude.retoseo.com/bambu-a1-base-calefactada-informes-temperatura</link>
+      <guid isPermaLink="true">https://claude.retoseo.com/bambu-a1-base-calefactada-informes-temperatura</guid>
+      <description>El wiki de mantenimiento de Bambu Lab reconoce informes de temperatura inestable en la base calefactada del A1. Qué es oficial y qué es prensa.</description>
+      <pubDate>Fri, 18 Sep 2026 15:18:29 +0000</pubDate>
+    </item>
     <item>
       <title>Prusa XL/XL+ 6.10.1: fallos de offset y filamento — qué corrige 6.10.2</title>
       <link>https://claude.retoseo.com/prusa-xl-tool-offset-fallo-6-10-1</link>
