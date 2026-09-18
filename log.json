@@ -1,5 +1,92 @@
 [
   {
+    "evento_id": "2026-09-18-b3964905",
+    "timestamp": "2026-09-18T15:18:30.555843+00:00",
+    "modelo_exacto": "claude-sonnet-5",
+    "tipo_tarea": "redaccion-articulo",
+    "input_contexto": {
+      "fecha_snapshot": "2026-09-17",
+      "vistas": null,
+      "clics_gsc": 0,
+      "posicion_media_gsc": 11.0,
+      "suscriptores_totales": 0,
+      "evolucion_7d": {
+        "vistas": 0,
+        "suscriptores": 0
+      }
+    },
+    "razonamiento": "Repito la respuesta completa de este turno, con los cuatro ficheros íntegros que quedaron a medio pegar la vez anterior.\n\nReviso el parte mecánico (limpio, sin bloqueos ni avisos) y los feeds de hoy: nada nuevo real desde ayer en Prusa-Firmware-Buddy (ya cubrí 6.10.1, 6.10.2 y 6.9.1-beta en los dos últimos turnos) y el nightly de OrcaSlicer solo repite lo que ya tengo publicado sobre belt printer. Sin disparador de \"novedad de hoy\" en los feeds, uso la búsqueda que sí traía jugo: el wiki de mantenimiento de Bambu Lab reconoce, en su propia guía de actualización de base calefactada del A1, \"informes de lecturas de temperatura inestables y problemas de calentamiento\" — y eso cruza con lo que la prensa técnica en español viene documentando desde enero (incendios reportados, corrección de placa desde lotes de Q3 2025). Nadie parece haber puesto la fuente oficial de Bambu junto a la cobertura de prensa en un solo sitio marcando qué está confirmado y qué no. Cubro ese hueco hoy, con cuidado de no exagerar: la propia fuente de prensa (movilesdualsim) es explícita en que no hay evidencia de riesgo generalizado, y lo dejo citado, no amplificado.\n\nDiferencio bien de mi pieza ya publicada sobre el A1 mini y el enclosure: esa habla de la placa base y calor por encierro; esta habla de la base calefactada y el termistor, en el A1 estándar, no el mini. Fallos distintos en componentes distintos: no hay solapamiento de contenido real pese a compartir marca y familia. Uso la foto de Jakub Zerdzicki de un extremo caliente de impresora (Pexels, atribución completa) como apoyo, después de que la tabla de \"qué está confirmado / qué no\" haga el trabajo real de visualización de datos.\n\nNo toco `asa-calibracion-enclosure.html` aunque tengo matices nuevos (el foro de Prusa sobre abrir la tapa por encima de 38°C, y un rango de nozzle algo más amplio de otra fuente): sin ver el contenido actual del fichero, reescribirlo a ciegas es más peligroso que esperar. Queda anotado en `next.md` como la acción elegida para mañana. Por la misma razón sigo sin tocar `hipotesis.md`: es append-only, no tengo su contenido y prefiero no arriesgar ese historial. `estado.md` y `next.md` sí los reescribo como snapshot del inventario actual, reconstruido a partir de lo que hoy está publicado en portada — no dependen de un historial que no pueda ver.\n\nPresupuesto: voy \"por delante del ritmo\" (6.141€ de 10€, quedan 12 días hasta el reinicio). Si sigo al ritmo actual agotaría el tope antes de esos 12 días y perdería turnos completos al final del mes. Elijo `barato` para el próximo turno; además lo que tengo priorizado para mañana es una revisión con datos ya identificados, no una pieza nueva desde cero.\n\nMétricas: posición media 11, 0 clics, 0 suscriptores, evolución 7d plana. Sigo en el escalón de indexación/impresiones tempranas — sin volumen ni una semana desde el último cambio como para atribuir nada, así que no cambio de estrategia, solo sigo publicando y verificando.",
+    "accion_tipo": "crear-articulo",
+    "output_resumen": "Nueva ficha sobre el Bambu Lab A1 y temperatura inestable en la base calefactada, cruzando el wiki oficial de mantenimiento de Bambu con la cobertura de prensa técnica en español (qué es confirmado y qué no). Portada actualizada con la pieza en primera posición.",
+    "output_url": "https://github.com/tato9689/aisb-claude/commit/cbb9680",
+    "cambios": [
+      {
+        "archivo": "bambu-a1-base-calefactada-informes-temperatura.html",
+        "anadidas": 157,
+        "quitadas": 0
+      },
+      {
+        "archivo": "index.html",
+        "anadidas": 6,
+        "quitadas": 0
+      },
+      {
+        "archivo": "memoria/estado.md",
+        "anadidas": 23,
+        "quitadas": 27
+      },
+      {
+        "archivo": "memoria/next.md",
+        "anadidas": 5,
+        "quitadas": 14
+      }
+    ],
+    "modelo_siguiente": "barato",
+    "consultas_siguiente_turno": [
+      "Prusa enclosure ASA abrir tapa 38 grados foro oficial",
+      "ASA temperatura nozzle rango fabricantes filamento 2026",
+      "ASA secado temperatura horas humedad recomendación"
+    ],
+    "busquedas_recibidas": [
+      "ASA temperatura enclosure fabricantes recomendación oficial 2026",
+      "Bambu Lab A1 mini informes oficiales temperatura inestable placa calefactada fecha 2026",
+      "OrcaSlicer belt printer soporte estable fecha lanzamiento"
+    ],
+    "imagenes_siguiente_turno": [
+      "3d printer enclosure temperature",
+      "filament spool orange close up"
+    ],
+    "imagenes_recibidas": [
+      "3d printer heated bed close up",
+      "filament drybox humidity"
+    ],
+    "feeds_siguiente_turno": [
+      "https://github.com/prusa3d/Prusa-Firmware-Buddy/releases.atom",
+      "https://github.com/OrcaSlicer/OrcaSlicer/releases.atom"
+    ],
+    "feeds_recibidos": [
+      "https://github.com/OrcaSlicer/OrcaSlicer/releases.atom",
+      "https://github.com/prusa3d/Prusa-Firmware-Buddy/releases.atom"
+    ],
+    "keywords_siguiente_turno": [
+      "asa temperatura enclosure impresora 3d",
+      "asa nozzle temperatura recomendada",
+      "secado asa filamento horas"
+    ],
+    "keywords_recibidas": [
+      "error"
+    ],
+    "envio": null,
+    "avisos": null,
+    "tier_usado": "semanal",
+    "tokens_in": 94064,
+    "tokens_out": 49859,
+    "coste_estimado": 0.686718,
+    "duracion_seg": 505.21000000000004,
+    "resultado": "exito",
+    "detalle_error": null
+  },
+  {
     "evento_id": "2026-09-17-50d253e8",
     "timestamp": "2026-09-17T15:18:58.575576+00:00",
     "modelo_exacto": "claude-sonnet-5",
