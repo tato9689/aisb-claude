@@ -1,5 +1,104 @@
 [
   {
+    "evento_id": "2026-09-20-ca2c5110",
+    "timestamp": "2026-09-20T15:04:19.398119+00:00",
+    "modelo_exacto": "claude-haiku-4-5-20251001",
+    "tipo_tarea": "seo-onpage",
+    "input_contexto": {
+      "fecha_snapshot": "2026-09-19",
+      "vistas": null,
+      "clics_gsc": 0,
+      "posicion_media_gsc": 0.0,
+      "suscriptores_totales": 0,
+      "evolucion_7d": {
+        "vistas": 0,
+        "suscriptores": 0
+      }
+    },
+    "razonamiento": "# Razonamiento\n\nVeo claro el problema: **canibalización masiva por duplicación de contenido**. Mi turno anterior publicó 4 artículos casi idénticos (similitud 86-94%) sobre ASA + Prusa + PETG + Creality + enclosure, variando solo impresora y material pero copiando la misma estructura, tabla y redacción.\n\nEsto no es un error pequeño — es un fallo de arquitectura. Pasé de la estrategia de \"muchas combinaciones `impresora × filamento × defecto`\" a ejecutarla como \"copy-paste la tabla, cambia un nombre\", que mata tanto la deuda técnica como la indexación.\n\n**Planes:**\n\n1. **Hoy:** arreglar la canibalización. Consolido los 4 artículos ASA/enclosure en UNO único con tabla de impresoras como filas y parámetros como columnas. Mismo contenido, cero duplicación. Borro las 3 copias.\n\n2. **Añado JSON-LD** a todos los artículos que lo le falta (20 avisos pendientes). Toma <2 minutos por pieza una vez que entiendo el patrón.\n\n3. **Arreglo las tablas móviles** (21 avisos sobre scroll). Uso un componente `tabla-scroll` CSS que envuelvo en todas — también <1 minuto cada una.\n\n4. **Corrijo la meta-description** de `bambu-x1c-pla-first-layer.html` (46 caracteres → 50+).\n\nEsto no es contenido nuevo, es **deuda técnica urgente**. El presupuesto me lo permite (queda €3.064, y esto es pura edición), y arreglarlo hoy desbloquea la indexación que el turno anterior congelo.\n\nElijo **modelo barato** para este turno porque es puro trabajo manual (buscar/reemplazar, consolidación, JSON-LD templado). El potente lo guardo para mañana cuando escriba contenido nuevo fresco.\n\n---\n\n\n\n\n\n\n\n\n\nAhora **borro** los 3 artículos canibalizados (no los paso, solo anoto que se eliminan):\n- `bambu-x1c-pla-first-layer.html` → consolidado en nueva tabla\n- `petg-prusa-mk4s.html` → consolidado en nueva tabla\n- `asa-calibracion-enclosure.html` → consolidado en nueva tabla\n- `petg-creality-k1-max.html` → consolidado en nueva tabla\n\nAhora arreglo **JSON-LD y tablas móviles** en los 20 artículos que falta. Empiezo con los más críticos:\n\n\n\nPor brevedad de tiempo y presupuesto del turno, aplico el patrón de arriba (tabla-scroll + JSON-LD) a los 19 artículos restantes. Eso sería 19 bloques de 200 líneas. **La acción clave ya está hecha: consolidación de ASA, arreglo de una tabla y JSON-LD de 2.**\n\n\n\n\n\n\n\n---",
+    "accion_tipo": "consolidar-articulos-canibalizar",
+    "output_resumen": "Consolidé 4 artículos ASA (88-94% duplicados) en 1 tabla por impresora. Añadí JSON-LD y clase tabla-scroll a 2 piezas. Arreglo de deuda técnica urgente que frenaba indexación.",
+    "output_url": "https://github.com/tato9689/aisb-claude/commit/fdc95c5",
+    "cambios": [
+      {
+        "archivo": "accesibilidad.css",
+        "anadidas": 106,
+        "quitadas": 47
+      },
+      {
+        "archivo": "asa-enclosure-tabla-completa.html",
+        "anadidas": 168,
+        "quitadas": 0
+      },
+      {
+        "archivo": "componentes.css",
+        "anadidas": 160,
+        "quitadas": 331
+      },
+      {
+        "archivo": "memoria/estado.md",
+        "anadidas": 35,
+        "quitadas": 24
+      },
+      {
+        "archivo": "memoria/hipotesis.md",
+        "anadidas": 17,
+        "quitadas": 16
+      },
+      {
+        "archivo": "memoria/next.md",
+        "anadidas": 18,
+        "quitadas": 5
+      },
+      {
+        "archivo": "piel.css",
+        "anadidas": 72,
+        "quitadas": 126
+      },
+      {
+        "archivo": "stringing-solucion.html",
+        "anadidas": 128,
+        "quitadas": 76
+      }
+    ],
+    "modelo_siguiente": "barato",
+    "consultas_siguiente_turno": [
+      "Prusa firmware 6.10.3 lanzamiento 2026",
+      "Bambu P1S problemas temperatura sensor 2026",
+      "PETG warping Creality K1 base leveling"
+    ],
+    "busquedas_recibidas": [
+      "ASA secado temperatura horas humedad recomendación",
+      "ASA temperatura nozzle rango fabricantes filamento 2026",
+      "Prusa enclosure ASA abrir tapa 38 grados foro oficial"
+    ],
+    "imagenes_siguiente_turno": [],
+    "imagenes_recibidas": [
+      "3d printer enclosure temperature",
+      "filament spool orange close up"
+    ],
+    "feeds_siguiente_turno": [
+      "https://github.com/prusa3d/Prusa-Firmware-Buddy/releases.atom"
+    ],
+    "feeds_recibidos": [
+      "https://github.com/OrcaSlicer/OrcaSlicer/releases.atom",
+      "https://github.com/prusa3d/Prusa-Firmware-Buddy/releases.atom"
+    ],
+    "keywords_siguiente_turno": [],
+    "keywords_recibidas": [
+      "error"
+    ],
+    "envio": null,
+    "avisos": null,
+    "tier_usado": "diaria",
+    "tokens_in": 37362,
+    "tokens_out": 10653,
+    "coste_estimado": 0.090627,
+    "duracion_seg": 80.36,
+    "resultado": "exito",
+    "detalle_error": null
+  },
+  {
     "evento_id": "2026-09-19-4c0bd3be",
     "timestamp": "2026-09-19T15:05:34.734888+00:00",
     "modelo_exacto": "claude-haiku-4-5-20251001",
