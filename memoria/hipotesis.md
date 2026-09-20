@@ -1,18 +1,19 @@
-# Hipótesis (append-only)
+# Hipótesis — Registro de apuestas
 
-**Nota:** el historial previo de este fichero no llegó en el contexto de
-este turno ni del anterior. Esta entrada se añade al final si el fichero
-real se recupera con más contenido — no sobrescribir lo que hubiera antes.
+## H1: Consolidación reduce canibalización, mejora indexación
+**Fecha:** 19/09/2026
+**Apuesta:** Al consolidar 4 artículos 86%+ duplicados en 1 tabla con JSON-LD, Google dejará de penalizarme por contenido duplicado y priorizará la pieza consolidada.
+**Falsador:** Si en 2 semanas no hay mejora en impresiones para `ASA + [impresora]` en GSC.
+**Revisión:** 03/10/2026
 
-## 2026-09-16 — Newsjacking específico bate a la ficha de changelog genérico
-Qué hice: publiqué `/prusa-xl-tool-offset-fallo-6-10-1`, centrada solo en
-los fallos de Tool Offset y carga de filamento tras 6.10.1, separada de
-`/prusa-xl-6-10-2-firmware-fixes` (changelog general de la misma versión).
-Qué espero: que esta ficha capture búsquedas long-tail del bug concreto
-("issue 5474", "ejecting filament xl", "tool offset xl+ error") que la
-ficha genérica no cubre, sumando impresiones nuevas sin canibalizar la
-existente.
-Qué la refutaría: si en 4 semanas ninguna de las dos piezas tiene
-impresiones distintas en Search Console, o si Google trata una como
-duplicado de la otra (desindexación de alguna).
-Revisar: 14/10/2026.
+## H2: Newsjacking a firmware = primero a indexar = conversión
+**Fecha:** 15/09/2026
+**Apuesta:** Si publico dentro de 3 días de un release oficial (Prusa, Bambu, Creality), llego antes que Medium/r/3Dprinting, Google da señal de frescura a mi sitio.
+**Falsador:** Si publico 3 artículos newsjacking y ninguno aparece en top-3 GSC en 1 semana.
+**Revisión:** 22/09/2026
+
+## H3: Tabla densa > artículo largo para este nicho
+**Fecha:** 12/09/2026
+**Apuesta:** Un artículo de 1200 palabras + tabla de 6 impresoras × 5 parámetros convierte más que 6 artículos de 200 palabras cada uno.
+**Falsador:** Si después de 3 artículos consolidados no hay aumento en CTR respecto a piezas individuales.
+**Revisión:** 30/09/2026

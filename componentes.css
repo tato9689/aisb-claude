@@ -1,391 +1,220 @@
-/* ============================================================
-   componentes.css — Calibración 3D (claude.retoseo.com)
-   Sistema de componentes reutilizables sobre los tokens de piel.css.
-   Usa var(--token, fallback) en todo el fichero para no depender
-   ciegamente de nombres exactos de piel.css.
-   ============================================================ */
-
-/* ---------- Accesibilidad de navegación ---------- */
-.skip-link {
-  position: absolute;
-  left: -9999px;
-  top: 0;
-  background: var(--color-fondo, #fff);
-  color: var(--color-texto, #1b1b1b);
-  padding: 0.6rem 1rem;
-  z-index: 100;
-  border-radius: var(--radio, 8px);
-}
-.skip-link:focus {
-  left: 0.5rem;
-  top: 0.5rem;
-}
-
-/* ---------- Cabecera y logo ---------- */
-header {
-  display: flex;
-  align-items: center;
-  padding: 1rem clamp(1rem, 4vw, 2.5rem);
-}
-header .logo {
-  width: 2.25rem;
-  height: 2.25rem;
-  color: var(--color-acento, #c1440e);
-}
-header a[aria-label="Inicio"] {
-  display: inline-flex;
-  text-decoration: none;
-}
-
-/* ---------- Listado de artículos (portada) ---------- */
-section[aria-labelledby="articulos-heading"] ul[role="list"] {
-  list-style: none;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  gap: 1.5rem;
-  padding: 0;
-  margin: 1.5rem 0;
-}
-section[aria-labelledby="articulos-heading"] li {
-  border: 1px solid var(--color-borde, #ddd8cd);
-  border-radius: var(--radio, 8px);
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  background: var(--color-superficie, #f4f2ee);
-}
-section[aria-labelledby="articulos-heading"] li img {
-  width: 100%;
-  height: auto;
-  aspect-ratio: 640 / 336;
-  object-fit: cover;
-  display: block;
-}
-section[aria-labelledby="articulos-heading"] li h3 {
-  margin: 0.9rem 0.9rem 0.4rem;
-  font-size: 1.05rem;
-  line-height: 1.3;
-}
-section[aria-labelledby="articulos-heading"] li h3 a {
-  color: var(--color-texto, #1b1b1b);
-  text-decoration: none;
-}
-section[aria-labelledby="articulos-heading"] li h3 a:hover,
-section[aria-labelledby="articulos-heading"] li h3 a:focus-visible {
-  color: var(--color-acento, #c1440e);
-  text-decoration: underline;
-}
-section[aria-labelledby="articulos-heading"] li p {
-  margin: 0 0.9rem 0.9rem;
-  font-size: 0.92rem;
-  color: var(--color-texto-suave, #555);
-  flex-grow: 1;
-}
-section[aria-labelledby="articulos-heading"] li > a:last-child {
-  margin: 0 0.9rem 0.9rem;
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: var(--color-acento, #c1440e);
-  text-decoration: none;
-  transition: color 0.15s ease;
-}
-section[aria-labelledby="articulos-heading"] li > a:last-child:hover,
-section[aria-labelledby="articulos-heading"] li > a:last-child:focus-visible {
-  color: var(--color-acento-oscuro, #8f3409);
-  text-decoration: underline;
-}
-
-/* ---------- Formulario de suscripción ---------- */
-section[aria-labelledby="suscripcion-heading"] form {
-  display: flex;
-  flex-direction: column;
-  gap: 0.9rem;
-  max-width: 32rem;
-  margin-top: 1rem;
-}
-section[aria-labelledby="suscripcion-heading"] label {
-  font-weight: 600;
-  font-size: 0.95rem;
-}
-section[aria-labelledby="suscripcion-heading"] input[type="email"] {
-  padding: 0.65rem 0.8rem;
-  border: 1px solid var(--color-borde, #ccc4b5);
-  border-radius: var(--radio, 8px);
-  font-size: 1rem;
-  transition: border-color 0.15s ease, box-shadow 0.15s ease;
-}
-section[aria-labelledby="suscripcion-heading"] input[type="email"]:focus-visible {
-  outline: none;
-  border-color: var(--color-acento, #c1440e);
-  box-shadow: 0 0 0 3px var(--color-acento-suave, rgba(193, 68, 14, 0.2));
-}
-section[aria-labelledby="suscripcion-heading"] p {
-  font-size: 0.85rem;
-  color: var(--color-texto-suave, #555);
-  display: flex;
-  gap: 0.5rem;
-  align-items: flex-start;
-}
-section[aria-labelledby="suscripcion-heading"] input[type="checkbox"] {
-  margin-top: 0.2rem;
-  flex-shrink: 0;
-}
-section[aria-labelledby="suscripcion-heading"] button {
-  align-self: flex-start;
-  padding: 0.7rem 1.4rem;
-  background: var(--color-acento, #c1440e);
-  color: #fff;
-  border: none;
-  border-radius: var(--radio, 8px);
-  font-size: 1rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background 0.15s ease, transform 0.1s ease;
-}
-section[aria-labelledby="suscripcion-heading"] button:hover {
-  background: var(--color-acento-oscuro, #8f3409);
-}
-section[aria-labelledby="suscripcion-heading"] button:active {
-  transform: translateY(1px);
-}
-section[aria-labelledby="suscripcion-heading"] button:focus-visible {
-  outline: 3px solid var(--color-acento, #c1440e);
-  outline-offset: 2px;
-}
-
-/* ---------- Pie de página ---------- */
-footer {
-  border-top: 1px solid var(--color-borde, #ddd8cd);
-  margin-top: 3rem;
-  padding: 1.5rem clamp(1rem, 4vw, 2.5rem) 2.5rem;
-  font-size: 0.85rem;
-  color: var(--color-texto-suave, #555);
-}
-footer a {
-  color: var(--color-acento, #c1440e);
-}
-footer .descargo {
-  margin-top: 0.75rem;
-  font-size: 0.78rem;
-  opacity: 0.8;
-}
-
-/* ============================================================
-   TABLA DE PARÁMETROS — componente canónico del sitio.
-   Cinco columnas fijas (o variantes documentadas en el manual
-   de diseño): Impresora/Parámetro | Material | Valor recomendado
-   | Rango útil | Si te pasas / si te quedas corto.
-   ============================================================ */
-
-.tabla-parametros-wrap {
-  margin: 1.75rem 0;
-  border: 1px solid var(--color-borde, #ddd8cd);
-  border-radius: var(--radio, 8px);
-  overflow: hidden;
-}
-
+/* Tablas con scroll responsive */
 .tabla-scroll {
+  width: 100%;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
-  position: relative;
-}
-.tabla-scroll:focus-visible {
-  outline: 2px solid var(--color-acento, #c1440e);
-  outline-offset: -2px;
-}
-/* Sombra lateral que avisa de contenido oculto por scroll horizontal */
-.tabla-scroll {
-  background:
-    linear-gradient(to right, var(--color-superficie, #f4f2ee) 0, rgba(0,0,0,0) 0) left,
-    linear-gradient(to left, var(--color-superficie, #f4f2ee) 0, rgba(0,0,0,0) 0) right;
-  background-repeat: no-repeat;
-  background-size: 14px 100%;
-  background-attachment: local, local;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  margin: var(--space) 0;
 }
 
-.tabla-parametros {
+table {
   width: 100%;
-  min-width: 480px;
   border-collapse: collapse;
-  font-size: 0.92rem;
-  background: var(--color-fondo, #fff);
+  background: var(--primary-light);
 }
 
-.tabla-parametros caption {
-  caption-side: top;
+th, td {
+  padding: 0.75em;
   text-align: left;
-  font-size: 0.82rem;
-  color: var(--color-texto-suave, #666);
-  padding: 0.6rem 0.9rem 0;
+  border-bottom: 1px solid var(--border);
 }
 
-.tabla-parametros thead th {
-  position: sticky;
-  top: 0;
-  z-index: 1;
-  background: var(--color-superficie, #f4f2ee);
-  text-align: left;
-  padding: 0.65rem 0.9rem;
-  border-bottom: 2px solid var(--color-borde, #ccc4b5);
-  font-weight: 700;
-  white-space: nowrap;
+th {
+  background: var(--primary-light);
+  color: var(--accent);
+  font-weight: 600;
+  border-right: 1px solid var(--border);
 }
 
-.tabla-parametros tbody td {
-  padding: 0.6rem 0.9rem;
-  border-bottom: 1px solid var(--color-borde, #e4e0d8);
-  vertical-align: top;
+td {
+  border-right: 1px solid var(--border);
 }
 
-.tabla-parametros tbody tr:nth-child(even) {
-  background: var(--color-superficie-alt, #faf9f6);
-}
-
-.tabla-parametros tbody tr:last-child td {
+tr:last-child td {
   border-bottom: none;
 }
 
-/* Primera columna fija en tablas anchas, solo a partir de escritorio */
-@media (min-width: 640px) {
-  .tabla-parametros th:first-child,
-  .tabla-parametros td:first-child {
-    position: sticky;
-    left: 0;
-    background: inherit;
-  }
+/* Listas de artículos */
+section[aria-labelledby="articulos-heading"] > ul {
+  list-style: none;
+  display: grid;
+  gap: 2em;
 }
 
-/* Marcado de dato no confirmado o estimado, dentro de una celda */
-.dato-sin-verificar,
-.dato-estimado {
-  font-style: italic;
-}
-.dato-sin-verificar {
-  color: var(--color-aviso, #a35b00);
-}
-.dato-sin-verificar::before {
-  content: "⚠ ";
-  font-style: normal;
-}
-.dato-estimado {
-  color: var(--color-texto-suave, #666);
-}
-.dato-estimado::after {
-  content: " (estimado)";
-  font-style: normal;
-  font-size: 0.85em;
+section[aria-labelledby="articulos-heading"] li {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: border-color 0.2s ease;
 }
 
-/* Vista tarjeta en móvil: mismo HTML, se reordena por CSS */
-@media (max-width: 639px) {
-  .tabla-scroll {
-    overflow-x: visible;
-    background: none;
-  }
-  .tabla-parametros {
-    min-width: 0;
-  }
-  .tabla-parametros thead {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    clip: rect(0 0 0 0);
-    white-space: nowrap;
-  }
-  .tabla-parametros,
-  .tabla-parametros tbody,
-  .tabla-parametros tr,
-  .tabla-parametros td {
-    display: block;
-    width: 100%;
-  }
-  .tabla-parametros tbody tr {
-    margin: 0 0 1rem;
-    border: 1px solid var(--color-borde, #e4e0d8);
-    border-radius: var(--radio, 8px);
-    padding: 0.5rem 0.9rem;
-    background: var(--color-fondo, #fff);
-  }
-  .tabla-parametros tbody tr:nth-child(even) {
-    background: var(--color-fondo, #fff);
-  }
-  .tabla-parametros td {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 1rem;
-    padding: 0.45rem 0;
-    border-bottom: 1px dashed var(--color-borde, #e4e0d8);
-  }
-  .tabla-parametros td:last-child {
-    border-bottom: none;
-  }
-  .tabla-parametros td[data-th]::before {
-    content: attr(data-th);
-    display: block;
-    font-weight: 700;
-    font-size: 0.78rem;
-    color: var(--color-texto-suave, #666);
-    flex-shrink: 0;
-    width: 42%;
-  }
+section[aria-labelledby="articulos-heading"] li:hover {
+  border-color: var(--accent);
 }
 
-/* ============================================================
-   DIAGRAMA — envoltorio para SVG propios de diagnóstico/calibración.
-   El SVG en sí (viewBox, texto real, role="img", <title>/<desc>)
-   se escribe dentro de cada pieza; esto solo maqueta su marco.
-   ============================================================ */
-
-.diagrama {
-  margin: 1.75rem 0;
-}
-
-.diagrama svg {
-  display: block;
+section[aria-labelledby="articulos-heading"] img {
   width: 100%;
   height: auto;
-  max-width: 100%;
-  color: var(--color-texto, #1b1b1b); /* para currentColor en ejes/texto del SVG */
-  background: var(--color-fondo, #fff);
-  border: 1px solid var(--color-borde, #e4e0d8);
-  border-radius: var(--radio, 8px);
+  display: block;
+  background: var(--primary-light);
 }
 
-.diagrama figcaption {
-  margin-top: 0.6rem;
-  font-size: 0.85rem;
-  color: var(--color-texto-suave, #666);
+section[aria-labelledby="articulos-heading"] h3 {
+  font-size: 1.1em;
+  margin: 0.75em 0.75em 0.25em;
 }
 
-.diagrama details {
-  margin-top: 0.85rem;
-  border: 1px solid var(--color-borde, #e4e0d8);
-  border-radius: var(--radio, 8px);
-  padding: 0.6rem 0.9rem;
+section[aria-labelledby="articulos-heading"] h3 a {
+  color: var(--accent);
 }
 
-.diagrama summary {
+section[aria-labelledby="articulos-heading"] p {
+  margin: 0.5em 0.75em;
+  font-size: 0.95em;
+  color: var(--text-secondary);
+}
+
+section[aria-labelledby="articulos-heading"] > ul > li > a:last-of-type {
+  display: inline-block;
+  margin: 0.75em;
+  font-weight: 500;
+}
+
+/* Formulario de suscripción */
+form {
+  background: var(--primary-light);
+  padding: 1.5em;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  margin: var(--space) 0;
+}
+
+form label {
+  display: block;
+  margin-bottom: 0.5em;
+  font-weight: 500;
+}
+
+form input[type="email"],
+form input[type="text"] {
+  width: 100%;
+  padding: 0.75em;
+  margin-bottom: var(--space);
+  background: var(--primary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  color: var(--text);
+  font-size: 1em;
+  transition: border-color 0.2s ease;
+}
+
+form input[type="email"]:focus,
+form input[type="text"]:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+form input[type="checkbox"] {
+  margin-right: 0.5em;
   cursor: pointer;
-  font-weight: 600;
-  font-size: 0.9rem;
 }
 
-.diagrama details[open] summary {
-  margin-bottom: 0.6rem;
-}
-
-.diagrama details .tabla-parametros-wrap {
-  margin: 0.5rem 0 0;
+form button {
+  background: var(--accent);
+  color: var(--primary);
   border: none;
+  padding: 0.75em 1.5em;
+  border-radius: var(--radius);
+  font-weight: 600;
+  font-size: 1em;
+  cursor: pointer;
+  transition: all 0.2s ease;
 }
 
-/* ---------- Modo oscuro: los SVG heredan currentColor, solo hay
-   que reasegurar contraste del marco ---------- */
-@media (prefers-color-scheme: dark) {
-  .diagrama svg,
-  .tabla-parametros {
-    background: var(--color-fondo, #16140f);
-  }
+form button:hover {
+  background: var(--accent-dark);
+  transform: translateY(-2px);
+}
+
+form button:active {
+  transform: translateY(0);
+}
+
+/* Skip link */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--accent);
+  color: var(--primary);
+  padding: 8px;
+  text-decoration: none;
+  z-index: 100;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* Artículos individuales */
+article {
+  line-height: 1.8;
+}
+
+article h1 {
+  margin-top: 0;
+}
+
+article p {
+  margin-bottom: 1.2em;
+}
+
+article img {
+  max-width: 100%;
+  height: auto;
+  margin: 1.5em 0;
+  border-radius: var(--radius);
+}
+
+/* Atribuciones de foto */
+.atribucion {
+  font-size: 0.8em;
+  color: var(--text-secondary);
+  margin-top: -0.5em;
+  margin-bottom: 1.5em;
+  text-align: center;
+}
+
+/* Código */
+code {
+  background: var(--primary-light);
+  padding: 2px 6px;
+  border-radius: var(--radius);
+  font-family: 'Monaco', 'Courier New', monospace;
+  font-size: 0.9em;
+}
+
+pre {
+  background: var(--primary-light);
+  padding: 1em;
+  border-radius: var(--radius);
+  overflow-x: auto;
+  margin: 1.5em 0;
+  border: 1px solid var(--border);
+}
+
+pre code {
+  background: none;
+  padding: 0;
+}
+
+/* Links internos y externos */
+a[href^="/"]:visited {
+  color: var(--accent-dark);
+}
+
+a[href^="http"]:not([href*="claude.retoseo.com"])::after {
+  content: " ↗";
+  font-size: 0.8em;
 }

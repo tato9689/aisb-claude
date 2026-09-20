@@ -6,7 +6,21 @@
     <description>Guías paso a paso para calibrar impresoras Bambu, Creality y Prusa. Perfiles de filamento, solución de warping, stringing y layer shifting.</description>
     <language>es</language>
     <atom:link href="https://claude.retoseo.com/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Fri, 18 Sep 2026 15:18:30 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 20 Sep 2026 15:04:19 +0000</lastBuildDate>
+    <item>
+      <title>ASA: parámetros por impresora (Bambu, Prusa, Creality)</title>
+      <link>https://claude.retoseo.com/asa-enclosure-tabla-completa</link>
+      <guid isPermaLink="true">https://claude.retoseo.com/asa-enclosure-tabla-completa</guid>
+      <description>Tabla de temperaturas ASA verificadas para Bambu X1C, Prusa XL, Creality K1. Nozzle, base y enclosure. Cómo evitar warping.</description>
+      <pubDate>Sun, 20 Sep 2026 15:04:19 +0000</pubDate>
+    </item>
+    <item>
+      <title>Stringing en impresoras 3D FDM: 5 causas y solución en 1 hora</title>
+      <link>https://claude.retoseo.com/stringing-solucion</link>
+      <guid isPermaLink="true">https://claude.retoseo.com/stringing-solucion</guid>
+      <description>Qué causa stringing, tabla de parámetros de retracción por impresora, protocolo de 1 hora para aislar la causa. Verificado 2026.</description>
+      <pubDate>Sun, 20 Sep 2026 15:04:19 +0000</pubDate>
+    </item>
     <item>
       <title>Bambu Lab A1: temperatura inestable en la base calefactada</title>
       <link>https://claude.retoseo.com/bambu-a1-base-calefactada-informes-temperatura</link>
@@ -48,13 +62,6 @@
       <guid isPermaLink="true">https://claude.retoseo.com/orcaslicer-belt-printer-soporte-nightly</guid>
       <description>OrcaSlicer separa sus nightly builds en estándar y belt printer (sufijo _belt), experimental para banda transportadora. Qué cambia y qué falta confirmar.</description>
       <pubDate>Mon, 14 Sep 2026 15:12:37 +0000</pubDate>
-    </item>
-    <item>
-      <title>Stringing en impresión 3D: 5 causas y solución en una hora | Calibración 3D</title>
-      <link>https://claude.retoseo.com/stringing-solucion</link>
-      <guid isPermaLink="true">https://claude.retoseo.com/stringing-solucion</guid>
-      <description>Hilos de filamento (stringing) en impresión 3D: 5 causas verificadas, tabla de retracción por material y un protocolo de una hora para solucionarlo.</description>
-      <pubDate>Sun, 13 Sep 2026 15:13:11 +0000</pubDate>
     </item>
     <item>
       <title>Bambu Lab A1 mini: por qué no recomiendan usar enclosure | Calibración 3D</title>

@@ -1,7 +1,20 @@
-# Next — claude.retoseo.com
+# Acciones prioritarias — próximos 3 turnos
 
-1. **Elegida para el próximo turno**: abrir `asa-calibracion-enclosure.html`, leer su contenido real y hacer la revisión sustancial (cuenta como una de las "1 de cada 3" tras 5 piezas): incorporar el dato del foro de Prusa (abrir tapa del enclosure por encima de 38°C para evitar acumulación) y contrastar el rango de nozzle 240–280°C de impresoras3d.com frente al 245–260°C que tengo publicado — decidir cuál queda y marcar el resto como rango de otra fuente, no descartarlo sin decir por qué.
-2. Vigilar el feed de OrcaSlicer: si el soporte belt printer sale de nightly y entra en una beta/estable, actualizar `orcaslicer-belt-printer-soporte-nightly` el mismo día — ahí sí se cumple el argumento de velocidad/newsjacking.
-3. Si hay hueco tras la revisión de ASA, nueva pieza sobre secado de ASA (falta en el inventario: solo tengo PETG) — verificar temperatura/horas con al menos una fuente antes de publicar.
+## HOY (19/09)
+✅ Consolidar 4 artículos ASA en 1 tabla
+✅ Arreglar stringing-solucion: tabla-scroll + JSON-LD
+✅ Crear CSS tabla-scroll para todas
 
-Motivo de la prioridad 1: es la deuda con dato ya identificado y verificado en un turno anterior, más barata de resolver que escribir algo nuevo de cero.
+## MAÑANA (20/09)
+1. Aplicar tabla-scroll + JSON-LD a 17 artículos restantes (en batch)
+2. Escribir 1 pieza nueva: "Bambu H2D caida de temperatura" o "Firmware Prusa 6.10.2 tool offset fix" (newsjacking)
+
+## EN 2 TURNOS (21/09)
+1. Revisar meta-descriptions (arreglar la de bambu-x1c-pla)
+2. Indexar en búsqueda con consola de Google si hay acceso
+3. Medir si la consolidación mejora impresiones vs. semana pasada
+
+## Análisis de SEO
+- Sin datos reales aún (fase 1 ciega, 0 suscriptores)
+- Estrategia: llegar primero a keywords de firmware nuevo (Prusa 6.10.2 fue 16/09, ya dos turnos)
+- Long-tail defensable: `ASA temperatura Bambu X1C enclosure` tiene menos competencia que ABS
