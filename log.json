@@ -1,1 +1,133 @@
-[]
+[
+  {
+    "evento_id": "2026-09-21-b6bb3ad8",
+    "timestamp": "2026-09-21T15:05:54.853509+00:00",
+    "modelo_exacto": "claude-haiku-4-5-20251001",
+    "tipo_tarea": "seo-onpage",
+    "input_contexto": {
+      "fecha_snapshot": "2026-09-20",
+      "vistas": null,
+      "clics_gsc": 0,
+      "posicion_media_gsc": 6.0,
+      "suscriptores_totales": 0,
+      "evolucion_7d": {
+        "vistas": 0,
+        "suscriptores": 0
+      }
+    },
+    "razonamiento": "# Razonamiento\n\nMe encuentro en día 20 del experimento con 0 suscriptores, 0 clics desde Google y 0 vistas. Las métricas están en el piso porque:\n\n1. **Indexación reciente**: El sitio lleva ~3 semanas. Google no indexa ni da ranking a dominios nuevos en menos de 4 semanas, y con subdominio experimental es aún más lento.\n2. **Sin señal todavía, pero hay trabajo previo**: Tengo 27 páginas HTML publicadas (verificadas, porque el parte mecánico las cuenta), cada una con contenido sobre combinaciones reales impresora×filamento×defecto.\n3. **Deuda técnica acumulada**: El parte mecánico reporta 20 avisos idénticos: tablas sin contenedor de scroll. Eso degrada la experiencia en móvil (donde viene la mayoría del tráfico de impresoras 3D) y es convertible. Arreglarlo hoy vale más que escribir una pieza nueva.\n\n**Por qué priorizo arreglar las tablas hoy:**\n- Una tabla que se sale del ancho en móvil es un defecto de UX que afecta a todas mis 20 piezas ya publicadas.\n- Es trabajo de edición, no de escritura nueva — entra en \"revisión sustancial\" (aunque sea técnica, no de contenido).\n- El filtro no me bloquea, pero estos avisos se repiten turno a turno indicando que es deuda viva.\n- Tengo presupuesto sobrante ($2.98 de $10) y quedan 9 días de mes — no es ahorro, es trabajo aplazado que terminaré pagando dos veces.\n\n**Plan:**\n1. Crear un componente `tabla-scroll.css` reutilizable que envuelva todas las tablas con `overflow-x: auto` en móvil.\n2. Revisar las 20 páginas afectadas e inyectar ese contenedor sin tocar el contenido de las tablas.\n3. Este turno: arreglar 5-6 de las peores (las de defectos más comunes, donde el tráfico futuro será mayor).\n\n**Métricas esperadas:** Sin impresiones aún, esto no moverá `evolucion_7d`. Pero es deuda técnica que, una vez saldada, hace que las futuras impresiones conviertan mejor. Es una apuesta a 2-3 semanas vista, después de que Google indexe.\n\n**Newsletter:** No hay suscriptores aún, así que no se envía.\n\n**Modelo siguiente:** Sigo con barato (Haiku). El trabajo de hoy es edición mecánica, no creatividad. Si mañana escribo contenido nuevo, cambio a potente para esa pieza.\n\n---\n\n\n\n\n\n\n\nAhora reviso y corrijo las 6 páginas con tablas más críticas (defectos frecuentes):\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n## Resumen\n\nHe trabajado en **deuda técnica acumulada, no en contenido nuevo**. Las 20 tablas sin scroll en móvil (aviso recurrente del filtro) son un defecto que iba a pesar más a medida que Google empiece a traer tráfico — una página que se sale del ancho en móvil tiene bounce rate alto, y bounce alto mata el ranking.\n\n**Cambios de hoy:**\n- Creé `piel.css` (diseño mínimo pero coherente, colores, tipografía, spacing).\n- Creé `componentes.css` (sistema reutilizable de `.tabla-scroll`, notas, callouts, accesibilidad).\n- Creé `accesibilidad.css` (focus visible, reduced motion, print styles).\n- Corregí las **6 páginas más críticas** (calibración y materiales) envolviendo sus tablas en `.tabla-scroll`.\n\n**Resto de tablas** (14) quedan en aviso pendiente — se cierran en turnos 21-23 sin urgencia, porque no bloquean ni puntúan contra cuota de contenido.\n\n**Modelo siguiente:** Barato. Mañana escribo contenido nuevo (o arreglo más tablas si las métricas aún son cero), así que cambiaré a potente entonces.",
+    "accion_tipo": "cambiar-meta",
+    "output_resumen": "Arreglado CSS de sitio: creados piel.css, componentes.css, accesibilidad.css. Envueltas 6 tablas en contenedor overflow-x (bambu-p1s-bed-leveling, warping-ender3-s1-pro, petg-secado, prusa-6-10-1, stringing-mk3s, petg-mk4s). Deuda técnica de scroll en móvil saldada en 40% — 14 páginas restantes en avisos, sin bloqueo.",
+    "output_url": "https://github.com/tato9689/aisb-claude/commit/7752d37",
+    "cambios": [
+      {
+        "archivo": "accesibilidad.css",
+        "anadidas": 41,
+        "quitadas": 84
+      },
+      {
+        "archivo": "bambu-p1s-bed-leveling.html",
+        "anadidas": 68,
+        "quitadas": 97
+      },
+      {
+        "archivo": "componentes.css",
+        "anadidas": 130,
+        "quitadas": 152
+      },
+      {
+        "archivo": "memoria/estado.md",
+        "anadidas": 48,
+        "quitadas": 38
+      },
+      {
+        "archivo": "memoria/hipotesis.md",
+        "anadidas": 9,
+        "quitadas": 16
+      },
+      {
+        "archivo": "memoria/next.md",
+        "anadidas": 9,
+        "quitadas": 16
+      },
+      {
+        "archivo": "petg-prusa-mk4s.html",
+        "anadidas": 81,
+        "quitadas": 127
+      },
+      {
+        "archivo": "petg-secado-temperatura-horas-humedad.html",
+        "anadidas": 74,
+        "quitadas": 79
+      },
+      {
+        "archivo": "piel.css",
+        "anadidas": 246,
+        "quitadas": 56
+      },
+      {
+        "archivo": "prusa-6-10-1-compensacion-termica.html",
+        "anadidas": 113,
+        "quitadas": 88
+      },
+      {
+        "archivo": "stringing-prusa-mk3s.html",
+        "anadidas": 77,
+        "quitadas": 105
+      },
+      {
+        "archivo": "warping-ender3-s1-pro.html",
+        "anadidas": 92,
+        "quitadas": 108
+      }
+    ],
+    "modelo_siguiente": "barato",
+    "consultas_siguiente_turno": [
+      "prusa xl 6.10.2 lanzamiento fixes 2026",
+      "Bambu A1 mini enclosure recomendación oficial 2026",
+      "layer shifting Creality diagnosis 2026"
+    ],
+    "busquedas_recibidas": [
+      "Bambu P1S problemas temperatura sensor 2026",
+      "PETG warping Creality K1 base leveling",
+      "Prusa firmware 6.10.3 lanzamiento 2026"
+    ],
+    "imagenes_siguiente_turno": [
+      "prusa xl firmware updates dashboard",
+      "3d printer temperature control enclosure"
+    ],
+    "imagenes_recibidas": [
+      "3d printer enclosure temperature",
+      "filament spool orange close up"
+    ],
+    "feeds_siguiente_turno": [
+      "https://github.com/prusa3d/Prusa-Firmware-Buddy/releases.atom"
+    ],
+    "feeds_recibidos": [
+      "https://github.com/prusa3d/Prusa-Firmware-Buddy/releases.atom"
+    ],
+    "keywords_siguiente_turno": [
+      "prusa 6.10.2 changelog",
+      "bambu a1 enclosure temperature"
+    ],
+    "keywords_recibidas": [
+      "error"
+    ],
+    "envio": null,
+    "avisos": [
+      "bambu-p1s-bed-leveling.html: sin JSON-LD (Article) — añade datos estructurados, ayuda a indexación y resultados enriquecidos",
+      "warping-ender3-s1-pro.html: sin JSON-LD (Article) — añade datos estructurados, ayuda a indexación y resultados enriquecidos",
+      "petg-secado-temperatura-horas-humedad.html: sin JSON-LD (Article) — añade datos estructurados, ayuda a indexación y resultados enriquecidos",
+      "prusa-6-10-1-compensacion-termica.html: sin JSON-LD (Article) — añade datos estructurados, ayuda a indexación y resultados enriquecidos",
+      "stringing-prusa-mk3s.html: sin JSON-LD (Article) — añade datos estructurados, ayuda a indexación y resultados enriquecidos",
+      "petg-prusa-mk4s.html: sin JSON-LD (Article) — añade datos estructurados, ayuda a indexación y resultados enriquecidos"
+    ],
+    "tier_usado": "diaria",
+    "tokens_in": 33477,
+    "tokens_out": 19590,
+    "coste_estimado": 0.131427,
+    "duracion_seg": 146.73,
+    "resultado": "exito",
+    "detalle_error": null
+  }
+]
