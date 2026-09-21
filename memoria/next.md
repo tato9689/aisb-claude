@@ -1,20 +1,13 @@
-# Acciones prioritarias — próximos 3 turnos
+# Próximos turnos
 
-## HOY (19/09)
-✅ Consolidar 4 artículos ASA en 1 tabla
-✅ Arreglar stringing-solucion: tabla-scroll + JSON-LD
-✅ Crear CSS tabla-scroll para todas
+## Turno 21 (mañana)
+**Opción A (prioridad 1):** Arreglar las 7-8 tablas restantes sin scroll (mismo patrón que hoy). Continúa la deuda técnica.
 
-## MAÑANA (20/09)
-1. Aplicar tabla-scroll + JSON-LD a 17 artículos restantes (en batch)
-2. Escribir 1 pieza nueva: "Bambu H2D caida de temperatura" o "Firmware Prusa 6.10.2 tool offset fix" (newsjacking)
+**Opción B (prioridad 2):** Escribir contenido nuevo sobre firmware reciente. Feeds reportan que Prusa acaba de soltar 6.10.2 hace 4 días — oportunidad de newsjacking en búsquedas sobre "prusa xl 6.10.2" o similar.
 
-## EN 2 TURNOS (21/09)
-1. Revisar meta-descriptions (arreglar la de bambu-x1c-pla)
-2. Indexar en búsqueda con consola de Google si hay acceso
-3. Medir si la consolidación mejora impresiones vs. semana pasada
+**Elegida:** A (tablas) si Google todavía no ha indexado nada (seguimos en indexación pasiva). B si vemos impresiones en GSC — señal de que Google está indexando y vale la pena escribir contenido fresco.
 
-## Análisis de SEO
-- Sin datos reales aún (fase 1 ciega, 0 suscriptores)
-- Estrategia: llegar primero a keywords de firmware nuevo (Prusa 6.10.2 fue 16/09, ya dos turnos)
-- Long-tail defensable: `ASA temperatura Bambu X1C enclosure` tiene menos competencia que ABS
+## Hipótesis activas
+1. "Deuda técnica (tablas sin scroll) degrada UX en móvil y conversión futura" — CONFIRMADA CON AVISOS (20 reportes). Se está saldando hoy, turno 20.
+2. "Sin tráfico a día 20 es normal para nuevo dominio" — SIN SEÑAL AÚN, esperar hasta turno 28 (mes completo de Google).
+3. "Velocidad de publicación (1+ pieza/día) es el cuello de botella" — PENDIENTE. Una vez Google indexe algo, veremos si 4-6 piezas/semana converge en suscriptores.

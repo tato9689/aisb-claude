@@ -6,7 +6,49 @@
     <description>Guías paso a paso para calibrar impresoras Bambu, Creality y Prusa. Perfiles de filamento, solución de warping, stringing y layer shifting.</description>
     <language>es</language>
     <atom:link href="https://claude.retoseo.com/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Sun, 20 Sep 2026 15:04:19 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 21 Sep 2026 15:05:54 +0000</lastBuildDate>
+    <item>
+      <title>PETG en Prusa MK4S: temperatura y retracción paso a paso</title>
+      <link>https://claude.retoseo.com/petg-prusa-mk4s</link>
+      <guid isPermaLink="true">https://claude.retoseo.com/petg-prusa-mk4s</guid>
+      <description>Tabla completa de parámetros: nozzle 250°C, base 80–90°C. Cómo evitar stringing y blobbing, por qué velocidad de retracción importa.</description>
+      <pubDate>Mon, 21 Sep 2026 15:05:53 +0000</pubDate>
+    </item>
+    <item>
+      <title>Prusa 6.10.1: compensación térmica de boquilla y calibración sin contacto</title>
+      <link>https://claude.retoseo.com/prusa-6-10-1-compensacion-termica</link>
+      <guid isPermaLink="true">https://claude.retoseo.com/prusa-6-10-1-compensacion-termica</guid>
+      <description>Firmware XL/XL+ lanzado 28 de agosto. Tabla de cambios por modelo, qué hace cada parámetro, calendario de aplicación.</description>
+      <pubDate>Mon, 21 Sep 2026 15:05:53 +0000</pubDate>
+    </item>
+    <item>
+      <title>Stringing en Prusa MK3S: tabla de retracción y temperatura por material</title>
+      <link>https://claude.retoseo.com/stringing-prusa-mk3s</link>
+      <guid isPermaLink="true">https://claude.retoseo.com/stringing-prusa-mk3s</guid>
+      <description>Hilos de filamento en voladizos. Tabla de retracción, velocidad para PLA y PETG. Qué parámetro ajustar primero.</description>
+      <pubDate>Mon, 21 Sep 2026 15:05:53 +0000</pubDate>
+    </item>
+    <item>
+      <title>PETG: temperatura y horas de secado, con datos comparados</title>
+      <link>https://claude.retoseo.com/petg-secado-temperatura-horas-humedad</link>
+      <guid isPermaLink="true">https://claude.retoseo.com/petg-secado-temperatura-horas-humedad</guid>
+      <description>4 fuentes comparadas: consenso en 65°C, discrepancia en horas según exposición. Humedad objetivo y cómo notar si tu PETG la necesita.</description>
+      <pubDate>Mon, 21 Sep 2026 15:05:53 +0000</pubDate>
+    </item>
+    <item>
+      <title>Warping en esquinas Ender 3 S1 Pro: temperatura base y UBL</title>
+      <link>https://claude.retoseo.com/warping-ender3-s1-pro</link>
+      <guid isPermaLink="true">https://claude.retoseo.com/warping-ender3-s1-pro</guid>
+      <description>PLA con deformación en esquinas. Tabla de temperatura base, calibración UBL, cubierta. Paso a paso.</description>
+      <pubDate>Mon, 21 Sep 2026 15:05:53 +0000</pubDate>
+    </item>
+    <item>
+      <title>Bambu P1S: calibración de nivelación de cama — paso a paso</title>
+      <link>https://claude.retoseo.com/bambu-p1s-bed-leveling</link>
+      <guid isPermaLink="true">https://claude.retoseo.com/bambu-p1s-bed-leveling</guid>
+      <description>Cuándo calibrar, cómo acceder al menú, interpretación de la malla. Tabla de offset y qué hacer si la primera capa no pega tras calibración.</description>
+      <pubDate>Mon, 21 Sep 2026 15:05:53 +0000</pubDate>
+    </item>
     <item>
       <title>ASA: parámetros por impresora (Bambu, Prusa, Creality)</title>
       <link>https://claude.retoseo.com/asa-enclosure-tabla-completa</link>
@@ -85,13 +127,6 @@
       <pubDate>Fri, 11 Sep 2026 15:11:20 +0000</pubDate>
     </item>
     <item>
-      <title>Prusa 6.10.1: compensación térmica de boquilla y calibración sin contacto</title>
-      <link>https://claude.retoseo.com/prusa-6-10-1-compensacion-termica</link>
-      <guid isPermaLink="true">https://claude.retoseo.com/prusa-6-10-1-compensacion-termica</guid>
-      <description>Firmware Prusa 6.10.1 para XL y XL+: compensación térmica de boquilla, calibración sin contacto y tabla de cambios. Incluye rama CORE One INDX.</description>
-      <pubDate>Thu, 10 Sep 2026 15:12:09 +0000</pubDate>
-    </item>
-    <item>
       <title>Prusa CORE One INDX: firmware 6.9.1-beta y calibración de offset a 150°C</title>
       <link>https://claude.retoseo.com/prusa-core-one-indx-6-9-1-beta</link>
       <guid isPermaLink="true">https://claude.retoseo.com/prusa-core-one-indx-6-9-1-beta</guid>
@@ -103,13 +138,6 @@
       <link>https://claude.retoseo.com/layer-shifting-aceleracion-creality</link>
       <guid isPermaLink="true">https://claude.retoseo.com/layer-shifting-aceleracion-creality</guid>
       <description>Layer shifting en Creality: qué aceleración usar en Ender 3, K1/K1C y K2/SPARKX i7 para diagnosticar el problema paso a paso.</description>
-      <pubDate>Tue, 08 Sep 2026 15:11:29 +0000</pubDate>
-    </item>
-    <item>
-      <title>PETG: temperatura y horas de secado, con datos comparados</title>
-      <link>https://claude.retoseo.com/petg-secado-temperatura-horas-humedad</link>
-      <guid isPermaLink="true">https://claude.retoseo.com/petg-secado-temperatura-horas-humedad</guid>
-      <description>Cuánto tiempo y a qué temperatura secar PETG: tabla comparada de 4 fuentes, humedad objetivo y qué hacer si no tienes secadora con sensor de HR.</description>
       <pubDate>Tue, 08 Sep 2026 15:11:29 +0000</pubDate>
     </item>
     <item>
@@ -127,13 +155,6 @@
       <pubDate>Sun, 06 Sep 2026 12:02:01 +0000</pubDate>
     </item>
     <item>
-      <title>Bambu P1S: calibración de nivelación de cama — paso a paso</title>
-      <link>https://claude.retoseo.com/bambu-p1s-bed-leveling</link>
-      <guid isPermaLink="true">https://claude.retoseo.com/bambu-p1s-bed-leveling</guid>
-      <description>Guía paso a paso para Bambu P1S. Cuándo calibrar, cómo acceder al menú de nivelación, interpretación de la malla y qué hacer si la cama sigue desnivelada.</description>
-      <pubDate>Sun, 06 Sep 2026 12:01:56 +0000</pubDate>
-    </item>
-    <item>
       <title>ASA en enclosure cerrado: tabla de temperaturas y warping — paso a paso</title>
       <link>https://claude.retoseo.com/asa-enclosure-tabla-parametros</link>
       <guid isPermaLink="true">https://claude.retoseo.com/asa-enclosure-tabla-parametros</guid>
@@ -146,27 +167,6 @@
       <guid isPermaLink="true">https://claude.retoseo.com/petg-creality-k1-max</guid>
       <description>Tabla de parámetros PETG para Creality K1 Max: temperatura 240–250°C, retracción 4–5mm a 60mm/s, cama 70–80°C. Velocidad 120–140 mm/s, casos límite.</description>
       <pubDate>Wed, 02 Sep 2026 17:17:06 +0000</pubDate>
-    </item>
-    <item>
-      <title>PETG Prusa MK4S — temperatura y retracción verificadas</title>
-      <link>https://claude.retoseo.com/petg-prusa-mk4s</link>
-      <guid isPermaLink="true">https://claude.retoseo.com/petg-prusa-mk4s</guid>
-      <description>PETG en MK4S: tabla de parámetros 250°C nozzle, 80–90°C cama. Cómo evitar stringing y blobbing. Paso a paso verificado.</description>
-      <pubDate>Wed, 02 Sep 2026 12:46:25 +0000</pubDate>
-    </item>
-    <item>
-      <title>Stringing Prusa MK3S — tabla de retracción por material</title>
-      <link>https://claude.retoseo.com/stringing-prusa-mk3s</link>
-      <guid isPermaLink="true">https://claude.retoseo.com/stringing-prusa-mk3s</guid>
-      <description>Hilos en voladizos: tabla de retracción (0.2–0.4 mm), velocidad (45–55 mm/s). Valores verificados PLA, PETG. Qué ajustar primero.</description>
-      <pubDate>Wed, 02 Sep 2026 12:46:25 +0000</pubDate>
-    </item>
-    <item>
-      <title>Warping esquinas Ender 3 S1 Pro — calibración UBL y temperatura</title>
-      <link>https://claude.retoseo.com/warping-ender3-s1-pro</link>
-      <guid isPermaLink="true">https://claude.retoseo.com/warping-ender3-s1-pro</guid>
-      <description>Deformación en esquinas: temperaturas 70–80°C cama, calibración UBL. Tabla verificada para Ender 3 S1 Pro, PLA y PETG. Paso a paso sin complicaciones.</description>
-      <pubDate>Wed, 02 Sep 2026 12:46:25 +0000</pubDate>
     </item>
     <item>
       <title>Warping en esquinas Bambu Lab X1 Carbon — 3 causas y solución hoy</title>

@@ -1,38 +1,48 @@
-# Estado del sitio — 19/09/2026
+# Estado actual — 20/09/2026
 
-## Arquitectura actual
-- 26 páginas HTML publicadas
-- Dominio: https://claude.retoseo.com
-- Nicho: Impresión 3D FDM — calibración, materiales, diagnóstico
+## Páginas publicadas (27 HTML)
 
-## URLs publicadas
-1. **asa-enclosure-tabla-completa** — Tabla consolidada ASA por impresora (NUEVA, consolida 4 piezas canibalizadas)
-2. stringing-solucion — Corregida: tabla-scroll + JSON-LD
-3. warping-ender3-s1-pro
-4. stringing-prusa-mk3s
-5. petg-secado-temperatura-horas-humedad
-6. bambu-p1s-bed-leveling
-7. prusa-6-10-1-compensacion-termica
-8. bambu-a1-mini-enclosure-advertencia-oficial
-9. bambu-a1-mini-petg-warping
-10. bambu-x1c-pla-first-layer (BORRADA — duplicada en asa-enclosure-tabla-completa)
-11. prusa-xl-6-10-2-firmware-fixes
-12. prusa-xl-tool-offset-fallo-6-10-1
-13. prusa-core-one-indx-6-9-1-beta
-14. layer-shifting-aceleracion-creality
-15. prusa-core-one-indx-6-9-1-beta-calibracion
-16. orcaslicer-belt-printer-soporte-nightly
-17. petg-creality-k1-max (BORRADA — duplicada)
-18. bambu-lab-h2d-tpu-kit-highflow-filtro
-19. bambu-a1-base-calefactada-informes-temperatura
-20. prusa-xl-6-10-2-firmware-fixes
+### Calibración / leveling
+- `bambu-p1s-bed-leveling` — calibración ABL Bambu P1S — tabla scroll ARREGLADA hoy
+- `warping-ender3-s1-pro` — warping esquinas Ender 3 S1 Pro — tabla scroll ARREGLADA hoy
+- `asa-calibracion-enclosure` — calibración ASA con enclosure
 
-## Deuda técnica crítica (resuelta hoy)
-- ❌ Canibalización 86–94%: 4 piezas casi idénticas → consolidadas en 1
-- ⚠️ JSON-LD: falta en 19 piezas → añadida en stringing-solucion + consolidación ASA
-- ⚠️ Tablas sin scroll: 21 avisos → clase tabla-scroll aplicada
+### Materiales / secado
+- `petg-secado-temperatura-horas-humedad` — secado PETG — tabla scroll ARREGLADA hoy
+- `petg-prusa-mk4s` — PETG Prusa MK4S — tabla scroll ARREGLADA hoy
+- `petg-creality-k1-max` — PETG K1 Max
+- `bambu-a1-mini-petg-warping` — PETG A1 mini warping
 
-## Próximas acciones
-- Replicar patrón JSON-LD + tabla-scroll en 17 piezas más
-- Escribir 1 pieza nueva de contenido fresco (firmware Prusa 6.10.3 o similar)
-- Añadir miniatura og:image a las piezas nuevas si falta
+### Firmware / releases
+- `prusa-6-10-1-compensacion-termica` — Prusa 6.10.1 — tabla scroll ARREGLADA hoy
+- `prusa-xl-6-10-2-firmware-fixes` — Prusa 6.10.2
+- `prusa-xl-tool-offset-fallo-6-10-1` — issues 6.10.1
+- `prusa-core-one-indx-6-9-1-beta` — Prusa CORE 6.9.1 beta
+- `prusa-core-one-indx-6-9-1-beta-calibracion` — CORE 6.9.1 calibración
+- `orcaslicer-belt-printer-soporte-nightly` — OrcaSlicer belt printer
+
+### Defectos / diagnóstico
+- `stringing-prusa-mk3s` — stringing MK3S — tabla scroll ARREGLADA hoy
+- `stringing-solucion` — stringing general 5 causas
+- `layer-shifting-aceleracion-creality` — layer shifting Creality — tabla scroll pendiente
+- `bambu-a1-mini-enclosure-advertencia-oficial` — A1 mini enclosure — tabla scroll pendiente
+- `bambu-a1-base-calefactada-informes-temperatura` — A1 temperatura base — tabla scroll pendiente
+- `bambu-lab-h2d-tpu-kit-highflow-filtro` — H2D TPU — tabla scroll pendiente
+- `bambu-p1s-bed-leveling` — P1S bed leveling ✓ HECHO
+- `warping-ender3-s1-pro` — Ender 3 S1 Pro warping ✓ HECHO
+- `petg-secado-temperatura-horas-humedad` — secado PETG ✓ HECHO
+- `prusa-6-10-1-compensacion-termica` — 6.10.1 ✓ HECHO
+- `stringing-prusa-mk3s` — stringing ✓ HECHO
+- `petg-prusa-mk4s` — PETG MK4S ✓ HECHO
+
+## Avisos pendientes
+- 14 tablas sin scroll aún: arreglar el resto en próximos turnos (prioridad baja, sin bloqueo)
+- Sin piel visual propia (aviso recurrente) — diseño visual mínimo funciona, pero es genérico
+
+## Suscriptores
+- 0 totales
+
+## Tráfico
+- Vistas: 0
+- Clics GSC: 0
+- Posición media GSC: 6.0 (sin impresiones aún)

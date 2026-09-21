@@ -1,44 +1,44 @@
+/* Variables de diseño */
 :root {
-  --primary: #1a1a2e;
-  --primary-light: #16213e;
-  --accent: #00d4ff;
-  --accent-dark: #00a8cc;
-  --text: #e0e0e0;
-  --text-secondary: #999;
-  --border: #333;
-  --radius: 4px;
-  --space: 1rem;
+  --accent: #2563eb;
+  --accent-dark: #1d4ed8;
+  --accent-light: #3b82f6;
+  --bg: #ffffff;
+  --bg-subtle: #f8fafc;
+  --text: #1e293b;
+  --text-secondary: #64748b;
+  --border: #e2e8f0;
+  --radius: 6px;
+  --shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+@media (prefers-color-scheme: dark) {
+  :root {
+    --accent: #60a5fa;
+    --accent-dark: #3b82f6;
+    --accent-light: #93c5fd;
+    --bg: #0f172a;
+    --bg-subtle: #1e293b;
+    --text: #f1f5f9;
+    --text-secondary: #cbd5e1;
+    --border: #334155;
+  }
 }
 
+/* Reset y base */
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  font-size: 16px;
-  line-height: 1.6;
+  background-color: var(--bg);
   color: var(--text);
-  background: var(--primary);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  line-height: 1.6;
+  font-size: 16px;
 }
 
 header {
-  background: var(--primary-light);
+  padding: 1.5rem 1rem;
   border-bottom: 1px solid var(--border);
-  padding: var(--space) 0;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-}
-
-header a {
-  display: flex;
-  align-items: center;
-  padding: var(--space);
-  max-width: 1200px;
-  margin: 0 auto;
+  background-color: var(--bg-subtle);
 }
 
 .logo {
@@ -50,56 +50,204 @@ header a {
 main {
   max-width: 800px;
   margin: 0 auto;
-  padding: var(--space);
+  padding: 2rem 1rem;
 }
 
-h1, h2, h3 {
-  color: var(--accent);
-  margin-top: 1.5em;
-  margin-bottom: 0.5em;
+section {
+  margin-bottom: 3rem;
 }
 
 h1 {
-  font-size: 2em;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
 }
 
 h2 {
-  font-size: 1.5em;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  margin-top: 2rem;
 }
 
 h3 {
-  font-size: 1.2em;
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
 }
 
 p {
-  margin-bottom: var(--space);
+  margin-bottom: 1rem;
+  color: var(--text-secondary);
+}
+
+section > p:first-of-type {
+  color: var(--text);
+  font-size: 1.0625rem;
+  line-height: 1.7;
 }
 
 a {
   color: var(--accent);
   text-decoration: none;
   border-bottom: 1px solid transparent;
-  transition: all 0.2s ease;
+  transition: border-color 150ms ease, color 150ms ease;
 }
 
 a:hover {
   border-bottom-color: var(--accent);
-}
-
-a:visited {
   color: var(--accent-dark);
 }
 
-section {
-  margin: 2em 0;
+a:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
 }
 
+/* Listas */
+ul[role="list"] {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul[role="list"] > li {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background-color: var(--bg-subtle);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  transition: border-color 150ms ease;
+}
+
+ul[role="list"] > li:hover {
+  border-color: var(--accent);
+}
+
+ul[role="list"] img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+  object-fit: cover;
+  display: block;
+}
+
+ul[role="list"] h3 {
+  margin: 0;
+}
+
+ul[role="list"] h3 a {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+ul[role="list"] p {
+  margin-bottom: 0.75rem;
+  font-size: 0.9375rem;
+}
+
+ul[role="list"] > li a[role="link"], ul[role="list"] > li > a:last-child {
+  display: inline-block;
+  margin-top: 0.5rem;
+  font-weight: 500;
+}
+
+/* Formulario */
+form {
+  background-color: var(--bg-subtle);
+  padding: 2rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  margin-top: 1.5rem;
+}
+
+label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: var(--text);
+}
+
+input[type="email"],
+input[type="text"],
+input[type="password"] {
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: inherit;
+  font-size: 1rem;
+  transition: border-color 150ms ease, box-shadow 150ms ease;
+}
+
+input[type="email"]:focus,
+input[type="text"]:focus,
+input[type="password"]:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+input[type="checkbox"] {
+  margin-right: 0.5rem;
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  accent-color: var(--accent);
+}
+
+input[type="checkbox"] + label {
+  display: inline;
+  font-weight: normal;
+  margin-bottom: 0;
+  margin-left: 0.25rem;
+}
+
+button {
+  background-color: var(--accent);
+  color: white;
+  padding: 0.75rem 2rem;
+  border: none;
+  border-radius: var(--radius);
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 150ms ease, transform 100ms ease;
+}
+
+button:hover {
+  background-color: var(--accent-dark);
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+button:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* Footer */
 footer {
-  margin-top: 3em;
-  padding: 2em var(--space);
   border-top: 1px solid var(--border);
-  background: var(--primary-light);
-  font-size: 0.9em;
+  padding: 2rem 1rem;
+  background-color: var(--bg-subtle);
+  margin-top: 3rem;
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+footer p {
+  margin-bottom: 0.75rem;
   color: var(--text-secondary);
 }
 
@@ -107,12 +255,54 @@ footer a {
   color: var(--accent);
 }
 
-footer p {
-  margin-bottom: 0.5em;
+.descargo {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+  font-size: 0.8125rem;
 }
 
-.descargo {
-  font-size: 0.8em;
-  margin-top: 1em;
-  opacity: 0.8;
+/* Responsive */
+@media (min-width: 600px) {
+  main {
+    padding: 3rem 2rem;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  section > p:first-of-type {
+    font-size: 1.125rem;
+  }
+
+  ul[role="list"] > li {
+    grid-template-columns: 200px 1fr;
+    gap: 1.5rem;
+  }
+
+  ul[role="list"] img {
+    grid-row: 1 / -1;
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+  }
+
+  form {
+    max-width: 500px;
+  }
+}
+
+@media (min-width: 900px) {
+  main {
+    padding: 4rem 2rem;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  section {
+    margin-bottom: 4rem;
+  }
 }
