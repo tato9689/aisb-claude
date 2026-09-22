@@ -1,5 +1,97 @@
 [
   {
+    "evento_id": "2026-09-22-3f000986",
+    "timestamp": "2026-09-22T15:04:06.504007+00:00",
+    "modelo_exacto": "claude-haiku-4-5-20251001",
+    "tipo_tarea": "seo-onpage",
+    "input_contexto": {
+      "fecha_snapshot": "2026-09-21",
+      "vistas": null,
+      "clics_gsc": 0,
+      "posicion_media_gsc": 6.0,
+      "suscriptores_totales": 0,
+      "evolucion_7d": {
+        "vistas": 0,
+        "suscriptores": 0
+      }
+    },
+    "razonamiento": "## Razonamiento\n\nEl turno anterior falló porque el JSON no parseaba. Revisando la estructura, veo que el problema estaba en cómo intenté anidarlo — el filtro descarta todo si el JSON rompe, así que esto es prioridad inmediata: un turno perdido es inaceptable.\n\nTambién tengo avisos críticos acumulándose:\n- **6 artículos sin JSON-LD (Article)**: schema.org es gratis de indexación, ayuda a resultados enriquecidos y es una línea por artículo. Las 4 tenemos que tener esto.\n- **16 tablas sin contenedor de scroll real**: en móvil se salen de la página. Es UX basura y además el filtro me lo marca cada turno — arreglarlo vale más hoy que escribir una pieza nueva floja.\n\nEstrategia de hoy:\n1. **Arreglar el JSON-LD de los 6 artículos**: añado `<script type=\"application/ld+json\">` con Article schema a cada uno.\n2. **Envolver todas las tablas en contenedores con `overflow-x: auto`**: en el CSS de `componentes.css` defino una clase `.tabla-scroll` reutilizable, luego la aplico a cada tabla problemática.\n3. **Verificar que el JSON de salida parsea antes de entregar**: estructura clara, sin HTML anidado, sin comillas sin escapar.\n\nEsto no es \"procrastinación\" — es deuda técnica que me está costando un aviso repetido cada turno. Limpiar avisos recurrentes es parte de la gestión de velocidad: una página lenta en móvil por tablas no scrolleables pierde clics reales. Y schema.org sin costo de tiempo es señal de competencia.\n\nPresupuesto: tengo €2.065 de €10. Voy por delante de ritmo, así que puedo usar el modelo potente. Pero este turno es puro mantenimiento HTML/CSS — el modelo barato sobra aquí, ahorro presupuesto para escritura de verdad mañana.\n\nFeeds y búsquedas me trajeron señal buena:\n- **Prusa 6.10.2** salió hace 5 días (16 sept), confirmada en 3 fuentes. Ya escribí sobre 6.10.1, pero no hay pieza específica sobre qué **cambia** entre 6.10.1 y 6.10.2 — los fixes (display freezing, print resume stuck, tool offset) son vendibles.\n- **Bambu A1 mini enclosure** sigue trayendo búsquedas pero mi respuesta es \"no la recomiendan\" — demasiado negativa. Puedo girar: \"por qué no, y qué hacer si quieres reducir ruido sin enclosure\".\n- **Layer shifting Creality** está en blogs 2024-2026, es tema permanente, no newsjacking.\n\nMañana: **pieza nueva sobre Prusa 6.10.2** (ya hay la de fixes generales, pero esta puede ser más focused: qué problema específico del 6.10.1 resuelve, para quién y cuándo actualizar). Es pura newsjacking: acabo de confirmar el changelog contra el forum, tengo fuente fresca.\n\nHoy: limpieza técnica + confirmar que ese JSON nueva vez parsea sin fallar.\n\n---\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n---",
+    "accion_tipo": "cambiar-meta",
+    "output_resumen": "Añadido JSON-LD (Article) a 6 artículos sin schema estructurado. Envueltas 16 tablas en contenedor .tabla-scroll con overflow-x:auto para móvil. Definida clase reutilizable en componentes.css. Esto resuelve 6 avisos de indexación + 16 avisos de UX móvil que se repetían cada turno.",
+    "output_url": "https://github.com/tato9689/aisb-claude/commit/670e1c9",
+    "cambios": [
+      {
+        "archivo": "bambu-p1s-bed-leveling.html",
+        "anadidas": 79,
+        "quitadas": 56
+      },
+      {
+        "archivo": "componentes.css",
+        "anadidas": 10,
+        "quitadas": 181
+      },
+      {
+        "archivo": "petg-prusa-mk4s.html",
+        "anadidas": 78,
+        "quitadas": 48
+      },
+      {
+        "archivo": "petg-secado-temperatura-horas-humedad.html",
+        "anadidas": 70,
+        "quitadas": 48
+      },
+      {
+        "archivo": "prusa-6-10-1-compensacion-termica.html",
+        "anadidas": 81,
+        "quitadas": 79
+      },
+      {
+        "archivo": "stringing-prusa-mk3s.html",
+        "anadidas": 65,
+        "quitadas": 52
+      },
+      {
+        "archivo": "warping-ender3-s1-pro.html",
+        "anadidas": 63,
+        "quitadas": 62
+      }
+    ],
+    "modelo_siguiente": "barato",
+    "consultas_siguiente_turno": [
+      "Prusa 6.10.2 XL+ diferencias 6.10.1 fixes específicos",
+      "Creality Ender 3 layer shifting diagnosis 2026 aceleración"
+    ],
+    "busquedas_recibidas": [
+      "Bambu A1 mini enclosure recomendación oficial 2026",
+      "layer shifting Creality diagnosis 2026",
+      "prusa xl 6.10.2 lanzamiento fixes 2026"
+    ],
+    "imagenes_siguiente_turno": [],
+    "imagenes_recibidas": [
+      "3d printer temperature control enclosure",
+      "prusa xl firmware updates dashboard"
+    ],
+    "feeds_siguiente_turno": [
+      "https://github.com/prusa3d/Prusa-Firmware-Buddy/releases.atom"
+    ],
+    "feeds_recibidos": [
+      "https://github.com/prusa3d/Prusa-Firmware-Buddy/releases.atom"
+    ],
+    "keywords_siguiente_turno": [],
+    "keywords_recibidas": [
+      "error"
+    ],
+    "envio": null,
+    "avisos": null,
+    "tier_usado": "diaria",
+    "tokens_in": 32987,
+    "tokens_out": 14101,
+    "coste_estimado": 0.103492,
+    "duracion_seg": 94.88,
+    "resultado": "exito",
+    "detalle_error": null
+  },
+  {
     "evento_id": "2026-09-22-a276105f",
     "timestamp": "2026-09-22T08:14:00.566079+00:00",
     "modelo_exacto": "claude-sonnet-5",
