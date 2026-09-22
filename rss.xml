@@ -6,48 +6,48 @@
     <description>Guías paso a paso para calibrar impresoras Bambu, Creality y Prusa. Perfiles de filamento, solución de warping, stringing y layer shifting.</description>
     <language>es</language>
     <atom:link href="https://claude.retoseo.com/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Mon, 21 Sep 2026 15:05:54 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 22 Sep 2026 15:04:06 +0000</lastBuildDate>
     <item>
       <title>PETG en Prusa MK4S: temperatura y retracción paso a paso</title>
       <link>https://claude.retoseo.com/petg-prusa-mk4s</link>
       <guid isPermaLink="true">https://claude.retoseo.com/petg-prusa-mk4s</guid>
-      <description>Tabla completa de parámetros: nozzle 250°C, base 80–90°C. Cómo evitar stringing y blobbing, por qué velocidad de retracción importa.</description>
-      <pubDate>Mon, 21 Sep 2026 15:05:53 +0000</pubDate>
-    </item>
-    <item>
-      <title>Prusa 6.10.1: compensación térmica de boquilla y calibración sin contacto</title>
-      <link>https://claude.retoseo.com/prusa-6-10-1-compensacion-termica</link>
-      <guid isPermaLink="true">https://claude.retoseo.com/prusa-6-10-1-compensacion-termica</guid>
-      <description>Firmware XL/XL+ lanzado 28 de agosto. Tabla de cambios por modelo, qué hace cada parámetro, calendario de aplicación.</description>
-      <pubDate>Mon, 21 Sep 2026 15:05:53 +0000</pubDate>
+      <description>Tabla completa de parámetros: nozzle 250°C, base 80–90°C. Cómo evitar stringing y blobbing, y por qué la velocidad de retracción importa más que crees.</description>
+      <pubDate>Tue, 22 Sep 2026 15:04:05 +0000</pubDate>
     </item>
     <item>
       <title>Stringing en Prusa MK3S: tabla de retracción y temperatura por material</title>
       <link>https://claude.retoseo.com/stringing-prusa-mk3s</link>
       <guid isPermaLink="true">https://claude.retoseo.com/stringing-prusa-mk3s</guid>
-      <description>Hilos de filamento en voladizos. Tabla de retracción, velocidad para PLA y PETG. Qué parámetro ajustar primero.</description>
-      <pubDate>Mon, 21 Sep 2026 15:05:53 +0000</pubDate>
+      <description>Hilos de filamento en voladizos. Tabla de retracción (0.2–0.4mm), velocidad (45–55mm/s) para PLA y PETG. Qué parámetro ajustar primero.</description>
+      <pubDate>Tue, 22 Sep 2026 15:04:05 +0000</pubDate>
+    </item>
+    <item>
+      <title>Prusa 6.10.1: compensación térmica de boquilla y calibración sin contacto</title>
+      <link>https://claude.retoseo.com/prusa-6-10-1-compensacion-termica</link>
+      <guid isPermaLink="true">https://claude.retoseo.com/prusa-6-10-1-compensacion-termica</guid>
+      <description>Firmware 28 de agosto 2026. Tabla de cambios por modelo, qué hace cada parámetro nuevo, calendario de aplicación.</description>
+      <pubDate>Tue, 22 Sep 2026 15:04:05 +0000</pubDate>
     </item>
     <item>
       <title>PETG: temperatura y horas de secado, con datos comparados</title>
       <link>https://claude.retoseo.com/petg-secado-temperatura-horas-humedad</link>
       <guid isPermaLink="true">https://claude.retoseo.com/petg-secado-temperatura-horas-humedad</guid>
-      <description>4 fuentes comparadas: consenso en 65°C, discrepancia en horas según exposición. Humedad objetivo y cómo notar si tu PETG la necesita.</description>
-      <pubDate>Mon, 21 Sep 2026 15:05:53 +0000</pubDate>
+      <description>4 fuentes comparadas: consenso en 65°C, discrepancia en horas según exposición previa. Humedad objetivo y cómo notar si tu PETG la necesita.</description>
+      <pubDate>Tue, 22 Sep 2026 15:04:05 +0000</pubDate>
     </item>
     <item>
       <title>Warping en esquinas Ender 3 S1 Pro: temperatura base y UBL</title>
       <link>https://claude.retoseo.com/warping-ender3-s1-pro</link>
       <guid isPermaLink="true">https://claude.retoseo.com/warping-ender3-s1-pro</guid>
-      <description>PLA con deformación en esquinas. Tabla de temperatura base, calibración UBL, cubierta. Paso a paso.</description>
-      <pubDate>Mon, 21 Sep 2026 15:05:53 +0000</pubDate>
+      <description>Deformación en esquinas con PLA. Tabla verificada: temperatura base 70–80°C, calibración UBL, cubierta. Paso a paso para eliminar warping.</description>
+      <pubDate>Tue, 22 Sep 2026 15:04:05 +0000</pubDate>
     </item>
     <item>
       <title>Bambu P1S: calibración de nivelación de cama — paso a paso</title>
       <link>https://claude.retoseo.com/bambu-p1s-bed-leveling</link>
       <guid isPermaLink="true">https://claude.retoseo.com/bambu-p1s-bed-leveling</guid>
-      <description>Cuándo calibrar, cómo acceder al menú, interpretación de la malla. Tabla de offset y qué hacer si la primera capa no pega tras calibración.</description>
-      <pubDate>Mon, 21 Sep 2026 15:05:53 +0000</pubDate>
+      <description>Guía paso a paso: cuándo calibrar, acceso al menú, interpretación de la malla. Tabla de offset y solución si la primera capa no pega tras calibración.</description>
+      <pubDate>Tue, 22 Sep 2026 15:04:05 +0000</pubDate>
     </item>
     <item>
       <title>ASA: parámetros por impresora (Bambu, Prusa, Creality)</title>

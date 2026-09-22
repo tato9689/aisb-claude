@@ -1,198 +1,27 @@
-/* Componentes reutilizables */
-
-/* Skip link accesibilidad */
-.skip-link {
-  position: absolute;
-  top: -40px;
-  left: 0;
-  background-color: var(--accent);
-  color: white;
-  padding: 8px;
-  text-decoration: none;
-  z-index: 100;
-}
-
-.skip-link:focus {
-  top: 0;
-}
-
-/* Tabla con scroll en móvil */
+/* Tabla con scroll horizontal en móvil */
 .tabla-scroll {
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
   margin: 1.5rem 0;
-  border-radius: var(--radius);
-  border: 1px solid var(--border);
 }
 
 .tabla-scroll table {
-  width: 100%;
+  min-width: 100%;
   border-collapse: collapse;
-  min-width: 500px;
 }
 
-.tabla-scroll table th {
-  background-color: var(--bg-subtle);
-  padding: 0.875rem;
+.tabla-scroll th,
+.tabla-scroll td {
+  padding: 0.75rem;
   text-align: left;
+  border-bottom: 1px solid var(--border-color, #e0e0e0);
+}
+
+.tabla-scroll th {
+  background-color: var(--header-bg, #f5f5f5);
   font-weight: 600;
-  border-bottom: 2px solid var(--border);
-  color: var(--text);
 }
 
-.tabla-scroll table td {
-  padding: 0.875rem;
-  border-bottom: 1px solid var(--border);
-  color: var(--text-secondary);
-}
-
-.tabla-scroll table tr:last-child td {
-  border-bottom: none;
-}
-
-.tabla-scroll table tr:hover {
-  background-color: var(--bg-subtle);
-}
-
-/* Notas / callouts */
-.nota {
-  background-color: var(--bg-subtle);
-  border-left: 4px solid var(--accent);
-  padding: 1rem;
-  margin: 1.5rem 0;
-  border-radius: var(--radius);
-}
-
-.nota strong {
-  color: var(--text);
-}
-
-.nota p {
-  margin-bottom: 0;
-}
-
-/* Citas */
-blockquote {
-  border-left: 4px solid var(--accent);
-  padding-left: 1rem;
-  margin: 1.5rem 0;
-  color: var(--text-secondary);
-  font-style: italic;
-}
-
-/* Código */
-code {
-  background-color: var(--bg-subtle);
-  padding: 0.2em 0.4em;
-  border-radius: 3px;
-  font-family: 'Courier New', monospace;
-  font-size: 0.9em;
-  color: var(--text);
-}
-
-pre {
-  background-color: var(--bg-subtle);
-  padding: 1rem;
-  border-radius: var(--radius);
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  margin: 1.5rem 0;
-  border: 1px solid var(--border);
-}
-
-pre code {
-  background: none;
-  padding: 0;
-  border-radius: 0;
-  color: inherit;
-}
-
-/* Artículos */
-article {
-  line-height: 1.8;
-}
-
-article h2 {
-  margin-top: 2.5rem;
-  margin-bottom: 1rem;
-}
-
-article h3 {
-  margin-top: 1.5rem;
-  margin-bottom: 0.75rem;
-}
-
-article p + h2,
-article p + h3 {
-  margin-top: 2rem;
-}
-
-article img {
-  max-width: 100%;
-  height: auto;
-  border-radius: var(--radius);
-  margin: 2rem 0;
-  display: block;
-}
-
-/* Links de breadcrumb / índice */
-.indice {
-  list-style: none;
-  padding: 0;
-  margin: 2rem 0;
-}
-
-.indice li {
-  margin-bottom: 0.5rem;
-}
-
-.indice a {
-  display: block;
-  padding: 0.5rem;
-  border-radius: var(--radius);
-  transition: background-color 150ms ease;
-}
-
-.indice a:hover {
-  background-color: var(--bg-subtle);
-  border-bottom-color: var(--accent);
-}
-
-/* Badge / etiqueta */
-.badge {
-  display: inline-block;
-  background-color: var(--accent-light);
-  color: white;
-  padding: 0.25rem 0.75rem;
-  border-radius: 20px;
-  font-size: 0.75rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  margin: 0.5rem 0.25rem 0.5rem 0;
-}
-
-/* Actualización */
-.actualizado {
-  font-size: 0.875rem;
-  color: var(--text-secondary);
-  margin-top: 2rem;
-  padding-top: 1rem;
-  border-top: 1px solid var(--border);
-}
-
-.actualizado strong {
-  color: var(--text);
-}
-
-/* Diagrama / tabla visual */
-.diagram {
-  margin: 2rem 0;
-  text-align: center;
-}
-
-.diagram img,
-.diagram svg {
-  max-width: 100%;
-  height: auto;
-  border-radius: var(--radius);
+.tabla-scroll tr:hover {
+  background-color: var(--hover-bg, #fafafa);
 }
