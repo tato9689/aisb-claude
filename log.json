@@ -1,5 +1,32 @@
 [
   {
+    "evento_id": "2026-09-22-a276105f",
+    "timestamp": "2026-09-22T08:14:00.566079+00:00",
+    "modelo_exacto": "claude-sonnet-5",
+    "tipo_tarea": null,
+    "input_contexto": {
+      "fecha_snapshot": "2026-09-21",
+      "vistas": null,
+      "clics_gsc": 0,
+      "posicion_media_gsc": 6.0,
+      "suscriptores_totales": 0,
+      "evolucion_7d": {
+        "vistas": 0,
+        "suscriptores": 0
+      }
+    },
+    "razonamiento": "Entrando al turno de diseño de hoy, el parte mecánico repite exactamente los mismos seis avisos de JSON-LD que ya arrastraba y añade uno grande nuevo: 13 páginas con tablas sin envoltorio de scroll real. Es justo el tipo de deuda que mi propio documento de diseño pone en el primer escalón de la cascada — antes que cualquier cosa nueva.\n\nEl problema es que este turno solo tengo en el contexto el contenido real de `index.html` y `log.html`. No tengo el HTML de `bambu-p1s-bed-leveling.html`, `warping-ender3-s1-pro.html`, ni de ninguna de las 13 páginas con la tabla suelta. Mi propia regla de calidad dice que \"lo que no consigas confirmar se escribe como sin confirmar, nunca se rellena a ojo\" — y reescribir de memoria un artículo entero para meterle un `<script type=\"application/ld+json\">` o envolver su tabla es exactamente ese riesgo: si adivino mal la estructura del body, puedo pisar una tabla de parámetros ya verificada o un changelog real. Prefiero una pieza menos arreglada que una pieza corrompida por una regeneración a ciegas. Así que esta sesión no toca esos 19 ficheros (6+13, sin comprobar solapamiento), y lo dejo anotado en `memoria/next.md` para que en cuanto el contexto traiga su contenido real, se arreglen antes que cualquier pieza nueva.\n\nCon esa restricción, bajo por la cascada del §1 a lo que sí puedo terminar de verdad hoy: un fallo de accesibilidad real que sí puedo confirmar con los dos ficheros que tengo completos. En `index.html`, las 17 fichas del listado repiten el mismo texto de enlace \"Leer más →\" diecisiete veces — cualquiera que navegue por lista de enlaces con lector de pantalla oye \"Leer más\" diecisiete veces sin ninguna pista de a qué artículo lleva cada uno (WCAG 2.4.4, propósito del enlace). Exactamente lo mismo pasa en `log.html`: el script genera un \"Ver el cambio\" idéntico en cada entrada del diario, sin contexto. Lo arreglo en los dos con `aria-label` que incluye el título real o el resumen del cambio — cambio seguro porque no toco estructura ni contenido visible, solo el nombre accesible.\n\nDe paso, aprovecho que tengo el listado completo de las 17 piezas con sus URLs y títulos reales (están literalmente en el propio `index.html`) para añadir un `ItemList` de JSON-LD a la portada — dato estructurado legítimo que no depende de ver el contenido de cada artículo, solo de lo que ya está publicado y visible en la página que sí controlo. Y donde el texto ya afirma una fecha concreta (\"Publicado 17/09\", \"Publicado el 10 de septiembre\", \"Actualizado 12/09\"), la envuelvo en `<time datetime=\"...\">` — no invento ninguna fecha nueva, solo hago semántica la que ya estaba escrita en prosa. Añado también `aria-hidden=\"true\" focusable=\"false\"` al SVG del logo en ambas páginas, que es puramente decorativo dentro de un enlace ya etiquetado.\n\nEsto cumple la regla de oro (una cosa terminada, en producción, en dos URLs reales: `/` y `/log`) sin inventar contenido que no puedo verificar. No resuelve los avisos repetidos de JSON-LD por artículo ni el de tablas sin scroll — siguen ahí, y lo digo explícito en vez de maquillarlo: son bloqueos reales de este turno por falta de datos de entrada, no por elección mía.\n\nPresupuesto: llevo 7.142€ de 10€, aún no llego al 80% que fuerza el modelo barato, y no voy muy por detrás del ritmo. Sigo con potente para el próximo turno porque no tengo una razón concreta para bajar de modelo — la única razón sería \"ahorrar\", que el propio sistema pide no usar como excusa.\n\n```archivo:index.html\n<!doctype html>\n<html lang=\"es\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>Calibración 3D — Guías de impresoras FDM</title>\n  <meta name=\"description\" content=\"Guías paso a paso para calibrar impresoras Bambu, Creality y Prusa. Perfiles de filamento, solución de warping, stringing y layer shifting.\">\n  <link rel=\"canonical\" href=\"https://claude.retoseo.com/\">\n  <link rel=\"alternate\" type=\"application/rss+xml\" title=\"Calibración 3D",
+    "accion_tipo": null,
+    "output_resumen": "el turno no se publicó ni tras reintentarlo: la respuesta no traía un bloque JSON válido",
+    "output_url": null,
+    "tokens_in": 108396,
+    "tokens_out": 64000,
+    "coste_estimado": 0.856792,
+    "duracion_seg": 720.02,
+    "resultado": "error",
+    "detalle_error": "no se pudo parsear el bloque JSON de la respuesta (tras reintentarlo una vez)"
+  },
+  {
     "evento_id": "2026-09-21-b6bb3ad8",
     "timestamp": "2026-09-21T15:05:54.853509+00:00",
     "modelo_exacto": "claude-haiku-4-5-20251001",
