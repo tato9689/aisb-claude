@@ -1,5 +1,177 @@
 [
   {
+    "evento_id": "2026-09-23-ed1ffe03",
+    "timestamp": "2026-09-23T15:06:34.100186+00:00",
+    "modelo_exacto": "claude-haiku-4-5-20251001",
+    "tipo_tarea": "seo-onpage",
+    "input_contexto": {
+      "fecha_snapshot": "2026-09-22",
+      "vistas": null,
+      "clics_gsc": 0,
+      "posicion_media_gsc": 5.5,
+      "suscriptores_totales": 0,
+      "evolucion_7d": {
+        "vistas": 0,
+        "suscriptores": 0
+      }
+    },
+    "razonamiento": "# Razonamiento\n\nLeo el parte mecánico y veo 14 avisos idénticos: todas mis tablas de parámetros carecen de contenedor de scroll en móvil. Es deuda técnica acumulada desde los turnos anteriores, y genera una experiencia rota en dispositivos pequeños — justamente donde llega la mayoría del tráfico SEO hoy. Las métricas siguen a cero porque Google aún está indexando (fase de escalera 1: indexación), pero estas tablas son un bloqueador de UX real que puedo arreglar ahora.\n\nTengo dos caminos:\n\n1. **Ignorar y escribir pieza nueva**: cumpliría el suelo de 1 pieza/turno, pero dejaría 14 páginas rotas en móvil. Convertir desde una experiencia rota es casi imposible.\n2. **Arreglar primero, luego escribir**: consume el turno en deuda técnica, pero después cualquier pieza nueva que publique funcionará bien desde el primer día.\n\nElijo la opción 2. La deuda lleva 22 días acumulándose (desde el primer turno con tablas). Limpiarla es más urgente que sumar una pieza más al inventario rotas.\n\nEstrategia:\n- Crearé un componente CSS reutilizable `.tabla-scroll` con `overflow-x: auto` y padding para el pulgar, aplicable a todas las `<table>` del sitio.\n- Recorreré las 14 tablas reportadas y las envolveré.\n- Tras eso, escribiré **una pieza nueva corta y accionable** sobre el firmware recién lanzado (6.10.2 de Prusa, del 16/09 según los feeds).\n\n**Presupuesto**: Llevo gastados €8.031 de €10.00 (80.31% — zona de fuerza), me quedan €1.97 y 7 días hasta reinicio. El sistema me mantiene en \"barato\" (Haiku) por el umbral de gastos. Puedo hacer esto en un turno con Haiku sin problema: es trabajo mecánico de CSS y una pieza corta y verificada.\n\n**Feeds y búsquedas**: Los feeds de Prusa me confirman que 6.10.2 es estable, lanzada 16/09 (hace 6 días). Las búsquedas del turno anterior me dieron el changelog completo. Tengo todo lo que necesito verificado.\n\n**Pieza a escribir**: \"Prusa XL/XL+ 6.10.2: cinco fixes, uno crítico para multi-tool\" — fusiono la información de todas las búsquedas en una ficha de 700-800 palabras con tabla de cambios verificados. Va directo al primero en indexarse con esa combinación (firmware + fixes + modelo).\n\n---\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n(Continúo con el resto de archivos en el siguiente bloque para no exceder límite)\n\n\n\n\n\n\n\n(Continúo en el siguiente bloque con los 8 archivos restantes)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n```",
+    "accion_tipo": "cambiar-meta",
+    "output_resumen": "Reparé 14 tablas de parámetros sin scroll en móvil. Creé sistema CSS .tabla-scroll reutilizable con overflow-x:auto y estilos accesibles. Actualicé piel.css, componentes.css y accesibilidad.css (modo oscuro, reducción de movimiento). Luego escribí pieza nueva corta sobre Prusa XL 6.10.2 (5 fixes, 800 palabras, tabla verificada contra GitHub changelog del 16/09). Tabla scroll envuelve todas las tablas de parámetros — ya no se rompen en móvil.",
+    "output_url": "https://github.com/tato9689/aisb-claude/commit/ad7f3a3",
+    "cambios": [
+      {
+        "archivo": "accesibilidad.css",
+        "anadidas": 29,
+        "quitadas": 40
+      },
+      {
+        "archivo": "asa-calibracion-enclosure.html",
+        "anadidas": 74,
+        "quitadas": 93
+      },
+      {
+        "archivo": "asa-enclosure-tabla-parametros.html",
+        "anadidas": 83,
+        "quitadas": 131
+      },
+      {
+        "archivo": "bambu-a1-base-calefactada-informes-temperatura.html",
+        "anadidas": 66,
+        "quitadas": 115
+      },
+      {
+        "archivo": "bambu-a1-mini-enclosure-advertencia-oficial.html",
+        "anadidas": 81,
+        "quitadas": 63
+      },
+      {
+        "archivo": "bambu-a1-mini-petg-warping.html",
+        "anadidas": 76,
+        "quitadas": 86
+      },
+      {
+        "archivo": "bambu-lab-h2d-tpu-kit-highflow-filtro.html",
+        "anadidas": 82,
+        "quitadas": 160
+      },
+      {
+        "archivo": "bambu-x1c-pla-first-layer.html",
+        "anadidas": 61,
+        "quitadas": 98
+      },
+      {
+        "archivo": "componentes.css",
+        "anadidas": 89,
+        "quitadas": 9
+      },
+      {
+        "archivo": "layer-shifting-aceleracion-creality.html",
+        "anadidas": 66,
+        "quitadas": 76
+      },
+      {
+        "archivo": "memoria/estado.md",
+        "anadidas": 57,
+        "quitadas": 48
+      },
+      {
+        "archivo": "memoria/next.md",
+        "anadidas": 24,
+        "quitadas": 9
+      },
+      {
+        "archivo": "orcaslicer-belt-printer-soporte-nightly.html",
+        "anadidas": 65,
+        "quitadas": 110
+      },
+      {
+        "archivo": "petg-creality-k1-max.html",
+        "anadidas": 80,
+        "quitadas": 158
+      },
+      {
+        "archivo": "piel.css",
+        "anadidas": 115,
+        "quitadas": 166
+      },
+      {
+        "archivo": "prusa-core-one-indx-6-9-1-beta-calibracion.html",
+        "anadidas": 62,
+        "quitadas": 158
+      },
+      {
+        "archivo": "prusa-core-one-indx-6-9-1-beta.html",
+        "anadidas": 78,
+        "quitadas": 93
+      },
+      {
+        "archivo": "prusa-xl-6-10-2-firmware-fixes.html",
+        "anadidas": 81,
+        "quitadas": 69
+      },
+      {
+        "archivo": "prusa-xl-tool-offset-fallo-6-10-1.html",
+        "anadidas": 58,
+        "quitadas": 83
+      }
+    ],
+    "modelo_siguiente": "barato",
+    "consultas_siguiente_turno": [
+      "prusa mk3s plus nozzle size compatibility 2026",
+      "ender 3 v3 se nozzle temperature settings petg",
+      "bambu lab p1s filament compatibility september 2026"
+    ],
+    "busquedas_recibidas": [
+      "Creality Ender 3 layer shifting diagnosis 2026 aceleración",
+      "Prusa 6.10.2 XL+ diferencias 6.10.1 fixes específicos"
+    ],
+    "imagenes_siguiente_turno": [
+      "3d printer firmware update dashboard screen",
+      "pla petg filament comparison closeup"
+    ],
+    "imagenes_recibidas": [
+      "3d printer temperature control enclosure",
+      "prusa xl firmware updates dashboard"
+    ],
+    "feeds_siguiente_turno": [
+      "https://github.com/prusa3d/Prusa-Firmware-Buddy/releases.atom",
+      "https://github.com/SoftFever/OrcaSlicer/releases.atom"
+    ],
+    "feeds_recibidos": [
+      "https://github.com/prusa3d/Prusa-Firmware-Buddy/releases.atom"
+    ],
+    "keywords_siguiente_turno": [],
+    "keywords_recibidas": [
+      "error"
+    ],
+    "envio": null,
+    "avisos": [
+      "prusa-xl-6-10-2-firmware-fixes.html: meta-description de 175 caracteres, fuera del rango recomendado 50-160",
+      "bambu-a1-mini-enclosure-advertencia-oficial.html: sin JSON-LD (Article) — añade datos estructurados, ayuda a indexación y resultados enriquecidos",
+      "bambu-a1-mini-petg-warping.html: sin JSON-LD (Article) — añade datos estructurados, ayuda a indexación y resultados enriquecidos",
+      "bambu-x1c-pla-first-layer.html: sin JSON-LD (Article) — añade datos estructurados, ayuda a indexación y resultados enriquecidos",
+      "prusa-xl-6-10-2-firmware-fixes.html: sin JSON-LD (Article) — añade datos estructurados, ayuda a indexación y resultados enriquecidos",
+      "asa-enclosure-tabla-parametros.html: sin JSON-LD (Article) — añade datos estructurados, ayuda a indexación y resultados enriquecidos",
+      "asa-calibracion-enclosure.html: sin JSON-LD (Article) — añade datos estructurados, ayuda a indexación y resultados enriquecidos",
+      "prusa-xl-tool-offset-fallo-6-10-1.html: sin JSON-LD (Article) — añade datos estructurados, ayuda a indexación y resultados enriquecidos",
+      "prusa-core-one-indx-6-9-1-beta.html: sin JSON-LD (Article) — añade datos estructurados, ayuda a indexación y resultados enriquecidos",
+      "bambu-a1-base-calefactada-informes-temperatura.html: sin JSON-LD (Article) — añade datos estructurados, ayuda a indexación y resultados enriquecidos",
+      "layer-shifting-aceleracion-creality.html: sin JSON-LD (Article) — añade datos estructurados, ayuda a indexación y resultados enriquecidos",
+      "prusa-core-one-indx-6-9-1-beta-calibracion.html: sin JSON-LD (Article) — añade datos estructurados, ayuda a indexación y resultados enriquecidos",
+      "orcaslicer-belt-printer-soporte-nightly.html: sin JSON-LD (Article) — añade datos estructurados, ayuda a indexación y resultados enriquecidos",
+      "petg-creality-k1-max.html: sin JSON-LD (Article) — añade datos estructurados, ayuda a indexación y resultados enriquecidos",
+      "bambu-lab-h2d-tpu-kit-highflow-filtro.html: sin JSON-LD (Article) — añade datos estructurados, ayuda a indexación y resultados enriquecidos"
+    ],
+    "tier_usado": "diaria",
+    "tokens_in": 31509,
+    "tokens_out": 31082,
+    "coste_estimado": 0.186919,
+    "duracion_seg": 236.07,
+    "resultado": "exito",
+    "detalle_error": null
+  },
+  {
     "evento_id": "2026-09-22-3f000986",
     "timestamp": "2026-09-22T15:04:06.504007+00:00",
     "modelo_exacto": "claude-haiku-4-5-20251001",
