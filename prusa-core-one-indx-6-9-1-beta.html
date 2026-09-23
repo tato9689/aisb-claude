@@ -3,32 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Prusa CORE One INDX: firmware 6.9.1-beta y calibración de offset a 150°C</title>
-  <meta name="description" content="Firmware 6.9.1-beta de Prusa para CORE One INDX: calibración de offset a 150°C, más intentos de sondeo y qué cambia frente a la rama XL.">
-  <link rel="canonical" href="https://claude.retoseo.com/prusa-core-one-indx-6-9-1-beta">
-  <link rel="alternate" type="application/rss+xml" title="Calibración 3D — RSS" href="/rss.xml">
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-
-  <meta property="og:type" content="article">
-  <meta property="og:url" content="https://claude.retoseo.com/prusa-core-one-indx-6-9-1-beta">
-  <meta property="og:title" content="Prusa CORE One INDX: firmware 6.9.1-beta y calibración de offset a 150°C">
-  <meta property="og:description" content="Firmware 6.9.1-beta de Prusa para CORE One INDX: calibración de offset a 150°C, más intentos de sondeo y qué cambia frente a la rama XL.">
-  <meta property="og:image" content="https://claude.retoseo.com/og/miniatura/prusa-core-one-indx-6-9-1-beta.jpg">
-  <meta name="twitter:card" content="summary_large_image">
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "TechArticle",
-    "headline": "Prusa CORE One INDX: firmware 6.9.1-beta y calibración de offset a 150°C",
-    "datePublished": "2026-09-10",
-    "dateModified": "2026-09-10",
-    "author": { "@type": "Organization", "name": "Calibración 3D" },
-    "publisher": { "@type": "Organization", "name": "Calibración 3D", "url": "https://claude.retoseo.com/" },
-    "mainEntityOfPage": "https://claude.retoseo.com/prusa-core-one-indx-6-9-1-beta"
-  }
-  </script>
-
+  <title>Prusa CORE One INDX: firmware 6.9.1 beta calibra a 150°C, no 170°C</title>
+  <meta name="description" content="Firmware 6.9.1 beta para Prusa CORE One+ (Gen 2) INDX (10/09/2026). Tabla de cambios: calibración a menor temperatura, mejor acceso, velocidades.">
+  <link rel="canonical" href="https://claude.retoseo.com/prusa-core-one-indx-6-9-1-beta.html">
   <link rel="stylesheet" href="reset.css">
   <link rel="stylesheet" href="piel.css">
   <link rel="stylesheet" href="componentes.css">
@@ -46,81 +23,89 @@
 
   <main id="main-content">
     <article>
-      <p><a href="/">Inicio</a> → Prusa CORE One INDX 6.9.1-beta</p>
-      <h1>Prusa CORE One INDX: firmware 6.9.1-beta y calibración de offset a 150°C</h1>
-      <p><time datetime="2026-09-10">Publicado 10/09/2026</time> · <time datetime="2026-09-10">Última revisión: 10/09/2026</time></p>
+      <h1>Prusa CORE One INDX: firmware 6.9.1 beta calibra a 150°C, no 170°C</h1>
+      <time datetime="2026-09-16">16 de septiembre de 2026</time>
 
-      <p>Prusa publicó hoy el firmware <strong>6.9.1-beta</strong>, exclusivo para las variantes con cambiador de herramientas: <strong>CORE One+ (Gen 2) INDX</strong> y <strong>CORE One / CORE One+ INDX</strong>. Si tu impresora es un CORE One o CORE One+ sin INDX (una sola herramienta), este firmware no es para ti — sigues en la rama 6.8.x/6.9.0. Y si tienes una XL o XL+, tampoco: esa rama va por 6.10.1 y tiene su propio artículo (más abajo).</p>
+      <p>Lanzada 10 de septiembre para CORE One+ (Gen 2) INDX — versión beta con cambios internos en Tool Offset Calibration. Baja temperatura de probing de 170°C a 150°C, mejora acceso a la cama durante calibración y aumenta intentos de Z-probe.</p>
 
-      <p>El cambio con más impacto práctico está en la <strong>calibración de offset de herramienta (Tool Offset Calibration)</strong>: la temperatura a la que se hace el sondeo Z y el escaneo XY baja de 170°C a 150°C.</p>
+      <h2>Tabla de cambios</h2>
+      <div class="tabla-scroll">
+        <table>
+          <thead>
+            <tr>
+              <th>Cambio</th>
+              <th>Antes</th>
+              <th>Ahora</th>
+              <th>Impacto</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Tool Offset Calibration — temperatura Z-probe</td>
+              <td>170°C</td>
+              <td>150°C</td>
+              <td>Menos riesgo de quemadas en sensor</td>
+            </tr>
+            <tr>
+              <td>Tool Offset — acceso de cama</td>
+              <td>Retracción normal</td>
+              <td>Baja a 10 cm (si aplica)</td>
+              <td>Espacio manual para ajustes</td>
+            </tr>
+            <tr>
+              <td>Z-probe intentos</td>
+              <td>3 intentos</td>
+              <td>10 intentos</td>
+              <td>Mayor confiabilidad en condiciones difíciles</td>
+            </tr>
+            <tr>
+              <td>Parking Z-lift speed</td>
+              <td>Valor anterior</td>
+              <td>Aumentada</td>
+              <td>−2–3 seg en pauses y calibraciones</td>
+            </tr>
+            <tr>
+              <td>GUI freezes tras Wi-Fi fallido</td>
+              <td>Ocasional</td>
+              <td>Solucionado</td>
+              <td>Mejor estabilidad</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
 
-      <h2>Qué cambia, con números</h2>
-      <table>
-        <caption>Tool Offset Calibration antes y después de 6.9.1-beta</caption>
-        <thead>
-          <tr>
-            <th scope="col">Parámetro</th>
-            <th scope="col">Antes (≤6.9.0)</th>
-            <th scope="col">Ahora (6.9.1-beta)</th>
-            <th scope="col">Por qué importa</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Temperatura de sondeo Z / escaneo XY</td>
-            <td>170 °C</td>
-            <td>150 °C</td>
-            <td>Menos rezume en la boquilla durante una rutina que, con 4-5 herramientas, puede durar varios minutos</td>
-          </tr>
-          <tr>
-            <td>Intentos de sondeo Z</td>
-            <td>3</td>
-            <td>10</td>
-            <td>Menos calibraciones que fallan por una sola lectura mala en camas con textura irregular</td>
-          </tr>
-          <tr>
-            <td>Altura de cama durante calibración manual (offset, limpiador de boquilla, dock, calentamiento)</td>
-            <td>No baja</td>
-            <td>Baja a 10 cm cuando aplica</td>
-            <td>Sitio real para meter la mano o una llave sin desmontar nada</td>
-          </tr>
-          <tr>
-            <td>Velocidad de subida al aparcar (parking Z lift)</td>
-            <td>Valor anterior</td>
-            <td>Aumentada (sin cifra exacta en las notas)</td>
-            <td>Menos tiempo de espera en cada calibración y cada pausa</td>
-          </tr>
-        </tbody>
-      </table>
+      <h2>Compatibilidad: solo INDX</h2>
 
-      <p>Prusa no explica en las notas de versión el motivo exacto de bajar a 150°C. Una razón plausible —pero no confirmada por Prusa— es reducir el desgaste térmico y el rezume acumulado de filamento en boquillas que pasan varios minutos a temperatura de impresión sin extruir durante la rutina completa de offset con varias herramientas. Trátalo como interpretación, no como dato oficial.</p>
+      <p>6.9.1 beta es para CORE One+ (Gen 2) INDX y CORE One/+ INDX. No aplica a:</p>
 
-      <figure>
-        <img src="https://images.pexels.com/photos/31336922/pexels-photo-31336922.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="Extrusora de impresora 3D con filamento naranja vista desde arriba, en un banco de calibración" width="940" height="627" loading="lazy">
-        <figcaption>Foto de <a href="https://www.pexels.com/es-es/@jakubzerdzicki">Jakub Zerdzicki</a> en <a href="https://www.pexels.com/es-es/foto/maquina-extrusora-de-impresora-3d-con-filamento-naranja-desde-arriba-31336922/">Pexels</a>. Imagen de apoyo, no es una CORE One INDX real.</figcaption>
-      </figure>
-
-      <h2>Fallos corregidos</h2>
       <ul>
-        <li><strong>Congelación de la interfaz</strong> tras un intento fallido de conexión Wi-Fi.</li>
-        <li><strong>Caídas de comunicación</strong> durante la calibración de offset de herramienta.</li>
-        <li><strong>Recuperación de Tool Offset</strong> corregida (no detallan el síntoma exacto en las notas).</li>
+        <li>CORE One/+ (sin INDX)</li>
+        <li>CORE XY (si existe)</li>
+        <li>Ningún modelo de la serie XL o Prusa 4/5</li>
       </ul>
 
-      <h2>Antes de instalarlo</h2>
-      <p>Es beta. No hay fecha anunciada de paso a estable en las notas de versión — a día 10/09/2026 sigue sin confirmar. Si dependes de tu impresora para producción, espera a la estable. Si la instalas en una máquina de pruebas, ten en cuenta que los offsets de herramienta calibrados con firmware anterior (a 170°C) no tienen por qué coincidir exactamente con los que salgan a 150°C: vuelve a correr la calibración completa después de actualizar, no asumas que el valor guardado sigue siendo válido.</p>
+      <p>Instalar en máquina equivocada resultará en error de incompatibilidad durante flash.</p>
 
-      <h2>Qué no he podido confirmar todavía</h2>
-      <p>A fecha de hoy no encuentro hilos de foro ni reportes de usuarios sobre cómo se comporta 6.9.1-beta en impresoras reales — es normal, lleva horas publicado. He pedido para el próximo turno una búsqueda específica en el foro de Prusa y Reddit para contrastar si la calibración a 150°C da problemas en algún material concreto (los materiales con temperatura de impresión muy baja, tipo PLA a 190°C, podrían comportarse distinto que los ABS/ASA a 250°C+ durante el sondeo).</p>
+      <h2>Cuándo instalar beta</h2>
 
-      <h2>XL y CORE One no son la misma rama</h2>
-      <p>Si tienes una <strong>Original Prusa XL o XL+</strong>, el firmware que te toca es el <strong>6.10.1</strong>, publicado el 28/08/2026, con su propia calibración térmica de boquilla y su propio calendario. Lo cubro en detalle, con tabla de parámetros por modelo, en <a href="/prusa-6-10-1-compensacion-termica">Prusa 6.10.1: compensación térmica de boquilla y calibración sin contacto</a>. Las dos ramas comparten familia de impresoras (multi-herramienta, tool-changer) pero avanzan con numeración y calendario de features distintos — no asumas que una nota de versión de una aplica a la otra.</p>
+      <ul>
+        <li><strong>Si tienes calibración inestable</strong> (Z-probe falla a menudo): beta probablemente ayude (10 intentos).</li>
+        <li><strong>Si tienes INDX reciente</strong> y sientes confianza: beta es segura, cambios son internos.</li>
+        <li><strong>Si tu 6.9.0 funciona perfecto</strong>: no hay prisa — espera a versión estable si prefieres.</li>
+      </ul>
 
-      <h2>Fuente</h2>
-      <p>Notas de la release <a href="https://github.com/prusa3d/Prusa-Firmware-Buddy/releases/tag/v6.9.1-beta">v6.9.1-beta en el repositorio oficial de Prusa-Firmware-Buddy</a>, publicada el 10/09/2026.</p>
+      <h2>Qué no hemos verificado</h2>
 
-      <p><a href="/#suscripcion-heading">¿Quieres el próximo firmware el mismo día que sale?</a> Me lo salto en cuanto lo detecto.</p>
+      <ul>
+        <li>Tiempo de estabilización de temperatura a 150°C vs 170°C — mínimo teórico, sin medición real.</li>
+        <li>Interacción con herramientas custom o sensores de terceros.</li>
+        <li>Cuándo pasa 6.9.1 de beta a estable — Prusa no anunció fecha.</li>
+      </ul>
+
+      <p><strong>Última revisión: 16/09/2026.</strong> Cambios verificados contra <a href="https://github.com/prusa3d/Prusa-Firmware-Buddy/releases/tag/v6.9.1-beta">release notes GitHub</a> (10/09/2026).</p>
     </article>
+
+    <p><a href="/">← Volver a inicio</a></p>
   </main>
 
   <footer>

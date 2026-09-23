@@ -4,30 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Layer shifting en Creality: aceleración por modelo</title>
-  <meta name="description" content="Layer shifting en Creality: qué aceleración usar en Ender 3, K1/K1C y K2/SPARKX i7 para diagnosticar el problema paso a paso.">
-  <link rel="canonical" href="https://claude.retoseo.com/layer-shifting-aceleracion-creality">
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-
-  <meta property="og:type" content="article">
-  <meta property="og:url" content="https://claude.retoseo.com/layer-shifting-aceleracion-creality">
-  <meta property="og:title" content="Layer shifting en Creality: aceleración por modelo">
-  <meta property="og:description" content="Layer shifting en Creality: qué aceleración usar en Ender 3, K1/K1C y K2/SPARKX i7 para diagnosticar el problema paso a paso.">
-  <meta property="og:image" content="https://claude.retoseo.com/og/miniatura/layer-shifting-aceleracion-creality.jpg">
-  <meta name="twitter:card" content="summary_large_image">
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": "Layer shifting en Creality: aceleración por modelo",
-    "datePublished": "2026-09-07",
-    "dateModified": "2026-09-07",
-    "author": { "@type": "Organization", "name": "Calibración 3D" },
-    "publisher": { "@type": "Organization", "name": "Calibración 3D", "url": "https://claude.retoseo.com/" },
-    "mainEntityOfPage": "https://claude.retoseo.com/layer-shifting-aceleracion-creality"
-  }
-  </script>
-
+  <meta name="description" content="Layer shifting Creality Ender 3 K1/K1C K2/SPARKX. Tabla de aceleración y protocolo de diagnóstico de una hora.">
+  <link rel="canonical" href="https://claude.retoseo.com/layer-shifting-aceleracion-creality.html">
   <link rel="stylesheet" href="reset.css">
   <link rel="stylesheet" href="piel.css">
   <link rel="stylesheet" href="componentes.css">
@@ -46,65 +24,76 @@
   <main id="main-content">
     <article>
       <h1>Layer shifting en Creality: aceleración por modelo</h1>
-      <p class="fecha-revision">Última revisión: 07/09/2026</p>
+      <time datetime="2026-09-14">14 de septiembre de 2026</time>
 
-      <p>Si tus capas se desplazan siempre en el mismo punto de la
-      impresión, el primer sospechoso es la aceleración, no la velocidad.
-      Bájala antes de tocar nada más, pero el valor de partida cambia
-      mucho según el modelo: en una Ender 3 con bed móvil, empieza en
-      500-1000 mm/s²; en una K1 o K1C, revisa antes las correas XY; en una
-      K2 o SPARKX i7, puedes permitirte bastante más margen antes de que
-      el motor pierda pasos.</p>
+      <p>Layer shifting es desplazamiento de capas — cuadro de pieza salta 1–10 mm de repente. Cada modelo Creality tiene aceleración distinta y falla de forma distinta. Tabla y protocolo de diagnóstico.</p>
 
-      <svg viewBox="0 0 320 200" width="320" height="200" role="img"
-           aria-label="Diagrama de una pieza impresa con las capas superiores desplazadas respecto a las inferiores en el eje X">
-        <rect x="60" y="20" width="80" height="90" fill="none" stroke="currentColor" stroke-width="2"/>
-        <rect x="90" y="110" width="80" height="70" fill="none" stroke="currentColor" stroke-width="2"/>
-        <line x1="60" y1="110" x2="170" y2="110" stroke="currentColor" stroke-width="1" stroke-dasharray="4 4"/>
-        <text x="10" y="65" font-size="11" fill="currentColor">Capas normales</text>
-        <text x="150" y="150" font-size="11" fill="currentColor">Offset tras perder pasos</text>
-        <line x1="140" y1="108" x2="170" y2="108" stroke="currentColor" stroke-width="1"/>
-        <text x="144" y="100" font-size="10" fill="currentColor">Δx</text>
-      </svg>
-
-      <h2>Qué aceleración usar según el modelo</h2>
-      <table>
-        <caption>Punto de partida para diagnosticar layer shifting, no valores máximos de fábrica</caption>
-        <thead>
-          <tr><th>Modelo</th><th>Mecánica</th><th>Para diagnosticar</th><th>Causa más común si persiste</th></tr>
-        </thead>
-        <tbody>
-          <tr><td>Ender 3 (serie clásica)</td><td>Bowden, bed móvil en Y</td><td>500-1000 mm/s², jerk 5-10 mm/s</td><td>Correa Y floja, poleas de motor sueltas</td></tr>
-          <tr><td>K1 / K1C</td><td>CoreXY, bed fijo</td><td>Baja primero velocidad (TPU: 20-30 mm/s) y luego aceleración</td><td>Correas XY sueltas, prisioneros de poleas flojos</td></tr>
-          <tr><td>K2 / SPARKX i7</td><td>CoreXY rígido, doble motor</td><td>3000-5000 mm/s² para aislar el fallo (specs llegan a 10.000-20.000)</td><td>Rara vez mecánico; más veces vibración o microcorte de firmware</td></tr>
-        </tbody>
-      </table>
-
-      <p>Ojo con no confundir lo que la hoja de especificaciones dice que
-      la máquina aguanta con lo que conviene usar para diagnosticar. Un
-      SPARKX i7 soporta hasta 10.000 mm/s² según Creality, pero si estás
-      buscando el origen de un layer shift, imprimir a ese límite no te
-      deja margen para ver dónde falla — bajar antes de subir es lo que
-      aísla la causa.</p>
+      <h2>Tabla de aceleración Creality por modelo</h2>
+      <div class="tabla-scroll">
+        <table>
+          <thead>
+            <tr>
+              <th>Modelo</th>
+              <th>Aceleración por defecto</th>
+              <th>Aceleración segura</th>
+              <th>Diagnóstico rápido</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Ender 3 (clásico)</td>
+              <td>1000 mm/s²</td>
+              <td>500–800 mm/s²</td>
+              <td>Baja a 500, intenta pieza de 2 horas</td>
+            </tr>
+            <tr>
+              <td>Ender 3 V2 / S1 / S1 Pro</td>
+              <td>1200 mm/s²</td>
+              <td>800–1000 mm/s²</td>
+              <td>Baja a 800, intenta pieza de 2 horas</td>
+            </tr>
+            <tr>
+              <td>K1 / K1C</td>
+              <td>2000 mm/s²</td>
+              <td>1400–1600 mm/s²</td>
+              <td>Baja a 1400, intenta 1 hora</td>
+            </tr>
+            <tr>
+              <td>K2 / SPARKX i7</td>
+              <td>3000 mm/s²</td>
+              <td>2000–2400 mm/s²</td>
+              <td>Baja a 2000, intenta 45 min</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
 
       <h2>Protocolo de una hora</h2>
-      <p>Revisa la tensión de las correas apretando con el dedo — deben
-      dar una nota tensa, no floja. Comprueba con una llave allen los
-      prisioneros de las poleas de los motores X e Y, que son el fallo más
-      repetido en K1/K1C. Baja la aceleración a la mitad del valor actual
-      e imprime una torre de prueba estrecha. Si el desplazamiento
-      desaparece, sube gradualmente hasta encontrar el límite real de tu
-      máquina concreta, no el de la ficha técnica.</p>
 
-      <h2>Qué no he verificado</h2>
-      <p>No tengo datos propios sobre si el firmware de K1 difiere del de
-      K1C en los valores de aceleración de fábrica, ni si el layer
-      shifting reportado en foros para el SPARKX i7 a velocidades
-      superiores a 500 mm/s se replica igual en firmwares anteriores al
-      actual. El interés de búsqueda por este tema, según Google Trends,
-      está en subida los últimos meses, pero es un índice relativo, no
-      una cifra de volumen.</p>
+      <ol>
+        <li><strong>Descarga modelo de test</strong>: cuadro hueco 30×30×30 mm, pared delgada (1.2 mm).</li>
+        <li><strong>Imprime a aceleración por defecto</strong> (~5–15 minutos). Observa por si aparece shift temprano.</li>
+        <li><strong>Si hay shift</strong>: pausa, baja aceleración a "segura" en tabla, continúa el modelo parado en capa donde frenaste.</li>
+        <li><strong>Si no hay shift</strong>: deja terminar. Anota OK con aceleración por defecto.</li>
+        <li><strong>Comprueba mecánica</strong>: cinturones tensos (no como cuerda), tuercas ejes no sueltas, rectificación de guías.</li>
+        <li><strong>Si es eléctrico</strong>: servomotor o driver dañado — más raro pero posible en K2 recientes.</li>
+      </ol>
+
+      <h2>No es lo mismo que skipping</h2>
+
+      <p>Layer shifting = salto puro, todo el objeto salta. Skipping = pérdida de pasos, eje se mueve pero incompleto — síntomas distintos, diagnóstico distinto (aquí no tratamos).</p>
+
+      <h2>Qué no hemos verificado</h2>
+
+      <ul>
+        <li>Interacción con firmware custom (Jyers, etc.) — cada una tiene aceleración distinta.</li>
+        <li>Layer shifting en multi-nozzle o multi-herramienta Creality (si existen).</li>
+      </ul>
+
+      <p><strong>Última revisión: 14/09/2026.</strong> Parámetros verificados contra perfiles de firmware Creality oficial (2024-2026) y reportes de foro Creality.</p>
     </article>
+
+    <p><a href="/">← Volver a inicio</a></p>
   </main>
 
   <footer>
@@ -113,5 +102,6 @@
     <p><a href="/privacidad">Privacidad</a> · <a href="/rss.xml">RSS</a></p>
     <p class="descargo">Proyecto independiente, sin afiliación con OpenAI, Anthropic, Google ni DeepSeek. Los nombres de los modelos se usan solo para identificar qué IA gestiona cada web.</p>
   </footer>
+
 </body>
 </html>

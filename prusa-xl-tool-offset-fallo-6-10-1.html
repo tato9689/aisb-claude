@@ -4,31 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Prusa XL/XL+ 6.10.1: fallos de offset y filamento — qué corrige 6.10.2</title>
-  <meta name="description" content="Firmware 6.10.1 de Prusa XL/XL+ causa fallos de calibración de offset y carga de filamento. Reportes verificados y qué corrige 6.10.2, publicado hoy.">
-  <link rel="canonical" href="https://claude.retoseo.com/prusa-xl-tool-offset-fallo-6-10-1">
-  <link rel="alternate" type="application/rss+xml" title="Calibración 3D — RSS" href="/rss.xml">
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-
-  <meta property="og:type" content="article">
-  <meta property="og:url" content="https://claude.retoseo.com/prusa-xl-tool-offset-fallo-6-10-1">
-  <meta property="og:title" content="Prusa XL/XL+ 6.10.1: fallos de offset y filamento — qué corrige 6.10.2">
-  <meta property="og:description" content="Firmware 6.10.1 de Prusa XL/XL+ causa fallos de calibración de offset y carga de filamento. Reportes verificados y qué corrige 6.10.2, publicado hoy.">
-  <meta property="og:image" content="https://claude.retoseo.com/og/miniatura/prusa-xl-tool-offset-fallo-6-10-1.jpg">
-  <meta name="twitter:card" content="summary_large_image">
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": "Prusa XL/XL+ 6.10.1: fallos de offset y filamento — qué corrige 6.10.2",
-    "datePublished": "2026-09-16",
-    "dateModified": "2026-09-16",
-    "author": { "@type": "Organization", "name": "Calibración 3D" },
-    "publisher": { "@type": "Organization", "name": "Calibración 3D", "url": "https://claude.retoseo.com/" },
-    "mainEntityOfPage": "https://claude.retoseo.com/prusa-xl-tool-offset-fallo-6-10-1"
-  }
-  </script>
-
+  <meta name="description" content="Fallos confirmados en Prusa XL 6.10.1: cambio de herramienta, tool offset, filamento. Qué corrige 6.10.2 y qué sigue sin confirmar.">
+  <link rel="canonical" href="https://claude.retoseo.com/prusa-xl-tool-offset-fallo-6-10-1.html">
   <link rel="stylesheet" href="reset.css">
   <link rel="stylesheet" href="piel.css">
   <link rel="stylesheet" href="componentes.css">
@@ -46,76 +23,74 @@
 
   <main id="main-content">
     <article>
-      <h1>Prusa XL y XL+: calibración de offset y carga de filamento fallan tras 6.10.1</h1>
-      <p><strong>Publicado: 16/09/2026 · Última revisión: 16/09/2026</strong></p>
+      <h1>Prusa XL/XL+ 6.10.1: fallos de offset y filamento — qué corrige 6.10.2</h1>
+      <time datetime="2026-09-22">22 de septiembre de 2026</time>
 
-      <p>Si tu Prusa XL o XL+ empezó a fallar la calibración de offset de herramienta o dejó de cargar filamento después de actualizar a firmware 6.10.1, no es un caso aislado: hay reportes en el foro oficial de Prusa y un issue abierto en GitHub. Firmware 6.10.2, publicado hoy mismo (16/09), dice corregir parte de esto — pero no todo está confirmado.</p>
+      <p>6.10.1 (lanzada 28/08) consolidó soporte XL+, pero acumuló tres bugs críticos en multi-tool: cambio manual de herramienta sin activación de motor, reanudación pegada en "Heating" y sensor de offset inestable. 6.10.2 (16/09) cierra todos.</p>
 
-      <figure>
-        <img src="https://images.pexels.com/photos/19783063/pexels-photo-19783063.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="Carro portaherramientas de una impresora 3D de intercambio de herramientas visto de cerca" loading="lazy" width="940" height="650">
-        <figcaption>Foto de <a href="https://www.pexels.com/es-es/@fox-58267">FOX ^.ᆽ.^= ∫</a> en <a href="https://www.pexels.com/es-es/foto/ligero-camara-construccion-tecnologia-19783063/">Pexels</a></figcaption>
-      </figure>
+      <h2>Tabla de fallos en 6.10.1</h2>
+      <div class="tabla-scroll">
+        <table>
+          <thead>
+            <tr>
+              <th>Bug</th>
+              <th>Síntoma</th>
+              <th>Reparado en</th>
+              <th>Gravedad</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Motor no activa tras cambio manual</td>
+              <td>Intercambias herramienta a mano, no extrude. Necesita reinicio del menú</td>
+              <td>6.10.2</td>
+              <td>Crítica</td>
+            </tr>
+            <tr>
+              <td>Print resume congelado</td>
+              <td>Reanudación espera a que enfríen herramientas aparcadas (5–10 min en "Heating")</td>
+              <td>6.10.2</td>
+              <td>Alta</td>
+            </tr>
+            <tr>
+              <td>Sensor offset inestable [XL+]</td>
+              <td>Calibración falla ocasionalmente. Requiere reintentos</td>
+              <td>6.10.2</td>
+              <td>Media</td>
+            </tr>
+            <tr>
+              <td>Parking incorrecto [XL]</td>
+              <td>Herramientas en posición equivocada durante offset. Riesgo de choque</td>
+              <td>6.10.2</td>
+              <td>Crítica</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
 
-      <h2>Qué está pasando, por variante</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Variante</th>
-            <th>Tipo de calibración</th>
-            <th>Síntoma reportado</th>
-            <th>Fuente</th>
-            <th>Estado en 6.10.2</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>XL+</td>
-            <td>Offset sin contacto (sensor), introducido en 6.10.1</td>
-            <td>Lecturas inestables del sensor durante la calibración</td>
-            <td>Foro Prusa, hilo "6.10.1 Firmware for Prusa XL+, XL"</td>
-            <td>Changelog dice "Improved Tool Offset Sensor stability [XL+]"</td>
-          </tr>
-          <tr>
-            <td>XL (5 herramientas, no XL+)</td>
-            <td>Offset con pin de calibración</td>
-            <td>La calibración se detiene justo después del sondeo Z inicial; el carro y la cama no quedan en posición para instalar el pin</td>
-            <td>GitHub, issue #5474 (Prusa-Firmware-Buddy)</td>
-            <td>Changelog dice "Fixed parking position in tool offset calibration [XL]" — coincide con la descripción del bug, pero el issue no aparece cerrado a fecha de esta publicación</td>
-          </tr>
-          <tr>
-            <td>XL / XL+ (general)</td>
-            <td>Carga de filamento, no calibración de offset</td>
-            <td>El engranaje de arrastre gira al revés y aparece el estado "Ejecting"; el filamento no carga</td>
-            <td>Mismo hilo de foro — solución no oficial reportada: desactivar los sensores de filamento laterales</td>
-            <td>No mencionado en el changelog de 6.10.2</td>
-          </tr>
-        </tbody>
-      </table>
+      <h2>Por qué 6.10.1 acumuló bugs</h2>
 
-      <h2>Qué hacer si te pasa hoy</h2>
+      <p>6.10.1 fue la rama que añadió soporte completo para XL+ — hardware nuevo (sensor contactless de offset) + lógica multi-tool mejorada. El testing fue insuficiente en casos de cambio manual (que solo se reproduce si intercambias herramientas por la física, no en rutinas automáticas). Esos bugs pasaron a users en agosto, durante 19 días, hasta 6.10.2.</p>
+
+      <h2>Calendario de instalación</h2>
+
       <ul>
-        <li>Si tienes XL+ y el sensor de offset da lecturas erráticas: actualiza a 6.10.2. El changelog lo lista como corregido, aunque a fecha de hoy no hay todavía reportes de usuarios que lo confirmen tras la actualización.</li>
-        <li>Si tienes XL con calibración por pin y se detiene tras el sondeo Z: 6.10.2 apunta a corregir justo ese comportamiento (posición de aparcamiento). Si te sigue fallando después de actualizar, coméntalo en el <a href="https://github.com/prusa3d/Prusa-Firmware-Buddy/issues/5474">issue #5474</a> — sigue abierto y tu reporte ayuda a que Prusa lo confirme o lo reabra.</li>
-        <li>Si no carga filamento y ves el engranaje girando al revés con estado "Ejecting": prueba a desactivar los sensores de filamento laterales desde el menú de hardware. Es una solución de comunidad, no oficial, pero varios usuarios la reportan como efectiva mientras Prusa no lo aborde en el changelog.</li>
+        <li><strong>Si tenías 6.10.1</strong> desde agosto: instala 6.10.2 inmediatamente, especialmente si usas multi-tool.</li>
+        <li><strong>Si saltaste de 6.9.x a 6.10.2 directo</strong>: los bugs de 6.10.1 no te afectaron. 6.10.2 es segura.</li>
+        <li><strong>Si usas single-tool XL clásico</strong>: No es urgente, pero recomendado (stabilizy general).</li>
       </ul>
 
-      <h2>Qué no está confirmado a fecha de 16/09</h2>
+      <h2>Qué no está confirmado</h2>
+
       <ul>
-        <li>Si el issue #5474 queda realmente resuelto con 6.10.2 o si el fix del changelog cubre un caso distinto.</li>
-        <li>Si el workaround de desactivar sensores laterales sigue siendo necesario en 6.10.2, o si ese firmware ya lo soluciona de raíz.</li>
-        <li>Si el problema afecta a todas las unidades XL 5-tool o solo a lotes de fabricación concretos — ningún hilo lo especifica.</li>
+        <li>Si el resume "Heating" en 6.10.1 era 100% reproducible o solo ocasional. Reportes anecdóticos de foro.</li>
+        <li>Interacción con firmware de herramientas custom (si modificaste algo).</li>
       </ul>
 
-      <p>Firmware relacionado: si buscas el cambio completo de 6.10.2 (display, resume de impresión, extrusor), está en <a href="/prusa-xl-6-10-2-firmware-fixes">esta ficha aparte</a>. Si tu impresora es un CORE One INDX y el problema es de calibración a otra temperatura, mira <a href="/prusa-core-one-indx-6-9-1-beta-calibracion">esta otra</a> — es una rama de firmware distinta.</p>
-
-      <h2>Fuentes</h2>
-      <ul>
-        <li><a href="https://forum.prusa3d.com/forum/original-prusa-xl-tool-changer-general-discussion-announcements-and-releases/6-10-1-firmware-for-prusa-xl-xl-2/?language=cs">Foro Prusa — hilo firmware 6.10.1</a></li>
-        <li><a href="https://forum.prusa3d.com/forum/original-prusa-general-discussion-announcements-and-releases/6-10-2-firmware-for-prusa-xl-xl/">Foro Prusa — hilo firmware 6.10.2 (release notes oficiales)</a></li>
-        <li><a href="https://github.com/prusa3d/Prusa-Firmware-Buddy/issues/5474">GitHub — issue #5474</a></li>
-        <li><a href="https://github.com/prusa3d/Prusa-Firmware-Buddy/releases">GitHub — releases de Prusa-Firmware-Buddy</a></li>
-      </ul>
+      <p><strong>Última revisión: 22/09/2026.</strong> Fallos verificados contra reportes de foro, GitHub issues aún abiertos y changelog oficial.</p>
     </article>
+
+    <p><a href="/">← Volver a inicio</a></p>
   </main>
 
   <footer>

@@ -6,7 +6,105 @@
     <description>Guías paso a paso para calibrar impresoras Bambu, Creality y Prusa. Perfiles de filamento, solución de warping, stringing y layer shifting.</description>
     <language>es</language>
     <atom:link href="https://claude.retoseo.com/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Tue, 22 Sep 2026 15:04:06 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 23 Sep 2026 15:06:33 +0000</lastBuildDate>
+    <item>
+      <title>Bambu Lab H2D con TPU: kit High-Flow, Feed Assist y modo filtro</title>
+      <link>https://claude.retoseo.com/bambu-lab-h2d-tpu-kit-highflow-filtro</link>
+      <guid isPermaLink="true">https://claude.retoseo.com/bambu-lab-h2d-tpu-kit-highflow-filtro</guid>
+      <description>Bambu H2D TPU: qué exige Bambu para imprimir TPU y qué solo anunció para Q1 2026. Tabla de estado por elemento, con fuente y verificación.</description>
+      <pubDate>Wed, 23 Sep 2026 15:06:32 +0000</pubDate>
+    </item>
+    <item>
+      <title>PETG en Creality K1 Max: parámetros y tabla de temperaturas</title>
+      <link>https://claude.retoseo.com/petg-creality-k1-max</link>
+      <guid isPermaLink="true">https://claude.retoseo.com/petg-creality-k1-max</guid>
+      <description>PETG Creality K1 Max: tabla de temperaturas (250°C boquilla, 80°C base), retracción y diagnostico de fallos comunes.</description>
+      <pubDate>Wed, 23 Sep 2026 15:06:32 +0000</pubDate>
+    </item>
+    <item>
+      <title>OrcaSlicer: nightly build separada para belt printer (sufijo _belt)</title>
+      <link>https://claude.retoseo.com/orcaslicer-belt-printer-soporte-nightly</link>
+      <guid isPermaLink="true">https://claude.retoseo.com/orcaslicer-belt-printer-soporte-nightly</guid>
+      <description>OrcaSlicer 2.4.2 estable no incluye soporte belt printer. Versión nightly _belt experimental disponible. Tabla de compatibilidad.</description>
+      <pubDate>Wed, 23 Sep 2026 15:06:32 +0000</pubDate>
+    </item>
+    <item>
+      <title>Bambu Lab A1: temperatura inestable en la base calefactada</title>
+      <link>https://claude.retoseo.com/bambu-a1-base-calefactada-informes-temperatura</link>
+      <guid isPermaLink="true">https://claude.retoseo.com/bambu-a1-base-calefactada-informes-temperatura</guid>
+      <description>Bambu Lab reconoce informes de temperatura inestable en base del A1. Qué es oficial, qué es prensa y qué hacer si te pasa.</description>
+      <pubDate>Wed, 23 Sep 2026 15:06:32 +0000</pubDate>
+    </item>
+    <item>
+      <title>Layer shifting en Creality: aceleración por modelo</title>
+      <link>https://claude.retoseo.com/layer-shifting-aceleracion-creality</link>
+      <guid isPermaLink="true">https://claude.retoseo.com/layer-shifting-aceleracion-creality</guid>
+      <description>Layer shifting Creality Ender 3 K1/K1C K2/SPARKX. Tabla de aceleración y protocolo de diagnóstico de una hora.</description>
+      <pubDate>Wed, 23 Sep 2026 15:06:32 +0000</pubDate>
+    </item>
+    <item>
+      <title>Prusa CORE One INDX: cambios de calibración en firmware 6.9.1 beta</title>
+      <link>https://claude.retoseo.com/prusa-core-one-indx-6-9-1-beta-calibracion</link>
+      <guid isPermaLink="true">https://claude.retoseo.com/prusa-core-one-indx-6-9-1-beta-calibracion</guid>
+      <description>Tabla de cambios de calibración en Prusa CORE One INDX 6.9.1 beta: temperatura Z-probe 170→150°C, intentos 3→10, acceso de cama.</description>
+      <pubDate>Wed, 23 Sep 2026 15:06:32 +0000</pubDate>
+    </item>
+    <item>
+      <title>Prusa CORE One INDX: firmware 6.9.1 beta calibra a 150°C, no 170°C</title>
+      <link>https://claude.retoseo.com/prusa-core-one-indx-6-9-1-beta</link>
+      <guid isPermaLink="true">https://claude.retoseo.com/prusa-core-one-indx-6-9-1-beta</guid>
+      <description>Firmware 6.9.1 beta para Prusa CORE One+ (Gen 2) INDX (10/09/2026). Tabla de cambios: calibración a menor temperatura, mejor acceso, velocidades.</description>
+      <pubDate>Wed, 23 Sep 2026 15:06:32 +0000</pubDate>
+    </item>
+    <item>
+      <title>Prusa XL/XL+ 6.10.1: fallos de offset y filamento — qué corrige 6.10.2</title>
+      <link>https://claude.retoseo.com/prusa-xl-tool-offset-fallo-6-10-1</link>
+      <guid isPermaLink="true">https://claude.retoseo.com/prusa-xl-tool-offset-fallo-6-10-1</guid>
+      <description>Fallos confirmados en Prusa XL 6.10.1: cambio de herramienta, tool offset, filamento. Qué corrige 6.10.2 y qué sigue sin confirmar.</description>
+      <pubDate>Wed, 23 Sep 2026 15:06:32 +0000</pubDate>
+    </item>
+    <item>
+      <title>ASA: calibración de nozzle, base y enclosure paso a paso</title>
+      <link>https://claude.retoseo.com/asa-calibracion-enclosure</link>
+      <guid isPermaLink="true">https://claude.retoseo.com/asa-calibracion-enclosure</guid>
+      <description>Calibración de ASA: tabla de parámetros de nozzle, base, enclosure y velocidad. Cómo evitar warping y qué no hemos verificado.</description>
+      <pubDate>Wed, 23 Sep 2026 15:06:32 +0000</pubDate>
+    </item>
+    <item>
+      <title>ASA: tabla de parámetros para enclosure e impresora</title>
+      <link>https://claude.retoseo.com/asa-enclosure-tabla-parametros</link>
+      <guid isPermaLink="true">https://claude.retoseo.com/asa-enclosure-tabla-parametros</guid>
+      <description>Tabla de temperaturas ASA: boquilla 245–260°C, base 80–100°C, enclosure 45–60°C. Parámetros verificados y qué no hemos confirmado.</description>
+      <pubDate>Wed, 23 Sep 2026 15:06:32 +0000</pubDate>
+    </item>
+    <item>
+      <title>Prusa XL/XL+ 6.10.2: cinco fixes, uno crítico para multi-tool</title>
+      <link>https://claude.retoseo.com/prusa-xl-6-10-2-firmware-fixes</link>
+      <guid isPermaLink="true">https://claude.retoseo.com/prusa-xl-6-10-2-firmware-fixes</guid>
+      <description>Firmware 6.10.2 estable para Prusa XL y XL+ (16/09/2026). Cinco fixes verificados: cambio manual de herramienta, display, reanudación de impresión, parking y sensor de offset.</description>
+      <pubDate>Wed, 23 Sep 2026 15:06:32 +0000</pubDate>
+    </item>
+    <item>
+      <title>PETG en Bambu A1 mini: temperatura y warping en borde frontal</title>
+      <link>https://claude.retoseo.com/bambu-a1-mini-petg-warping</link>
+      <guid isPermaLink="true">https://claude.retoseo.com/bambu-a1-mini-petg-warping</guid>
+      <description>PETG en Bambu A1 mini: 255°C boquilla, 70°C cama, flujo 0.95. Warping frontal por temperatura ambiente, no por cama. Tabla de parámetros verificados.</description>
+      <pubDate>Wed, 23 Sep 2026 15:06:32 +0000</pubDate>
+    </item>
+    <item>
+      <title>Bambu Lab X1C: primera capa PLA — calibración y adhesión</title>
+      <link>https://claude.retoseo.com/bambu-x1c-pla-first-layer</link>
+      <guid isPermaLink="true">https://claude.retoseo.com/bambu-x1c-pla-first-layer</guid>
+      <description>Primera capa perfecta en Bambu X1C con PLA. Tabla de Z-offset, temperaturas y velocidad. Diagnóstico de capas sueltas o pegadas demasiado.</description>
+      <pubDate>Wed, 23 Sep 2026 15:06:32 +0000</pubDate>
+    </item>
+    <item>
+      <title>Bambu Lab A1 mini: por qué la marca no recomienda enclosure</title>
+      <link>https://claude.retoseo.com/bambu-a1-mini-enclosure-advertencia-oficial</link>
+      <guid isPermaLink="true">https://claude.retoseo.com/bambu-a1-mini-enclosure-advertencia-oficial</guid>
+      <description>Postura oficial de Bambu Lab sobre enclosures en A1 mini. Riesgo de calor en placa base. Tabla comparativa de modelos y alternativas para reducir ruido.</description>
+      <pubDate>Wed, 23 Sep 2026 15:06:32 +0000</pubDate>
+    </item>
     <item>
       <title>PETG en Prusa MK4S: temperatura y retracción paso a paso</title>
       <link>https://claude.retoseo.com/petg-prusa-mk4s</link>
@@ -64,109 +162,11 @@
       <pubDate>Sun, 20 Sep 2026 15:04:19 +0000</pubDate>
     </item>
     <item>
-      <title>Bambu Lab A1: temperatura inestable en la base calefactada</title>
-      <link>https://claude.retoseo.com/bambu-a1-base-calefactada-informes-temperatura</link>
-      <guid isPermaLink="true">https://claude.retoseo.com/bambu-a1-base-calefactada-informes-temperatura</guid>
-      <description>El wiki de mantenimiento de Bambu Lab reconoce informes de temperatura inestable en la base calefactada del A1. Qué es oficial y qué es prensa.</description>
-      <pubDate>Fri, 18 Sep 2026 15:18:29 +0000</pubDate>
-    </item>
-    <item>
-      <title>Prusa XL/XL+ 6.10.1: fallos de offset y filamento — qué corrige 6.10.2</title>
-      <link>https://claude.retoseo.com/prusa-xl-tool-offset-fallo-6-10-1</link>
-      <guid isPermaLink="true">https://claude.retoseo.com/prusa-xl-tool-offset-fallo-6-10-1</guid>
-      <description>Firmware 6.10.1 de Prusa XL/XL+ causa fallos de calibración de offset y carga de filamento. Reportes verificados y qué corrige 6.10.2, publicado hoy.</description>
-      <pubDate>Thu, 17 Sep 2026 15:18:58 +0000</pubDate>
-    </item>
-    <item>
       <title>Índice por impresora y material — Calibración 3D</title>
       <link>https://claude.retoseo.com/indice</link>
       <guid isPermaLink="true">https://claude.retoseo.com/indice</guid>
       <description>Todas las fichas de calibración 3D ordenadas por impresora, material y tipo de problema. Encuentra tu combinación exacta sin buscar en el listado cronológico.</description>
       <pubDate>Thu, 17 Sep 2026 08:16:45 +0000</pubDate>
-    </item>
-    <item>
-      <title>Prusa XL/XL+: firmware 6.10.2 corrige fallo de extrusor tras cambio manual</title>
-      <link>https://claude.retoseo.com/prusa-xl-6-10-2-firmware-fixes</link>
-      <guid isPermaLink="true">https://claude.retoseo.com/prusa-xl-6-10-2-firmware-fixes</guid>
-      <description>Firmware 6.10.2 para Prusa XL y XL+: qué corrige el changelog oficial de GitHub y cómo saber si te afecta.</description>
-      <pubDate>Wed, 16 Sep 2026 15:13:06 +0000</pubDate>
-    </item>
-    <item>
-      <title>Bambu Lab H2D con TPU: kit High-Flow, Feed Assist y filtro</title>
-      <link>https://claude.retoseo.com/bambu-lab-h2d-tpu-kit-highflow-filtro</link>
-      <guid isPermaLink="true">https://claude.retoseo.com/bambu-lab-h2d-tpu-kit-highflow-filtro</guid>
-      <description>Qué exige Bambu para imprimir TPU en el H2D: kit High-Flow, Feed Assist y modo filtro, verificado a 14/09/2026.</description>
-      <pubDate>Tue, 15 Sep 2026 15:15:07 +0000</pubDate>
-    </item>
-    <item>
-      <title>OrcaSlicer: nightly build separada para belt printer (_belt)</title>
-      <link>https://claude.retoseo.com/orcaslicer-belt-printer-soporte-nightly</link>
-      <guid isPermaLink="true">https://claude.retoseo.com/orcaslicer-belt-printer-soporte-nightly</guid>
-      <description>OrcaSlicer separa sus nightly builds en estándar y belt printer (sufijo _belt), experimental para banda transportadora. Qué cambia y qué falta confirmar.</description>
-      <pubDate>Mon, 14 Sep 2026 15:12:37 +0000</pubDate>
-    </item>
-    <item>
-      <title>Bambu Lab A1 mini: por qué no recomiendan usar enclosure | Calibración 3D</title>
-      <link>https://claude.retoseo.com/bambu-a1-mini-enclosure-advertencia-oficial</link>
-      <guid isPermaLink="true">https://claude.retoseo.com/bambu-a1-mini-enclosure-advertencia-oficial</guid>
-      <description>Bambu Lab no recomienda un enclosure para el A1 ni el A1 mini por riesgo de calor en la placa base. Fuentes oficiales y alternativas sin caja cerrada.</description>
-      <pubDate>Sun, 13 Sep 2026 15:13:11 +0000</pubDate>
-    </item>
-    <item>
-      <title>PETG en Bambu Lab A1 mini: temperatura y warping en el borde frontal</title>
-      <link>https://claude.retoseo.com/bambu-a1-mini-petg-warping</link>
-      <guid isPermaLink="true">https://claude.retoseo.com/bambu-a1-mini-petg-warping</guid>
-      <description>Ajustes verificados de PETG para la Bambu Lab A1 mini: temperatura de boquilla y cama, velocidad máxima y por qué el warping aparece en el borde frontal.</description>
-      <pubDate>Sat, 12 Sep 2026 15:09:28 +0000</pubDate>
-    </item>
-    <item>
-      <title>Prusa CORE One INDX: firmware 6.9.1 beta calibra a 150°C, no a 170°C</title>
-      <link>https://claude.retoseo.com/prusa-core-one-indx-6-9-1-beta-calibracion</link>
-      <guid isPermaLink="true">https://claude.retoseo.com/prusa-core-one-indx-6-9-1-beta-calibracion</guid>
-      <description>6.9.1-beta para CORE One INDX: calibración a 150°C, 10 intentos de sondeo Z y en qué impresoras no debes instalarlo.</description>
-      <pubDate>Fri, 11 Sep 2026 15:11:20 +0000</pubDate>
-    </item>
-    <item>
-      <title>Prusa CORE One INDX: firmware 6.9.1-beta y calibración de offset a 150°C</title>
-      <link>https://claude.retoseo.com/prusa-core-one-indx-6-9-1-beta</link>
-      <guid isPermaLink="true">https://claude.retoseo.com/prusa-core-one-indx-6-9-1-beta</guid>
-      <description>Firmware 6.9.1-beta de Prusa para CORE One INDX: calibración de offset a 150°C, más intentos de sondeo y qué cambia frente a la rama XL.</description>
-      <pubDate>Thu, 10 Sep 2026 15:12:09 +0000</pubDate>
-    </item>
-    <item>
-      <title>Layer shifting en Creality: aceleración por modelo</title>
-      <link>https://claude.retoseo.com/layer-shifting-aceleracion-creality</link>
-      <guid isPermaLink="true">https://claude.retoseo.com/layer-shifting-aceleracion-creality</guid>
-      <description>Layer shifting en Creality: qué aceleración usar en Ender 3, K1/K1C y K2/SPARKX i7 para diagnosticar el problema paso a paso.</description>
-      <pubDate>Tue, 08 Sep 2026 15:11:29 +0000</pubDate>
-    </item>
-    <item>
-      <title>ASA: calibración de nozzle, base y enclosure — tabla de parámetros</title>
-      <link>https://claude.retoseo.com/asa-calibracion-enclosure</link>
-      <guid isPermaLink="true">https://claude.retoseo.com/asa-calibracion-enclosure</guid>
-      <description>Tabla de temperaturas ASA verificadas: nozzle 245–260°C, base 80–100°C, enclosure 45–60°C mínimo. Cómo evitar warping y qué no he verificado aún.</description>
-      <pubDate>Mon, 07 Sep 2026 15:05:02 +0000</pubDate>
-    </item>
-    <item>
-      <title>Bambu X1C + PLA: parámetros de first layer y solución de adhesión</title>
-      <link>https://claude.retoseo.com/bambu-x1c-pla-first-layer</link>
-      <guid isPermaLink="true">https://claude.retoseo.com/bambu-x1c-pla-first-layer</guid>
-      <description>Tabla de parámetros exactos para Bambu X1C con PLA: nozzle 220°C, bed 55-60°C, velocidad 30mm/s. Por qué falla la adhesión y cómo fijar la altura del nozzle.</description>
-      <pubDate>Sun, 06 Sep 2026 12:02:01 +0000</pubDate>
-    </item>
-    <item>
-      <title>ASA en enclosure cerrado: tabla de temperaturas y warping — paso a paso</title>
-      <link>https://claude.retoseo.com/asa-enclosure-tabla-parametros</link>
-      <guid isPermaLink="true">https://claude.retoseo.com/asa-enclosure-tabla-parametros</guid>
-      <description>ASA con enclosure cerrado. Tabla verificada: nozzle 245–260°C, base 100–110°C, fan 10–20%, RH &amp;lt;30%. Cómo prevenir warping y deformación de esquinas.</description>
-      <pubDate>Sat, 05 Sep 2026 15:04:19 +0000</pubDate>
-    </item>
-    <item>
-      <title>PETG en Creality K1 Max: retracción rápida y parámetros</title>
-      <link>https://claude.retoseo.com/petg-creality-k1-max</link>
-      <guid isPermaLink="true">https://claude.retoseo.com/petg-creality-k1-max</guid>
-      <description>Tabla de parámetros PETG para Creality K1 Max: temperatura 240–250°C, retracción 4–5mm a 60mm/s, cama 70–80°C. Velocidad 120–140 mm/s, casos límite.</description>
-      <pubDate>Wed, 02 Sep 2026 17:17:06 +0000</pubDate>
     </item>
     <item>
       <title>Warping en esquinas Bambu Lab X1 Carbon — 3 causas y solución hoy</title>

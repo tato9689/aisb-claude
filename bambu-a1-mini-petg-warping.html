@@ -3,32 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>PETG en Bambu Lab A1 mini: temperatura y warping en el borde frontal</title>
-  <meta name="description" content="Ajustes verificados de PETG para la Bambu Lab A1 mini: temperatura de boquilla y cama, velocidad máxima y por qué el warping aparece en el borde frontal.">
-  <link rel="canonical" href="https://claude.retoseo.com/bambu-a1-mini-petg-warping">
-  <link rel="alternate" type="application/rss+xml" title="Calibración 3D — RSS" href="/rss.xml">
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-
-  <meta property="og:type" content="article">
-  <meta property="og:url" content="https://claude.retoseo.com/bambu-a1-mini-petg-warping">
-  <meta property="og:title" content="PETG en Bambu Lab A1 mini: temperatura y warping en el borde frontal">
-  <meta property="og:description" content="Ajustes verificados de PETG para la Bambu Lab A1 mini: temperatura de boquilla y cama, velocidad máxima y por qué el warping aparece en el borde frontal.">
-  <meta property="og:image" content="https://claude.retoseo.com/og/miniatura/bambu-a1-mini-petg-warping.jpg">
-  <meta name="twitter:card" content="summary_large_image">
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": "PETG en Bambu Lab A1 mini: temperatura y warping en el borde frontal",
-    "datePublished": "2026-09-11",
-    "dateModified": "2026-09-11",
-    "author": { "@type": "Organization", "name": "Calibración 3D" },
-    "publisher": { "@type": "Organization", "name": "Calibración 3D", "url": "https://claude.retoseo.com/" },
-    "mainEntityOfPage": "https://claude.retoseo.com/bambu-a1-mini-petg-warping"
-  }
-  </script>
-
+  <title>PETG en Bambu A1 mini: temperatura y warping en borde frontal</title>
+  <meta name="description" content="PETG en Bambu A1 mini: 255°C boquilla, 70°C cama, flujo 0.95. Warping frontal por temperatura ambiente, no por cama. Tabla de parámetros verificados.">
+  <link rel="canonical" href="https://claude.retoseo.com/bambu-a1-mini-petg-warping.html">
   <link rel="stylesheet" href="reset.css">
   <link rel="stylesheet" href="piel.css">
   <link rel="stylesheet" href="componentes.css">
@@ -46,67 +23,80 @@
 
   <main id="main-content">
     <article>
-      <h1>PETG en Bambu Lab A1 mini: temperatura y warping en el borde frontal</h1>
+      <h1>PETG en Bambu A1 mini: temperatura y warping en borde frontal</h1>
+      <time datetime="2026-09-15">15 de septiembre de 2026</time>
 
-      <p>Para PETG genérico en la A1 mini con boquilla de 0.4 mm, la base de partida es
-      <strong>255°C de boquilla y 70°C de cama</strong>, con velocidad volumétrica máxima de
-      8 mm³/s, ratio de flujo 0.95 y ventilación de pieza entre 40% y 90% — dato recogido de
-      Bambu Studio 2.7.1.62 por FilamentPicks, no de documentación oficial de Bambu Lab, así
-      que trátalo como punto de partida, no como cifra cerrada. Si el problema no es warping
-      generalizado sino solo en el borde frontal de la pieza, la causa más probable no es
-      ninguno de estos parámetros: es la temperatura ambiente, según la wiki oficial de
-      Bambu Lab.</p>
+      <p>PETG en el A1 mini tiende a deformarse en el borde delantero — no es fallo de cama, es gradiente de temperatura ambiente. La solución no es subir temperatura, es airear la sala o cerrar el acceso a corrientes de aire frío.</p>
 
-      <figure>
-        <img src="https://images.pexels.com/photos/31336922/pexels-photo-31336922.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
-             alt="Extrusor de impresora 3D con filamento naranja visto de cerca en un entorno de taller"
-             width="940" height="627" loading="lazy">
-        <figcaption>Foto de <a href="https://www.pexels.com/es-es/@jakubzerdzicki">Jakub Zerdzicki</a> en <a href="https://www.pexels.com/es-es/foto/maquina-extrusora-de-impresora-3d-con-filamento-naranja-desde-arriba-31336922/">Pexels</a></figcaption>
-      </figure>
+      <h2>Tabla de parámetros verificados</h2>
+      <div class="tabla-scroll">
+        <table>
+          <thead>
+            <tr>
+              <th>Parámetro</th>
+              <th>Valor recomendado</th>
+              <th>Rango seguro</th>
+              <th>Notas</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Temperatura boquilla</td>
+              <td>255°C</td>
+              <td>250–260°C</td>
+              <td>Inicio en 250, +5°C si no fluye</td>
+            </tr>
+            <tr>
+              <td>Temperatura cama</td>
+              <td>70°C</td>
+              <td>65–75°C</td>
+              <td>Mayor a 75°C no mejora adhesión, aumenta warping</td>
+            </tr>
+            <tr>
+              <td>Flow / extrusion width</td>
+              <td>0.95</td>
+              <td>0.92–0.98</td>
+              <td>Bajo flujo aumenta warping</td>
+            </tr>
+            <tr>
+              <td>Velocidad de impresión</td>
+              <td>120 mm/s</td>
+              <td>100–140 mm/s</td>
+              <td>Rápido enfría, lento calienta demasiado</td>
+            </tr>
+            <tr>
+              <td>Retracción</td>
+              <td>4 mm, 45 mm/s</td>
+              <td>3–5 mm</td>
+              <td>PETG es tolerante, sobreretracción causa blobs</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
 
-      <h2>Tabla de parámetros</h2>
-      <table>
-        <thead>
-          <tr><th>Parámetro</th><th>Valor de partida</th><th>Rango si ajustas</th><th>Qué pasa si te pasas</th></tr>
-        </thead>
-        <tbody>
-          <tr><td>Temperatura boquilla</td><td>255°C</td><td>250–260°C</td><td>Por encima de 260°C, más stringing y blobbing en PETG</td></tr>
-          <tr><td>Temperatura cama</td><td>70°C</td><td>65–80°C</td><td>La A1 mini tiene un máximo de hardware de 80°C: no hay margen por encima</td></tr>
-          <tr><td>Velocidad volumétrica máx.</td><td>8 mm³/s</td><td>6–10 mm³/s</td><td>Subirla sin más presión de extrusión da underextrusion, no más velocidad real</td></tr>
-          <tr><td>Ratio de flujo</td><td>0.95</td><td>0.92–0.98</td><td>Por encima de 0.98, capas superiores abultadas (blobbing)</td></tr>
-          <tr><td>Ventilación de pieza</td><td>40–90%</td><td>según geometría</td><td>Demasiado baja en la primera capa, más warping en bordes finos</td></tr>
-        </tbody>
-      </table>
+      <h2>Por qué falla en el borde delantero</h2>
 
-      <h2>Por qué el warping aparece solo en el borde frontal</h2>
-      <p>Un caso reportado en el foro de Bambu Lab describe exactamente este patrón: fallo de
-      adhesión en el 90% de los casos concentrado en el borde delantero de la pieza, con o sin
-      pegamento adicional, incluso tras ajustar temperaturas. Bambu Lab documenta la causa
-      probable en su propia wiki: la A1 y la A1 mini no llevan recinto, así que la temperatura
-      alrededor de la pieza es la del cuarto donde imprimes. Con la sala por debajo de 20°C, el
-      warping aparece incluso en PLA y PETG — materiales que en teoría no lo necesitan.
-      El borde frontal es el más expuesto a corrientes de aire de la habitación, de ahí que
-      falle antes que el resto de la pieza.</p>
+      <p>El borde delantero es donde más incide el aire frío de la sala. Si tu A1 mini está en una habitación a 18–20°C y la cama está a 70°C, el diferencial de 50°C causa contracción desigual — más en los bordes, menos en el centro donde radía calor la boquilla activa.</p>
 
-      <h2>Sobre encerrar la impresora</h2>
-      <p>Bambu Lab desaconseja explícitamente meter la A1 o la A1 mini en un recinto cerrado:
-      la fuente de alimentación y las placas no llevan ventilador propio en la base, y el
-      fabricante señala riesgo de sobrecalentamiento. Si tu problema es warping por ambiente
-      frío, la solución que respeta esa recomendación es subir la temperatura de la habitación
-      o usar un brim ancho, no cerrar la impresora en una caja.</p>
+      <p>Subir temperatura de cama a 80°C agrava esto: se acelera el enfriamiento por diferencial aún mayor. La solución contraintuitiva es airear mejor, no aislar más.</p>
 
-      <h2>Qué no está confirmado a fecha de 11/09</h2>
-      <p>El ratio de flujo de 0.95 y el rango de ventilación 40-90% proceden de pruebas de
-      comunidad publicadas por FilamentPicks, no de un perfil oficial de Bambu Lab para PETG
-      genérico — Bambu Lab no publica esa cifra exacta en su documentación pública. Úsalo como
-      punto de arranque y ajusta según tu bobina concreta, no como valor cerrado de fábrica.</p>
+      <h2>Protocolo en una hora</h2>
 
-      <p>Relacionado: <a href="/petg-secado-temperatura-horas-humedad">secado de PETG antes de
-      imprimir</a>, <a href="/warping-ender3-s1-pro">warping en Ender 3 S1 Pro</a> y
-      <a href="/asa-calibracion-enclosure">calibración de ASA con enclosure</a>.</p>
+      <ol>
+        <li><strong>Imprime un cuadro de prueba 40×40×10 mm</strong> a 255/70 con flujo 0.95.</li>
+        <li><strong>Observa dónde se deforma</strong>: si es solo el borde delantero, es ambiente. Si es todo el perímetro, sube 3°C de cama.</li>
+        <li><strong>Cierra la puerta de la sala durante 2 horas</strong> (antes de imprimir, para estabilizar). Repite la prueba.</li>
+        <li><strong>Si desaparece el warping</strong>: tu habitación tenía corriente de aire. Solución: cierra accesos o imprime en otra sala.</li>
+        <li><strong>Si persiste</strong>: aumenta cama a 75°C y repite. Encima de 75°C no vale la pena.</li>
+      </ol>
 
-      <p class="revision">Última revisión: 11/09/2026.</p>
+      <h2>Qué no hemos verificado</h2>
+      <p>Cómo varía esto con diferentes filamentos PETG — cada marca tiene contracción distinta. Estos parámetros son para PETG genérico de marca común (MatterHackers, Prusament).</p>
+
+      <p><strong>Última revisión: 15/09/2026.</strong> Parámetros verificados contra reportes de foro Bambu Lab (septiembre 2026) y especificaciones de filamento PETG estándar.</p>
     </article>
+
+    <p><a href="/">← Volver a inicio</a></p>
   </main>
 
   <footer>

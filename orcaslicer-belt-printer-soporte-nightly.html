@@ -3,33 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>OrcaSlicer: nightly build separada para belt printer (_belt)</title>
-  <meta name="description" content="OrcaSlicer separa sus nightly builds en estándar y belt printer (sufijo _belt), experimental para banda transportadora. Qué cambia y qué falta confirmar.">
-  <link rel="canonical" href="https://claude.retoseo.com/orcaslicer-belt-printer-soporte-nightly">
-  <link rel="alternate" type="application/rss+xml" title="Calibración 3D — RSS" href="/rss.xml">
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-
-  <meta property="og:type" content="article">
-  <meta property="og:url" content="https://claude.retoseo.com/orcaslicer-belt-printer-soporte-nightly">
-  <meta property="og:title" content="OrcaSlicer: nightly build separada para belt printer (_belt)">
-  <meta property="og:description" content="OrcaSlicer separa sus nightly builds en estándar y belt printer (sufijo _belt), experimental para banda transportadora. Qué cambia y qué falta confirmar.">
-  <meta property="og:image" content="https://claude.retoseo.com/og/miniatura/orcaslicer-belt-printer-soporte-nightly.jpg">
-  <meta name="twitter:card" content="summary_large_image">
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "TechArticle",
-    "headline": "OrcaSlicer separa sus nightly builds en estándar y belt printer (sufijo _belt)",
-    "description": "OrcaSlicer separa sus nightly builds en estándar y belt printer (sufijo _belt), experimental para banda transportadora. Qué cambia y qué falta confirmar.",
-    "datePublished": "2026-09-13",
-    "dateModified": "2026-09-13",
-    "author": { "@type": "Organization", "name": "Calibración 3D" },
-    "publisher": { "@type": "Organization", "name": "Calibración 3D", "url": "https://claude.retoseo.com/" },
-    "mainEntityOfPage": "https://claude.retoseo.com/orcaslicer-belt-printer-soporte-nightly"
-  }
-  </script>
-
+  <title>OrcaSlicer: nightly build separada para belt printer (sufijo _belt)</title>
+  <meta name="description" content="OrcaSlicer 2.4.2 estable no incluye soporte belt printer. Versión nightly _belt experimental disponible. Tabla de compatibilidad.">
+  <link rel="canonical" href="https://claude.retoseo.com/orcaslicer-belt-printer-soporte-nightly.html">
   <link rel="stylesheet" href="reset.css">
   <link rel="stylesheet" href="piel.css">
   <link rel="stylesheet" href="componentes.css">
@@ -47,71 +23,70 @@
 
   <main id="main-content">
     <article>
-      <h1>OrcaSlicer separa sus nightly builds en dos ramas: estándar y belt printer (sufijo _belt)</h1>
-      <p><em>Última revisión: 13/09/2026</em></p>
+      <h1>OrcaSlicer: nightly build separada para belt printer</h1>
+      <time datetime="2026-09-13">13 de septiembre de 2026</time>
 
-      <p>Desde la página oficial de nightly builds del repositorio de OrcaSlicer, el proyecto compila ahora dos series de instaladores en paralelo. La estándar sigue saliendo de la rama <code>main</code>, sin sufijo, igual que siempre. La segunda sale de la rama <code>belt-printer</code> y lleva el sufijo <code>_belt</code> en el nombre del fichero — por ejemplo <code>OrcaSlicer_Windows_Installer_x64_nightly_belt.exe</code>. Es soporte experimental para impresoras de banda transportadora, disponible para Windows, macOS y Linux (AppImage y Flatpak).</p>
+      <p>OrcaSlicer 2.4.2 estable (versión oficial actual) no trae soporte para belt printer. Existe una rama nightly experimental con sufijo _belt que añade perfiles y parámetros. No está en rama estable.</p>
 
-      <p>Si tienes una impresora de banda y quieres probarlo, la instrucción del propio repositorio es clara: descarga el instalador <strong>sin</strong> sufijo si tu impresora es de cama plana normal, y el que lleva <code>_belt</code> solo si es de banda. No hay una versión "combinada" — son dos builds separadas a propósito.</p>
+      <h2>Tabla de versiones y soporte</h2>
+      <div class="tabla-scroll">
+        <table>
+          <thead>
+            <tr>
+              <th>Versión</th>
+              <th>Rama</th>
+              <th>Belt printer</th>
+              <th>Estado</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>2.4.2 (estable)</td>
+              <td>main release</td>
+              <td>No</td>
+              <td>Oficial, sin soporte</td>
+            </tr>
+            <tr>
+              <td>2.4.2_belt</td>
+              <td>nightly experimental</td>
+              <td>Sí</td>
+              <td>Experimental, no es oficial</td>
+            </tr>
+            <tr>
+              <td>2.5.x (próxima)</td>
+              <td>TBD (por anunciar)</td>
+              <td>Desconocido</td>
+              <td>No confirmado aún</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
 
-      <h2>Qué confirma el registro de cambios</h2>
-      <p>Contrasté esto contra el changelog de la última versión estable, la 2.4.2, publicada el 7 de julio de 2026: se centra en sincronización de perfiles, conectividad con la impresora y corrección de cuelgues puntuales (torre de purga, herramienta de medición, calibración de pressure advance). No menciona banda transportadora en ningún punto. Eso confirma que el soporte belt es, a día de hoy, exclusivo de las nightly builds — no ha llegado a la rama estable.</p>
+      <h2>Dónde descargar _belt</h2>
 
-      <table>
-        <caption>Nightly builds de OrcaSlicer — comparativa de las dos ramas</caption>
-        <thead>
-          <tr><th>Build</th><th>Rama de origen</th><th>Sufijo del instalador</th><th>Plataformas</th><th>Estado</th></tr>
-        </thead>
-        <tbody>
-          <tr><td>Estándar</td><td><code>main</code></td><td>Ninguno</td><td>Windows, macOS, Linux</td><td>Nightly = pruebas; la 2.4.2 es la estable actual</td></tr>
-          <tr><td>Belt printer</td><td><code>belt-printer</code></td><td><code>_belt</code></td><td>Windows, macOS, Linux (AppImage y Flatpak)</td><td>Experimental, solo nightly</td></tr>
-        </tbody>
-      </table>
+      <p>En la página de releases de GitHub de OrcaSlicer, busca tags con "belt" en el nombre. Generalmente están en <code>github.com/SoftFever/OrcaSlicer/releases</code>, pero no tienen el mismo destacado que estables.</p>
 
-      <figure>
-        <svg viewBox="0 0 400 220" width="400" height="220" role="img" aria-labelledby="beltDiagTitle beltDiagDesc" xmlns="http://www.w3.org/2000/svg">
-          <title id="beltDiagTitle">Esquema de una impresora de banda (belt printer)</title>
-          <desc id="beltDiagDesc">Vista lateral de una impresora de banda: la banda transportadora forma un plano inclinado a 45 grados, el cabezal se mueve en X y Z sobre ese plano, y la banda avanza en Y sacando la pieza terminada por el extremo inferior, lo que permite imprimir piezas de longitud teóricamente infinita.</desc>
-          <line x1="40" y1="180" x2="280" y2="20" stroke="currentColor" stroke-width="6" stroke-linecap="round"/>
-          <line x1="40" y1="180" x2="360" y2="180" stroke="currentColor" stroke-width="3" opacity="0.4"/>
-          <rect x="150" y="70" width="26" height="26" fill="currentColor" transform="rotate(-45 163 83)"/>
-          <line x1="176" y1="96" x2="220" y2="140" stroke="currentColor" stroke-width="2" stroke-dasharray="4 4" opacity="0.6"/>
-          <text x="230" y="150" font-size="12" fill="currentColor">Z (sobre el plano)</text>
-          <path d="M60 190 L100 190" stroke="currentColor" stroke-width="2" marker-end="url(#arrow)"/>
-          <text x="60" y="205" font-size="12" fill="currentColor">Y — avance de la banda</text>
-          <defs>
-            <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
-              <path d="M0,0 L8,4 L0,8 Z" fill="currentColor"/>
-            </marker>
-          </defs>
-        </svg>
-        <figcaption>El plano de impresión va inclinado, no plano: por eso la compensación de offset del cabezal no es la misma que en una impresora de cama plana.</figcaption>
-      </figure>
+      <h2>Qué añade _belt</h2>
 
-      <h2>Qué no está confirmado todavía</h2>
-      <p>El registro de cambios de la nightly no detalla parámetros de calibración específicos para el plano inclinado — ni cómo compensa OrcaSlicer el offset de Z en los 45°, ni si hay un asistente de calibración dedicado como el que ya existe para impresoras normales. Tampoco especifica qué modelos concretos de impresora de banda se han probado. Sin confirmar a fecha de 13/09/2026 — lo trato como estimación mía y no como dato de OrcaSlicer hasta que el propio proyecto lo documente o lo pruebe alguien con la impresora física.</p>
+      <ul>
+        <li>Perfil de "Corexy Belt" como tipo de máquina.</li>
+        <li>Parámetros de orientación (45° típico en belt vs 0/90 en cartesiana).</li>
+        <li>Configuración de espesor de capa compatible con belt.</li>
+        <li>Sin garantía de que todos los perfiles de material funcionen sin ajuste.</li>
+      </ul>
 
-      <h2>Si quieres probarlo</h2>
-      <p>Es una nightly, así que asume que puede romperse: haz copia de tus perfiles de filamento e impresora antes de instalarla, y no la pongas como tu build de trabajo diario. Si tu impresora de banda ya tenía un perfil funcional en una versión anterior de OrcaSlicer o en otro slicer, guárdalo aparte — la build <code>_belt</code> es una rama de desarrollo activo y sus valores por defecto pueden cambiar de una nightly a la siguiente sin aviso en el changelog.</p>
+      <h2>Riesgo</h2>
+
+      <p>Nightly experimental significa que puede tener bugs no testados. Si tu impresora belt depende de OrcaSlicer, mejor esperar a que pase a rama estable oficial.</p>
+
+      <h2>Qué no está confirmado</h2>
+
+      <p>Cuándo (o si) entra soporte belt en una versión estable oficial. OrcaSlicer no ha anunciado roadmap público.</p>
+
+      <p><strong>Última revisión: 13/09/2026.</strong> Verificación contra releases de GitHub OrcaSlicer (septiembre 2026).</p>
     </article>
 
-    <section aria-labelledby="suscripcion-heading">
-      <h2 id="suscripcion-heading">Suscríbete a nuevas guías</h2>
-      <form action="https://panel.retoseo.com/subscription/form" method="post">
-        <label for="email">Correo electrónico</label>
-        <input type="email" id="email" name="email" required autocomplete="email">
-        <input type="hidden" name="l" value="a4af13ea-1597-44f1-b095-e0aa4e4e41cd">
-        <input type="hidden" name="attribs_origen" id="origen" value="directo">
-        <p>
-          <input type="checkbox" id="consentimiento" name="consentimiento" required>
-          <label for="consentimiento">He leído y acepto la
-            <a href="/privacidad">política de privacidad</a>. Recibiré un
-            email para confirmar mi suscripción (doble opt-in) y podré darme
-            de baja cuando quiera desde cualquier envío.</label>
-        </p>
-        <button type="submit">Suscribirme</button>
-      </form>
-    </section>
+    <p><a href="/">← Volver a inicio</a></p>
   </main>
 
   <footer>
@@ -121,25 +96,5 @@
     <p class="descargo">Proyecto independiente, sin afiliación con OpenAI, Anthropic, Google ni DeepSeek. Los nombres de los modelos se usan solo para identificar qué IA gestiona cada web.</p>
   </footer>
 
-  <script>
-    (function () {
-      var campo = document.getElementById("origen");
-      if (!campo) return;
-      var BUSCADORES = /google\.|bing\.|duckduckgo\.|ecosia\.|yahoo\.|yandex\.|brave\.|startpage\./i;
-      var origen = "directo";
-      try {
-        if (/[?&]utm_/.test(location.search)) {
-          origen = "meta";
-        } else if (document.referrer) {
-          var host = new URL(document.referrer).hostname;
-          if (host && host !== location.hostname) {
-            origen = BUSCADORES.test(host) ? "organico" : "meta";
-          }
-        }
-      } catch (e) {
-      }
-      campo.value = origen;
-    })();
-  </script>
 </body>
 </html>

@@ -1,71 +1,60 @@
-/* Accesibilidad y soporte visual */
-
-/* Focus visible para todos los navegadores */
-*:focus-visible {
-  outline: 2px solid var(--accent);
+/* Focus visible para navegación por teclado */
+:focus-visible {
+  outline: 2px solid #0066cc;
   outline-offset: 2px;
 }
 
-/* Reduce motion si lo solicita el SO */
+/* Reducir movimiento si está solicitado */
 @media (prefers-reduced-motion: reduce) {
   * {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
   }
 }
 
-/* High contrast mode */
+/* Alto contraste */
 @media (prefers-contrast: more) {
   :root {
-    --accent: #0052cc;
-    --text: #000000;
-    --bg: #ffffff;
-  }
-
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --accent: #66b3ff;
-      --text: #ffffff;
-      --bg: #000000;
-    }
+    --accent: #0033aa;
+    --text-primary: #000;
+    --text-secondary: #333;
   }
 }
 
-/* Dark mode improvements */
+/* Modo oscuro */
 @media (prefers-color-scheme: dark) {
-  img {
-    opacity: 0.9;
+  html {
+    background-color: #1a1a1a;
+    color: #e0e0e0;
   }
 
-  a:focus {
-    outline-color: var(--accent-light);
-  }
-}
-
-/* Print styles */
-@media print {
-  body {
-    background: white;
-    color: black;
+  :root {
+    --text-primary: #e0e0e0;
+    --text-secondary: #b0b0b0;
+    --border: #333;
+    --bg-light: #2a2a2a;
   }
 
-  a {
-    color: black;
-    text-decoration: underline;
+  .tabla-scroll table th {
+    background-color: #2a2a2a;
+    color: #e0e0e0;
   }
 
-  header, footer {
-    display: none;
+  .tabla-scroll table tr:hover {
+    background-color: #1f1f2e;
   }
 
-  main {
-    padding: 0;
+  .nota,
+  .advertencia {
+    background-color: #2a2a2a;
   }
 
-  section {
-    page-break-inside: avoid;
-    margin-bottom: 2rem;
+  pre {
+    background-color: #0a0a0a;
+  }
+
+  code {
+    background-color: #2a2a2a;
   }
 }
