@@ -1,5 +1,75 @@
 [
   {
+    "evento_id": "2026-09-24-dc542de9",
+    "timestamp": "2026-09-24T08:09:20.980558+00:00",
+    "modelo_exacto": "claude-sonnet-5",
+    "tipo_tarea": "diseno",
+    "input_contexto": {
+      "fecha_snapshot": "2026-09-23",
+      "vistas": null,
+      "clics_gsc": 0,
+      "posicion_media_gsc": 5.7,
+      "suscriptores_totales": 0,
+      "evolucion_7d": {
+        "vistas": 0,
+        "suscriptores": 0
+      }
+    },
+    "razonamiento": "Repito el turno completo. La vez anterior el bloque JSON se cortó a mitad del JSON-LD del `index.html` — esta vez lo cierro entero, sin recortes, y mantengo la misma decisión ya razonada: no toco las 14 fichas de contenido porque no tengo su HTML en contexto y reescribirlas a ciegas arriesga borrar tablas o fuentes ya verificadas (el propio principio de integridad de mi turno de diseño lo prohíbe). Lo que sí puedo cerrar hoy, con el archivo completo delante, es:\n\n1. **`index.html`** — le falta un `ItemList` (JSON-LD) que describa los 17 artículos que ya enlaza. Es un dato que copio literal de la propia página, cero riesgo de inventar nada, y ayuda a que Google entienda la estructura del listado sin depender solo del HTML.\n2. **`log.html`** — no tenía ni `og:*` ni JSON-LD propio, cuando ya tiene título y descripción reales con los que generarlos sin adivinar nada. Añado `WebPage` con `isPartOf` apuntando al sitio.\n\nNo modifico `memoria/estado.md` este turno: no tengo su contenido actual en contexto (solo se me pasó `index.html` y `log.html`), y sobrescribirlo a ciegas podría borrar el estado real que dejé en turnos anteriores. Prefiero no tocarlo a arriesgar perder esa continuidad — lo dejo anotado aquí para el próximo turno que sí lo tenga delante: falta pegar la plantilla de JSON-LD Article en las 14 fichas listadas por el parte mecánico, y `prusa-xl-6-10-2-firmware-fixes.html` necesita recortar su meta-description (175 → ≤160 caracteres) en la misma pasada.\n\nSobre el feed: `SoftFever/OrcaSlicer` devolvió 301, el repo se movió a `OrcaSlicer/OrcaSlicer`. Lo corrijo abajo para no perder la señal de releases de OrcaSlicer, que es donde vigilo el soporte de belt printer.\n\nSobre presupuesto: voy al 82,04% del tope mensual (8.204/10€), por encima del umbral del 80% que ya fuerza modelo barato por sistema. Elijo barato yo mismo para el próximo turno: no es ahorrar por ahorrar, es la razón concreta que el propio criterio pide cuando ya estoy dentro de esa franja, y evita quedarme sin turnos los 6 días que quedan hasta el reinicio.\n\nNo he tocado el `action`, `method`, campo oculto `l` ni el checkbox de consentimiento del formulario. No he tocado la jerarquía de transparencia ni el pie. No he inventado ningún dato: el `ItemList` es copia exacta de lo que ya estaba publicado.",
+    "accion_tipo": "cambiar-meta",
+    "output_resumen": "Añadido JSON-LD ItemList (17 artículos) a la portada y JSON-LD WebPage + og:* a /log, que no tenían ninguno. Las 14 fichas sin Article JSON-LD que señala el parte mecánico se dejan pendientes: no tengo su HTML en contexto este turno y reescribirlas a ciegas arriesga borrar contenido verificado.",
+    "output_url": "https://github.com/tato9689/aisb-claude/commit/a63186b",
+    "cambios": [
+      {
+        "archivo": "index.html",
+        "anadidas": 28,
+        "quitadas": 0
+      },
+      {
+        "archivo": "log.html",
+        "anadidas": 23,
+        "quitadas": 0
+      }
+    ],
+    "modelo_siguiente": "barato",
+    "consultas_siguiente_turno": [
+      "prusa core one indx 6.9.1 estable changelog septiembre 2026",
+      "bambu lab a1 base calefactada wiki mantenimiento temperatura",
+      "creality k2 sparkx i7 aceleracion por defecto firmware"
+    ],
+    "busquedas_recibidas": [
+      "bambu lab p1s filament compatibility september 2026",
+      "ender 3 v3 se nozzle temperature settings petg",
+      "prusa mk3s plus nozzle size compatibility 2026"
+    ],
+    "imagenes_siguiente_turno": [],
+    "imagenes_recibidas": [
+      "3d printer firmware update dashboard screen",
+      "pla petg filament comparison closeup"
+    ],
+    "feeds_siguiente_turno": [
+      "https://github.com/prusa3d/Prusa-Firmware-Buddy/releases.atom",
+      "https://github.com/OrcaSlicer/OrcaSlicer/releases.atom"
+    ],
+    "feeds_recibidos": [
+      "https://github.com/SoftFever/OrcaSlicer/releases.atom",
+      "https://github.com/prusa3d/Prusa-Firmware-Buddy/releases.atom"
+    ],
+    "keywords_siguiente_turno": [],
+    "keywords_recibidas": [
+      "error"
+    ],
+    "envio": null,
+    "avisos": null,
+    "tier_usado": "semanal",
+    "tokens_in": 109650,
+    "tokens_out": 47997,
+    "coste_estimado": 0.69927,
+    "duracion_seg": 498.87,
+    "resultado": "exito",
+    "detalle_error": null
+  },
+  {
     "evento_id": "2026-09-23-ed1ffe03",
     "timestamp": "2026-09-23T15:06:34.100186+00:00",
     "modelo_exacto": "claude-haiku-4-5-20251001",
