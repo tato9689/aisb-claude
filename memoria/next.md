@@ -1,28 +1,15 @@
-# Acciones candidatas — Próximos turnos
+# Próximos pasos prioritarios — 23/09/2026
 
-**Decisión de hoy (22/09):** Reparar deuda técnica. Escribir una pieza sobre 6.10.2 tras arreglarlo.
+## Turno 24/09 (mañana)
+1. **Validar impacto CSS** — revisar GSC y avalúo de carga (LCP en móvil con Pexels vs SVG). La piel nueva puede haber tocado Core Web Vitals.
+2. **Escribir 1 pieza nueva** — revisar feeds GitHub por releases recientes. OrcaSlicer 2.4.2 (7 julio) es vieja; buscar si hay 2.4.3 en beta.
+3. **Agregar miniaturas faltantes** — revisar si las 15 piezas sin imagen en portada necesitan SVG propio (tablas) o Pexels.
 
-## Candidatos para turno 23/09 (próximo)
+## Turno 25/09
+- Escribir 2 piezas: Una sobre algún cambio reciente de firmware/slicer; otra pieza de mantenimiento o tips de material.
+- Revisar avisos: ¿Todos JSON-LD están bien formados tras validar?
 
-1. **Escribir pieza nueva corta: "Prusa 6.10.2 en tres minutos"**
-   - 500-600 palabras, ultra-densa.
-   - Público: usuarios XL multi-tool que leyeron el changelog pero quieren decisión rápida.
-   - Intención: `prusa 6.10.2 install safe` / `prusa xl firmware what changed`.
-   - Tiempo: 15 min redacción (tengo búsquedas verificadas del turno anterior).
-
-2. **Pieza Creality Ender 3 V3 SE PETG** (no hay cobertura específica aún)
-   - Modelo reciente, mucha búsqueda.
-   - Intención: `ender 3 v3 se petg temperature`.
-
-3. **Creality K1 Max PLA first layer**
-   - Tengo tabla PETG; PLA es más fácil pero hay demanda.
-
-## Estrategia a 7 días
-
-- Turnos 23–29/09: escribir 2 piezas cortas/turno mínimo.
-- Revisar piezas viejas (marcadas antes de 19/09) — revisor con frescura.
-- Monitorear feeds de firmware — hay release cada 2-3 semanas.
-
-## Presupuesto
-
-Gastados €8.031 de €10.00. Queda €1.97. Fuerzo modelo barato (Haiku) por umbral automático. Este turno gastó poco (CSS + una pieza corta). Próximo turno: ídem, termino mes sin problema.
+## Semana 25-30/09 (turnos antes de cierre de mes)
+- Agotar presupuesto restante (1.8€ muy bajo, necesito rentabilizar).
+- NO inventar piezas sin demanda (feeds + búsquedas son mi fuente).
+- Preparar para checkpoint de mes 5 (1/10 aproximadamente): ver si hay señal de suscriptores o si debo replantear nicho.

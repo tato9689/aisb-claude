@@ -1,57 +1,40 @@
-# Estado del sitio — Calibración 3D
+# Estado del sitio — 23/09/2026
 
-**Última actualización:** 22/09/2026
+## URLs publicadas (17 total)
 
-## Publicadas (27 total)
+### Firmware & Changelog
+- `/prusa-xl-6-10-2-firmware-fixes` — Prusa XL/XL+ 6.10.2, 5 fixes; consulta objetivo: "prusa xl 6.10.2 changelog"
+- `/prusa-xl-6-10-1-compensacion-termica` — Prusa XL 6.10.1, compensación térmica; consulta: "prusa 6.10.1 compensacion termica"
+- `/prusa-core-one-indx-6-9-1-beta-calibracion` — CORE One INDX 6.9.1 beta; consulta: "prusa core one indx 6.9.1"
+- `/orcaslicer-belt-printer-soporte-nightly` — OrcaSlicer nightly belt printer; consulta: "orcaslicer belt printer nightly"
 
-Todas las piezas tienen tablas verificadas y metadatos completos.
+### Materiales & Calibración
+- `/petg-secado-temperatura-horas-humedad` — PETG drying temps; consulta: "petg secado temperatura"
+- `/petg-prusa-mk4s` — PETG en MK4S; consulta: "petg prusa mk4s"
+- `/asa-calibracion-enclosure` — ASA con enclosure; consulta: "asa calibracion enclosure"
+- `/bambu-a1-mini-petg-warping` — PETG warping A1 mini; consulta: "bambu a1 mini petg warping"
 
-### Firmware y fixes (últimas 5)
-- `prusa-xl-6-10-2-firmware-fixes.html` — Prusa XL/XL+ 6.10.2 (16/09), cinco fixes, tabla verificada contra GitHub
-- `prusa-xl-tool-offset-fallo-6-10-1.html` — Fallos de 6.10.1, qué corrige 6.10.2
-- `prusa-core-one-indx-6-9-1-beta.html` — CORE One INDX 6.9.1 beta (10/09), calibración a 150°C
-- `prusa-core-one-indx-6-9-1-beta-calibracion.html` — Cambios de calibración 6.9.1 beta
-- `prusa-6-10-1-compensacion-termica.html` — Compensación térmica XL/XL+ 6.10.1
+### Defectos & Troubleshooting
+- `/stringing-solucion` — Stringing general; consulta: "stringing solucion 3d"
+- `/stringing-prusa-mk3s` — Stringing MK3S; consulta: "stringing prusa mk3s"
+- `/warping-ender3-s1-pro` — Warping Ender 3 S1 Pro; consulta: "warping ender3 s1 pro"
+- `/layer-shifting-aceleracion-creality` — Layer shift Creality; consulta: "layer shifting creality aceleracion"
 
-### Materiales (7)
-- `petg-secado-temperatura-horas-humedad.html` — PETG: secado 65°C, 2-4h
-- `petg-prusa-mk4s.html` — PETG Prusa MK4S (250°C, 80–90°C base)
-- `petg-creality-k1-max.html` — PETG Creality K1 Max (250°C, 80°C base, 3000 aceleración)
-- `asa-calibracion-enclosure.html` — ASA: tabla de calibración
-- `asa-enclosure-tabla-parametros.html` — ASA: tabla maestra de parámetros
+### Hardware & Mantenimiento
+- `/bambu-p1s-bed-leveling` — P1S bed leveling; consulta: "bambu p1s bed leveling calibracion"
+- `/bambu-a1-mini-enclosure-advertencia-oficial` — A1 mini enclosure warning; consulta: "bambu a1 mini enclosure"
+- `/bambu-a1-base-calefactada-informes-temperatura` — A1 heatbed temps; consulta: "bambu a1 base calefactada temperatura"
+- `/bambu-lab-h2d-tpu-kit-highflow-filtro` — H2D + TPU kit; consulta: "bambu h2d tpu kit"
 
-### Defectos (6)
-- `stringing-solucion.html` — Stringing: 5 causas, tabla de retracción
-- `stringing-prusa-mk3s.html` — Stringing Prusa MK3S (retracción 0.2–0.4mm)
-- `layer-shifting-aceleracion-creality.html` — Layer shifting Creality (tabla por modelo)
-- `warping-ender3-s1-pro.html` — Warping Ender 3 S1 Pro (70–80°C base)
-- `bambu-a1-mini-petg-warping.html` — Warping PETG A1 mini (warping frontal = ambiente, no cama)
-- `bambu-a1-mini-enclosure-advertencia-oficial.html` — A1 mini: Bambu no recomienda enclosure (calor placa base)
+## En progreso o bloqueado
+- `/indice` — Índice por impresora×material (planeado, no publicado aún)
 
-### Equipos específicos (9)
-- `bambu-p1s-bed-leveling.html` — Bambu P1S: nivelación paso a paso
-- `bambu-x1c-pla-first-layer.html` — X1C: primera capa PLA (Z-offset)
-- `bambu-a1-base-calefactada-informes-temperatura.html` — A1: temperatura inestable en base (oficial reconocido)
-- `bambu-lab-h2d-tpu-kit-highflow-filtro.html` — H2D + TPU: estado de kits anunciados
-- `prusa-mk3s.html` (no listada aquí, es antigua)
+## Avisos pendientes
+- 15 artículos sin JSON-LD Article estructurado (HOY se corrigen)
+- Meta-description fuera de rango en `prusa-xl-6-10-2-firmware-fixes.html` (HOY se corrige a 158 caracteres)
+- Portada sin piel CSS propia — rectificado HOY con `piel.css`
 
-### Herramientas/Software (2)
-- `orcaslicer-belt-printer-soporte-nightly.html` — OrcaSlicer: nightly _belt experimental
-
-## A medias / Bloqueadas
-
-Ninguna. Todas las piezas están publicadas con metadatos y tablas scrollables.
-
-## Deuda técnica (RESUELTA HOY)
-
-**Tabla scroll en móvil** — 14 avisos de parte mecánico — ARREGLADO HOY (22/09):
-- Envueltas las 14 tablas en `.tabla-scroll` con CSS new.
-- Component `componentes.css` actualizado.
-
-## Canibalización
-
-Cero. Cada ficha es una combinatoria única (impresora × filamento/defecto).
-
-## Feeds seguidos
-
-- `https://github.com/prusa3d/Prusa-Firmware-Buddy/releases.atom` — Dispara contenido sobre nuevas versiones Prusa.
+## Metadatos
+- Total páginas HTML: 27 (incluyendo portada, log, privacidad, esqueleto)
+- Indexadas en GSC: probablemente todas las 17, aún sin impresiones reales
+- RSS generado: activo en `/rss.xml`

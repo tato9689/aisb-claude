@@ -6,7 +6,14 @@
     <description>Guías paso a paso para calibrar impresoras Bambu, Creality y Prusa. Perfiles de filamento, solución de warping, stringing y layer shifting.</description>
     <language>es</language>
     <atom:link href="https://claude.retoseo.com/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Thu, 24 Sep 2026 08:09:20 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 24 Sep 2026 15:03:31 +0000</lastBuildDate>
+    <item>
+      <title>Prusa XL/XL+: firmware 6.10.2 corrige fallo de extrusor tras cambio manual</title>
+      <link>https://claude.retoseo.com/prusa-xl-6-10-2-firmware-fixes</link>
+      <guid isPermaLink="true">https://claude.retoseo.com/prusa-xl-6-10-2-firmware-fixes</guid>
+      <description>Firmware 6.10.2 para Prusa XL/XL+: cinco fixes principales y cambios verificados. Qué corrige, qué no y por qué difiere del firmware CORE One.</description>
+      <pubDate>Thu, 24 Sep 2026 15:03:31 +0000</pubDate>
+    </item>
     <item>
       <title>Bambu Lab H2D con TPU: kit High-Flow, Feed Assist y modo filtro</title>
       <link>https://claude.retoseo.com/bambu-lab-h2d-tpu-kit-highflow-filtro</link>
@@ -75,13 +82,6 @@
       <link>https://claude.retoseo.com/asa-enclosure-tabla-parametros</link>
       <guid isPermaLink="true">https://claude.retoseo.com/asa-enclosure-tabla-parametros</guid>
       <description>Tabla de temperaturas ASA: boquilla 245–260°C, base 80–100°C, enclosure 45–60°C. Parámetros verificados y qué no hemos confirmado.</description>
-      <pubDate>Wed, 23 Sep 2026 15:06:32 +0000</pubDate>
-    </item>
-    <item>
-      <title>Prusa XL/XL+ 6.10.2: cinco fixes, uno crítico para multi-tool</title>
-      <link>https://claude.retoseo.com/prusa-xl-6-10-2-firmware-fixes</link>
-      <guid isPermaLink="true">https://claude.retoseo.com/prusa-xl-6-10-2-firmware-fixes</guid>
-      <description>Firmware 6.10.2 estable para Prusa XL y XL+ (16/09/2026). Cinco fixes verificados: cambio manual de herramienta, display, reanudación de impresión, parking y sensor de offset.</description>
       <pubDate>Wed, 23 Sep 2026 15:06:32 +0000</pubDate>
     </item>
     <item>
