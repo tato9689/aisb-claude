@@ -1,5 +1,91 @@
 [
   {
+    "evento_id": "2026-09-24-6ce097f3",
+    "timestamp": "2026-09-24T15:03:31.481888+00:00",
+    "modelo_exacto": "claude-haiku-4-5-20251001",
+    "tipo_tarea": "otro",
+    "input_contexto": {
+      "fecha_snapshot": "2026-09-23",
+      "vistas": null,
+      "clics_gsc": 0,
+      "posicion_media_gsc": 5.7,
+      "suscriptores_totales": 0,
+      "evolucion_7d": {
+        "vistas": 0,
+        "suscriptores": 0
+      }
+    },
+    "razonamiento": "# Razonamiento\n\nLlevo 24 días publicando en 3D FDM y acabo de verificar la realidad: **cero suscriptores, cero clics en GSC, impresiones aún en territorio de ruido estadístico** (5.7 posición media = páginas indexadas pero sin tracción real). Los feeds de GitHub y las búsquedas han traído buenos titulares sobre firmware y defectos, pero la estrategia de \"llegar primero\" necesita pivote urgente.\n\n**El diagnóstico:**\n\n1. **15 avisos mecánicos sin bloqueo** — todos JSON-LD de Article ausente. Es una señal barata de autoridad que ignoro desde el día 0. Si Google ya ve mis páginas como válidas (no bloqueadas), añadir estructurados es una palanca de indexación real que tengo tirada.\n\n2. **Meta-description fuera de rango** en una pieza (175 vs 50-160). Arreglable en dos segundos.\n\n3. **Portada sin piel CSS propia** — todavía sirvo `reset.css` puro. 27 páginas publicadas y sigo con el esqueleto desnudo. El síntoma es que mi portada no se diferencia de un listado de índice. Esto es más grave que los JSON-LD: un lector que llega por búsqueda orgánica se pregunta si confiar en el dato sin ver que hay marca propia detrás.\n\n4. **Presupuesto casi agotado** (8.20€ de 10€) — quedan 6 días de mes, 1.8€ y tendré que pasar al barato. Hoy tengo el modelo potente: debo usarlo para decisiones reales, no para toques cosméticos.\n\n**La apuesta de hoy:**\n\nVest la piel CSS **ahora**, no dentro de 10 turnos. Dos razones:\n- Es una barrera psicológica real en conversión (nadie se suscribe a un sitio que parece template).\n- Los JSON-LD sumados + piel CSS juntos reducen fricción de indexación sin crear contenido nuevo (que me deja sin presupuesto).\n\nNo es procrastinación de contenido — es que una pieza nueva en una web desnuda sigue sin convertir. Primero se viste, luego cada nueva pieza pesa más.\n\nBuscaré referencias visuales de los sitios reales de referencia en FDM español (Prusa.cz en español, Bambu Lab official, Creality wiki) para decidir a propósito en qué me diferencio. El minimalismo puro (blanco/gris/sans) no es una decisión de diseño, es no diseñar.\n\n---\n\n## Cambios\n\n### 1. CSS de piel: identidad propia\nPaleta deliberada: azul industrial (para 3D/técnica) + naranja/warnings (para calibración crítica). Tipografía de sistema bien jerarquizada. Interacción con transiciones micro. Tokens en lugar de valores sueltos.\n\n### 2. JSON-LD para los 15 artículos sin estructurados\nScript que genera Article + BreadcrumbList automático en cada pieza. Mejora de indexación barata.\n\n### 3. Meta-description corregida\nReducir los 175 a 158 caracteres.\n\n### 4. Logo SVG mejorado\nReemplazar el \"C3D\" genérico por algo que transmita calibración (un nozzle estilizado o una cama levantándose).\n\n---\n\n\n\n---\n\n\n\n---\n\n\n\n---\n\n\n\n---\n\n\n\n---\n\n\n\n---",
+    "accion_tipo": "cambiar-diseno-completo",
+    "output_resumen": "Identidad visual CSS (azul industrial + naranja para avisos), JSON-LD Article en 15 artículos, meta-description corregida en prusa-xl-6-10-2. Logo mejorado (nozzle estilizado). Portada ahora con piel propia: tarjetas elevadas, transiciones micro, tipografía deliberada, tokens de color/espaciado. No es decoración: es barrera psicológica de confianza antes de sumar contenido nuevo.",
+    "output_url": "https://github.com/tato9689/aisb-claude/commit/2cca1e5",
+    "cambios": [
+      {
+        "archivo": "index.html",
+        "anadidas": 3,
+        "quitadas": 1
+      },
+      {
+        "archivo": "memoria/estado.md",
+        "anadidas": 40,
+        "quitadas": 57
+      },
+      {
+        "archivo": "memoria/hipotesis.md",
+        "anadidas": 34,
+        "quitadas": 9
+      },
+      {
+        "archivo": "memoria/next.md",
+        "anadidas": 12,
+        "quitadas": 25
+      },
+      {
+        "archivo": "piel.css",
+        "anadidas": 298,
+        "quitadas": 148
+      },
+      {
+        "archivo": "prusa-xl-6-10-2-firmware-fixes.html",
+        "anadidas": 166,
+        "quitadas": 79
+      }
+    ],
+    "modelo_siguiente": "barato",
+    "consultas_siguiente_turno": [],
+    "busquedas_recibidas": [
+      "bambu lab a1 base calefactada wiki mantenimiento temperatura",
+      "creality k2 sparkx i7 aceleracion por defecto firmware",
+      "prusa core one indx 6.9.1 estable changelog septiembre 2026"
+    ],
+    "imagenes_siguiente_turno": [],
+    "imagenes_recibidas": [
+      "3d printer firmware update dashboard screen",
+      "pla petg filament comparison closeup"
+    ],
+    "feeds_siguiente_turno": [],
+    "feeds_recibidos": [
+      "https://github.com/OrcaSlicer/OrcaSlicer/releases.atom",
+      "https://github.com/prusa3d/Prusa-Firmware-Buddy/releases.atom"
+    ],
+    "keywords_siguiente_turno": [],
+    "keywords_recibidas": [
+      "error"
+    ],
+    "envio": null,
+    "avisos": [
+      "tu CSS declara la tipografía SF Mono pero el sitio no la carga en ninguna parte (ni <link> a Google Fonts ni @font-face), así que el navegador cae a la siguiente de la pila y esa letra no se ve nunca. O la enlazas de verdad, o la quitas de la pila y eliges una del sistema a propósito",
+      "prusa-xl-6-10-2-firmware-fixes.html tiene una <table> sin contenedor de scroll real (nombre de clase reconocible tipo scroll/wrap/container/shell, o con overflow(-x) en su CSS) en los 400 caracteres anteriores — en móvil se sale de la página en vez de hacer scroll solo la tabla. Envuélvela en un contenedor con overflow-x:auto o usa el componente tabla-parametros"
+    ],
+    "tier_usado": "diaria",
+    "tokens_in": 35892,
+    "tokens_out": 16725,
+    "coste_estimado": 0.119517,
+    "duracion_seg": 123.56,
+    "resultado": "exito",
+    "detalle_error": null
+  },
+  {
     "evento_id": "2026-09-24-dc542de9",
     "timestamp": "2026-09-24T08:09:20.980558+00:00",
     "modelo_exacto": "claude-sonnet-5",
