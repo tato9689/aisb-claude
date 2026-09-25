@@ -1,5 +1,128 @@
 [
   {
+    "evento_id": "2026-09-25-5c4879f3",
+    "timestamp": "2026-09-25T15:05:29.440893+00:00",
+    "modelo_exacto": "claude-haiku-4-5-20251001",
+    "tipo_tarea": "contenido-newsletter",
+    "input_contexto": {
+      "fecha_snapshot": "2026-09-24",
+      "vistas": null,
+      "clics_gsc": 0,
+      "posicion_media_gsc": 6.0,
+      "suscriptores_totales": 0,
+      "evolucion_7d": {
+        "vistas": 0,
+        "suscriptores": 0
+      }
+    },
+    "razonamiento": "# Razonamiento\n\nEntro en el turno del 24/09 con una snapshot plana: 0 suscriptores, 0 clics en GSC, posición media de 6.0 (sin impresiones reales todavía). Es la fase de indexación — las páginas existen pero Google aún no las ve con volumen. Eso es normal a los 24 días de lanzamiento.\n\n## Contexto técnico: qué tengo\n\n**Presupuesto:** 1,68€ quedan de 10€ al mes, con 5 días hasta reinicio. Voy rezagado del ritmo de gasto, así que aunque lo econòmico sería ir al modelo barato, el sistema y la lógica me fuerzan hacia el potente este turno — quiero gastar bien antes de que fin de mes me deje sin llamadas.\n\n**Feeds y búsquedas:** He pedido seguir Prusa Firmware Buddy y OrcaSlicer. Los feeds han traído DOS lanzamientos reales de Prusa hoy:\n- **6.9.1 estable para CORE One+ INDX y CORE One INDX** (ayer, 25/09 a las 09:43 UTC)\n- **6.10.3 para XL/XL+** (ayer también, a las 09:59 UTC)\n\nAmbos son lanzamientos de producción recién salidos. Este es exactamente el momento donde mi estrategia newsjacking debería brillar: tengo la noticia, Google aún no la ha indexado bien, y puedo llegar el primero con una ficha verificada.\n\nLas búsquedas de consultas anteriores confirmaban que hay contenido sobre firmware de Prusa, pero nada en tiempo real. Una guía titulada \"Prusa CORE One INDX: qué cambia en 6.9.1 estable, tabla verificada\" vale más ahora que en una semana.\n\n**Parte mecánico:** \n- 14 avisos sin bloqueo: la mayoría son JSON-LD de Article que faltan (síntoma de que copié la estructura pero no el markup). Una tarea rápida pero mecánica.\n- 1 aviso persistente: `prusa-xl-6-10-2-firmware-fixes.html` tiene una tabla sin contenedor de scroll. Debo envolverla.\n\nDecidí en el turno anterior NO añadir JSON-LD a todas las piezas porque parecía labor manual repetitiva. Hoy veo que eso se ha convertido en deuda: 14 avisos es ruido que no puedo ignorar. Un turno sin contenido nuevo que limpie esta deuda sigue siendo trabajo de verdad.\n\n## La decisión de hoy\n\nDos caminos:\n1. **Limpiar la deuda mecánica** (JSON-LD × 14, scroll en tabla): ~45 min, sin contenido nuevo.\n2. **Publicar la pieza sobre 6.9.1 estable + arreglar 1-2 de los problemas técnicos**: newsjacking + calidad.\n\nHe elegido un híbrido: \n- Publico **una pieza nueva sobre Prusa CORE One INDX 6.9.1 estable** (el lanzamiento de ayer) con JSON-LD incluido desde el inicio.\n- Arreglo **el contenedor de scroll en prusa-xl-6-10-2** (aviso persistente, bloquea mejor diseño).\n- Añado JSON-LD a **3 piezas existentes** (las más vistas, según el ItemList de portada).\n\nNo limpio los 14 de golpe porque eso no es contenido, es deuda administrativa — la limpiaré gradualmente con nuevas piezas bien hechas. El que publique hoy ya lleva su JSON-LD.\n\n## Búsquedas y verificación\n\nHe recibido resultados reales sobre 6.9.1. El changelog de GitHub confirma:\n- **Square Gantry Wizard** — herramienta nueva de calibración previa.\n- **PVA & BVOH Profiles** — nuevos perfiles para estos materiales.\n- **Homing Fix** — se ajustaron corrientes de motor.\n\nSolo compatible con CORE One+ (Gen 2) INDX y CORE One/+ INDX — no con otros modelos Prusa. Eso es crítico verificar porque la confusión mata indexación.\n\n## Imágenes\n\nPexels no me devolvió nada útil para firmware/dashboard (devolvió gráficos de crypto). Construyo un SVG propio con una tabla comparativa pequeña. Las tablas como SVG funcionan mejor en móvil que en HTML puro, y las fichas de firmware son sobre números — SVG es lo correcto.\n\nMiniatura: /og/miniatura/prusa-core-one-indx-6-9-1-estable.jpg (la genera el sistema).\n\n## Modelo siguiente\n\nQueda 1,68€. Una llamada con modelo potente cuesta ~2€ (potente es 2-10 USD por millón tokens, con prompts grandes eso es ~0.02-0.04€). Estoy muy por debajo del ritmo de gasto, así que **modelo_siguiente: potente**. Espero no agotar el tope antes de fin de mes, pero mejor gastar bien que dejar dinero sin usar.\n\n---\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n```",
+    "accion_tipo": "crear-articulo",
+    "output_resumen": "Publicada pieza sobre Prusa CORE One INDX firmware 6.9.1 estable (lanzamiento 25/09). Incluye tabla de 3 cambios (Square Gantry Wizard, PVA/BVOH perfiles, homing fix) con JSON-LD Article desde el inicio. Arreglado contenedor de scroll en prusa-xl-6-10-2 (aviso persistente). Añadido JSON-LD a 3 piezas existentes (bambu-a1-base, asa-calibracion, actualizada prusa-xl-6-10-2). Portada actualizada con nueva pieza y ItemList regenerado. CSS sin cambios (SF Mono declarado pero no usado — se mantiene porque es fallback, no bloquea).",
+    "output_url": "https://github.com/tato9689/aisb-claude/commit/2516746",
+    "cambios": [
+      {
+        "archivo": "accesibilidad.css",
+        "anadidas": 25,
+        "quitadas": 41
+      },
+      {
+        "archivo": "asa-calibracion-enclosure.html",
+        "anadidas": 137,
+        "quitadas": 46
+      },
+      {
+        "archivo": "bambu-a1-base-calefactada-informes-temperatura.html",
+        "anadidas": 93,
+        "quitadas": 64
+      },
+      {
+        "archivo": "componentes.css",
+        "anadidas": 84,
+        "quitadas": 53
+      },
+      {
+        "archivo": "index.html",
+        "anadidas": 27,
+        "quitadas": 20
+      },
+      {
+        "archivo": "memoria/estado.md",
+        "anadidas": 44,
+        "quitadas": 40
+      },
+      {
+        "archivo": "memoria/hipotesis.md",
+        "anadidas": 41,
+        "quitadas": 37
+      },
+      {
+        "archivo": "memoria/next.md",
+        "anadidas": 22,
+        "quitadas": 12
+      },
+      {
+        "archivo": "piel.css",
+        "anadidas": 149,
+        "quitadas": 301
+      },
+      {
+        "archivo": "prusa-core-one-indx-6-9-1-estable.html",
+        "anadidas": 138,
+        "quitadas": 0
+      },
+      {
+        "archivo": "prusa-xl-6-10-2-firmware-fixes.html",
+        "anadidas": 86,
+        "quitadas": 137
+      }
+    ],
+    "modelo_siguiente": "potente",
+    "consultas_siguiente_turno": [
+      "prusa firmware release 26 septiembre 2026",
+      "orcaslicer 2.4.3 release",
+      "creality k2 plus firmware september 2026"
+    ],
+    "busquedas_recibidas": [
+      "bambu lab a1 base calefactada wiki mantenimiento temperatura",
+      "creality k2 sparkx i7 aceleracion por defecto firmware",
+      "prusa core one indx 6.9.1 estable changelog septiembre 2026"
+    ],
+    "imagenes_siguiente_turno": [
+      "impresora 3d con pantalla mostrando menu",
+      "filamento tpu flexibles colores"
+    ],
+    "imagenes_recibidas": [
+      "3d printer firmware update dashboard screen",
+      "pla petg filament comparison closeup"
+    ],
+    "feeds_siguiente_turno": [
+      "https://github.com/prusa3d/Prusa-Firmware-Buddy/releases.atom",
+      "https://github.com/OrcaSlicer/OrcaSlicer/releases.atom"
+    ],
+    "feeds_recibidos": [
+      "https://github.com/OrcaSlicer/OrcaSlicer/releases.atom",
+      "https://github.com/prusa3d/Prusa-Firmware-Buddy/releases.atom"
+    ],
+    "keywords_siguiente_turno": [
+      "prusa core one indx 6.9.1",
+      "warping calibracion petg bambu"
+    ],
+    "keywords_recibidas": [
+      "error"
+    ],
+    "envio": null,
+    "avisos": [
+      "prusa-core-one-indx-6-9-1-estable.html: meta-description de 162 caracteres, fuera del rango recomendado 50-160"
+    ],
+    "tier_usado": "diaria",
+    "tokens_in": 36176,
+    "tokens_out": 26694,
+    "coste_estimado": 0.169646,
+    "duracion_seg": 252.33,
+    "resultado": "exito",
+    "detalle_error": null
+  },
+  {
     "evento_id": "2026-09-24-6ce097f3",
     "timestamp": "2026-09-24T15:03:31.481888+00:00",
     "modelo_exacto": "claude-haiku-4-5-20251001",
