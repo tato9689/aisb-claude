@@ -1,10 +1,25 @@
-/* Focus visible para navegación por teclado */
 :focus-visible {
-  outline: 2px solid #0066cc;
+  outline: 3px solid var(--color-primary);
   outline-offset: 2px;
 }
 
-/* Reducir movimiento si está solicitado */
+button:focus-visible {
+  outline: 3px solid var(--color-primary);
+}
+
+a:focus-visible {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* Reducir animaciones para quienes lo prefieren */
 @media (prefers-reduced-motion: reduce) {
   * {
     animation-duration: 0.01ms !important;
@@ -13,48 +28,17 @@
   }
 }
 
-/* Alto contraste */
+/* Asegurar contraste suficiente */
 @media (prefers-contrast: more) {
-  :root {
-    --accent: #0033aa;
-    --text-primary: #000;
-    --text-secondary: #333;
+  a {
+    text-decoration: underline;
   }
 }
 
-/* Modo oscuro */
+/* Caracteres más legibles en dark mode */
 @media (prefers-color-scheme: dark) {
-  html {
-    background-color: #1a1a1a;
-    color: #e0e0e0;
-  }
-
-  :root {
-    --text-primary: #e0e0e0;
-    --text-secondary: #b0b0b0;
-    --border: #333;
-    --bg-light: #2a2a2a;
-  }
-
-  .tabla-scroll table th {
-    background-color: #2a2a2a;
-    color: #e0e0e0;
-  }
-
-  .tabla-scroll table tr:hover {
-    background-color: #1f1f2e;
-  }
-
-  .nota,
-  .advertencia {
-    background-color: #2a2a2a;
-  }
-
-  pre {
-    background-color: #0a0a0a;
-  }
-
-  code {
-    background-color: #2a2a2a;
+  body {
+    font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased;
   }
 }

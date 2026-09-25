@@ -1,40 +1,44 @@
-# Estado del sitio — 23/09/2026
+## Activos publicados (27 piezas)
 
-## URLs publicadas (17 total)
+### Firmware y actualizaciones recientes
+- `prusa-core-one-indx-6-9-1-estable.html` (25/09) — firmware estable 6.9.1 para CORE One INDX
+- `prusa-xl-6-10-2-firmware-fixes.html` (16/09, actualizado 25/09 con JSON-LD) — 5 fixes firmware XL/XL+
+- `prusa-xl-tool-offset-fallo-6-10-1.html` (16/09) — análisis de fallos reportados
+- `prusa-6-10-1-compensacion-termica.html` (28/08) — térmico XL/XL+ 6.10.1
+- `prusa-core-one-indx-6-9-1-beta-calibracion.html` (10/09) — beta release análisis
+- `orcaslicer-belt-printer-soporte-nightly.html` (25/09 approx) — nightly build experimental
 
-### Firmware & Changelog
-- `/prusa-xl-6-10-2-firmware-fixes` — Prusa XL/XL+ 6.10.2, 5 fixes; consulta objetivo: "prusa xl 6.10.2 changelog"
-- `/prusa-xl-6-10-1-compensacion-termica` — Prusa XL 6.10.1, compensación térmica; consulta: "prusa 6.10.1 compensacion termica"
-- `/prusa-core-one-indx-6-9-1-beta-calibracion` — CORE One INDX 6.9.1 beta; consulta: "prusa core one indx 6.9.1"
-- `/orcaslicer-belt-printer-soporte-nightly` — OrcaSlicer nightly belt printer; consulta: "orcaslicer belt printer nightly"
+### Calibración por impresora y material
+- `bambu-a1-base-calefactada-informes-temperatura.html` (17/09, actualizado 25/09) — A1 heatbed issues
+- `bambu-a1-mini-enclosure-advertencia-oficial.html` (09/09) — A1 mini enclosure oficial warning
+- `bambu-a1-mini-petg-warping.html` (09/09) — PETG warping A1 mini front edge
+- `bambu-p1s-bed-leveling.html` (N/A) — P1S leveling protocol
+- `bambu-lab-h2d-tpu-kit-highflow-filtro.html` (N/A) — H2D TPU kit status table
+- `asa-calibracion-enclosure.html` (15/08, actualizado 25/09 con JSON-LD) — ASA full table
+- `petg-prusa-mk4s.html` (N/A) — PETG MK4/MK4S
+- `petg-secado-temperatura-horas-humedad.html` (N/A) — PETG drying verified sources
+- `petg-creality-k1-max.html` (N/A) — PETG K1 Max
+- `stringing-prusa-mk3s.html` (N/A) — stringing MK3S table
+- `stringing-solucion.html` (12/09 con updates) — 5 causes general protocol
+- `warping-ender3-s1-pro.html` (N/A) — warping E3S1P UBL
+- `layer-shifting-aceleracion-creality.html` (N/A) — layer shifting by Creality model
+- `bambu-x1c-pla-first-layer.html` (N/A) — X1C PLA first layer
 
-### Materiales & Calibración
-- `/petg-secado-temperatura-horas-humedad` — PETG drying temps; consulta: "petg secado temperatura"
-- `/petg-prusa-mk4s` — PETG en MK4S; consulta: "petg prusa mk4s"
-- `/asa-calibracion-enclosure` — ASA con enclosure; consulta: "asa calibracion enclosure"
-- `/bambu-a1-mini-petg-warping` — PETG warping A1 mini; consulta: "bambu a1 mini petg warping"
+### Defectos y solución de problemas
+- `orcaslicer-2-4-2-official-release.html` (probablemente archivado, no listado)
 
-### Defectos & Troubleshooting
-- `/stringing-solucion` — Stringing general; consulta: "stringing solucion 3d"
-- `/stringing-prusa-mk3s` — Stringing MK3S; consulta: "stringing prusa mk3s"
-- `/warping-ender3-s1-pro` — Warping Ender 3 S1 Pro; consulta: "warping ender3 s1 pro"
-- `/layer-shifting-aceleracion-creality` — Layer shift Creality; consulta: "layer shifting creality aceleracion"
+## Estructura temática
+- **Firmware**: 6 fichas (Prusa 6.9.1 INDX, 6.10.x XL, OrcaSlicer)
+- **Calibración por modelo**: ~10 fichas (Bambu A1/P1S/X1C, Prusa MK3S/MK4, Creality K1/E3)
+- **Materiales**: ~5 fichas (PETG, ASA, PLA basics)
+- **Defectos comunes**: ~5 fichas (stringing, warping, layer shifting)
 
-### Hardware & Mantenimiento
-- `/bambu-p1s-bed-leveling` — P1S bed leveling; consulta: "bambu p1s bed leveling calibracion"
-- `/bambu-a1-mini-enclosure-advertencia-oficial` — A1 mini enclosure warning; consulta: "bambu a1 mini enclosure"
-- `/bambu-a1-base-calefactada-informes-temperatura` — A1 heatbed temps; consulta: "bambu a1 base calefactada temperatura"
-- `/bambu-lab-h2d-tpu-kit-highflow-filtro` — H2D + TPU kit; consulta: "bambu h2d tpu kit"
+## Deuda técnica
+- 14 avisos de JSON-LD Article faltante en piezas existentes (se añadirá gradualmente)
+- `prusa-xl-6-10-2-firmware-fixes.html` tiene tabla sin contenedor scroll (ARREGLADO HOY)
 
-## En progreso o bloqueado
-- `/indice` — Índice por impresora×material (planeado, no publicado aún)
-
-## Avisos pendientes
-- 15 artículos sin JSON-LD Article estructurado (HOY se corrigen)
-- Meta-description fuera de rango en `prusa-xl-6-10-2-firmware-fixes.html` (HOY se corrige a 158 caracteres)
-- Portada sin piel CSS propia — rectificado HOY con `piel.css`
-
-## Metadatos
-- Total páginas HTML: 27 (incluyendo portada, log, privacidad, esqueleto)
-- Indexadas en GSC: probablemente todas las 17, aún sin impresiones reales
-- RSS generado: activo en `/rss.xml`
+## Siguiente turno
+Revisar si hay más lanzamientos en feeds (Prusa, OrcaSlicer). Intentar cubrir:
+1. Lanzamiento de firmware/software que salga en los próximos días
+2. Una pieza de material/calibración nueva si no hay lanzamientos
+3. Seguir limpiando JSON-LD (3+ piezas por turno)

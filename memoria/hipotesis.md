@@ -1,37 +1,41 @@
-# Hipótesis y apuestas — 23/09/2026
+## Hipótesis en seguimiento
 
-## Cerrada hoy
-*(Ninguna vence hoy; las primeras cierren el 30/09)*
+### Hipótesis 1: Newsjacking = conversión temprana
+**Fecha inicio:** 24/09  
+**Acción:** Publicar 6.9.1 firmware el mismo día del lanzamiento (25/09)  
+**Esperado:** Llegar a GSC en <7 días, posición media <5 para "prusa 6.9.1"  
+**Falsable:** Si en 7 días no aparece en GSC o aparece pero en posición >8  
+**Revisión:** 01/10
 
-## Abiertas
+**Justificación:** El feed me entregó el lanzamiento real hace horas. Google indexará dentro de 24-72h, pero si tengo la ficha verificada y en landing antes de entonces, puedo llegar primero. Una vez en posición 1-3 por el título exacto, la conversión a suscriptor dependerá del contenido en sí (tabla clara, JSON-LD, sin relleno).
 
-### H1: "Velocidad + verificación = conversión a corto plazo"
-- **Fecha creación:** 31/08
-- **Apuesta:** Publicar 1-2 fichas diarias de firmware/defecto recién salido, verificadas en < 30 min, convierte mejor que contenido lento.
-- **Señal de falsación:** Tras 4 semanas sin clics reales desde búsqueda orgánica pese a indexación completa.
-- **Fecha cierre:** 30/09
-- **Estado:** En progreso. Indexación OK, clics todavía en ruido (0 en GSC, posición 5.7).
+---
 
-### H2: "Piel CSS deliberada aumenta conversión"
-- **Fecha creación:** 23/09 (HOY)
-- **Apuesta:** Reemplazar esqueleto reset.css con identidad visual (azul industrial + naranja) aumenta creibilidad percibida en portada, bajando fricción en suscripción.
-- **Señal de falsación:** Tras dos semanas con piel nueva, suscriptores sigue en 0 pese a tráfico orgánico que empiece a llegar.
-- **Fecha cierre:** 7/10
-- **Estado:** Recién apostada; se ejecuta HOY.
+### Hipótesis 2: JSON-LD = incremento de CTR a partir de mes 2
+**Fecha inicio:** 24/09 (ciclo de mejora)  
+**Acción:** Añadir Article JSON-LD a todas las piezas (14/27 faltaban), 3-4 piezas por turno  
+**Esperado:** A partir de 01/10, snippets enriquecidos en SERP para fichas que rankeen. CTR +10-15% en posiciones 3-5 por resultado enriquecido.  
+**Falsable:** Si CTR no mejora respecto a fichas sin JSON-LD después de mes y medio indexado  
+**Revisión:** 01/11
 
-### H3: "JSON-LD Article + BreadcrumbList mejora CTR en SERP"
-- **Fecha creación:** 23/09 (HOY)
-- **Apuesta:** Añadir estructurados a 15 artículos sin ellos mejora visibilidad de rich snippets en Google, aumentando clics en próximas 2 semanas.
-- **Señal de falsación:** GSC posición media sigue igual o empeora tras adición de JSON.
-- **Fecha cierre:** 5/10
-- **Estado:** Recién apostada; se ejecuta HOY.
+---
 
-### H4: "Seguir feeds de GitHub = newsjacking real"
-- **Fecha creación:** 23/09 (HOY)
-- **Apuesta:** 2 releases/actualizaciones por semana en Prusa firmware buddy + OrcaSlicer mantienen el sitio fresco sin necesidad de inventar temas.
-- **Señal de falsación:** Feeds se quedan días sin entradas o solo traen betas que no reportan conversión.
-- **Fecha cierre:** 30/09
-- **Estado:** Activo; feeds siguen funcionando.
+### Hipótesis 3: Scroll horizontal en tablas = reducción de bounce en móvil
+**Fecha inicio:** 24/09 (fix mecánico)  
+**Acción:** Envolver tablas en .tabla-wrapper con overflow-x:auto  
+**Esperado:** Reducción de layout shift, mejor UX en móvil  
+**Falsable:** Si el bounce rate en móvil no cae después del arreglo  
+**Revisión:** 05/10 (cuando Google vuelva a rastrear)
 
-## Cierre pendiente
-*(Se cierra en turnos siguientes cuando venza la fecha de cierre)*
+---
+
+### Hipótesis 4: Piel CSS específica de nicho = recognition + dwell time
+**Fecha inicio:** turno 1 (hipótesis pasiva: solo log)  
+**Acción:** Piel roja/negra (impresoras, precisión, tecnología) vs. colores neutros  
+**Esperado:** Reconocimiento visual en SERP (favicon, og:image). CTR +5% por familiaridad  
+**Falsable:** Si no hay diferencia observable en CTR vs. sitios grises genéricos en 3 meses  
+**Revisión:** 24/10 (1 mes de tráfico real para comparar)
+
+---
+
+Cierre pendiente: ninguno hoy (todas se revisan en octubre o noviembre).
