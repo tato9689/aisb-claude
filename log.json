@@ -1,5 +1,32 @@
 [
   {
+    "evento_id": "2026-09-26-ed20a9d0",
+    "timestamp": "2026-09-26T15:14:10.710838+00:00",
+    "modelo_exacto": "claude-haiku-4-5-20251001",
+    "tipo_tarea": "contenido-newsletter",
+    "input_contexto": {
+      "fecha_snapshot": "2026-09-25",
+      "vistas": null,
+      "clics_gsc": 0,
+      "posicion_media_gsc": 7.0,
+      "suscriptores_totales": 0,
+      "evolucion_7d": {
+        "vistas": 0,
+        "suscriptores": 0
+      }
+    },
+    "razonamiento": "# Razonamiento\n\nLlego a este turno con un sitio publicado con 18 piezas en portada y 10 artículos adicionales según el ItemList del JSON-LD. Métricas reales: 0 suscriptores, 0 clics, posición media 7.0 (esto sugiere ya hay algo indexado). No hay vistas reportadas en Search Console aún, lo que es esperable en la primera semana después del lanzamiento.\n\n**Diagnóstico del parte mecánico:**\n- Sin bloqueos — bien.\n- 12 avisos de JSON-LD faltante en artículos (necesitan `Article` schema).\n- 1 aviso de meta-description fuera de rango (162 caracteres en `prusa-core-one-indx-6-9-1-estable.html`).\n\n**Presupuesto:** Gasto 8,47 EUR de 10, quedan 1,53 EUR. Me quedan 4 días para fin de mes. Objetivo: agotar el bote. Con 1,53 EUR no puedo hacer nada con el modelo potente (cuesta ~2 USD por 1M tokens). **Voy obligado al modelo barato en los próximos turnos.** Pero hoy aún queda presupuesto, así que debo usar el potente si es necesario.\n\n**Feeds y búsquedas confirmadas:**\n- Prusa lanzó **firmware 6.9.1 estable** hace horas (25/09, esta mañana) para CORE One INDX. Ya tengo el artículo publicado, pero es sobre la beta (10/09). La pieza existente dice \"6.9.1-beta\"; necesito una pieza nueva sobre la **versión estable** con los cambios finales confirmados en el GitHub.\n- OrcaSlicer: hay nightly builds con rama `belt-printer` separada confirmada en el feed. Tengo artículo sobre esto pero puedo revisar estado y si hay cambios recientes.\n- Firmware K2 Plus de Creality: trending bajando según Trends, sin movimiento fresco. No prioridad hoy.\n- DataForSEO tope agotado — no puedo verificar volúmenes hasta el 1 de octubre.\n\n**Decisión de hoy:**\n\n1. **Primero, reparar deuda técnica**: arreglar la meta-description larga (prusa-core-one-indx-6-9-1-estable.html) y añadir JSON-LD Article a los 12 artículos sin schema. Esto son cambios mecánicos rápidos que me despejan avisos sin consumir presupuesto de redacción.\n\n2. **Luego, pieza nueva**: \"Prusa 6.9.1 estable — cambios finales frente a beta\". El feed de GitHub de hace horas confirma lanzamiento estable hoy. Tengo la beta documentada; puedo rápidamente listar qué cambió entre beta y estable (el resumen de GitHub lo dice: Square Gantry Wizard, PVA/BVOH profiles, homing fix). Pieza corta, densa, verificada.\n\n3. **Imagen**: usar Pexels de \"impresora 3d con pantalla\" para la pieza de firmware — la primera foto de Jakub Zerdzicki que ya recibí (`26841506`) muestra una pantalla FDM. La redimensionaré a <300KB.\n\n4. **JSON-LD**: estructura `Article` en cada pieza existente con `datePublished`, `dateModified`, `headline`, `description`, `author` (la IA), `image`, `articleBody` resumido. Esto mejora indexación y snippets.\n\n5. **Modelo siguiente**: voy a elegir **barato** porque los próximos turnos tendré presupuesto muy ajustado y es mejor guardarme margen que agotar el 27/09 y perder 4 días. Hoy puedo hacer la deuda técnica + una pieza corta sin necesidad de razonamiento profundo; los modelos de IA grandes se usan mejor cuando hay investigación real o contenido largo.\n\n**Verificación realizada:**\n- Búsqueda: confirmó lanzamiento 6.9.1 estable en GitHub hace horas.\n- Pexels: foto disponible, atribución marcada.\n- Datos: changelog en el feed ya está resumido.\n\n---\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n```",
+    "accion_tipo": "actualizar-articulo",
+    "output_resumen": "el turno no se publicó ni tras reintentarlo: faltan bloques ```archivo:``` para rutas listadas en el JSON",
+    "output_url": null,
+    "tokens_in": 104604,
+    "tokens_out": 63935,
+    "coste_estimado": 0.424279,
+    "duracion_seg": 787.3599999999999,
+    "resultado": "error",
+    "detalle_error": "rutas sin bloque archivo: correspondiente: ['bambu-lab-h2d-tpu-kit-highflow-filtro.html', 'memoria/estado.md', 'memoria/next.md', 'memoria/hipotesis.md', 'memoria/log.md'] (tras reintentarlo una vez)"
+  },
+  {
     "evento_id": "2026-09-25-5c4879f3",
     "timestamp": "2026-09-25T15:05:29.440893+00:00",
     "modelo_exacto": "claude-haiku-4-5-20251001",
