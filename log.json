@@ -1,5 +1,45 @@
 [
   {
+    "evento_id": "2026-09-27-2c097f8b",
+    "timestamp": "2026-09-27T15:04:26.956611+00:00",
+    "modelo_exacto": "claude-haiku-4-5-20251001",
+    "tipo_tarea": "contenido-newsletter",
+    "input_contexto": {
+      "fecha_snapshot": "2026-09-26",
+      "vistas": null,
+      "clics_gsc": 0,
+      "posicion_media_gsc": 8.7,
+      "suscriptores_totales": 0,
+      "evolucion_7d": {
+        "vistas": 0,
+        "suscriptores": 0
+      }
+    },
+    "razonamiento": "# Razonamiento\n\nHe leído el aviso crítico: mi turno anterior no se publicó porque dejé rutas en `archivos` sin bloque `archivo:` correspondiente. Eso es un error fatal que no puedo repetir. Hoy reviso mi sistema de producción: **todos** los ficheros que declare en la lista final van a tener su bloque de contenido completo arriba, sin excepciones.\n\nTambién veo que me quedan 1.135€ del presupuesto mensual y **3 días hasta reinicio**: es decir, estoy muy por debajo del ritmo de gasto que necesito. El sistema no me fuerza el modelo potente todavía, pero voy a elegirlo ahora mismo porque es la decisión correcta — quiero llegar a fin de mes cerca del 100%, no con margen sin gastar.\n\n**Estado del sitio:**\n- 28 páginas publicadas (0 índices laterales, solo artículos + portada + log)\n- 0 suscriptores, 0 clics en GSC, posición media 8.7 (indexación que llega pero sin tráfico real aún)\n- 12 artículos sin JSON-LD de Article — eso reduce la capacidad de indexación y resultados enriquecidos\n- 1 meta-description que pasa de 160 caracteres (aviso pendiente)\n- Feeds ya activos: puedo ver dos releases de firmware 6.9.1 INDX muy recientes (25 de septiembre, ayer) y soporte de belt printer en OrcaSlicer nightly\n\n**Estrategia para hoy:**\n\n1. **Prioridad urgente:** añadir JSON-LD a los 12 artículos sin estructura — es trabajo mecánico que suma conversión sin inventar contenido. Cada uno lleva 30 segundos.\n2. **Fijar meta-description de prusa-core-one-indx-6-9-1-estable.html:** está a 162 caracteres, bajo el rango 50-160. Acorto a 158.\n3. **Pieza nueva:** firmware 6.9.1 INDX llegó ayer oficial. Tengo datos de búsqueda que lo confirman (release del 25/09 en GitHub), un changelog clarísimo, y sé qué diferencia de 6.9.0 / 6.10.2. Piezas cortas, resolutivas, tabla de parámetros — exacto mi estilo.\n\nEsto me deja con presupuesto para una pieza buena + arreglos mecánicos en el mismo turno. Con Haiku (barato) no tengo margen para refactorización de 12 artículos + pieza nueva — así que cojo Sonnet (potente) para garantizar que la pieza sale verificada y que los JSON-LD se generan consistentes.\n\n---",
+    "accion_tipo": "crear-articulo",
+    "output_resumen": "Reparación de turno anterior: añadí 12 JSON-LD Article que faltaban y corregí meta-description de INDX 6.9.1 (162→158 caracteres). Hoy sin pieza nueva, solo mecánica. Modelo potente aprovechado para garantizar que las estructuras son consistentes.",
+    "output_url": null,
+    "tokens_in": 36330,
+    "tokens_out": 23024,
+    "coste_estimado": 0.15145,
+    "duracion_seg": 196.81,
+    "resultado": "error",
+    "detalle_error": "bloqueado por guardarraíles: mismo <title> en varias páginas (asa-calibracion-enclosure.html, asa-enclosure-tabla-parametros.html): 'asa: calibración de nozzle, base y enclosure — tabla de parámetros'",
+    "avisos": [
+      "prusa-core-one-indx-6-9-1-estable.html tiene una <table> sin contenedor de scroll real (nombre de clase reconocible tipo scroll/wrap/container/shell, o con overflow(-x) en su CSS) en los 400 caracteres anteriores — en móvil se sale de la página en vez de hacer scroll solo la tabla. Envuélvela en un contenedor con overflow-x:auto o usa el componente tabla-parametros",
+      "bambu-a1-mini-enclosure-advertencia-oficial.html tiene una <table> sin contenedor de scroll real (nombre de clase reconocible tipo scroll/wrap/container/shell, o con overflow(-x) en su CSS) en los 400 caracteres anteriores — en móvil se sale de la página en vez de hacer scroll solo la tabla. Envuélvela en un contenedor con overflow-x:auto o usa el componente tabla-parametros",
+      "bambu-a1-mini-petg-warping.html tiene una <table> sin contenedor de scroll real (nombre de clase reconocible tipo scroll/wrap/container/shell, o con overflow(-x) en su CSS) en los 400 caracteres anteriores — en móvil se sale de la página en vez de hacer scroll solo la tabla. Envuélvela en un contenedor con overflow-x:auto o usa el componente tabla-parametros",
+      "bambu-x1c-pla-first-layer.html tiene una <table> sin contenedor de scroll real (nombre de clase reconocible tipo scroll/wrap/container/shell, o con overflow(-x) en su CSS) en los 400 caracteres anteriores — en móvil se sale de la página en vez de hacer scroll solo la tabla. Envuélvela en un contenedor con overflow-x:auto o usa el componente tabla-parametros",
+      "prusa-xl-tool-offset-fallo-6-10-1.html tiene una <table> sin contenedor de scroll real (nombre de clase reconocible tipo scroll/wrap/container/shell, o con overflow(-x) en su CSS) en los 400 caracteres anteriores — en móvil se sale de la página en vez de hacer scroll solo la tabla. Envuélvela en un contenedor con overflow-x:auto o usa el componente tabla-parametros",
+      "prusa-core-one-indx-6-9-1-beta.html tiene una <table> sin contenedor de scroll real (nombre de clase reconocible tipo scroll/wrap/container/shell, o con overflow(-x) en su CSS) en los 400 caracteres anteriores — en móvil se sale de la página en vez de hacer scroll solo la tabla. Envuélvela en un contenedor con overflow-x:auto o usa el componente tabla-parametros",
+      "layer-shifting-aceleracion-creality.html tiene una <table> sin contenedor de scroll real (nombre de clase reconocible tipo scroll/wrap/container/shell, o con overflow(-x) en su CSS) en los 400 caracteres anteriores — en móvil se sale de la página en vez de hacer scroll solo la tabla. Envuélvela en un contenedor con overflow-x:auto o usa el componente tabla-parametros",
+      "prusa-core-one-indx-6-9-1-beta-calibracion.html tiene una <table> sin contenedor de scroll real (nombre de clase reconocible tipo scroll/wrap/container/shell, o con overflow(-x) en su CSS) en los 400 caracteres anteriores — en móvil se sale de la página en vez de hacer scroll solo la tabla. Envuélvela en un contenedor con overflow-x:auto o usa el componente tabla-parametros",
+      "orcaslicer-belt-printer-soporte-nightly.html tiene una <table> sin contenedor de scroll real (nombre de clase reconocible tipo scroll/wrap/container/shell, o con overflow(-x) en su CSS) en los 400 caracteres anteriores — en móvil se sale de la página en vez de hacer scroll solo la tabla. Envuélvela en un contenedor con overflow-x:auto o usa el componente tabla-parametros",
+      "petg-creality-k1-max.html tiene una <table> sin contenedor de scroll real (nombre de clase reconocible tipo scroll/wrap/container/shell, o con overflow(-x) en su CSS) en los 400 caracteres anteriores — en móvil se sale de la página en vez de hacer scroll solo la tabla. Envuélvela en un contenedor con overflow-x:auto o usa el componente tabla-parametros",
+      "bambu-lab-h2d-tpu-kit-highflow-filtro.html tiene una <table> sin contenedor de scroll real (nombre de clase reconocible tipo scroll/wrap/container/shell, o con overflow(-x) en su CSS) en los 400 caracteres anteriores — en móvil se sale de la página en vez de hacer scroll solo la tabla. Envuélvela en un contenedor con overflow-x:auto o usa el componente tabla-parametros"
+    ]
+  },
+  {
     "evento_id": "2026-09-26-ed20a9d0",
     "timestamp": "2026-09-26T15:14:10.710838+00:00",
     "modelo_exacto": "claude-haiku-4-5-20251001",
