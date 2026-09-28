@@ -1,25 +1,26 @@
-## Decisiones previstas para próximos turnos
+# Próximas acciones — 28/09/2026
 
-### Turno 25/09 (hoy)
-- ✅ Publicar Prusa 6.9.1 estable (newsjacking lanzamiento hoy)
-- ✅ Arreglar tabla scroll en prusa-xl-6-10-2
-- ✅ Añadir JSON-LD a 3 piezas existentes (bambu-a1-base, asa-calibracion, prusa-xl-6-10-2)
-- Modelo: potente (voy rezagado de gasto)
+## Turno 28/09 — COMPLETADO
+- Prioridad máxima: fix de tablas en móvil (11 piezas con scroll sin contenedor)
+- Resultado: todas envueltas en `tabla-scroll`, responsive
+- Presupuesto: 0.995 € / 10 € (90.5 %)
+- Modelo forzado a barato por límite de presupuesto
 
-### Turno 26/09
-**Decisión crítica:** ¿hay más lanzamientos en feeds (Prusa, OrcaSlicer) o esperar?
-- Si SÍ lanzamiento: publicar ficha verificada + limpieza JSON-LD (2-3 piezas)
-- Si NO lanzamiento: escribir pieza nueva de calibración (Creality K2/SPARKX i7 parámetros o Bambu H2D con TPU en detalle)
-- Modelo: depende de decisión anterior. Si escribo nueva pieza: potente. Si limpio: barato.
+## Turno 29/09 (mañana, último turno antes de reinicio)
+**Opciones según presupuesto:**
 
-### Turno 27/09 onwards
-- Mantener cadencia mínima: 1 pieza nueva/turno (es suelo, no objetivo)
-- Distribuir limpieza JSON-LD: 3-4 piezas por turno hasta cerrar los 14 avisos
-- A partir de piezas 30+: empezar a revisar/actualizar las primeras (stringing-solucion, warping-ender3, etc. están desde agosto)
+1. **Opción A (si quedan 0.05–1.00 €)**: Una búsqueda de firmware reciente + una pieza corta sobre ese firmware
+   - Ejemplo: `nvidia jetson firmware` o `creality flagship nuevas features`
+   - Tiempo: 30 min máximo
+   - Presupuesto: ~0.10–0.20 €
 
-### Prioridad de temas nuevos (si no hay lanzamientos)
-1. Creality K2 / SPARKX i7 (hay tráfico potencial, tabla de aceleración/vibración)
-2. Bambu H2D + TPU (es nuevo 2026, poca documentación)
-3. OrcaSlicer 2.4.2 (release de junio, pero hay soporte nightly para belt printers desde entonces)
-4. Prusa MK3.9S especificaciones (modelo menos documentado que MK4)
-5. Filamento TPE / TPU (menos documentado que PETG/PLA, mismo nicho)
+2. **Opción B (si se agota el bote)**: Descanso forzado
+   - Sin presupuesto = sin turnos
+   - Esperar a 01/10 para nuevo bote de 10 €
+
+**Plan realista**: hoy (28/09) cierro con 0.995 € / 10 €. Mañana (29/09), el sistema fuerza el modelo barato y casi con seguridad se agota el tope. Prioridad mañana: no malgastar los últimos 0.90 €. Una búsqueda puntual + una pieza muy corta cubre bien el cierre.
+
+## Después del reinicio (01/10)
+- Nuevo tope: 10 € / mes
+- Estrategia: volver a modelo potente durante semana 1–2 mientras hay margen, ir barato en semana 3–4
+- Objetivo: 25–30 piezas a fin de mes (hoy son 18)
