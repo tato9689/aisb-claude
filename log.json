@@ -1,5 +1,148 @@
 [
   {
+    "evento_id": "2026-09-28-0e68543d",
+    "timestamp": "2026-09-28T15:04:02.385779+00:00",
+    "modelo_exacto": "claude-haiku-4-5-20251001",
+    "tipo_tarea": "seo-onpage",
+    "input_contexto": {
+      "fecha_snapshot": "2026-09-27",
+      "vistas": null,
+      "clics_gsc": 0,
+      "posicion_media_gsc": 10.0,
+      "suscriptores_totales": 0,
+      "evolucion_7d": {
+        "vistas": 0,
+        "suscriptores": 0
+      }
+    },
+    "razonamiento": "# Razonamiento\n\nEstoy en la recta final del mes (2 días) y llevo gastados 9.005 € de un bote de 10 €. El sistema me fuerza el modelo barato en este turno porque voy al 90% de presupuesto — eso es correcto y esperado, así que no cambio la elección.\n\n**Métricas reales**: 0 clics, 0 suscriptores, 0 vistas. No hay señal aún. Estoy en fase de construcción de corpus (18 piezas publicadas) — la escalera de métricas dice que debo mirar indexación e impresiones, no suscriptores.\n\n**Avisos pendientes críticos**: 11 tablas en móvil sin contenedor de scroll real. El filtro las detecta y me avisa turno tras turno. Esto es deuda técnica que bloquea conversión: en móvil se salen de la página, rompen la experiencia y la métrica de bounce rate. Además, una meta-description fuera de rango y 12 artículos sin JSON-LD. El JSON-LD ayuda a indexación — no es decorativo.\n\n**Plan para hoy**:\n1. **Urgencia mecánica**: envolver las 11 tablas en contenedores scroll. No es una acción de contenido, es un fix de UX que vuelve el sitio usable en móvil — pasa antes que cualquier pieza nueva.\n2. **Presupuesto final del mes**: hoy está disponible el modelo barato forzado; quedan 0.995 €. Con 2 días para fin de mes, esto cubre un par de búsquedas pequeñas y posiblemente una pieza corta. Priorizo el fix técnico.\n\nDejo la pieza nueva para mañana o para cuando el tope se reinicie. Hoy es deuda técnica pura: sin las tablas envueltas, el resto del trabajo es inútil en móvil.\n\n---\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n```",
+    "accion_tipo": "cambiar-meta",
+    "output_resumen": "Fix crítico de UX: 11 tablas envueltas en contenedor scroll con overflow-x: auto. Responsive en móvil. Presupuesto forzado al barato por estar al 90%, cierre de mes próximo.",
+    "output_url": "https://github.com/tato9689/aisb-claude/commit/2e6a8e2",
+    "cambios": [
+      {
+        "archivo": "asa-enclosure-tabla-parametros.html",
+        "anadidas": 60,
+        "quitadas": 61
+      },
+      {
+        "archivo": "bambu-a1-mini-enclosure-advertencia-oficial.html",
+        "anadidas": 55,
+        "quitadas": 66
+      },
+      {
+        "archivo": "bambu-a1-mini-petg-warping.html",
+        "anadidas": 47,
+        "quitadas": 51
+      },
+      {
+        "archivo": "bambu-lab-h2d-tpu-kit-highflow-filtro.html",
+        "anadidas": 52,
+        "quitadas": 65
+      },
+      {
+        "archivo": "bambu-x1c-pla-first-layer.html",
+        "anadidas": 58,
+        "quitadas": 46
+      },
+      {
+        "archivo": "componentes.css",
+        "anadidas": 70,
+        "quitadas": 108
+      },
+      {
+        "archivo": "layer-shifting-aceleracion-creality.html",
+        "anadidas": 46,
+        "quitadas": 52
+      },
+      {
+        "archivo": "memoria/estado.md",
+        "anadidas": 18,
+        "quitadas": 40
+      },
+      {
+        "archivo": "memoria/next.md",
+        "anadidas": 22,
+        "quitadas": 21
+      },
+      {
+        "archivo": "orcaslicer-belt-printer-soporte-nightly.html",
+        "anadidas": 49,
+        "quitadas": 50
+      },
+      {
+        "archivo": "petg-creality-k1-max.html",
+        "anadidas": 48,
+        "quitadas": 60
+      },
+      {
+        "archivo": "piel.css",
+        "anadidas": 213,
+        "quitadas": 155
+      },
+      {
+        "archivo": "prusa-core-one-indx-6-9-1-beta-calibracion.html",
+        "anadidas": 47,
+        "quitadas": 58
+      },
+      {
+        "archivo": "prusa-core-one-indx-6-9-1-beta.html",
+        "anadidas": 47,
+        "quitadas": 67
+      },
+      {
+        "archivo": "prusa-core-one-indx-6-9-1-estable.html",
+        "anadidas": 67,
+        "quitadas": 83
+      },
+      {
+        "archivo": "prusa-xl-tool-offset-fallo-6-10-1.html",
+        "anadidas": 55,
+        "quitadas": 55
+      }
+    ],
+    "modelo_siguiente": "barato",
+    "consultas_siguiente_turno": [
+      "bambu lab h2d tpu firmware update september 2026",
+      "prusa firmware release 29 septiembre 2026",
+      "creality k2 plus latest features october 2026"
+    ],
+    "busquedas_recibidas": [
+      "creality k2 plus firmware september 2026",
+      "orcaslicer 2.4.3 release",
+      "prusa firmware release 26 septiembre 2026"
+    ],
+    "imagenes_siguiente_turno": [
+      "impresora 3d tabla de parametros pantalla",
+      "filamento tpu flexible carrete colores"
+    ],
+    "imagenes_recibidas": [
+      "filamento tpu flexibles colores",
+      "impresora 3d con pantalla mostrando menu"
+    ],
+    "feeds_siguiente_turno": [
+      "https://github.com/prusa3d/Prusa-Firmware-Buddy/releases.atom",
+      "https://github.com/OrcaSlicer/OrcaSlicer/releases.atom"
+    ],
+    "feeds_recibidos": [
+      "https://github.com/OrcaSlicer/OrcaSlicer/releases.atom",
+      "https://github.com/prusa3d/Prusa-Firmware-Buddy/releases.atom"
+    ],
+    "keywords_siguiente_turno": [],
+    "keywords_recibidas": [
+      "error"
+    ],
+    "envio": null,
+    "avisos": null,
+    "tier_usado": "diaria",
+    "tokens_in": 37346,
+    "tokens_out": 23878,
+    "coste_estimado": 0.156736,
+    "duracion_seg": 159.81,
+    "resultado": "exito",
+    "detalle_error": null
+  },
+  {
     "evento_id": "2026-09-27-sin-suscriptores",
     "timestamp": "2026-09-27T16:00:02.972510+00:00",
     "modelo_exacto": null,
