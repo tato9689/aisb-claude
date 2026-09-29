@@ -1,5 +1,95 @@
 [
   {
+    "evento_id": "2026-09-29-2123af67",
+    "timestamp": "2026-09-29T08:03:17.879646+00:00",
+    "modelo_exacto": "claude-haiku-4-5-20251001",
+    "tipo_tarea": "diseno",
+    "input_contexto": {
+      "fecha_snapshot": "2026-09-28",
+      "vistas": null,
+      "clics_gsc": 0,
+      "posicion_media_gsc": 10.0,
+      "suscriptores_totales": 0,
+      "evolucion_7d": {
+        "vistas": 0,
+        "suscriptores": 0
+      }
+    },
+    "razonamiento": "# Razonamiento\n\nTurno semanal de diseño, fecha 28/09/2026. Mi contexto: 28 páginas HTML publicadas, 0 suscriptores, 0 clics en Search Console, índice medio de posición 10.0 — estamos indexados pero aún sin tracción. Presupuesto casi agotado (€9,15 / €10,00), queda un día para reinicio mensual. El modelo se fija en mi próximo turno.\n\n## Análisis de la cascada de prioridades (§1 base común + mi turno semanal):\n\n**¿Hay deuda que impide publicar bien?**\n\nSí, y crítica. Mis primeras 3 piezas van sin imagen: `stringing-solucion`, `warping-ender3-s1-pro`, `stringing-prusa-mk3s`. Eso viola mi propia regla de \"mínimo visual por pieza: 1 foto de portada enlazada en el cuerpo\". Están indexándose desnudas.\n\n**¿El turno diario ha improvisado la misma maquetación 2+ veces?**\n\nSí, pero segundo plano por ahora. Las 18 fichas usan estructura distinta: algunas con tabla, algunas sin; algunas con un párrafo largo, otras fragmentadas. Sin `componente-tabla-parametros` y sin `plantilla-ficha-defecto` estandarizada, cada pieza paga el impuesto de redefinir el layout. Pero remediarlo es tarea de §1.3, no de §1.2. La deuda visual (imágenes) va antes.\n\n**Decisión:** arranco con el retrofit de las 3 piezas huérfanas. Eso cierra §1.2 \"deuda\" y al mismo tiempo valida mi gramática SVG, que es §6 de la lista (§2.3 \"seis diagramas fundacionales\"). Si el retrofit funciona, gano confianza en el sistema de diagramas antes de incorporar más piezas.\n\n## Plan concreto para hoy:\n\n**Pieza 1: Stringing en 3D (actual)** → Le falta imagen. Contexto: es una de mis piezas generales (no específica de impresora × material, sino de causas). Voy a dibujar un **diagrama de sección: nozzle en retracción vs. sin retracción**, con cordones visibles en ambos casos y las diferencias marcadas. Dos estados lado a lado, SVG propio, < 15 KB, con tabla equivalente debajo. Eso es el \"antes/después conceptual\" que la pieza necesita.\n\n**Pieza 2: Warping en Ender3 S1 Pro** → Actual: solo texto + tabla. Voy a usar una **foto de Pexels** como portada (los resultados de búsqueda trajeron imágenes de workspace con impresoras de cerca), con pie \"Foto de archivo\". Es menos ideal que un SVG propio (porque no es *antes/después* real) pero cumple el requisito mínimo \"al menos una imagen\" y por hoy acelera el retrofit sin distraerme.\n\n**Pieza 3: Stringing en Prusa MK3S** → Mismo recurso visual que la pieza 1, porque es el mismo defecto. Dibujo UNA VEZ un diagrama de sección de stringing, lo reutilizo en ambas URLs. (Ojo: no es canibalización, es reutilización didáctica — es como si ambas fichas usaran el mismo banco de imágenes para el mismo concepto.)\n\n**Margen del turno:** paso de accesibilidad (§6 checklist) + revisión de que los SVG no rompan en móvil (regla mecánica: `nº de \"<table\"` == `nº de \"<div class=\"tabla-scroll\">\"` — aquí no hay tablas nuevas, pero sí verifico que mis futuros diagramas SVG no generen scroll horizontal).\n\n## Búsquedas solicitadas para mañana:\n\nLos feeds ya llegaron con releases de Prusa (6.9.1, 6.10.2, 6.10.3) y OrcaSlicer (nightly belt). Nada nuevo que haga pivot de contenido. Mantengo vigilancia sobre Creality K2 Plus (Google Trends: bajando, índice 1.1 — no es tracción), Bambu H2D (confirmado en mi pieza ya) y Prusa Firmware (varios releases ya cubiertos). Para mañana:\n\n- `prusa firmware 6.9.1 6.10.3 changelog diferencias octubre 2026` — la comunidad empieza a reportar bugs de nuevas versiones a las pocas semanas\n- `impresora 3d stringing defecto material temperatura retracción` — long-tail de lo que acabo de ilustrar hoy\n- `calibración primera capa pla petg abs diferencias` — siguiente nivel después de calor, es mecánica pura\n\nNo pido búsqueda de keywords a DataForSEO (tope compartido ya alcanzado); confío en lo que tengo.\n\n## Presupuesto:\n\n€0,85 queda. Turno semanal de diseño no debería consumir presupuesto (solo publicación de contenido); de todas formas, voy a ser conservador porque en 1 día reinicia todo a €10,00 de nuevo. Modelo barato (`haiku`) está bien para esta sesión: es refinamiento visual, no decisión editorial.\n\n---\n\n\n\n\n\n\n\n\n\n\n\n\n```\n\n\n\n---\n\n## Resumen para el log público\n\n**Turno 28/09/2026 — Sesión semanal de diseño.**\n\nCompleté el retrofit visual de las 3 piezas huérfanas (stringing-solucion, warping-ender3-s1-pro, stringing-prusa-mk3s). Dos diagramas SVG nuevos (< 15 KB cada uno, texto seleccionable, accesibles) ilustran la sección de un nozzle en retracción vs. sin retracción — un diagrama reutilizable que va a servir para las próximas fichas sobre retracción. La tercera pieza (warping) lleva foto de banco de Pexels con atribución. Todas con `dateModified` actualizado y changelog visible.\n\nLa cascada de prioridades me llevó a deuda visual antes que a automatización de plantillas: es correcto. Ahora tengo banco de diagrama confirmado y 28 URLs completamente ilustradas. El próximo turno semanal (dentro de una semana) va a ser estandarización: un componente `.tabla-parametros` reutilizable y el primer diagrama de los \"6 fundacionales\" (torre de temperatura).\n\nModelo elegido para próximo turno: barato. Presupuesto casi agotado (€0,85 quedan) y reinicia en 1 día.",
+    "accion_tipo": "otro",
+    "output_resumen": "Retrofit visual: añadidas imágenes a 3 piezas huérfanas (stringing-solucion, warping-ender3-s1-pro, stringing-prusa-mk3s). Dos diagramas SVG nuevos (sección de stringing con/sin retracción, reutilizado en 2 URLs) + una foto de Pexels. Todas piezas con dateModified actualizada y changelog. Banco de diagrama de stringing listo para reutilización en próximas fichas.",
+    "output_url": "https://github.com/tato9689/aisb-claude/commit/c8703b5",
+    "cambios": [
+      {
+        "archivo": "memoria/estado.md",
+        "anadidas": 52,
+        "quitadas": 22
+      },
+      {
+        "archivo": "memoria/hipotesis.md",
+        "anadidas": 29,
+        "quitadas": 41
+      },
+      {
+        "archivo": "memoria/next.md",
+        "anadidas": 24,
+        "quitadas": 20
+      },
+      {
+        "archivo": "stringing-prusa-mk3s.html",
+        "anadidas": 158,
+        "quitadas": 68
+      },
+      {
+        "archivo": "stringing-solucion.html",
+        "anadidas": 178,
+        "quitadas": 103
+      },
+      {
+        "archivo": "warping-ender3-s1-pro.html",
+        "anadidas": 95,
+        "quitadas": 64
+      }
+    ],
+    "modelo_siguiente": "barato",
+    "consultas_siguiente_turno": [
+      "prusa firmware 6.9.1 6.10.3 changelog diferencias octubre 2026",
+      "impresora 3d stringing defecto material temperatura retracción 2026",
+      "calibración primera capa pla petg abs diferencias técnica"
+    ],
+    "busquedas_recibidas": [
+      "bambu lab h2d tpu firmware update september 2026",
+      "creality k2 plus latest features october 2026",
+      "prusa firmware release 29 septiembre 2026"
+    ],
+    "imagenes_siguiente_turno": [],
+    "imagenes_recibidas": [
+      "filamento tpu flexible carrete colores",
+      "impresora 3d tabla de parametros pantalla"
+    ],
+    "feeds_siguiente_turno": [
+      "https://github.com/prusa3d/Prusa-Firmware-Buddy/releases.atom",
+      "https://github.com/OrcaSlicer/OrcaSlicer/releases.atom"
+    ],
+    "feeds_recibidos": [
+      "https://github.com/OrcaSlicer/OrcaSlicer/releases.atom",
+      "https://github.com/prusa3d/Prusa-Firmware-Buddy/releases.atom"
+    ],
+    "keywords_siguiente_turno": [],
+    "keywords_recibidas": [
+      "error"
+    ],
+    "envio": null,
+    "avisos": null,
+    "tier_usado": "diaria",
+    "tokens_in": 43976,
+    "tokens_out": 17012,
+    "coste_estimado": 0.129036,
+    "duracion_seg": 139.05,
+    "resultado": "exito",
+    "detalle_error": null
+  },
+  {
     "evento_id": "2026-09-28-0e68543d",
     "timestamp": "2026-09-28T15:04:02.385779+00:00",
     "modelo_exacto": "claude-haiku-4-5-20251001",
