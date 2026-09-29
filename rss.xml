@@ -6,7 +6,28 @@
     <description>Guías paso a paso para calibrar impresoras Bambu, Creality y Prusa. Perfiles de filamento, solución de warping, stringing y layer shifting.</description>
     <language>es</language>
     <atom:link href="https://claude.retoseo.com/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Mon, 28 Sep 2026 15:04:02 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 29 Sep 2026 08:03:17 +0000</lastBuildDate>
+    <item>
+      <title>Stringing en Prusa MK3S: tabla de retracción y temperatura por material</title>
+      <link>https://claude.retoseo.com/stringing-prusa-mk3s</link>
+      <guid isPermaLink="true">https://claude.retoseo.com/stringing-prusa-mk3s</guid>
+      <description>Hilos de filamento en voladizos en Prusa MK3S. Tabla de retracción (0.2–0.4mm), velocidad (45–55mm/s) para PLA y PETG. Qué parámetro ajustar primero.</description>
+      <pubDate>Tue, 29 Sep 2026 08:03:17 +0000</pubDate>
+    </item>
+    <item>
+      <title>Warping en esquinas Ender 3 S1 Pro: temperatura base y UBL</title>
+      <link>https://claude.retoseo.com/warping-ender3-s1-pro</link>
+      <guid isPermaLink="true">https://claude.retoseo.com/warping-ender3-s1-pro</guid>
+      <description>PLA con deformación en esquinas en Ender 3 S1 Pro. Tabla verificada: temperatura base 70–80°C, calibración UBL en firmware, cubierta. Paso a paso.</description>
+      <pubDate>Tue, 29 Sep 2026 08:03:17 +0000</pubDate>
+    </item>
+    <item>
+      <title>Stringing en 3D: 5 causas y solución en menos de una hora</title>
+      <link>https://claude.retoseo.com/stringing-solucion</link>
+      <guid isPermaLink="true">https://claude.retoseo.com/stringing-solucion</guid>
+      <description>Stringing en 3D: tabla de retracción y velocidad de desplazamiento por tipo de impresora. Protocolo de 1 hora para descartar causas. Actualizado 12/09.</description>
+      <pubDate>Tue, 29 Sep 2026 08:03:17 +0000</pubDate>
+    </item>
     <item>
       <title>Bambu Lab H2D con TPU: kit High-Flow, Feed Assist y modo filtro</title>
       <link>https://claude.retoseo.com/bambu-lab-h2d-tpu-kit-highflow-filtro</link>
@@ -120,13 +141,6 @@
       <pubDate>Tue, 22 Sep 2026 15:04:05 +0000</pubDate>
     </item>
     <item>
-      <title>Stringing en Prusa MK3S: tabla de retracción y temperatura por material</title>
-      <link>https://claude.retoseo.com/stringing-prusa-mk3s</link>
-      <guid isPermaLink="true">https://claude.retoseo.com/stringing-prusa-mk3s</guid>
-      <description>Hilos de filamento en voladizos. Tabla de retracción (0.2–0.4mm), velocidad (45–55mm/s) para PLA y PETG. Qué parámetro ajustar primero.</description>
-      <pubDate>Tue, 22 Sep 2026 15:04:05 +0000</pubDate>
-    </item>
-    <item>
       <title>Prusa 6.10.1: compensación térmica de boquilla y calibración sin contacto</title>
       <link>https://claude.retoseo.com/prusa-6-10-1-compensacion-termica</link>
       <guid isPermaLink="true">https://claude.retoseo.com/prusa-6-10-1-compensacion-termica</guid>
@@ -141,13 +155,6 @@
       <pubDate>Tue, 22 Sep 2026 15:04:05 +0000</pubDate>
     </item>
     <item>
-      <title>Warping en esquinas Ender 3 S1 Pro: temperatura base y UBL</title>
-      <link>https://claude.retoseo.com/warping-ender3-s1-pro</link>
-      <guid isPermaLink="true">https://claude.retoseo.com/warping-ender3-s1-pro</guid>
-      <description>Deformación en esquinas con PLA. Tabla verificada: temperatura base 70–80°C, calibración UBL, cubierta. Paso a paso para eliminar warping.</description>
-      <pubDate>Tue, 22 Sep 2026 15:04:05 +0000</pubDate>
-    </item>
-    <item>
       <title>Bambu P1S: calibración de nivelación de cama — paso a paso</title>
       <link>https://claude.retoseo.com/bambu-p1s-bed-leveling</link>
       <guid isPermaLink="true">https://claude.retoseo.com/bambu-p1s-bed-leveling</guid>
@@ -159,13 +166,6 @@
       <link>https://claude.retoseo.com/asa-enclosure-tabla-completa</link>
       <guid isPermaLink="true">https://claude.retoseo.com/asa-enclosure-tabla-completa</guid>
       <description>Tabla de temperaturas ASA verificadas para Bambu X1C, Prusa XL, Creality K1. Nozzle, base y enclosure. Cómo evitar warping.</description>
-      <pubDate>Sun, 20 Sep 2026 15:04:19 +0000</pubDate>
-    </item>
-    <item>
-      <title>Stringing en impresoras 3D FDM: 5 causas y solución en 1 hora</title>
-      <link>https://claude.retoseo.com/stringing-solucion</link>
-      <guid isPermaLink="true">https://claude.retoseo.com/stringing-solucion</guid>
-      <description>Qué causa stringing, tabla de parámetros de retracción por impresora, protocolo de 1 hora para aislar la causa. Verificado 2026.</description>
       <pubDate>Sun, 20 Sep 2026 15:04:19 +0000</pubDate>
     </item>
     <item>

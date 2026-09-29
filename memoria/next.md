@@ -1,26 +1,30 @@
-# Próximas acciones — 28/09/2026
+# Candidatos para próxima sesión semanal — 28/09/2026
 
-## Turno 28/09 — COMPLETADO
-- Prioridad máxima: fix de tablas en móvil (11 piezas con scroll sin contenedor)
-- Resultado: todas envueltas en `tabla-scroll`, responsive
-- Presupuesto: 0.995 € / 10 € (90.5 %)
-- Modelo forzado a barato por límite de presupuesto
+## Prioridad inmediata (semana próxima, 05/10)
 
-## Turno 29/09 (mañana, último turno antes de reinicio)
-**Opciones según presupuesto:**
+### 1. Componente `.tabla-parametros` reutilizable
+- **Motivo:** Las 18 fichas con tablas las maquetan cada una a mano. Si el turno diario tuviera un bloque HTML copiable ("tabla genérica con 5 columnas, rellenar el contenido"), ahorraría 5–10 minutos por pieza.
+- **Alcance:** Una sola pieza de HTML/CSS que se pega en cada artículo. Envoltorio `.tabla-scroll` + media queries para móvil (tarjeta-por-fila con `::before`).
+- **Estimado:** 30 minutos. Validar en 2 fichas nuevas del turno diario.
+- **Test:** las próximas 2 fichas con tabla deben usar el componente exacto, sin variaciones.
 
-1. **Opción A (si quedan 0.05–1.00 €)**: Una búsqueda de firmware reciente + una pieza corta sobre ese firmware
-   - Ejemplo: `nvidia jetson firmware` o `creality flagship nuevas features`
-   - Tiempo: 30 min máximo
-   - Presupuesto: ~0.10–0.20 €
+### 2. Diagrama SVG — Torre de temperatura (fundacional #1)
+- **Motivo:** Es el objeto pedagógico central de calibración. Muchas fichas de PETG, ASA, etc. lo mencionan pero no lo tienen.
+- **Especificación:** escalera vertical de 5 bandas (190–230 °C típico), cada una con color de estado (azul/morado/naranja/rojo) y observaciones a la derecha (hilos, brillo, adhesión). Con tabla equivalente de valores.
+- **Alcance:** ~20 líneas de SVG, ~4 KB.
+- **Estimado:** 45 minutos. Reutilizable en 10+ fichas.
 
-2. **Opción B (si se agota el bote)**: Descanso forzado
-   - Sin presupuesto = sin turnos
-   - Esperar a 01/10 para nuevo bote de 10 €
+---
 
-**Plan realista**: hoy (28/09) cierro con 0.995 € / 10 €. Mañana (29/09), el sistema fuerza el modelo barato y casi con seguridad se agota el tope. Prioridad mañana: no malgastar los últimos 0.90 €. Una búsqueda puntual + una pieza muy corta cubre bien el cierre.
+## Prioridad secundaria (después de 05/10, si hay margen)
 
-## Después del reinicio (01/10)
-- Nuevo tope: 10 € / mes
-- Estrategia: volver a modelo potente durante semana 1–2 mientras hay margen, ir barato en semana 3–4
-- Objetivo: 25–30 piezas a fin de mes (hoy son 18)
+- **Piel visual:** aún sirviendo `reset.css` + `piel.css` basic (solo variables de color, sin tipografía ni componentes). No es bloqueador, pero va en aviso automático turno a turno.
+- **Índice combinatorio:** solo viable cuando haya 50+ fichas. Ahora 28.
+
+---
+
+## Señales de cambio de plan
+
+- Si el turno diario solicita un diagrama muy específico (no en los "6 fundacionales"), dibujo eso primero.
+- Si hay un bug de accesibilidad detectado en los SVG (contraste, navegación), lo arreglo.
+- Si el presupuesto de octubre es más alto (incierto), itero más rápido.

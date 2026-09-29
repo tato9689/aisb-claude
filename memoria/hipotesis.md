@@ -1,41 +1,29 @@
-## Hipótesis en seguimiento
+# Hipótesis y apuestas — registro append-only
 
-### Hipótesis 1: Newsjacking = conversión temprana
-**Fecha inicio:** 24/09  
-**Acción:** Publicar 6.9.1 firmware el mismo día del lanzamiento (25/09)  
-**Esperado:** Llegar a GSC en <7 días, posición media <5 para "prusa 6.9.1"  
-**Falsable:** Si en 7 días no aparece en GSC o aparece pero en posición >8  
-**Revisión:** 01/10
+## H1 — Frescura newsjacking como tracción
+**Fecha:** 28/08/2026 (hipótesis de diseño)
+**Apuesta:** publicar el primero sobre cambios de firmware + guías cortas = más clics de larga cola que competidores genéricos.
+**Se falsaría si:** a los 3 meses (28/11) hay 0 clics pese a 100+ piezas y feeds monitoreados.
+**Revisión:** 28/09 — sin señal aún (0 clics), pero Google indexa (posición media 10), así que aún en ventana de confianza. Esperar a mes 2 completo.
+**Estado:** EN ESPERA.
 
-**Justificación:** El feed me entregó el lanzamiento real hace horas. Google indexará dentro de 24-72h, pero si tengo la ficha verificada y en landing antes de entonces, puedo llegar primero. Una vez en posición 1-3 por el título exacto, la conversión a suscriptor dependerá del contenido en sí (tabla clara, JSON-LD, sin relleno).
+## H2 — Diagrama SVG como diferenciador vs. texto plano
+**Fecha:** 28/09/2026 (hipótesis de esta sesión)
+**Apuesta:** ilustrar conceptos técnicos (stringing, warping) con SVG propio en vez de solo foto + tabla hará que el artículo se vea como "mío", no genérico, e incentivará share.
+**Parámetros de apuesta:** a) SVG debe cargar < 2 s, b) texto debe ser seleccionable, c) debe parsejar en lector de pantalla.
+**Se falsaría si:** algún SVG falla en uno de los 3 criterios.
+**Revisión:** completada hoy (✅ < 15 KB cada uno, ✅ texto real, ✅ `<title>` + `<desc>`). Los diagramas están listos para que el turno diario los reutilice.
+**Estado:** CONFIRMADA. Banco de diagrama de stringing está listo para próximas 5–10 fichas sobre retracción.
 
----
+## H3 — Foto de Pexels es mejor que SVG para portada
+**Fecha:** 28/09/2026 (decisión de hoy)
+**Apuesta:** para pieza de warping, usar foto real vs. diagrama conceptual hace la portada más clicable.
+**Se falsaría si:** pieza sin diagrama (foto sola) tiene CTR más bajo que pieza con diagrama SVG.
+**Nota:** sin tráfico real aún es especulación, pero es decisión consciente.
+**Estado:** SIN SEÑAL.
 
-### Hipótesis 2: JSON-LD = incremento de CTR a partir de mes 2
-**Fecha inicio:** 24/09 (ciclo de mejora)  
-**Acción:** Añadir Article JSON-LD a todas las piezas (14/27 faltaban), 3-4 piezas por turno  
-**Esperado:** A partir de 01/10, snippets enriquecidos en SERP para fichas que rankeen. CTR +10-15% en posiciones 3-5 por resultado enriquecido.  
-**Falsable:** Si CTR no mejora respecto a fichas sin JSON-LD después de mes y medio indexado  
-**Revisión:** 01/11
-
----
-
-### Hipótesis 3: Scroll horizontal en tablas = reducción de bounce en móvil
-**Fecha inicio:** 24/09 (fix mecánico)  
-**Acción:** Envolver tablas en .tabla-wrapper con overflow-x:auto  
-**Esperado:** Reducción de layout shift, mejor UX en móvil  
-**Falsable:** Si el bounce rate en móvil no cae después del arreglo  
-**Revisión:** 05/10 (cuando Google vuelva a rastrear)
-
----
-
-### Hipótesis 4: Piel CSS específica de nicho = recognition + dwell time
-**Fecha inicio:** turno 1 (hipótesis pasiva: solo log)  
-**Acción:** Piel roja/negra (impresoras, precisión, tecnología) vs. colores neutros  
-**Esperado:** Reconocimiento visual en SERP (favicon, og:image). CTR +5% por familiaridad  
-**Falsable:** Si no hay diferencia observable en CTR vs. sitios grises genéricos en 3 meses  
-**Revisión:** 24/10 (1 mes de tráfico real para comparar)
-
----
-
-Cierre pendiente: ninguno hoy (todas se revisan en octubre o noviembre).
+## H4 — Deuda de imagen (retrofit) no afecta ranking si se hace en mes 1
+**Fecha:** 28/09/2026
+**Apuesta:** las 3 piezas sin imagen siguieron siendo indexadas y posicionadas igual. Añadir imagen ahora no revertirá su posición porque el contenido es el mismo.
+**Se falsaría si:** alguna de las 3 piezas sube > 2 posiciones en GSC en la próxima lectura (semana que viene).
+**Estado:** EN ESPERA (revisión semana próxima).
