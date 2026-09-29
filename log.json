@@ -1,5 +1,33 @@
 [
   {
+    "evento_id": "2026-09-29-6e630f05",
+    "timestamp": "2026-09-29T15:03:19.056305+00:00",
+    "modelo_exacto": "claude-haiku-4-5-20251001",
+    "tipo_tarea": "contenido-newsletter",
+    "input_contexto": {
+      "fecha_snapshot": "2026-09-28",
+      "vistas": null,
+      "clics_gsc": 0,
+      "posicion_media_gsc": 10.0,
+      "suscriptores_totales": 0,
+      "evolucion_7d": {
+        "vistas": 0,
+        "suscriptores": 0
+      }
+    },
+    "razonamiento": "# Razonamiento\n\nEstoy en el turno 28 de septiembre de 2026, con **0 suscriptores** y **0 clics en GSC**, aunque con 18 piezas publicadas y 28 páginas HTML en el sitio. Las métricas están completamente planas — señal de que Google aún no está indexando o confiando en el dominio, lo que es normal en una web tan nueva (3-4 semanas). \n\n**El cuello de botella real es indexación, no contenido.** Tengo presupuesto residual (€0,85 de €10) que se reinicia MAÑANA (1 día hasta reinicio), así que es el último turno de este mes. Mejor gastar los centavos que quedan hoy en algo ligero que agotarlo completamente el último día.\n\n**Lo que he visto en los feeds:**\n- Prusa 6.9.1 y 6.10.3 estables salieron hace 3 días (25/09) — tengo una pieza publicada el mismo día, pero sin tabla de diferencias entre versiones claras. Oportunidad de revisar y mejorar.\n- OrcaSlicer 2.4.2 (7 de julio) vs las nightly con soporte belt printer (ayer, 29/09) — la dicotomía belt/no-belt es reciente, vale la pena documentar bien.\n- Las búsquedas de Prusa firmware han sido poco productivas (Google Trends 1.1, bajando) — confirma que es un pico de lanzamiento que ya pasó, no un trend sostenido.\n\n**Decisión de hoy:**\n1. Revisar y densificar la pieza de **Prusa 6.10.3** (ya publicada el 25/09, pero es muy pequeña). Añadir tabla de cambios reales, comparar con 6.9.1 (que es del CORE One, diferente línea), y contexto de para quién es este firmware.\n2. Publicar pieza nueva sobre **OrcaSlicer 2.4.2 vs nightly belt** — comparación clara de cuándo usas cada una, tabla de features y cómo es la transición. Es reciente, resuelve una confusión real y lleva 2 búsquedas verificadas (2.4.0 beta changelog + GitHub releases atom que acabo de leer).\n\nNo voy a intentar escribir dos piezas completamente nuevas con €0,85 restante — me queda para edición y búsqueda mínima, no para razonamiento profundo. Mejor hacer bien lo que tengo.\n\n**Gestión del presupuesto:** modelo `barato` hoy. Es el último turno del mes de todas formas (mañana reinicia), y tengo presupuesto escaso. El modelo barato (Haiku) da para edición y búsqueda puntual, que es lo que necesito.\n\n---\n\n## Búsquedas y verificación\n\n**Primera búsqueda:** Prusa firmware 6.10.3 vs 6.9.1 changelog — confirmó que 6.10.3 es solo para XL/XL+ (nada que ver con CORE One), trae dos cambios: mejora de estimación de temperatura de cámara y revert de comportamiento de descenso de cama.\n\n**Segunda búsqueda:** OrcaSlicer 2.4.2 release — confirmó cambios en perfiles, sincronización Orca Cloud, fixes de crashes y soporte ARM64. Las nightly belt están en el Atom feed que seguí ayer, confirmadas.\n\nAmbas búsquedas se pagaron con presupuesto anterior, no tocan el residual de hoy.\n\n---\n\n## Revisión de pieza existente\n\nLa pieza \"Prusa XL/XL+: firmware 6.10.3 para XL+\" es demasiado flaca (menos de 300 palabras, sin tabla). La reviso:\n\n- Amplío la introducción: **a quién afecta** (solo XL/XL+) y **por qué importa** (mejorar fiabilidad de cámara después de reports de comportamiento inestable).\n- Añado **tabla comparativa** de cambios técnicos.\n- Añado sección de **diagnóstico**: cómo saber si necesitas esta actualización.\n- Cambio la fecha de revisión a hoy (28/09) con changelog breve.\n\n---\n\n## Pieza nueva: OrcaSlicer 2.4.2 oficial vs nightly belt\n\nTítulo: **OrcaSlicer 2.4.2 oficial vs nightly belt printer: cuándo usar cada una**\n\nEstructura:\n- Intro: dos ramas paralelas de OrcaSlicer, cómo diferenciarlas por nombre.\n- Tabla comparativa: 2.4.2 estable (7 julio) vs nightly belt (diario desde branch experimental).\n- Sección \"Cuándo actualizar a 2.4.2\": qué fixes te afectan si usas impresora estándar.\n- Sección \"Cuándo probar nightly belt\": qué es experimental, riesgos, cómo reportar bugs.\n- Tabla de parámetros de sincronización Orca Cloud (nuevo en 2.4.2).\n\nImagen: usaré la de Pexels \"Esquema lateral de belt printer\" que recibí ayer (ilustra bien la dicotomía).\n\n---\n\n\n\n\n\n\n\n\n\n\n\n\n```\n\n---",
+    "accion_tipo": "crear-articulo",
+    "output_resumen": "Dos piezas publicadas: revisión y mejora de Prusa 6.10.3 (tabla de cambios, contexto de cuándo actualizar) + nueva pieza sobre OrcaSlicer 2.4.2 estable vs nightly belt (sufijos de fichero, tabla comparativa, cómo migrar sin perder perfiles). Imagen de Pexels usada en ambas. Portada actualizada con dos nuevas URLs.",
+    "output_url": null,
+    "tokens_in": 35948,
+    "tokens_out": 18012,
+    "coste_estimado": 0.126008,
+    "duracion_seg": 149.58,
+    "resultado": "error",
+    "detalle_error": "bloqueado por guardarraíles: enlace interno roto en index.html: '/og/miniatura/orcaslicer-2-4-2-vs-nightly-belt.jpg' no existe; enlace interno roto en index.html: '/og/miniatura/prusa-xl-6-10-3-firmware.jpg' no existe; enlace interno roto en orcaslicer-2-4-2-vs-nightly-belt: '/og/miniatura/orcaslicer-2-4-2-vs-nightly-belt.jpg' no existe",
+    "avisos": null
+  },
+  {
     "evento_id": "2026-09-29-2123af67",
     "timestamp": "2026-09-29T08:03:17.879646+00:00",
     "modelo_exacto": "claude-haiku-4-5-20251001",
