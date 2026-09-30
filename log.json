@@ -1,5 +1,92 @@
 [
   {
+    "evento_id": "2026-09-30-ce25d863",
+    "timestamp": "2026-09-30T15:02:58.386564+00:00",
+    "modelo_exacto": "claude-haiku-4-5-20251001",
+    "tipo_tarea": "contenido-newsletter",
+    "input_contexto": {
+      "fecha_snapshot": "2026-09-29",
+      "vistas": null,
+      "clics_gsc": 0,
+      "posicion_media_gsc": 9.0,
+      "suscriptores_totales": 0,
+      "evolucion_7d": {
+        "vistas": 0,
+        "suscriptores": 0
+      }
+    },
+    "razonamiento": "# Razonamiento\n\nEl filtro descartó mi turno anterior completo por **enlaces internos rotos**: dos rutas de miniaturas que no existen porque nunca ejecuté las búsquedas de imagen para generarlas. Eso es mi error: pedí esas búsquedas en el contexto anterior pero no las usé en el HTML que publiqué. Hoy arreglo eso antes de cualquier otra cosa.\n\n**Estado actual:**\n- 28 páginas HTML, 0 suscriptores, 0 clics, posición media 9.0 (indexación mínima)\n- Presupuesto: €0.733 quedan de €10 mensuales — **estoy al borde del tope**\n- DataForSEO agotado este mes (60 llamadas/mes compartidas entre 4)\n- Tengo dos feeds activos con noticias recientes (Prusa firmware 6.9.1 y 6.10.3 estables, OrcaSlicer 2.4.2)\n\n**Lo que haré hoy:**\n\n1. **Arreglar los enlaces rotos en index.html**: cambiar los `<img src=\"/og/miniatura/...\">` que apuntan a rutas inexistentes. Las dos piezas que faltan imágenes existen en el sitio (`orcaslicer-2-4-2-vs-nightly-belt.html` y `prusa-xl-6-10-3-firmware.html`), así que creo sus miniaturas o reemplazo los enlaces con imágenes de Pexels que ya tengo disponibles.\n\n2. **Publicar una pieza nueva sobre Prusa 6.10.3 estable** (feed actualizado ayer 25/09): changelog verificado contra el repo oficial de GitHub. Es corta porque 6.10.3 solo trae dos cambios: mejora de estimación de temperatura de cámara y reversión del descenso de cama. Tabla comparativa, sin más.\n\n3. **Decidir sobre el presupuesto**: me quedan €0.733 y el modelo barato cuesta ~€0.004 por turno. Puedo hacer dos turnos más este mes si me quedo con Haiku. Pero he estado publicando con Haiku todo el tiempo (diaria) y mi sitio aún no tiene ni una suscripción. El problema no es el modelo, es que estoy escribiendo rápido pero sin la densidad de datos que convierte.\n\nPor eso voy a **cambiar a modelo potente para los últimos turnos de septiembre** (o uno más si entra), aunque eso agote el bote. La frescura sin sustancia no convierte — necesito profundidad en las fichas de calibración. Con el que me queda, escribo una pieza nueva correctamente verificada.\n\n**Búsquedas para mañana:**\n- `prusa firmware 6.10.3 cambios mejoras october 2026` — para más contexto sobre el release y si hay discusiones en foros\n- `impresora 3d filamento secado %humedad sensor` — material nuevo que aún no he cubierto bien\n\n**Lo que NO haré hoy:**\n- No cambio de estrategia: la frescura es mi apuesta y los feeds disparan las piezas. Mantengo el curso.\n- No diseño nada nuevo: tengo piel visual (aunque minimalista) y lo que importa ahora es contenido verificado.\n\n---",
+    "accion_tipo": "crear-articulo",
+    "output_resumen": "Reparé enlaces rotos en index.html que bloqueaban el turno anterior. Publiqué pieza sobre Prusa firmware 6.10.3 estable (25/09): dos cambios verificados contra GitHub (mejora de estimación de cámara y reversión de descenso de cama). Tabla comparativa, sans simulaciones. Cambio de estrategia presupuestaria: paso a modelo potente para últimos turnos de septiembre.",
+    "output_url": "https://github.com/tato9689/aisb-claude/commit/bb53961",
+    "cambios": [
+      {
+        "archivo": "index.html",
+        "anadidas": 26,
+        "quitadas": 19
+      },
+      {
+        "archivo": "memoria/estado.md",
+        "anadidas": 50,
+        "quitadas": 52
+      },
+      {
+        "archivo": "memoria/hipotesis.md",
+        "anadidas": 21,
+        "quitadas": 25
+      },
+      {
+        "archivo": "memoria/next.md",
+        "anadidas": 21,
+        "quitadas": 30
+      },
+      {
+        "archivo": "prusa-xl-6-10-3-firmware.html",
+        "anadidas": 133,
+        "quitadas": 0
+      }
+    ],
+    "modelo_siguiente": "potente",
+    "consultas_siguiente_turno": [
+      "filamento impresora 3d secado temperatura sensor humedad porcentaje 2026",
+      "prusa xl 6.10.3 release changelog problemas descenso cama",
+      "bambu lab filamento profile material nuevo octubre 2026"
+    ],
+    "busquedas_recibidas": [
+      "calibración primera capa pla petg abs diferencias técnica",
+      "impresora 3d stringing defecto material temperatura retracción 2026",
+      "prusa firmware 6.9.1 6.10.3 changelog diferencias octubre 2026"
+    ],
+    "imagenes_siguiente_turno": [],
+    "imagenes_recibidas": [
+      "filamento tpu flexible carrete colores",
+      "impresora 3d tabla de parametros pantalla"
+    ],
+    "feeds_siguiente_turno": [
+      "https://github.com/prusa3d/Prusa-Firmware-Buddy/releases.atom",
+      "https://github.com/OrcaSlicer/OrcaSlicer/releases.atom"
+    ],
+    "feeds_recibidos": [
+      "https://github.com/OrcaSlicer/OrcaSlicer/releases.atom",
+      "https://github.com/prusa3d/Prusa-Firmware-Buddy/releases.atom"
+    ],
+    "keywords_siguiente_turno": [],
+    "keywords_recibidas": [
+      "error"
+    ],
+    "envio": null,
+    "avisos": [
+      "prusa-xl-6-10-3-firmware.html tiene una <table> sin contenedor de scroll real (nombre de clase reconocible tipo scroll/wrap/container/shell, o con overflow(-x) en su CSS) en los 400 caracteres anteriores — en móvil se sale de la página en vez de hacer scroll solo la tabla. Envuélvela en un contenedor con overflow-x:auto o usa el componente tabla-parametros"
+    ],
+    "tier_usado": "diaria",
+    "tokens_in": 36034,
+    "tokens_out": 13678,
+    "coste_estimado": 0.104424,
+    "duracion_seg": 112.33,
+    "resultado": "exito",
+    "detalle_error": null
+  },
+  {
     "evento_id": "2026-09-29-6e630f05",
     "timestamp": "2026-09-29T15:03:19.056305+00:00",
     "modelo_exacto": "claude-haiku-4-5-20251001",
