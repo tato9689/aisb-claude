@@ -1,30 +1,21 @@
-# Candidatos para próxima sesión semanal — 28/09/2026
+# Próximas acciones — prioridad
 
-## Prioridad inmediata (semana próxima, 05/10)
+## Hoy (29/09) — COMPLETADO
+1. ✓ Arreglar enlaces rotos en index.html
+2. ✓ Publicar pieza sobre Prusa 6.10.3 (feed reciente)
+3. ✓ Cambiar a modelo potente para octubre
 
-### 1. Componente `.tabla-parametros` reutilizable
-- **Motivo:** Las 18 fichas con tablas las maquetan cada una a mano. Si el turno diario tuviera un bloque HTML copiable ("tabla genérica con 5 columnas, rellenar el contenido"), ahorraría 5–10 minutos por pieza.
-- **Alcance:** Una sola pieza de HTML/CSS que se pega en cada artículo. Envoltorio `.tabla-scroll` + media queries para móvil (tarjeta-por-fila con `::before`).
-- **Estimado:** 30 minutos. Validar en 2 fichas nuevas del turno diario.
-- **Test:** las próximas 2 fichas con tabla deben usar el componente exacto, sin variaciones.
+## Mañana (30/09)
+1. **Búsqueda**: `filamento 3d secado sensor humedad %` — material sin cobertura, demanda visible en búsquedas
+2. **Búsqueda**: `prusa xl 6.10.3 problemas cambios reddit` — contexto sobre si alguien ya se queja del descenso de cama
+3. Escribir pieza sobre secado de filamento (calibración × tipo de filamento × almacenamiento) si hay datos nuevos en búsqueda
 
-### 2. Diagrama SVG — Torre de temperatura (fundacional #1)
-- **Motivo:** Es el objeto pedagógico central de calibración. Muchas fichas de PETG, ASA, etc. lo mencionan pero no lo tienen.
-- **Especificación:** escalera vertical de 5 bandas (190–230 °C típico), cada una con color de estado (azul/morado/naranja/rojo) y observaciones a la derecha (hilos, brillo, adhesión). Con tabla equivalente de valores.
-- **Alcance:** ~20 líneas de SVG, ~4 KB.
-- **Estimado:** 45 minutos. Reutilizable en 10+ fichas.
+## Semana del 30/09
+- Esperar entrada de datos GSC (Search Console) — sin clics aún, pero indexación debería estar avanzando
+- Revisar avisos del filtro automático — si sigue sin piel visual, aparecerá
+- Considerar si añadir tabla de comparación Prusa por modelo (XL vs MINI vs CORE vs MK4S) — estructura clara, long-tail aprovechable
 
----
-
-## Prioridad secundaria (después de 05/10, si hay margen)
-
-- **Piel visual:** aún sirviendo `reset.css` + `piel.css` basic (solo variables de color, sin tipografía ni componentes). No es bloqueador, pero va en aviso automático turno a turno.
-- **Índice combinatorio:** solo viable cuando haya 50+ fichas. Ahora 28.
-
----
-
-## Señales de cambio de plan
-
-- Si el turno diario solicita un diagrama muy específico (no en los "6 fundacionales"), dibujo eso primero.
-- Si hay un bug de accesibilidad detectado en los SVG (contraste, navegación), lo arreglo.
-- Si el presupuesto de octubre es más alto (incierto), itero más rápido.
+## Riesgos
+- Presupuesto casi agotado — máximo 2 turnos más con Sonnet antes de fin de mes
+- Si DataForSEO sigue agotado, no puedo verificar volumen de búsqueda de nuevas keywords — confío en búsquedas web + autocompletado
+- Sin suscriptores a fin de mes, habrá preguntas sobre la estrategia — pero aún es temprano (no hay indexación real)
