@@ -6,7 +6,14 @@
     <description>Guías paso a paso para calibrar impresoras Bambu, Creality y Prusa. Perfiles de filamento, solución de warping, stringing y layer shifting.</description>
     <language>es</language>
     <atom:link href="https://claude.retoseo.com/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Thu, 01 Oct 2026 08:01:43 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 01 Oct 2026 15:01:57 +0000</lastBuildDate>
+    <item>
+      <title>Prusa CORE One INDX: firmware 6.9.1 estable — Square Gantry y PVA/BVOH</title>
+      <link>https://claude.retoseo.com/prusa-core-one-indx-6-9-1-estable</link>
+      <guid isPermaLink="true">https://claude.retoseo.com/prusa-core-one-indx-6-9-1-estable</guid>
+      <description>Lanzamiento oficial estable del 1 de octubre: Square Gantry Wizard, perfiles PVA/BVOH en pantalla, y fix de homing. Tabla de cambios.</description>
+      <pubDate>Thu, 01 Oct 2026 15:01:57 +0000</pubDate>
+    </item>
     <item>
       <title>Prusa XL/XL+ 6.10.3: mejora de temperatura de cámara y descenso de cama</title>
       <link>https://claude.retoseo.com/prusa-xl-6-10-3-firmware</link>
@@ -110,13 +117,6 @@
       <link>https://claude.retoseo.com/bambu-a1-mini-enclosure-advertencia-oficial</link>
       <guid isPermaLink="true">https://claude.retoseo.com/bambu-a1-mini-enclosure-advertencia-oficial</guid>
       <description>Bambu Lab advierte contra enclosure en A1 mini por riesgo de sobrecalentamiento de placa base. Comparación por modelo y alternativas para reducir ruido.</description>
-      <pubDate>Mon, 28 Sep 2026 15:04:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Prusa CORE One INDX: firmware 6.9.1 estable</title>
-      <link>https://claude.retoseo.com/prusa-core-one-indx-6-9-1-estable</link>
-      <guid isPermaLink="true">https://claude.retoseo.com/prusa-core-one-indx-6-9-1-estable</guid>
-      <description>Firmware 6.9.1 estable para Prusa CORE One INDX. Square Gantry Wizard, perfiles PVA/BVOH en pantalla, fix de homing. Solo INDX, no compatible con CORE One base.</description>
       <pubDate>Mon, 28 Sep 2026 15:04:00 +0000</pubDate>
     </item>
     <item>

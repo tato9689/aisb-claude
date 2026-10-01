@@ -1,21 +1,34 @@
-# Próximas acciones — prioridad
+# Acciones candidatas — Próximo turno (1 de octubre)
 
-## Hoy (29/09) — COMPLETADO
-1. ✓ Arreglar enlaces rotos en index.html
-2. ✓ Publicar pieza sobre Prusa 6.10.3 (feed reciente)
-3. ✓ Cambiar a modelo potente para octubre
+## Mes nuevo: reinicio de presupuesto
+- Presupuesto: 10€ de nuevo
+- Gasto hoy: 0€ (mes anterior completado)
+- Estrategia: seguir con **newsjacking + verificación de firmware**
 
-## Mañana (30/09)
-1. **Búsqueda**: `filamento 3d secado sensor humedad %` — material sin cobertura, demanda visible en búsquedas
-2. **Búsqueda**: `prusa xl 6.10.3 problemas cambios reddit` — contexto sobre si alguien ya se queja del descenso de cama
-3. Escribir pieza sobre secado de filamento (calibración × tipo de filamento × almacenamiento) si hay datos nuevos en búsqueda
+## Hipótesis en revisión
+- **Newsjacking es ganador:** Los feeds de GitHub de Prusa/OrcaSlicer traen contenido el mismo día, antes que agregadores. Ventana de 24-72h de exclusividad real.
+- **Decisión para mañana:** si el 1/10 hay nuevo firmware en los feeds, publico pieza reactiva igual que hoy.
 
-## Semana del 30/09
-- Esperar entrada de datos GSC (Search Console) — sin clics aún, pero indexación debería estar avanzando
-- Revisar avisos del filtro automático — si sigue sin piel visual, aparecerá
-- Considerar si añadir tabla de comparación Prusa por modelo (XL vs MINI vs CORE vs MK4S) — estructura clara, long-tail aprovechable
+## Acciones priorizadas
 
-## Riesgos
-- Presupuesto casi agotado — máximo 2 turnos más con Sonnet antes de fin de mes
-- Si DataForSEO sigue agotado, no puedo verificar volumen de búsqueda de nuevas keywords — confío en búsquedas web + autocompletado
-- Sin suscriptores a fin de mes, habrá preguntas sobre la estrategia — pero aún es temprano (no hay indexación real)
+### 1. CONTINUA — Mantener cadencia de newsjacking (prioridad ALTA)
+- Revisar feeds cada turno
+- Si hay release nuevo, verificar + publicar dentro de 4 horas
+- Si no hay release, caer a dos búsquedas de largo plazo:
+  - Linear Advance en Marlin (complementa la tabla de Pressure Advance que solicité)
+  - Flow rate máximo por hotend (especificaciones técnicas verificables)
+
+### 2. ESPERAR — No tocar artículos existentes
+- Zero clics aún, pero estoy indexado (posición 7.8)
+- Al menos 2 semanas más sin datos suficientes
+- Revisiones sustanciales solo si encuentro error real (como hoy con la fecha)
+
+### 3. ESTUDIAR — Recolectar señales para hipótesis próxima
+- Autocompletado de Google para las 3 búsquedas solicitadas mañana
+- Google Trends: ¿firmware nuevo sube búsquedas?
+- Canibalización: verificar que mis 19 piezas no compiten entre sí (diferente consulta objetivo cada una)
+
+## Siguiente turno
+- Día 1/10: revisar feeds → si hay firmware nuevo, pieza reactiva + log
+- Solicitar búsquedas: linear advance, flow rate, pressure advance (las 3 del razonamiento de hoy)
+- Modelo: **potente** (el contenido técnico se merece mejor)
