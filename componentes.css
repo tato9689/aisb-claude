@@ -1,100 +1,105 @@
-/* Tabla con scroll en móvil */
+/* Componente tabla-scroll: envoltorio con overflow horizontal seguro en móvil */
+
 .tabla-scroll {
   overflow-x: auto;
-  border: 1px solid var(--neutral-border);
-  border-radius: var(--radius-md);
-  margin: var(--space-lg) 0;
+  -webkit-overflow-scrolling: touch;
+  max-width: 100%;
+  margin: 1.5rem 0;
+  border-radius: 0.25rem;
+  box-shadow: inset -1px 0 0 rgba(0, 0, 0, 0.1);
+}
+
+.tabla-scroll:focus-within {
+  outline: 2px solid var(--accent, #2563eb);
+  outline-offset: 2px;
 }
 
 .tabla-scroll table {
-  width: 100%;
   border-collapse: collapse;
-  background-color: white;
+  min-width: 34rem;
+  width: 100%;
+}
+
+.tabla-scroll th,
+.tabla-scroll td {
+  padding: 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .tabla-scroll th {
-  background-color: var(--accent-primary);
-  color: white;
-  padding: var(--space-md);
-  text-align: left;
+  background-color: var(--bg-subtle, #f9fafb);
   font-weight: 600;
-  white-space: nowrap;
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 
-.tabla-scroll td {
-  padding: var(--space-md);
-  border-bottom: 1px solid var(--neutral-border);
-  white-space: nowrap;
+.tabla-scroll tbody tr:hover {
+  background-color: var(--bg-hover, #f3f4f6);
 }
 
 .tabla-scroll tbody tr:last-child td {
   border-bottom: none;
 }
 
-.tabla-scroll tbody tr:hover {
-  background-color: var(--neutral-bg);
+/* Responsivo: en pantallas pequeñas, opción de tarjeta por fila */
+@media (max-width: 640px) {
+  .tabla-scroll table,
+  .tabla-scroll thead,
+  .tabla-scroll tbody,
+  .tabla-scroll th,
+  .tabla-scroll td,
+  .tabla-scroll tr {
+    display: block;
+    width: 100%;
+  }
+
+  .tabla-scroll thead {
+    display: none;
+  }
+
+  .tabla-scroll tbody tr {
+    margin-bottom: 1rem;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 0.25rem;
+    overflow: hidden;
+  }
+
+  .tabla-scroll td {
+    padding-left: 50%;
+    position: relative;
+    min-height: 1.5rem;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  }
+
+  .tabla-scroll td:last-child {
+    border-bottom: none;
+  }
+
+  /* Mostrar el encabezado de columna vía ::before */
+  .tabla-scroll td[data-th]::before {
+    content: attr(data-th);
+    position: absolute;
+    left: 0.75rem;
+    top: 0.75rem;
+    font-weight: 600;
+    width: calc(50% - 1.5rem);
+    word-break: break-word;
+  }
 }
 
-/* Bloque de código */
-code {
-  background-color: #f5f5f2;
-  border-radius: var(--radius-sm);
-  padding: 0.2em 0.4em;
-  font-family: 'Courier New', monospace;
-  font-size: 0.9em;
+/* Accesibilidad: región anunciada */
+.tabla-scroll[role="region"] {
+  position: relative;
 }
 
-pre {
-  background-color: #f5f5f2;
-  border-radius: var(--radius-md);
-  padding: var(--space-lg);
-  overflow-x: auto;
-  margin: var(--space-lg) 0;
-  border: 1px solid var(--neutral-border);
-}
-
-pre code {
-  background-color: transparent;
-  padding: 0;
-}
-
-/* Nota o aviso */
-.nota {
-  background-color: #fffbf0;
-  border-left: 4px solid var(--accent-secondary);
-  padding: var(--space-md) var(--space-lg);
-  margin: var(--space-lg) 0;
-  border-radius: var(--radius-md);
-}
-
-.nota strong {
-  color: var(--accent-primary);
-}
-
-/* Enlace con icono */
-a[href*="github.com"]::after,
-a[href*="prusa3d.com"]::after,
-a[href*="bambulab.com"]::after,
-a[href*="creality.com"]::after {
-  content: " ↗";
-  font-size: 0.85em;
-  opacity: 0.7;
-}
-
-/* Acceso directo al contenido */
-.skip-link {
+.tabla-scroll[role="region"]::after {
+  content: "Scroll horizontal disponible";
   position: absolute;
-  top: -40px;
-  left: 0;
-  background: var(--accent-primary);
-  color: white;
-  padding: var(--space-md);
-  text-decoration: none;
-  z-index: 100;
-  border-radius: var(--radius-md);
-}
-
-.skip-link:focus {
-  top: var(--space-md);
-  left: var(--space-md);
+  right: -999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
 }

@@ -6,13 +6,13 @@
     <description>Guías paso a paso para calibrar impresoras Bambu, Creality y Prusa. Perfiles de filamento, solución de warping, stringing y layer shifting.</description>
     <language>es</language>
     <atom:link href="https://claude.retoseo.com/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Wed, 30 Sep 2026 15:02:58 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 01 Oct 2026 08:01:43 +0000</lastBuildDate>
     <item>
-      <title>Prusa XL/XL+ 6.10.3: cambios de firmware — estimación de cámara y descenso de cama</title>
+      <title>Prusa XL/XL+ 6.10.3: mejora de temperatura de cámara y descenso de cama</title>
       <link>https://claude.retoseo.com/prusa-xl-6-10-3-firmware</link>
       <guid isPermaLink="true">https://claude.retoseo.com/prusa-xl-6-10-3-firmware</guid>
-      <description>Firmware 6.10.3 para Prusa XL y XL+ del 25/09. Cambios: mejora de estimación de temperatura de cámara y reversión del comportamiento de descenso de cama.</description>
-      <pubDate>Wed, 30 Sep 2026 15:02:57 +0000</pubDate>
+      <description>Firmware Prusa XL 6.10.3 estable del 25/09/2026: mejora de estimación de temperatura de cámara y reversión del descenso automático de cama. Solo XL y XL+.</description>
+      <pubDate>Thu, 01 Oct 2026 08:01:43 +0000</pubDate>
     </item>
     <item>
       <title>Stringing en Prusa MK3S: tabla de retracción y temperatura por material</title>
