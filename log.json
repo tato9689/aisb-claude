@@ -1,5 +1,32 @@
 [
   {
+    "evento_id": "2026-10-02-67e9552c",
+    "timestamp": "2026-10-02T15:11:49.200813+00:00",
+    "modelo_exacto": "claude-sonnet-5",
+    "tipo_tarea": null,
+    "input_contexto": {
+      "fecha_snapshot": "2026-10-01",
+      "vistas": null,
+      "clics_gsc": 0,
+      "posicion_media_gsc": 3.7,
+      "suscriptores_totales": 0,
+      "evolucion_7d": {
+        "vistas": 0,
+        "suscriptores": 0
+      }
+    },
+    "razonamiento": "Reescribo el turno completo desde cero porque la respuesta anterior se perdió por un fallo de formato (JSON no parseable). Dos acciones reales hoy, priorizadas en este orden:\n\n**1) Corrección de integridad (antes que nada nuevo).** El feed de GitHub trae hoy, 01/10, la release real \"6.9.1 Firmware for Prusa CORE One+ (Gen 2) INDX, CORE One INDX\" — y su nota oficial dice literalmente que los perfiles PVA/BVOH **no se incluyeron** por un error de proceso, aunque estaban anunciados en el resumen inicial (tachados en el changelog oficial). Mi ficha existente sobre esta versión afirmaba que sí llegaban, y además la tenía fechada el 25/09 cuando la release real es de hoy. Eso es una afirmación falsa ya indexada: la corrijo entera, cito la frase oficial de Prusa, actualizo la fecha real y dejo explícito qué no está confirmado (ni el detalle técnico del fix de homing ni cuándo llega la \"nueva versión\" prometida). Aprovecho la misma pieza para resolver el aviso pendiente de la tabla sin contenedor de scroll — la envuelvo en un div con `overflow-x:auto` explícito, igual que hago ya en la pieza nueva.\n\n**2) Cobertura nueva para cumplir el suelo diario.** Con los resultados de búsqueda del turno anterior (documentación oficial de Marlin, 3DMaker Engineering, wiki de OrcaSlicer) escribo una ficha sobre Linear Advance en Marlin: qué cambió entre la unidad K antigua (30–130) y la actual (0.1–2.0), los tres requisitos previos verificados, y cómo calibrarlo con la herramienta oficial de Marlin y con la torre de OrcaSlicer (fórmula citada: inicio + paso×altura, ejemplo 0+(0.002×8)=0.016). Importante: mis resultados de búsqueda también traían material de Klipper (TUNING_TOWER, SET_VELOCITY_LIMIT), pero Klipper es self-hosting y eso es terreno de DeepSeek según el reparto de frontera — lo dejo fuera a propósito y lo digo explícito en la pieza (\"si tu impresora corre Klipper, el procedimiento es distinto y queda fuera de esta ficha\"), para no invadir su nicho aunque tuviera el dato a mano.\n\nNo toco `memoria/hipotesis.md` este turno: no tengo visibilidad de su contenido actual en este contexto y es append-only — sobrescribirlo a ciegas podría borrar historial real. Sí reconstruyo `estado.md` (se sobrescribe por diseño, y puedo reconstruirlo con precisión a partir del índice actual de 20 piezas) y `next.md`.\n\nGasto: 0,064€ de 10€, mes recién empezado (29 días para reinicio), sin presión de ritmo. Sigo con el modelo potente: no hay razón concreta para bajar a barato y el objetivo es agotar el bote con trabajo real, no ahorrarlo.\n\n```archivo:prusa-core-one-indx-6-9-1-estable.html\n<!doctype html>\n<html lang=\"es\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>Prusa CORE One INDX 6.9.1 estable: sin PVA/BVOH, corregido</title>\n  <meta name=\"description\" content=\"La release real de 6.9.1 trae Square Gantry Wizard y un fix de homing. PVA/BVOH se anunció pero no llegó: error de proceso confirmado por Prusa el 01/10.\">\n  <link rel=\"canonical\" href=\"https://claude.retoseo.com/prusa-core-one-indx-6-9-1-estable\">\n  <link rel=\"icon\" href=\"/favicon.svg\" type=\"image/svg+xml\">\n\n  <meta property=\"og:type\" content=\"article\">\n  <meta property=\"og:url\" content=\"https://claude.retoseo.com/prusa-core-one-indx-6-9-1-estable\">\n  <meta property=\"og:title\" content=\"Prusa CORE One INDX 6.9.1 estable: sin PVA/BVOH, corregido\">\n  <meta property=\"og:description\" content=\"La release real de 6.9.1 trae Square Gantry Wizard y un fix de homing. PVA/BVOH se anunció pero no llegó: error de proceso confirmado por Prusa el 01/10.\">\n  <meta property=\"og:image\" content=\"https://claude.retoseo.com/og/miniatura/prusa-core-one-indx-6-9-1-estable.jpg\">\n  <meta name=\"twitter:card\" content=\"summary_large_image\">\n\n  <script type=\"application/ld+json\">\n  {\n    \"@context\": \"https://schema.org\",\n    \"@type\": \"Article\",\n    \"headline\": \"Prusa CORE One INDX: firmware 6.9.1 estable — qué cambia de verdad\",\n    \"datePublished\": \"2026-09-2",
+    "accion_tipo": null,
+    "output_resumen": "el turno no se publicó ni tras reintentarlo: la respuesta no traía un bloque JSON válido",
+    "output_url": null,
+    "tokens_in": 89794,
+    "tokens_out": 64000,
+    "coste_estimado": 0.819588,
+    "duracion_seg": 650.22,
+    "resultado": "error",
+    "detalle_error": "no se pudo parsear el bloque JSON de la respuesta (tras reintentarlo una vez)"
+  },
+  {
     "evento_id": "2026-10-01-88751994",
     "timestamp": "2026-10-01T15:01:57.513768+00:00",
     "modelo_exacto": "claude-haiku-4-5-20251001",
