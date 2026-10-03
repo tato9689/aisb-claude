@@ -1,5 +1,32 @@
 [
   {
+    "evento_id": "2026-10-03-60ace199",
+    "timestamp": "2026-10-03T15:10:30.376883+00:00",
+    "modelo_exacto": "claude-sonnet-5",
+    "tipo_tarea": null,
+    "input_contexto": {
+      "fecha_snapshot": "2026-10-02",
+      "vistas": null,
+      "clics_gsc": 0,
+      "posicion_media_gsc": 3.5,
+      "suscriptores_totales": 0,
+      "evolucion_7d": {
+        "vistas": 0,
+        "suscriptores": 0
+      }
+    },
+    "razonamiento": "Turno de hoy, antes de nada: por qué falló el anterior. No fue un problema de contenido — fue que dejé HTML suelto fuera de los bloques ```archivo:``` en algún punto de la respuesta, y el parser no pudo recomponer el JSON. Esta vez separo limpio: razonamiento en texto libre, cada archivo en su propio bloque, JSON final solo con la lista de rutas. Repito el mismo plan de contenido de ayer porque sigue siendo válido — no he perdido ninguna verificación, solo el formato de entrega.\n\nSobre el contenido: el feed de `Prusa-Firmware-Buddy` trajo el dato más urgente — el release 6.9.1 estable (01/10) tacha explícitamente en sus propias notas los perfiles PVA/BVOH que había anunciado: \"This feature was actually not included in this release due to a process error\". Mi ficha existente sobre ese firmware decía que sí llegaban. Es un dato publicado que la propia fuente desmiente un día después, así que reescribo la pieza entera: tabla de estado por función (Square Gantry Wizard sí, fix de homing sí, PVA/BVOH no), explicación del tachado oficial, y un changelog visible de 2 líneas marcando la corrección. Aprovecho la misma reescritura para resolver el aviso pendiente del filtro — la tabla sin contenedor de scroll — envolviéndola en `div.tabla-parametros` con `overflow-x:auto` inline además de la clase, cinturón y tirantes por si el componente no estuviera bien definido.\n\nLa segunda pieza es nueva: \"Pressure Advance y Linear Advance: cómo calibrar el K-factor en Klipper y Marlin\", con las tres búsquedas que ya había hecho (Marlin/Linear Advance, flow rate por diámetro de boquilla, Pressure Advance en slicers). Marco explícitamente dos cosas sin segunda fuente: el rango de Pressure Advance en firmware Prusa post-5.0.0 (no lo publican, lo dejo como \"sin confirmar a fecha de 02/10\") y el salto pequeño entre 0.4 y 0.6mm de flow máximo que da filamentfeed.com, que no tiene nada que lo respalde de forma independiente. Añado un SVG propio con la torre de calibración (bajo/correcto/alto) como elemento visual — no hay tabla de banco de imágenes que capture eso mejor que un diagrama simple.\n\nNo toco `memoria/hipotesis.md`: sigue sin llegarme su contenido en el contexto y es append-only — prefiero no escribir a ciegas y arriesgarme a pisar historial que no he leído. Lo dejo anotado como primera tarea de mañana en `next.md`, junto con la hipótesis que quiero registrar en cuanto pueda leerlo: si la corrección rápida + la pieza nueva mueven algo en 7 días. Con `vistas: null` y `suscriptores: 0` sigo sin escalón de impresiones real — no saco ninguna conclusión de causalidad hoy, sigo mirando indexación y calidad de contenido.\n\nPresupuesto: 0.823€ de 10€, 28 días por delante, sin ir por detrás de ritmo. Sigo con el modelo potente — hoy la tarea era cruzar datos técnicos de varias fuentes con precisión numérica (K-factor, flow rate, corrección de firmware), justo donde se nota el criterio del modelo caro, y no hay razón de ahorro que lo justifique.\n\n```archivo:index.html\n<!doctype html>\n<html lang=\"es\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>Calibración 3D — Guías de impresoras FDM</title>\n  <meta name=\"description\" content=\"Guías paso a paso para calibrar impresoras Bambu, Creality y Prusa. Perfiles de filamento, solución de warping, stringing y layer shifting.\">\n  <link rel=\"canonical\" href=\"https://claude.retoseo.com/\">\n  <link rel=\"alternate\" type=\"application/rss+xml\" title=\"Calibración 3D — RSS\" href=\"/rss.xml\">\n  <link rel=\"icon\" href=\"/favicon.svg\" type=\"image/svg+xml\">\n\n  <meta property=\"og:type\" content=\"website\">\n  <meta property=\"og:url\" content=\"https://claude.retoseo.com/\">\n  <meta property=\"og:title\" content=\"Calibración 3D — Guías de impresoras FDM\">\n  <meta property=\"og:description\" content=\"Guías paso a paso para calibrar impresoras Bambu, Creality y Prusa. Perfiles de filamento, solución de warping, stringing y layer shifting.\">\n  <meta property=\"og:image\" content=\"ht",
+    "accion_tipo": null,
+    "output_resumen": "el turno no se publicó ni tras reintentarlo: la respuesta no traía un bloque JSON válido",
+    "output_url": null,
+    "tokens_in": 95975,
+    "tokens_out": 64000,
+    "coste_estimado": 0.83195,
+    "duracion_seg": 580.62,
+    "resultado": "error",
+    "detalle_error": "no se pudo parsear el bloque JSON de la respuesta (tras reintentarlo una vez)"
+  },
+  {
     "evento_id": "2026-10-02-67e9552c",
     "timestamp": "2026-10-02T15:11:49.200813+00:00",
     "modelo_exacto": "claude-sonnet-5",
