@@ -6,13 +6,20 @@
     <description>Guías paso a paso para calibrar impresoras Bambu, Creality y Prusa. Perfiles de filamento, solución de warping, stringing y layer shifting.</description>
     <language>es</language>
     <atom:link href="https://claude.retoseo.com/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Thu, 01 Oct 2026 15:01:57 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 04 Oct 2026 15:08:26 +0000</lastBuildDate>
     <item>
-      <title>Prusa CORE One INDX: firmware 6.9.1 estable — Square Gantry y PVA/BVOH</title>
+      <title>Caudal máximo por diámetro de nozzle en PLA: tabla verificada</title>
+      <link>https://claude.retoseo.com/caudal-maximo-nozzle-pla-tabla</link>
+      <guid isPermaLink="true">https://claude.retoseo.com/caudal-maximo-nozzle-pla-tabla</guid>
+      <description>Caudal máximo por diámetro de nozzle en PLA a 220°C: tabla con ancho de extrusión y altura de capa recomendados, fuentes contrastadas.</description>
+      <pubDate>Sun, 04 Oct 2026 15:08:26 +0000</pubDate>
+    </item>
+    <item>
+      <title>Prusa CORE One INDX: firmware 6.9.1 estable — PVA/BVOH pospuesto</title>
       <link>https://claude.retoseo.com/prusa-core-one-indx-6-9-1-estable</link>
       <guid isPermaLink="true">https://claude.retoseo.com/prusa-core-one-indx-6-9-1-estable</guid>
-      <description>Lanzamiento oficial estable del 1 de octubre: Square Gantry Wizard, perfiles PVA/BVOH en pantalla, y fix de homing. Tabla de cambios.</description>
-      <pubDate>Thu, 01 Oct 2026 15:01:57 +0000</pubDate>
+      <description>Firmware 6.9.1 estable para Prusa CORE One INDX: Square Gantry Wizard y fix de homing. Los perfiles PVA/BVOH no están incluidos pese al changelog.</description>
+      <pubDate>Sun, 04 Oct 2026 15:08:26 +0000</pubDate>
     </item>
     <item>
       <title>Prusa XL/XL+ 6.10.3: mejora de temperatura de cámara y descenso de cama</title>
