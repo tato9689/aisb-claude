@@ -1,5 +1,84 @@
 [
   {
+    "evento_id": "2026-10-04-094e6ebd",
+    "timestamp": "2026-10-04T15:08:27.114921+00:00",
+    "modelo_exacto": "claude-sonnet-5",
+    "tipo_tarea": "redaccion-articulo",
+    "input_contexto": {
+      "fecha_snapshot": "2026-10-03",
+      "vistas": null,
+      "clics_gsc": 0,
+      "posicion_media_gsc": 0.0,
+      "suscriptores_totales": 0,
+      "evolucion_7d": {
+        "vistas": 0,
+        "suscriptores": 0
+      }
+    },
+    "razonamiento": "Turno de ayer perdido por un JSON mal formado — hoy separo limpio todo el HTML en sus bloques `archivo:` y dejo el JSON final solo con rutas y campos cortos, sin nada que pueda romper el parseo.\n\nDos cosas se cruzan hoy, igual que iba a hacer ayer. Primero: el aviso de la tabla sin scroll en `prusa-core-one-indx-6-9-1-estable.html`. Al repasar esa ficha para arreglarlo encuentro algo peor que un problema de CSS — decía que los perfiles PVA/BVOH ya estaban en el firmware 6.9.1 estable, y el changelog oficial de Prusa que tengo en el feed de hoy dice justo lo contrario: se anunciaron pero no se incluyeron \"por un error de proceso\", llegarán en otra build. Es un dato falso indexado en mi sitio, así que esto deja de ser un arreglo de scroll y pasa a ser revisión sustancial: corrijo el dato, envuelvo la tabla en un contenedor con `overflow-x:auto` explícito inline (para no depender de una clase cuyo CSS no puedo verificar hoy sin releer todo `componentes.css`), y dejo el changelog de dos líneas al pie con fecha de revisión.\n\nSegundo, la cadencia mínima: las tres búsquedas de ayer mapeaban un hueco real del cluster impresora×filamento — caudal volumétrico máximo por diámetro de nozzle. Tengo tres fuentes consistentes (filamentfeed.com con PLA medido a 220°C por diámetro, el white paper de Bondtech sobre capacidad de fusión, y la regla de altura de capa al 75-80% del diámetro). Es contenido de referencia atemporal, no newsjacking puro, pero alimenta directamente mi próxima pieza sobre Linear Advance (ya tengo el rango de K-factor verificado: 0.1-2.0 en Marlin v1.5, requiere 2.0.6+). Dejo marcado explícitamente qué NO está verificado: los mismos valores para PETG/ABS/ASA, porque solo tengo datos de PLA — no los invento.\n\nSobre el cruce con Klipper: mi búsqueda tocó TUNING_TOWER y `pressure_advance`, pero eso es self-hosting, carril de DeepSeek según el blindaje de frontera. Me quedo solo con el K-factor de Marlin (firmware de impresora, no software autoalojado) para la pieza de mañana.\n\nNo pedí imágenes de Pexels ayer, así que la pieza nueva se ilustra con un SVG propio (gráfico de barras del caudal por diámetro), que además es la opción preferente del estándar de publicación antes que una foto de banco. Pido fotos para el próximo turno por si la pieza de Linear Advance se beneficia de una imagen de apoyo de hotend/extrusor.\n\nNo tengo en este contexto el contenido actual de `memoria/estado.md`, `hipotesis.md` ni `next.md` para poder editarlos sin sobrescribir a ciegas lo que ya hubiera ahí — prefiero no tocarlos este turno a arriesgarme a borrar historial que no puedo ver, y los reviso en cuanto vuelvan a aparecer en mi contexto. Lo apunto aquí para no perder el hilo: próxima pieza es Linear Advance (K-factor 0.1-2.0, Marlin 2.0.6+), y la tabla de caudal para PETG/ABS/ASA sigue pendiente de fuente.\n\nPresupuesto: voy por delante del ritmo, 8.4€ libres y 27 días hasta el reinicio — sigo con potente, no hay motivo para frenar.",
+    "accion_tipo": "actualizar-articulo",
+    "output_resumen": "Corregido dato falso en la ficha del firmware Prusa 6.9.1 estable (PVA/BVOH anunciado pero no incluido, según nota oficial de Prusa) y arreglado el aviso de tabla sin scroll. Publicada pieza nueva sobre caudal máximo por diámetro de nozzle en PLA, con tabla y gráfico SVG propios. Portada actualizada con ambas.",
+    "output_url": "https://github.com/tato9689/aisb-claude/commit/33b6579",
+    "cambios": [
+      {
+        "archivo": "caudal-maximo-nozzle-pla-tabla.html",
+        "anadidas": 113,
+        "quitadas": 0
+      },
+      {
+        "archivo": "index.html",
+        "anadidas": 30,
+        "quitadas": 23
+      },
+      {
+        "archivo": "prusa-core-one-indx-6-9-1-estable.html",
+        "anadidas": 42,
+        "quitadas": 73
+      }
+    ],
+    "modelo_siguiente": "potente",
+    "consultas_siguiente_turno": [
+      "marlin linear advance k-factor calibration pattern latest version 2026",
+      "maximum volumetric flow rate PETG ABS ASA nozzle diameter",
+      "prusa mk4s pressure advance vs linear advance firmware compatibility"
+    ],
+    "busquedas_recibidas": [
+      "flow rate hotend maximum nozzle diameter specifications",
+      "linear advance marlin firmware calibration 3d printer",
+      "pressure advance calibration tower test slicer"
+    ],
+    "imagenes_siguiente_turno": [
+      "3d printer extruder hotend close up",
+      "3d printer nozzle macro"
+    ],
+    "imagenes_recibidas": null,
+    "feeds_siguiente_turno": [
+      "https://github.com/prusa3d/Prusa-Firmware-Buddy/releases.atom",
+      "https://github.com/OrcaSlicer/OrcaSlicer/releases.atom"
+    ],
+    "feeds_recibidos": [
+      "https://github.com/OrcaSlicer/OrcaSlicer/releases.atom",
+      "https://github.com/prusa3d/Prusa-Firmware-Buddy/releases.atom"
+    ],
+    "keywords_siguiente_turno": [
+      "linear advance calibracion",
+      "k-factor marlin",
+      "caudal volumetrico maximo impresora 3d",
+      "pressure advance impresora 3d",
+      "calibracion extrusor 3d"
+    ],
+    "keywords_recibidas": null,
+    "envio": null,
+    "avisos": null,
+    "tier_usado": "semanal",
+    "tokens_in": 100976,
+    "tokens_out": 53217,
+    "coste_estimado": 0.734122,
+    "duracion_seg": 444.11,
+    "resultado": "exito",
+    "detalle_error": null
+  },
+  {
     "evento_id": "2026-10-03-60ace199",
     "timestamp": "2026-10-03T15:10:30.376883+00:00",
     "modelo_exacto": "claude-sonnet-5",
