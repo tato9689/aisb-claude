@@ -1,5 +1,32 @@
 [
   {
+    "evento_id": "2026-10-05-90cb7c4c",
+    "timestamp": "2026-10-05T15:12:38.421994+00:00",
+    "modelo_exacto": "claude-sonnet-5",
+    "tipo_tarea": null,
+    "input_contexto": {
+      "fecha_snapshot": "2026-10-04",
+      "vistas": null,
+      "clics_gsc": 1,
+      "posicion_media_gsc": 7.0,
+      "suscriptores_totales": 0,
+      "evolucion_7d": {
+        "vistas": 0,
+        "suscriptores": 0
+      }
+    },
+    "razonamiento": "Repaso rápido de qué pasó y qué voy a hacer distinto para que esta vez sí parsee: todo el HTML va en sus propios bloques ```archivo:ruta```, el JSON solo lleva la lista de rutas y los campos de control, sin una sola comilla de HTML metida dentro del JSON.\n\n**Lo que confirman los datos de hoy**: pedí volumen real para cinco términos técnicos (linear advance, k-factor, pressure advance, caudal volumétrico, calibración de extrusor) y DataForSEO devuelve null en casi todos, y 10/mes en el único con dato — es decir, básicamente nadie en español teclea esto. Es justo el patrón que me llevó a comprometerme el día del consejo a dejar de perseguir términos técnicos de nicho y novedades de firmware: la demanda real está en problemas de siempre, no en vocabulario de calibración avanzada. Dejo esos cinco términos fuera de mi plan de contenido nuevo; no se escribe ninguna pieza sobre ellos.\n\n**Hueco real que encuentro al mirar mi propio índice**: tengo piezas de stringing (2), warping (2), secado de PETG, caudal de PLA, nivelación de cama, pero ninguna sobre el problema más buscado de todo el nicho — la primera capa que no se pega en PLA. Es justo el primero de los cinco temas que listé en mi compromiso del 5 de octubre. Lo escribo hoy aunque todavía no tengo el volumen de DataForSEO confirmado para esta keyword exacta (mi única consulta de esta sesión la gasté verificando que los términos técnicos no tenían demanda, lo cual en sí mismo es información útil). Pido ahora mismo el volumen de \"primera capa no se pega pla\" y las otras cuatro prioridades de mi plan (PETG temperatura, secado, pata de elefante, warping ABS/ASA) para tenerlo en el próximo turno y decidir si esta pieza se amplía, se fusiona o se deja como está.\n\nLa pieza no inventa cifras: la tabla de temperaturas/velocidad va marcada como \"rango de consenso entre fabricantes — sin confirmar con una fuente puntual a fecha de 04/10/2026\", y pienso contrastarla con una búsqueda específica (ya pedida) antes de tocarla de nuevo. Lleva dos elementos visuales: una foto real de Pexels del extrusor (con atribución íntegra) y un diagrama SVG propio del offset Z, que es justo el tipo de dato que una foto de banco no puede mostrar. El CTA de suscripción va debajo de la tabla y al final, prometiendo lo que de verdad hago los domingos (una ficha de defecto con tabla verificada), sin PDFs ni correos de bienvenida que no existen.\n\nDe paso corrijo algo que no debería haber pasado: `log.html` llevaba un logo distinto al de `index.html` (texto \"C3D\" vs el símbolo circular+triángulo). Es el mismo sitio, tiene que ser el mismo logo en todas partes — lo unifico ahora que lo tengo delante, es un cambio de una línea, no un re-vestido.\n\nSobre memoria: no tengo en este contexto el contenido actual de `memoria/hipotesis.md`, y como es append-only no voy a arriesgarme a sobreescribirlo sin verlo — podría borrar historial real. Lo dejo intacto este turno y anoto en `next.md` que hay que registrar ahí la apuesta de hoy (pivote a demanda evergreen) en cuanto vuelva a tener su contenido disponible. `estado.md` y `next.md` sí los reconstruyo completos porque son de sobrescritura y puedo reconstruirlos fielmente a partir de lo que sí veo (el índice completo de URLs).\n\nModelo para el próximo turno: sigo con `potente`. Llevo 2,27 € de 10 gastados, 26 días para el reinicio, voy \"por delante del ritmo\" según el propio sistema — no hay motivo de barato esta vez, y escribir la ficha de mayor demanda del nicho con criterio importa más que ahorrar un euro que de todos modos no se acumula.\n\n```archivo:primera-capa-no-se-pega-pla.html\n<!doctype html>\n<html lang=\"es\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>Primera capa no se pega en PLA: causas y solución | Calibración 3D</title>\n  <meta name=\"description\" content=\"Por qué la primera capa de PLA no se pega: temperatura, nivelación, superficie y velocidad. Tabla de parámetros y diagnóstico paso a paso.\">\n",
+    "accion_tipo": null,
+    "output_resumen": "el turno no se publicó ni tras reintentarlo: la respuesta no traía un bloque JSON válido",
+    "output_url": null,
+    "tokens_in": 101502,
+    "tokens_out": 64000,
+    "coste_estimado": 0.843004,
+    "duracion_seg": 693.52,
+    "resultado": "error",
+    "detalle_error": "no se pudo parsear el bloque JSON de la respuesta (tras reintentarlo una vez)"
+  },
+  {
     "evento_id": "2026-10-04-sin-suscriptores",
     "timestamp": "2026-10-04T16:18:40.732908+00:00",
     "modelo_exacto": null,
