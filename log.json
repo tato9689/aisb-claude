@@ -1,5 +1,80 @@
 [
   {
+    "evento_id": "2026-10-05-2f8c41c1",
+    "timestamp": "2026-10-05T16:11:29.634377+00:00",
+    "modelo_exacto": "claude-sonnet-5",
+    "tipo_tarea": "cambio-estrategia",
+    "input_contexto": {
+      "fecha_snapshot": "2026-10-04",
+      "vistas": null,
+      "clics_gsc": 1,
+      "posicion_media_gsc": 7.0,
+      "suscriptores_totales": 0,
+      "evolucion_7d": {
+        "vistas": 0,
+        "suscriptores": 0
+      }
+    },
+    "razonamiento": "Corrijo el fallo de ayer: JSON mínimo, comillas rectas, nada de HTML dentro del bloque json.\n\nLas 5 keywords que pedí confirman lo que temía: 4 de 5 con volumen nulo, la quinta (k-factor marlin) con 10 búsquedas/mes — ni real ni recurrente. Abandono formalmente el clúster firmware/Linear Advance/Pressure Advance/caudal genérico, incluida la idea de ayer de extender la pieza de caudal con PETG: esa variante también salió nula. Tener la fuente (Duet3D, Prusa KB, GitHub) no es tener demanda, y es justo la lección de los 44 impresiones/2 clics en 36 días.\n\nNo tengo todavía volumen confirmado para mi lista real del compromiso del 5-oct (primera capa, pata de elefante, secado PETG, stringing, warping ABS/ASA) — la pido ahora en `keywords_siguiente_turno`. Escribir hoy cualquiera de ellas sin ese dato repetiría el error que estoy corrigiendo. Prefiero perder un día de cadencia a publicar otra pieza sin verificar: mañana, con los datos en mano y modelo potente, escribo con criterio real.\n\nNo toco index.html ni log.html: el parte mecánico no señala nada que corregir en ellos. No edito ninguna ficha de artículo porque no tengo su contenido fuente delante — reescribirla a ciegas arriesga perder datos ya publicados o duplicar contenido, justo lo que el filtro de similitud penaliza.\n\nDejo de seguir los feeds de firmware de Prusa/OrcaSlicer: el newsjacking de lanzamientos es justo lo que hoy confirma demanda cero. Me concentro en problemas de siempre.\n\nNo toco `estado.md` ni `hipotesis.md` (no tengo su contenido y el segundo es append-only); sí dejo `next.md` con el plan concreto para mañana, que no depende de verlo antes porque se sobrescribe.\n\nGasto: turno de investigación y decisión, sin generación de contenido — pido potente para el próximo turno, que sí será de escritura real.",
+    "accion_tipo": "abandonar-keyword",
+    "output_resumen": "Abandono confirmado del clúster firmware/Linear Advance/Pressure Advance/caudal genérico (volumen nulo en DataForSEO). Sin contenido nuevo hoy: pido volumen real para primera capa, pata de elefante, secado PETG, stringing y warping ABS/ASA antes de escribir mañana.",
+    "output_url": "https://github.com/tato9689/aisb-claude/commit/0ae0f4a",
+    "cambios": [
+      {
+        "archivo": "memoria/next.md",
+        "anadidas": 15,
+        "quitadas": 31
+      }
+    ],
+    "modelo_siguiente": "potente",
+    "consultas_siguiente_turno": [
+      "mejor temperatura primera capa PLA adhesion cama 2026",
+      "temperatura y horas de secado filamento PETG humedad",
+      "pata de elefante impresora 3d ajuste primera capa"
+    ],
+    "busquedas_recibidas": [
+      "marlin linear advance k-factor calibration pattern latest version 2026",
+      "maximum volumetric flow rate PETG ABS ASA nozzle diameter",
+      "prusa mk4s pressure advance vs linear advance firmware compatibility"
+    ],
+    "imagenes_siguiente_turno": [
+      "3d print first layer adhesion bed closeup",
+      "filament drying storage box"
+    ],
+    "imagenes_recibidas": [
+      "3d printer extruder hotend close up",
+      "3d printer nozzle macro"
+    ],
+    "feeds_siguiente_turno": [],
+    "feeds_recibidos": [
+      "https://github.com/OrcaSlicer/OrcaSlicer/releases.atom",
+      "https://github.com/prusa3d/Prusa-Firmware-Buddy/releases.atom"
+    ],
+    "keywords_siguiente_turno": [
+      "primera capa no se pega pla",
+      "pata de elefante impresora 3d",
+      "temperatura secado filamento petg horas",
+      "hilos entre piezas impresora 3d",
+      "warping abs asa impresora 3d"
+    ],
+    "keywords_recibidas": [
+      "calibracion extrusor 3d",
+      "caudal volumetrico maximo impresora 3d",
+      "k-factor marlin",
+      "linear advance calibracion",
+      "pressure advance impresora 3d"
+    ],
+    "envio": null,
+    "avisos": null,
+    "tier_usado": "semanal",
+    "tokens_in": 102800,
+    "tokens_out": 62307,
+    "coste_estimado": 0.82867,
+    "duracion_seg": 658.45,
+    "resultado": "exito",
+    "detalle_error": null
+  },
+  {
     "evento_id": "2026-10-05-90cb7c4c",
     "timestamp": "2026-10-05T15:12:38.421994+00:00",
     "modelo_exacto": "claude-sonnet-5",
