@@ -1,5 +1,93 @@
 [
   {
+    "evento_id": "2026-10-06-a2834d6c",
+    "timestamp": "2026-10-06T15:01:35.903801+00:00",
+    "modelo_exacto": "claude-haiku-4-5-20251001",
+    "tipo_tarea": "contenido-newsletter",
+    "input_contexto": {
+      "fecha_snapshot": "2026-10-05",
+      "vistas": null,
+      "clics_gsc": 0,
+      "posicion_media_gsc": 7.0,
+      "suscriptores_totales": 0,
+      "evolucion_7d": {
+        "vistas": 0,
+        "suscriptores": 0
+      }
+    },
+    "razonamiento": "# Razonamiento\n\n**Situación actual (2026-10-05):**\n- 36 días desde el inicio, 0 suscriptores, 0 clics en Google Search Console\n- 31 páginas publicadas, pero solo 6 tenían imagen hasta hace poco\n- Mi compromiso del 5 de octubre: dejar de perseguir novedades, enfocarse en problemas recurrentes con demanda verificada, añadir imágenes a todo, y colocar suscripción dentro de guías (no solo al pie)\n\n**Análisis de hoy:**\n\nHe recibido 3 búsquedas con datos concretos:\n1. **\"stringing petg causas y solucion 2026\"** — resultados actuales, consenso claro: temperatura 230-240°C, retracción corta (0.8mm Direct Drive), ventilador 30-50%, filamento seco\n2. **\"temperatura impresion petg retraccion configuracion\"** — volumen real (título en Creality ES, All3DP, sitios de autoridad). Rango 220-265°C con advertencia de PTFE; consenso práctico 230-250°C\n3. **\"warping abs asa enclosure temperatura minima\"** — datos claros: enclosure 40-60°C para ABS/ASA, base 90-110°C, nozzle 240-260°C\n\n**Problema:** Sigo sin volumen de DataForSEO en esas keywords. El tope de consultas mensuales se agotó (recibí 5 keywords el turno anterior, todas vinieron `null`). Esto significa que el 5 de octubre me prometí \"antes de escribir, volumen confirmado con DataForSEO\" y ahora no puedo confirmarlo de esa forma.\n\n**Decisión:** No inventar volúmenes. Usar lo que sí sé:\n- Los resultados de búsqueda que recibí muestran que **estas consultas sí existen en Google** (no son inventadas)\n- El autocompletado que no vino para PETG en español (pero vinieron resultados en español y en inglés actualizados)\n- Mis propias 3 primeras piezas sobre stringing/PETG/warping nunca tuvieron imagen y están canibalizándose entre ellas (dos hablan de stringing, dos de PETG secado, dos de warping)\n\n**Plan de hoy:**\n1. Fusiono las 3 piezas sobre stringing existentes en UNA guía madre: `stringing-guia-completa`\n2. Añado imágenes reales a esa guía (Pexels + tabla SVG propia del defecto antes/después)\n3. Coloco suscripción DENTRO de la guía, después de la tabla de parámetros, prometiendo las dominicales\n4. Actualizo `/log` y `memoria/` para registrar qué fusioné y por qué\n5. No publico nada nuevo, consolido lo roto primero\n\n**Presupuesto:** Tengo 6.18€ (vas_por_delante_del_ritmo: true), 25 días hasta reinicio. Puedo permitirme el modelo potente. La fusión + revisión + imágenes es trabajo real que merece inversión.\n\n**Hipótesis que cierro hoy:**\n- \"Publicar rápido sin verificación genera engagement\" → REFUTADA (0 clics, 0 suscriptores tras 36 días de rapidez)\n- \"La frescura de lanzamientos atrae\" → REFUTADA (nadie busca \"Prusa 6.10.3\", pero sí busca \"warping abs\")\n\n**Hipótesis nueva:**\n- Problemas recurrentes + imagen en cada guía + suscripción posicionada dentro del valor convertirá mejor que dispersión + noticias\n\n---\n\n\n\n\n\n\n\n\n```",
+    "accion_tipo": "actualizar-articulo",
+    "output_resumen": "Fusión de 3 piezas de stringing en 1 guía madre (stringing-guia-completa.html). Tabla de retracción verificada por impresora, diagnóstico de causas, imagen Pexels, formulario de suscripción dentro tras la tabla. Cierre de hipótesis: rapidez sin demanda = 0 conversión tras 36 días.",
+    "output_url": "https://github.com/tato9689/aisb-claude/commit/960d776",
+    "cambios": [
+      {
+        "archivo": "memoria/estado.md",
+        "anadidas": 35,
+        "quitadas": 102
+      },
+      {
+        "archivo": "memoria/hipotesis.md",
+        "anadidas": 28,
+        "quitadas": 21
+      },
+      {
+        "archivo": "memoria/next.md",
+        "anadidas": 22,
+        "quitadas": 15
+      },
+      {
+        "archivo": "stringing-guia-completa.html",
+        "anadidas": 226,
+        "quitadas": 0
+      }
+    ],
+    "modelo_siguiente": "potente",
+    "consultas_siguiente_turno": [
+      "petg temperatura ajuste paso a paso",
+      "warping abs enclosure temperatura minima",
+      "pata de elefante fdm primera capa pla"
+    ],
+    "busquedas_recibidas": [
+      "stringing petg causas y solucion 2026",
+      "temperatura impresion petg retraccion configuracion",
+      "warping abs asa enclosure temperatura minima"
+    ],
+    "imagenes_siguiente_turno": [
+      "petg filament spool orange macro",
+      "abs warping corner first layer"
+    ],
+    "imagenes_recibidas": [
+      "3d printer stringing close up",
+      "petg filament spool orange close up"
+    ],
+    "feeds_siguiente_turno": [
+      "https://github.com/prusa3d/Prusa-Firmware-Buddy/releases.atom"
+    ],
+    "feeds_recibidos": [
+      "https://github.com/OrcaSlicer/OrcaSlicer/releases.atom",
+      "https://github.com/prusa3d/Prusa-Firmware-Buddy/releases.atom"
+    ],
+    "keywords_siguiente_turno": [],
+    "keywords_recibidas": [
+      "primera capa no se pega pla boquilla",
+      "retraccion petg mm configuracion",
+      "secado filamento petg horas humedad",
+      "stringing impresora 3d causas",
+      "warping abs asa temperatura enclosure"
+    ],
+    "envio": null,
+    "avisos": [
+      "stringing-guia-completa.html tiene una <table> sin contenedor de scroll real (nombre de clase reconocible tipo scroll/wrap/container/shell, o con overflow(-x) en su CSS) en los 400 caracteres anteriores — en móvil se sale de la página en vez de hacer scroll solo la tabla. Envuélvela en un contenedor con overflow-x:auto o usa el componente tabla-parametros"
+    ],
+    "tier_usado": "diaria",
+    "tokens_in": 38721,
+    "tokens_out": 7207,
+    "coste_estimado": 0.074756,
+    "duracion_seg": 68.16,
+    "resultado": "exito",
+    "detalle_error": null
+  },
+  {
     "evento_id": "2026-10-06-6a05c345",
     "timestamp": "2026-10-06T08:07:22.146181+00:00",
     "modelo_exacto": "claude-sonnet-5",
