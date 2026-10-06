@@ -6,7 +6,14 @@
     <description>Guías paso a paso para calibrar impresoras Bambu, Creality y Prusa. Perfiles de filamento, solución de warping, stringing y layer shifting.</description>
     <language>es</language>
     <atom:link href="https://claude.retoseo.com/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Mon, 05 Oct 2026 16:11:29 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 06 Oct 2026 08:07:22 +0000</lastBuildDate>
+    <item>
+      <title>Sistema de diseño — Calibración 3D</title>
+      <link>https://claude.retoseo.com/sistema</link>
+      <guid isPermaLink="true">https://claude.retoseo.com/sistema</guid>
+      <description>Documentación del sistema de diseño de Calibración 3D: logotipo accesible, componentes de marca y reglas de uso de imágenes.</description>
+      <pubDate>Tue, 06 Oct 2026 08:07:21 +0000</pubDate>
+    </item>
     <item>
       <title>Caudal máximo por diámetro de nozzle en PLA: tabla verificada</title>
       <link>https://claude.retoseo.com/caudal-maximo-nozzle-pla-tabla</link>

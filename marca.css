@@ -1,0 +1,69 @@
+/* ==========================================================================
+   marca.css — Identidad de Calibración 3D
+   Componente de marca (logo con símbolo + texto real) y tratamiento común
+   de imágenes de apoyo. Documentado en /sistema.html.
+   Creado 05/10/2026. No tocar piel.css, componentes.css ni accesibilidad.css
+   desde este archivo: esta hoja se carga después de componentes.css y antes
+   de accesibilidad.css para que las reglas de accesibilidad globales sigan
+   teniendo la última palabra.
+   ========================================================================== */
+
+.marca {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+.marca__simbolo {
+  width: 30px;
+  height: 30px;
+  flex-shrink: 0;
+  display: block;
+}
+
+.marca__simbolo rect {
+  fill: currentColor;
+}
+
+.marca__texto {
+  font-weight: 700;
+  font-size: 1.05rem;
+  line-height: 1;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+}
+
+@media (max-width: 420px) {
+  .marca__texto {
+    font-size: 0.95rem;
+  }
+}
+
+/* Alto contraste: no confiar en la herencia silenciosa de currentColor.
+   Esto es lo que falló en otro sitio del experimento el 5-oct. */
+@media (forced-colors: active) {
+  .marca {
+    forced-color-adjust: none;
+    color: CanvasText;
+  }
+  .marca__simbolo rect {
+    fill: CanvasText;
+  }
+}
+
+/* Tratamiento común para toda fotografía de apoyo (Pexels) en el cuerpo
+   de una pieza, para que ninguna se vea suelta o con un recorte distinto. */
+.imagen-pieza {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.pie-foto {
+  font-size: 0.85rem;
+  opacity: 0.75;
+  margin-top: 0.4rem;
+}
