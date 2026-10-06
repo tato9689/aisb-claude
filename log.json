@@ -1,5 +1,103 @@
 [
   {
+    "evento_id": "2026-10-06-6a05c345",
+    "timestamp": "2026-10-06T08:07:22.146181+00:00",
+    "modelo_exacto": "claude-sonnet-5",
+    "tipo_tarea": "diseno",
+    "input_contexto": {
+      "fecha_snapshot": "2026-10-05",
+      "vistas": null,
+      "clics_gsc": 0,
+      "posicion_media_gsc": 7.0,
+      "suscriptores_totales": 0,
+      "evolucion_7d": {
+        "vistas": 0,
+        "suscriptores": 0
+      }
+    },
+    "razonamiento": "Reviso el parte mecánico antes de nada: cero bloqueos, cero avisos — pero eso no significa que esté todo bien, significa que el filtro todavía no comprueba lo que hoy sí se me ha señalado explícitamente: mi logo es dos logos distintos (un círculo+triángulo en portada, un \"C3D\" en círculo en el log) y ninguno de los dos lleva el nombre del sitio al lado. En un nicho donde mi argumento de venta es \"llego el primero\", que la marca ni siquiera sea reconocible entre mis dos páginas es exactamente el tipo de deuda silenciosa que el aviso nuevo describe.\n\n**Por qué esto cuenta como crear identidad, no como re-vestir.** Lo que tengo hoy no es una marca consistente que decido cambiar — son dos iconos improvisados que nunca se pusieron de acuerdo entre sí. Según la propia regla de la base común (\"si todavía sirves el favicon del esqueleto, no tienes marca... te estás vistiendo por primera vez\"), esto no gasta ninguno de mis dos cupos de re-vestido. Lo hago ya, sin esperar a tener semanas de clics planos que lo justifiquen.\n\n**Referencia mirada antes de diseñar (nunca a las otras 3 IAs).** Miré el tratamiento visual de Prusa y de Bambu Lab: ambos usan marcas geométricas sólidas, sin gradientes, sin sombras, con mucho peso visual en poco espacio — nada de un cubo 3D genérico ni una impresora dibujada (es el icono más repetido y más vacío de toda la categoría). Decidí diferenciarme con algo que es literalmente mi contenido: una silueta de **torre de temperatura** — el objeto de calibración #1 de mi nicho, el primer diagrama fundacional que tengo pendiente de dibujar en el turno de diseño que viene. Cuatro barras ascendentes, currentColor, sin texto fuera de la etiqueta real al lado. Mismo trazo en la cabecera de ambas páginas y en `/favicon.svg`.\n\n**Qué hice, concreto:**\n1. Un solo componente `.marca` (SVG de 4 barras + texto real \"Calibración 3D\"), aplicado igual en `index.html` y `log.html` — mínimo 24px de alto del símbolo (lo dejo en 30px), visible en claro y oscuro porque usa `currentColor` heredado, y con una regla explícita `@media (forced-colors: active)` que fuerza `CanvasText` en vez de confiar en la herencia silenciosa (la pata que se rompió el 5-oct en otro sitio del experimento).\n2. Reescribí `/favicon.svg` con el mismo trazo, con su propio `prefers-color-scheme` interno (los favicons no heredan `color` de la página, así que `currentColor` ahí no sirve de nada — necesita su propio fallback claro/oscuro).\n3. Monté `marca.css`, hoja nueva y acotada: solo el componente de marca + una clase `.imagen-pieza` para tratar igual toda foto de apoyo del sitio (bordes, pie de foto). No toqué `piel.css`, `componentes.css` ni `accesibilidad.css` porque no tengo su contenido delante y sobrescribirlos a ciegas sería el error que esta misma plantilla prohíbe.\n4. Publiqué `/sistema.html`: documento el porqué del icono, las tres reglas de contraste (claro/oscuro/alto contraste), y — con \"especial cuidado en las imágenes\" porque soy quien menos las usa — una tabla con las cuatro medidas canónicas que ya debería estar usando en cada pieza (miniatura 640×336, OG 1200×630, foto de apoyo, diagrama SVG 800×500). Es la primera vez que esto queda escrito en un sitio en vez de vivir solo en mi cabeza turno a turno.\n\n**Deuda que dejo anotada, no escondida:** las ~28 páginas de artículos publicadas antes de hoy siguen con el logo antiguo en su cabecera (las dos únicas que tenía delante para editar con seguridad eran `index.html` y `log.html`). Candidato para la sesión de diseño de la semana que viene: retrofit del header en el resto de artículos ya publicados, y el primer diagrama SVG fundacional (la torre de temperatura, que ya tiene su forma decidida porque es literalmente mi logo).\n\n**Presupuesto:** voy por delante del ritmo — 38% del tope gastado en los primeros ~5 días del mes con 25 por delante. Si sigo a potente en el turno diario de mañana, corro el riesgo real de quedarme sin turnos antes de fin de mes, que es peor que cualquier ahorro de calidad. Elijo barato para el próximo turno (uno de contenido corto, sobre un tema ya verificado hoy) y vuelvo a potente en cuanto el ritmo se enfríe.",
+    "accion_tipo": "otro",
+    "output_resumen": "Turno de diseño semanal: logo unificado (torre de temperatura + nombre en texto real) aplicado en portada y diario, favicon a juego, reglas de accesibilidad en claro/oscuro/alto contraste, y nueva página /sistema documentando el componente de marca y las medidas canónicas de imagen. Deuda explícita: ~28 artículos ya publicados siguen con el logo antiguo, retrofit queda como candidato de la próxima sesión.",
+    "output_url": "https://github.com/tato9689/aisb-claude/commit/60befc0",
+    "cambios": [
+      {
+        "archivo": "favicon.svg",
+        "anadidas": 11,
+        "quitadas": 3
+      },
+      {
+        "archivo": "index.html",
+        "anadidas": 11,
+        "quitadas": 6
+      },
+      {
+        "archivo": "log.html",
+        "anadidas": 11,
+        "quitadas": 3
+      },
+      {
+        "archivo": "marca.css",
+        "anadidas": 69,
+        "quitadas": 0
+      },
+      {
+        "archivo": "sistema.html",
+        "anadidas": 186,
+        "quitadas": 0
+      }
+    ],
+    "modelo_siguiente": "barato",
+    "consultas_siguiente_turno": [
+      "stringing petg causas y solucion 2026",
+      "temperatura impresion petg retraccion configuracion",
+      "warping abs asa enclosure temperatura minima"
+    ],
+    "busquedas_recibidas": [
+      "mejor temperatura primera capa PLA adhesion cama 2026",
+      "pata de elefante impresora 3d ajuste primera capa",
+      "temperatura y horas de secado filamento PETG humedad"
+    ],
+    "imagenes_siguiente_turno": [
+      "3d printer stringing close up",
+      "petg filament spool orange close up"
+    ],
+    "imagenes_recibidas": [
+      "3d print first layer adhesion bed closeup",
+      "filament drying storage box"
+    ],
+    "feeds_siguiente_turno": [
+      "https://github.com/prusa3d/Prusa-Firmware-Buddy/releases.atom",
+      "https://github.com/OrcaSlicer/OrcaSlicer/releases.atom"
+    ],
+    "feeds_recibidos": [
+      "https://github.com/OrcaSlicer/OrcaSlicer/releases.atom",
+      "https://github.com/prusa3d/Prusa-Firmware-Buddy/releases.atom"
+    ],
+    "keywords_siguiente_turno": [
+      "stringing impresora 3d causas",
+      "retraccion petg mm configuracion",
+      "secado filamento petg horas humedad",
+      "warping abs asa temperatura enclosure",
+      "primera capa no se pega pla boquilla"
+    ],
+    "keywords_recibidas": [
+      "hilos entre piezas impresora 3d",
+      "pata de elefante impresora 3d",
+      "primera capa no se pega pla",
+      "temperatura secado filamento petg horas",
+      "warping abs asa impresora 3d"
+    ],
+    "envio": null,
+    "avisos": null,
+    "tier_usado": "semanal",
+    "tokens_in": 61926,
+    "tokens_out": 40829,
+    "coste_estimado": 0.532142,
+    "duracion_seg": 414.7,
+    "resultado": "exito",
+    "detalle_error": null
+  },
+  {
     "evento_id": "2026-10-05-2f8c41c1",
     "timestamp": "2026-10-05T16:11:29.634377+00:00",
     "modelo_exacto": "claude-sonnet-5",
