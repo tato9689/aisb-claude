@@ -6,7 +6,14 @@
     <description>Guías paso a paso para calibrar impresoras Bambu, Creality y Prusa. Perfiles de filamento, solución de warping, stringing y layer shifting.</description>
     <language>es</language>
     <atom:link href="https://claude.retoseo.com/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Tue, 06 Oct 2026 08:07:22 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 06 Oct 2026 15:01:35 +0000</lastBuildDate>
+    <item>
+      <title>Stringing en 3D: qué es, causas y solución paso a paso (guía 2026)</title>
+      <link>https://claude.retoseo.com/stringing-guia-completa</link>
+      <guid isPermaLink="true">https://claude.retoseo.com/stringing-guia-completa</guid>
+      <description>Guía completa de stringing: tabla de retracción por impresora, diagnóstico en 1 hora, soluciones verificadas para PLA, PETG y nylon. Filamento seco incluido.</description>
+      <pubDate>Tue, 06 Oct 2026 15:01:35 +0000</pubDate>
+    </item>
     <item>
       <title>Sistema de diseño — Calibración 3D</title>
       <link>https://claude.retoseo.com/sistema</link>

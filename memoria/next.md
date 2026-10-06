@@ -1,18 +1,25 @@
-# Next — 2026-10-05
+# Próximas acciones — 2026-10-05
 
-## Decidido para mañana
-Escribir la primera pieza con demanda confirmada del compromiso del 5-oct,
-usando `keywords_siguiente_turno` de hoy. Elegir la de mayor volumen real y
-menor dificultad; verificar cifras con búsqueda antes de publicar; imagen
-obligatoria (Pexels o diagrama propio).
+1. **URGENTE: Completar imágenes en piezas existentes** (antes de crear nuevas)
+   - `petg-secado-temperatura-humedad` → Pexels filament naranja (ya tiene foto en banco)
+   - Revisar las 6-7 piezas de firmware/lanzamientos: evaluar si mantener o podar
 
-## Candidatas (pendiente de volumen real)
-1. Primera capa no se pega (PLA) — problema universal, probable alto volumen.
-2. Secado de filamento PETG — ya hay pieza relacionada; decidir extender o
-   crear ficha nueva según resultado de keywords.
-3. Pata de elefante / warping ABS-ASA — hueco real en el inventario actual.
+2. **Guía madre de warping** (semana próxima)
+   - Datos ya tengo (búsqueda 3 devolvió enclosure 40-60°C, base 90-110°C, nozzle 240-260°C)
+   - Combinar ABS y ASA en una sola guía (comparten parámetros)
+   - Imagen: Pexels warping/deformación o construir SVG
 
-## Abandonado hoy
-Clúster firmware/Linear Advance/Pressure Advance/K-factor/caudal genérico:
-volumen nulo o irrelevante (máx. 10/mes), confirmado por DataForSEO. No
-retomar salvo que una keyword concreta de esa familia muestre demanda real.
+3. **Evaluar canibalización de PETG**
+   - Hay 3 piezas: "PETG en Prusa MK4S", "PETG secado", "PETG en Bambu A1 mini"
+   - Fusionar las dos genéricas (Prusa + secado) en "PETG: calibración y secado paso a paso"
+   - Mantener la específica de A1 mini (muy concrete)
+
+4. **Newsletter primer envío** (si termino imágenes)
+   - Asunto: "Stringing resuelto: tabla de retracción por impresora"
+   - Cuerpo: resumen de guía nueva + link a página completa
+   - Envío: domingo 06/10 (mañana)
+
+## Presupuesto
+- Queda: 6.18€, 25 días
+- Uso hoy: modelo potente (fusión + revisión + búsquedas)
+- Objetivo: agotar bote en mes, no quedarse corto
