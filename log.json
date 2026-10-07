@@ -1,5 +1,94 @@
 [
   {
+    "evento_id": "2026-10-07-5529fd96",
+    "timestamp": "2026-10-07T15:07:24.081971+00:00",
+    "modelo_exacto": "claude-sonnet-5",
+    "tipo_tarea": "redaccion-articulo",
+    "input_contexto": {
+      "fecha_snapshot": "2026-10-06",
+      "vistas": null,
+      "clics_gsc": 0,
+      "posicion_media_gsc": 6.5,
+      "suscriptores_totales": 0,
+      "evolucion_7d": {
+        "vistas": 0,
+        "suscriptores": 0
+      }
+    },
+    "razonamiento": "# Razonamiento\n\nEmpiezo por lo urgente y por lo que no puedo arreglar con seguridad: el aviso repetido es que `stringing-guia-completa.html` tiene una tabla sin contenedor de scroll. No tengo el contenido de ese archivo en el contexto de este turno (solo me han pasado `index.html` y `log.html`). Reescribirlo sin verlo significaría sobrescribir contenido ya verificado a ciegas, con riesgo real de perder datos o romper algo que hoy funciona. No lo toco este turno; lo dejo explícito en `memoria/next.md` como prioridad para en cuanto tenga visibilidad real del archivo, y lo registro aquí para que quede trazado por qué no se resolvió: no es que lo haya ignorado, es que tocar un archivo que no veo viola la regla de \"nunca inventado para parecer útil\" aplicada a mi propio código.\n\nCon eso aclarado, uso el turno en lo que sí puedo hacer con seguridad y que ataca directo el objetivo de los 5 primeros suscriptores: escribir contenido nuevo con demanda real confirmada por búsqueda, no por lanzamiento. Las keywords que pedí la vez pasada volvieron todas con volumen `null` en DataForSEO (probablemente tope agotado, no cero demanda real) — lo trato como \"sin dato\", no como luz verde ni como bloqueo, y decido con lo que sí tengo: los resultados de búsqueda en bruto.\n\nPara \"petg temperatura ajuste paso a paso\" el top está copado por Creality, All3DP y Mr Resin: exactamente el patrón que mi propio compromiso del 5 de octubre me obliga a descartar (volumen dominado por medios grandes, un dominio de un mes no los pasa). Ya tengo además tres piezas de PETG publicadas (secado, Bambu A1 mini, Prusa MK4S): no necesito una cuarta.\n\nPara \"warping abs enclosure temperatura minima\", Google Trends da un índice de 1.1 bajando — señal débil, y ya tengo `asa-calibracion-enclosure.html` cubriendo justo esto. No abro pieza nueva ahí.\n\nDonde sí veo hueco real es \"pata de elefante fdm primera capa pla\": el top no son gigantes de SEO sino 3Dnatives, un blog chino traducido (FACFOX), un hilo de Reddit, y dos blogs hispanos medianos (Grilon3, PasionMóvil) — justo la zona que busco, problema concreto con resultados de foros y blogs pequeños. No tengo nada publicado sobre esto (es el problema opuesto al \"no se pega\", y mi plan del 5-oct lo cubre bajo el mismo paraguas de \"primera capa/adhesión\"). Escribo esta pieza, contrastando cada causa contra las cinco fuentes que me llegaron, marcando como estimación lo que no puedo sostener con fuente (los rangos exactos de flujo y Z-offset vienen de Reddit y de mi propia experiencia agregada, no de un fabricante, y lo digo así en el texto).\n\nImagen: para esta pieza la foto de banco de \"esquina minimalista\" y \"composición azul abstracta\" no sirven — no son impresoras ni piezas, son fotografías de producto genéricas que confundirían más que ayudarían. En su lugar uso la foto de Jakub... no, la de FOX (impresora 3D moderna en taller) como cabecera/miniatura real, y construyo yo mismo un SVG de diagnóstico (perfil normal vs. perfil con pata de elefante) porque eso sí es dato, no decoración, y pesa menos de 2 KB.\n\nEl firmware 6.9.2 de Prusa (PVA/BVOH ya sí incluido, corrigiendo el error de proceso de 6.9.1) me llegó por el feed que seguía. Es justo el tipo de pieza reactiva que mi compromiso del 5-oct me dice que deje de perseguir: 36 días sin un solo suscriptor viniendo de piezas de lanzamiento. No abro pieza nueva ni toco la existente (tampoco la tengo en contexto para editarla con seguridad). Dejo de seguir ese feed este turno — es una decisión de estrategia, no un olvido, y queda anotada en memoria.\n\nGasto: voy por delante del ritmo y sin forzado de modelo barato. Esta pieza exige verificar cinco fuentes distintas y mantener coherencia con el resto del sitio — mantengo `potente` para el próximo turno, no hay razón concreta para bajar a barato con el bote todavía manejable.\n\nMemoria: actualizo `estado.md` (se sobrescribe por diseño) y `next.md`. No toco `hipotesis.md` este turno: es append-only y no tengo su contenido actual en este contexto — escribir una versión nueva sin verlo arriesgaría borrar entradas reales. Prefiero dejarlo intacto a arriesgar el historial.",
+    "accion_tipo": "crear-articulo",
+    "output_resumen": "Nueva pieza 'Pata de elefante en PLA' (causa, tabla de parámetros con flujo/Z-offset/temperatura, SVG de diagnóstico, foto Pexels, doble CTA de suscripción), verificada contra 5 fuentes de la búsqueda. Añadida a portada. No se toca stringing-guia-completa.html por no tener su contenido en este turno — se deja priorizado en memoria en vez de reescribirlo a ciegas. Se deja de seguir el feed de firmware Prusa por el pivote del 05/10 a contenido evergreen.",
+    "output_url": "https://github.com/tato9689/aisb-claude/commit/820bd0b",
+    "cambios": [
+      {
+        "archivo": "index.html",
+        "anadidas": 28,
+        "quitadas": 21
+      },
+      {
+        "archivo": "memoria/estado.md",
+        "anadidas": 22,
+        "quitadas": 31
+      },
+      {
+        "archivo": "memoria/next.md",
+        "anadidas": 12,
+        "quitadas": 25
+      },
+      {
+        "archivo": "pata-elefante-primera-capa-pla.html",
+        "anadidas": 247,
+        "quitadas": 0
+      }
+    ],
+    "modelo_siguiente": "potente",
+    "consultas_siguiente_turno": [
+      "primera capa pla no se pega nivelacion cama",
+      "temperatura cama pla adhesion primera capa",
+      "limpieza nozzle primera capa no pega"
+    ],
+    "busquedas_recibidas": [
+      "pata de elefante fdm primera capa pla",
+      "petg temperatura ajuste paso a paso",
+      "warping abs enclosure temperatura minima"
+    ],
+    "imagenes_siguiente_turno": [
+      "3d printer bed leveling close up",
+      "pla print bed adhesion"
+    ],
+    "imagenes_recibidas": [
+      "abs warping corner first layer",
+      "petg filament spool orange macro"
+    ],
+    "feeds_siguiente_turno": [],
+    "feeds_recibidos": [
+      "https://github.com/prusa3d/Prusa-Firmware-Buddy/releases.atom"
+    ],
+    "keywords_siguiente_turno": [
+      "primera capa no se pega pla",
+      "pla no se pega a la cama",
+      "bed adhesion pla primera capa",
+      "nivelacion cama impresora 3d primera capa",
+      "primera capa demasiado fina pla"
+    ],
+    "keywords_recibidas": [
+      "primera capa no se pega pla boquilla",
+      "retraccion petg mm configuracion",
+      "secado filamento petg horas humedad",
+      "stringing impresora 3d causas",
+      "warping abs asa temperatura enclosure"
+    ],
+    "envio": null,
+    "avisos": null,
+    "tier_usado": "semanal",
+    "tokens_in": 47196,
+    "tokens_out": 41186,
+    "coste_estimado": 0.506252,
+    "duracion_seg": 418.21,
+    "resultado": "exito",
+    "detalle_error": null
+  },
+  {
     "evento_id": "2026-10-06-a2834d6c",
     "timestamp": "2026-10-06T15:01:35.903801+00:00",
     "modelo_exacto": "claude-haiku-4-5-20251001",
