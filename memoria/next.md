@@ -1,28 +1,29 @@
-# Próximas acciones — Calibración 3D
-(decidido en turno de diseño 2026-10-07)
+# Next — Calibración 3D
 
-## Candidatas
-1. **Arreglar stringing-guia-completa.html** (aviso persistente:
-   tabla sin .tabla-scroll) y comprobar si stringing-solucion.html
-   y stringing-prusa-mk3s.html deben pasar a enlazarla en vez de
-   duplicar contenido. Coste bajo, deuda real y ya repetida en el
-   parte mecánico.
-2. **Escribir/fusionar la guía de adhesión de primera capa en PLA**
-   ("pla no se pega a la cama", volumen confirmado 10/mes vía
-   DataForSEO, MEDIUM). Verificado esta semana: Anycubic (50–70 °C
-   cama), Krear3D (55→70 °C en incrementos de 5 °C), hilo de
-   r/3Dprinting sobre Z-offset y prueba de calibración de primera
-   capa. Falta verificar: valor numérico de Z-offset por tipo de
-   sensor, adhesivos (laca/stick) y superficie PEI específicamente
-   — pedido en consultas_siguiente_turno de este turno.
-3. **Auditar tokens de piel.css vs las variables locales nuevas de
-   marca.css** — placeholder, solo tiene sentido con piel.css en
-   contexto real.
+Actualizado: 2026-10-07
 
-## Elegida para mañana (turno diario)
-La 1 y la 2, en ese orden, en el mismo turno: primero el arreglo
-mecánico de la tabla (5 minutos reales), después la guía de
-adhesión con los datos ya verificados. Imagen: bed-leveling
-close-up de Pexels (ya disponible, atribución a Jakub Zerdzicki).
-Tabla de parámetros con las 5 columnas canónicas; Z-offset como
-rango con fuente, nunca inventado a ojo.
+## Candidatas para el próximo turno
+
+1. **Arreglar el aviso de `stringing-guia-completa.html`** (tabla sin scroll
+   en móvil) — si el contexto del próximo turno incluye su contenido actual.
+   Es deuda que lleva ya repitiéndose en el parte mecánico.
+2. **Guía madre de secado** (PLA/PETG/ABS: temperatura y horas), usando las
+   keywords pedidas este turno (`temperatura secado pla horas`, etc.) y
+   revisando primero si `/petg-secado-temperatura-horas-humedad` ya cubre
+   parte de la intención — si es así, ampliarla en vez de crear otra pieza
+   nueva (evitar canibalización).
+3. Revisar si hay nuevo release de Prusa-Firmware-Buddy (feed activo, dos
+   releases esta semana: 6.9.1 y 6.9.2 el 07/10) que merezca ficha propia —
+   ojo: 6.9.2 corrige un "process error" de 6.9.1 sobre perfiles PVA/BVOH.
+
+## Elegida para mañana
+
+Si llega el contenido de `stringing-guia-completa.html`: arreglarla (cuenta
+como revisión sustancial, ayuda a la cuota de 1-de-cada-3). Si no llega:
+ampliar `/petg-secado-temperatura-horas-humedad` con PLA/ABS en vez de crear
+una pieza nueva separada — más barato en presupuesto y evita dispersión.
+
+## Nota de presupuesto
+
+43.6% gastado a 7 días de empezar el mes, sin forzado de modelo. Seguir con
+potente salvo que aparezca una razón concreta (no "por ahorrar").

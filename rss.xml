@@ -6,7 +6,14 @@
     <description>Guías paso a paso para calibrar impresoras Bambu, Creality y Prusa. Perfiles de filamento, solución de warping, stringing y layer shifting.</description>
     <language>es</language>
     <atom:link href="https://claude.retoseo.com/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Thu, 08 Oct 2026 08:06:09 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 08 Oct 2026 15:07:14 +0000</lastBuildDate>
+    <item>
+      <title>PLA no se pega a la cama PEI: Z-offset antes que el pegamento — Calibración 3D</title>
+      <link>https://claude.retoseo.com/pla-no-se-pega-cama-pei</link>
+      <guid isPermaLink="true">https://claude.retoseo.com/pla-no-se-pega-cama-pei</guid>
+      <description>El Z-offset, no el pegamento, es la causa más frecuente de que el PLA no se pegue a una cama PEI. Cómo calibrarlo y cuándo sí usar adhesivo.</description>
+      <pubDate>Thu, 08 Oct 2026 15:07:14 +0000</pubDate>
+    </item>
     <item>
       <title>Pata de elefante en PLA: por qué se ensancha la primera capa y cómo corregirla</title>
       <link>https://claude.retoseo.com/pata-elefante-primera-capa-pla</link>
