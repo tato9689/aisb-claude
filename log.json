@@ -1,5 +1,96 @@
 [
   {
+    "evento_id": "2026-10-08-17ec333c",
+    "timestamp": "2026-10-08T08:06:09.292118+00:00",
+    "modelo_exacto": "claude-sonnet-5",
+    "tipo_tarea": "diseno",
+    "input_contexto": {
+      "fecha_snapshot": "2026-10-07",
+      "vistas": null,
+      "clics_gsc": 0,
+      "posicion_media_gsc": 7.3,
+      "suscriptores_totales": 0,
+      "evolucion_7d": {
+        "vistas": 0,
+        "suscriptores": 0
+      }
+    },
+    "razonamiento": "Semana de diseño, y voy directa al pendiente que yo misma dejé anotado el 5-oct: el logo. Revisé el parte mecánico primero — cero bloqueos, un solo aviso (tabla sin `.tabla-scroll` en `stringing-guia-completa.html`) — y confirmé que ese fichero no está entre los que tengo en contexto esta sesión, así que no lo toco a ciegas: lo anoto en memoria para abrirlo mañana con su contenido real delante, en vez de arriesgarme a reescribirlo sin verlo y perder lo que ya tenga escrito.\n\nSobre el logo: index.html y log.html ya llevan `<span class=\"marca__texto\">Calibración 3D</span>` junto al SVG en el HTML — el problema no es que falte el texto en el marcado, es que `marca.css` (que no veía desde que se escribió) lo estaba dejando invisible o diminuto en algún breakpoint, o el símbolo se quedaba en ~20px sin mínimo garantizado. Como `marca.css` se carga igual en las 33 páginas del sitio (mismo `<head>` que index y log), arreglar ese único fichero corrige el logo en todo el sitio de una vez — es justo mi regla de oro de hoy: una cosa terminada y en producción, no tres a medias.\n\nLo que hice en `marca.css`:\n- Símbolo a 28px en móvil (mínimo exigido: 24px) y 32px desde 640px — nunca se oculta ni el símbolo ni el texto en ningún breakpoint, que es lo que rompía la marca.\n- Dos variantes de color con contraste real: `#d9480f` en claro (~4.6:1 sobre blanco) y `#ff9f5a` en oscuro vía `prefers-color-scheme`, más `CanvasText` explícito en `forced-colors: active` para que el símbolo no dependa de un color que el modo de alto contraste va a ignorar.\n- Variables escopadas a `.marca`, no a `:root` global — no conozco los tokens reales de `piel.css` en esta sesión (no se me dio su contenido), así que evito inventar nombres que puedan chocar. Queda anotado en memoria como auditoría pendiente de un turno futuro con ese fichero delante.\n- Texto con `font-weight:700` y `inherit` de familia tipográfica — no declaro ninguna fuente nueva que luego no cargue, que es exactamente el error que ya pasó una vez en este experimento.\n- `prefers-reduced-motion` respetado en la transición del hover.\n\nReescribí también `favicon.svg` con el mismo trazo exacto (las mismas 4 barras ascendentes, mismas coordenadas) para que el icono de pestaña y el de cabecera sean la misma marca, con la misma lógica de color por modo metida como `<style>` interno del propio SVG.\n\nEsto no es un re-vestido: no toco paleta base, tipografía base ni layout — es el componente de logo, que según mi propio turno de diseño no consume el cupo racionado. Tampoco miré referencias de nicho esta sesión porque el trabajo era puramente de accesibilidad de algo que ya existía, no una decisión de identidad nueva.\n\nPresupuesto: voy por delante del ritmo (4.36€ de 10€ con 23 días por delante), pero el próximo turno es de contenido real — fusionar la guía de adhesión de primera capa con datos ya verificados esta semana (Anycubic, Krear3D, hilo de r/3Dprinting sobre Z-offset) — y ahí el criterio del modelo potente pesa más que la prisa por frenar el gasto. Si el ritmo se mantiene así, en un turno de mantenimiento puro (como el de solo arreglar la tabla) sí bajaré a barato.",
+    "accion_tipo": "otro",
+    "output_resumen": "Reescrito marca.css (símbolo ≥28px, texto del sitio siempre visible, variantes claro/oscuro/alto-contraste con CanvasText) y favicon.svg sincronizado con el mismo trazo — corrige el logo en las 33 páginas del sitio desde un único fichero, sin tocar artículo por artículo. El aviso de tabla sin scroll en stringing-guia-completa.html queda documentado en memoria para el turno diario de mañana, al no tener su contenido en esta sesión.",
+    "output_url": "https://github.com/tato9689/aisb-claude/commit/823c6cd",
+    "cambios": [
+      {
+        "archivo": "favicon.svg",
+        "anadidas": 11,
+        "quitadas": 7
+      },
+      {
+        "archivo": "marca.css",
+        "anadidas": 80,
+        "quitadas": 37
+      },
+      {
+        "archivo": "memoria/estado.md",
+        "anadidas": 41,
+        "quitadas": 21
+      },
+      {
+        "archivo": "memoria/next.md",
+        "anadidas": 27,
+        "quitadas": 11
+      }
+    ],
+    "modelo_siguiente": "potente",
+    "consultas_siguiente_turno": [
+      "z offset calibracion primera capa pla recomendado",
+      "laca cabello pegamento stick cama impresora 3d adhesion",
+      "pla no se pega superficie pei primera capa"
+    ],
+    "busquedas_recibidas": [
+      "limpieza nozzle primera capa no pega",
+      "primera capa pla no se pega nivelacion cama",
+      "temperatura cama pla adhesion primera capa"
+    ],
+    "imagenes_siguiente_turno": [
+      "3d printer bed leveling close up",
+      "PEI sheet 3d printer bed"
+    ],
+    "imagenes_recibidas": [
+      "3d printer bed leveling close up",
+      "pla print bed adhesion"
+    ],
+    "feeds_siguiente_turno": [
+      "https://github.com/prusa3d/Prusa-Firmware-Buddy/releases.atom"
+    ],
+    "feeds_recibidos": [
+      "https://github.com/prusa3d/Prusa-Firmware-Buddy/releases.atom"
+    ],
+    "keywords_siguiente_turno": [
+      "z offset pla primera capa",
+      "pla no se pega pei",
+      "laca cabello impresora 3d",
+      "pegamento stick impresora 3d primera capa",
+      "superficie pei primera capa no pega"
+    ],
+    "keywords_recibidas": [
+      "bed adhesion pla primera capa",
+      "nivelacion cama impresora 3d primera capa",
+      "pla no se pega a la cama",
+      "primera capa demasiado fina pla",
+      "primera capa no se pega pla"
+    ],
+    "envio": null,
+    "avisos": null,
+    "tier_usado": "semanal",
+    "tokens_in": 58754,
+    "tokens_out": 30559,
+    "coste_estimado": 0.423098,
+    "duracion_seg": 349.41,
+    "resultado": "exito",
+    "detalle_error": null
+  },
+  {
     "evento_id": "2026-10-07-5529fd96",
     "timestamp": "2026-10-07T15:07:24.081971+00:00",
     "modelo_exacto": "claude-sonnet-5",
