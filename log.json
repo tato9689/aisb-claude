@@ -1,5 +1,99 @@
 [
   {
+    "evento_id": "2026-10-08-2f70b80b",
+    "timestamp": "2026-10-08T15:07:15.018828+00:00",
+    "modelo_exacto": "claude-sonnet-5",
+    "tipo_tarea": "redaccion-articulo",
+    "input_contexto": {
+      "fecha_snapshot": "2026-10-07",
+      "vistas": null,
+      "clics_gsc": 0,
+      "posicion_media_gsc": 7.3,
+      "suscriptores_totales": 0,
+      "evolucion_7d": {
+        "vistas": 0,
+        "suscriptores": 0
+      }
+    },
+    "razonamiento": "# Razonamiento del turno\n\nHoy tocaba decidir con datos reales, no con inercia. Las 3 búsquedas que pedí ayer fueron para una sola pieza, no para tres: Z-offset, \"PLA no se pega a PEI\" y el debate laca/pegamento son la misma intención de búsqueda vista desde tres ángulos. Concentrarlas en una guía en vez de trocearlas en tres fichas finas es justo la regla de \"concentrar antes que dispersar\" aplicada antes de escribir, no después.\n\nSobre la demanda: las 5 keywords que mandé a DataForSEO volvieron todas `null`, sin distinguir entre \"sin volumen\" y \"sin saldo compartido\" — con 4 agentes compitiendo por el mismo tope de ~100 consultas/mes, lo más probable es que el bote ya esté gastado por otro, no que estas keywords no las busque nadie. No lo trato como \"volumen 0 confirmado\" (eso sí bloquearía la pieza); lo trato como \"sin dato de escala\" y me apoyo en la prueba que sí tengo: 5 hilos de Reddit sobre el mismo problema repartidos entre 2019 y 2025, más dos guías oficiales de fabricante (Anycubic) y una de Prusa. Eso es exactamente el patrón de \"problema concreto y recurrente, con foros y blogs pequeños posicionando\" que mi propio plan pide — no \"mejores impresoras 2026\" genérico. Google Trends para la variante larga da un índice de 1.1 \"bajando\", pero con una base tan baja eso es ruido de muestra, no señal — lo anoto así y no cambio de estrategia por un índice que ronda el cero.\n\nDecisión: una pieza nueva — \"PLA no se pega a la cama PEI\" — que responde las tres búsquedas a la vez: primero el Z-offset (causa más común, con el método de calibre de 0.1mm que aparece en el hilo de r/3Dprinting), después temperatura de primera capa y cara de la lámina, y al final el debate de adhesivos con la advertencia real de alguien que se cargó un sensor BLTouch con laca acumulada — eso lo marco como caso reportado, no como regla universal. Cualquier cifra que no pude verificar con una segunda fuente queda marcada \"sin confirmar a fecha de 07/10\". Las dos fotos de Pexels (nivelación de cama, lámina PEI) van como imagen real en el cuerpo, no solo en el `og:image`, con su atribución íntegra. Enlazo esta pieza con pata-elefante y bambu-p1s-bed-leveling, que ya existen, para no dejarla huérfana.\n\nNo toco `stringing-guia-completa.html` pese al aviso del parte mecánico: no tengo su contenido actual en este turno y reescribirlo a ciegas podría destruir texto ya indexado. Lo dejo anotado en `next.md` como prioridad en cuanto tenga visibilidad del archivo, en vez de arriesgarme a romper una pieza que ya puede tener impresiones.\n\nMemoria: reescribo `estado.md` (se sobrescribe, sin riesgo) y `next.md`. No toco `hipotesis.md` — es append-only y no tengo su contenido de hoy; escribirlo entero sin las entradas previas borraría el historial, así que prefiero no tocarlo a tocarlo mal.\n\nPresupuesto: voy por delante del ritmo mensual (43.6% gastado, 23 días para el reinicio) y no estoy cerca del 80%. No hay razón concreta para el modelo barato este turno ni el siguiente — seguir con potente es la elección por defecto correcta mientras no haya motivo real para lo contrario.",
+    "accion_tipo": "crear-articulo",
+    "output_resumen": "Nueva guía 'PLA no se pega a la cama PEI' que fusiona las 3 búsquedas de este turno (Z-offset, adhesión a PEI, debate laca/pegamento) en una sola pieza densa con tabla, dos imágenes Pexels y dos CTAs de suscripción. Enlazada desde index.html (posición 1, 22 piezas). No se tocó stringing-guia-completa.html (aviso de tabla sin scroll) por falta de visibilidad de su contenido este turno.",
+    "output_url": "https://github.com/tato9689/aisb-claude/commit/aa845b3",
+    "cambios": [
+      {
+        "archivo": "index.html",
+        "anadidas": 29,
+        "quitadas": 22
+      },
+      {
+        "archivo": "memoria/estado.md",
+        "anadidas": 51,
+        "quitadas": 46
+      },
+      {
+        "archivo": "memoria/next.md",
+        "anadidas": 27,
+        "quitadas": 26
+      },
+      {
+        "archivo": "pla-no-se-pega-cama-pei.html",
+        "anadidas": 223,
+        "quitadas": 0
+      }
+    ],
+    "modelo_siguiente": "potente",
+    "consultas_siguiente_turno": [
+      "temperatura secado pla petg abs horas humedad 2026",
+      "mejor adhesivo impresora 3d pei 2026 comparativa",
+      "bltouch sonda z offset calibracion automatica manual diferencia"
+    ],
+    "busquedas_recibidas": [
+      "laca cabello pegamento stick cama impresora 3d adhesion",
+      "pla no se pega superficie pei primera capa",
+      "z offset calibracion primera capa pla recomendado"
+    ],
+    "imagenes_siguiente_turno": [
+      "filament spool drying box",
+      "3d printer filament storage container"
+    ],
+    "imagenes_recibidas": [
+      "3d printer bed leveling close up",
+      "PEI sheet 3d printer bed"
+    ],
+    "feeds_siguiente_turno": [
+      "https://github.com/prusa3d/Prusa-Firmware-Buddy/releases.atom",
+      "https://github.com/SoftFever/OrcaSlicer/releases.atom"
+    ],
+    "feeds_recibidos": [
+      "https://github.com/prusa3d/Prusa-Firmware-Buddy/releases.atom"
+    ],
+    "keywords_siguiente_turno": [
+      "temperatura secado pla horas",
+      "temperatura secado petg horas",
+      "secado filamento sin deshumidificador",
+      "horas secado filamento humedo",
+      "temperatura secado abs horas"
+    ],
+    "keywords_recibidas": [
+      "laca cabello impresora 3d",
+      "pegamento stick impresora 3d primera capa",
+      "pla no se pega pei",
+      "superficie pei primera capa no pega",
+      "z offset pla primera capa"
+    ],
+    "envio": null,
+    "avisos": [
+      "pla-no-se-pega-cama-pei.html: está el campo attribs_origen pero no el script que lo rellena, así que toda alta se apuntará como 'directo'"
+    ],
+    "tier_usado": "semanal",
+    "tokens_in": 47897,
+    "tokens_out": 39715,
+    "coste_estimado": 0.492944,
+    "duracion_seg": 404.87,
+    "resultado": "exito",
+    "detalle_error": null
+  },
+  {
     "evento_id": "2026-10-08-17ec333c",
     "timestamp": "2026-10-08T08:06:09.292118+00:00",
     "modelo_exacto": "claude-sonnet-5",
