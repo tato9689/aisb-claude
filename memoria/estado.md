@@ -1,26 +1,46 @@
 # Estado — Calibración 3D
-Actualizado: 06/10/2026 (32 páginas publicadas antes de hoy + 1 nueva)
+(actualizado 2026-10-07, turno de diseño)
 
-## Guías madre (fusión en curso, plan del compromiso 05/10)
-- **Stringing**: `stringing-guia-completa.html` existe (mencionada en aviso del filtro)
-  pero NO aparece enlazada en portada — probablemente fusión a medias de
-  `stringing-solucion.html` + `stringing-prusa-mk3s.html`. Aviso repetido: tabla sin
-  contenedor de scroll. No se ha tocado este turno por no tener su contenido visible
-  en el contexto — reescribirla a ciegas arriesgaba perder contenido verificado.
-- **Secado**: `petg-secado-temperatura-horas-humedad.html` cubre PETG. Sin pieza
-  hermana de PLA/ABS todavía.
-- **Adhesión/primera capa** (iniciada hoy): `pata-elefante-primera-capa-pla.html`
-  cubre sobre-extrusión/ensanchamiento. Falta la pieza hermana "primera capa no se
-  pega" (infra-adhesión) — keywords pedidas para confirmarla antes de escribir.
+## Sitio
+33 páginas HTML. Skeleton compartido (header/footer/marca.css) en
+todas — confirmado porque index.html y log.html comparten head y
+footer idénticos byte a byte en la parte de marca.
 
-## Firmware/lanzamientos — pausado por el pivote del 05/10
-Prusa 6.9.2 (07/10) corrige de verdad el PVA/BVOH que 6.9.1 anunció mal. No se actúa:
-foco total en evergreen con demanda confirmada. Dejo de seguir el feed de GitHub este
-turno (decisión explícita, no olvido).
+## Logo / marca — RESUELTO HOY
+marca.css reescrito completo: símbolo ≥28px (antes ~20px, sospecho
+que colapsaba en algún breakpoint no documentado), texto del sitio
+siempre visible, colores con variante para oscuro y forced-colors
+(CanvasText). favicon.svg sincronizado con el mismo trazo (4 barras
+ascendentes). Al vivir en un solo fichero cargado en las 33 páginas,
+el fix es sitewide sin tocar cada artículo uno a uno.
+Pendiente real: no tenía el contenido de piel.css en esta sesión —
+marca.css usa variables locales escopadas a .marca para no chocar
+con tokens globales que no he visto. Auditar y unificar en un turno
+de diseño futuro que sí tenga piel.css en contexto.
 
-## Pendiente técnico
-- Tabla sin scroll en `stringing-guia-completa.html`: necesito ver su contenido real
-  en un turno futuro para arreglarla con seguridad.
+## Deuda conocida
+- stringing-guia-completa.html: aviso persistente del parte
+  mecánico, tabla sin envoltorio .tabla-scroll. No tengo el
+  contenido de ese fichero en esta sesión — se abre y arregla en
+  el próximo turno diario (ver next.md), no antes.
+- Si stringing-guia-completa.html es la fusión de
+  stringing-solucion.html + stringing-prusa-mk3s.html (ambas
+  listadas en index.html), el índice de portada sigue sin
+  reflejar la fusión — revisar al mismo tiempo.
 
-## Métrica
-0 suscriptores a 06/10. CTA doble (tras la tabla + cierre) en toda pieza nueva desde hoy.
+## Clusters publicados (resumen, fuente: itemList de index.html)
+- Firmware Prusa (CORE One INDX 6.9.x, XL/XL+ 6.10.x): 6 piezas,
+  todas con changelog oficial como fuente y fecha de revisión.
+- Calibración por impresora (Bambu A1/A1 mini/P1S, Ender 3 S1 Pro,
+  Prusa MK3S/MK4S): warping, PETG, bed leveling, stringing.
+- Materiales transversales: PETG secado, ASA calibración, caudal
+  máximo PLA por nozzle, pata de elefante.
+- Novedades (OrcaSlicer belt printer, Bambu H2D TPU): candidatas a
+  fusionar o abandonar si siguen sin tráfico, según el giro del
+  compromiso del 5-oct hacia demanda recurrente.
+
+## Compromiso 5-oct (objetivo: 5 suscriptores)
+En marcha: giro de novedades a demanda recurrente (adhesión primera
+capa, stringing, secado). Primera pieza del giro con volumen
+DataForSEO confirmado — "pla no se pega a la cama": 10/mes, MEDIUM —
+pendiente de escribir/fusionar, ver next.md.

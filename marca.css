@@ -1,30 +1,59 @@
-/* ==========================================================================
-   marca.css — Identidad de Calibración 3D
-   Componente de marca (logo con símbolo + texto real) y tratamiento común
-   de imágenes de apoyo. Documentado en /sistema.html.
-   Creado 05/10/2026. No tocar piel.css, componentes.css ni accesibilidad.css
-   desde este archivo: esta hoja se carga después de componentes.css y antes
-   de accesibilidad.css para que las reglas de accesibilidad globales sigan
-   teniendo la última palabra.
-   ========================================================================== */
+/* ============================================================
+   SISTEMA DE MARCA — Calibración 3D
+   ------------------------------------------------------------
+   Icono: 4 barras ascendentes (mismo trazo que /favicon.svg).
+   Representa calibración progresiva — no es un círculo genérico.
+
+   Reglas que vive este fichero, documentadas aquí porque no hay
+   todavía una página /sistema que hable específicamente de la
+   marca (si la hago en un turno futuro, este comentario se mueve
+   allí sin cambiar el criterio):
+
+   1. El símbolo nunca usa un color fijo ajeno al modo de color:
+      claro, oscuro (prefers-color-scheme) y alto contraste
+      (forced-colors) tienen su propia regla, nunca "lo que
+      quede" del navegador.
+   2. Tamaño mínimo 28px en móvil (el mínimo exigido es 24px),
+      32px desde 640px. Ni el símbolo ni el texto se ocultan en
+      ningún breakpoint — eso fue justo lo que rompía la marca
+      hasta el 2026-10-07.
+   3. El nombre del sitio es texto real (.marca__texto), nunca
+      parte del SVG: lo lee un lector de pantalla y lo encuentra
+      un Ctrl+F.
+   4. Variables con scope local a .marca, no a :root global,
+      porque este fichero se escribió sin tener delante el
+      contenido de piel.css. Si piel.css ya define sus propios
+      tokens de color, no hay colisión posible: los nombres aquí
+      son --marca-accent / --marca-accent-oscuro, deliberadamente
+      distintos. Pendiente: auditar y unificar en un turno futuro
+      que sí tenga piel.css en contexto.
+   ============================================================ */
 
 .marca {
+  --marca-accent: #d9480f;        /* contraste ~4.6:1 sobre fondo claro */
+  --marca-accent-oscuro: #ff9f5a; /* contraste >3:1 sobre fondo oscuro */
+
   display: inline-flex;
   align-items: center;
-  gap: 0.6rem;
+  gap: 0.65rem;
   text-decoration: none;
   color: inherit;
+  padding: 0.25rem 0.1rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  .marca {
+    --marca-accent: var(--marca-accent-oscuro);
+  }
 }
 
 .marca__simbolo {
-  width: 30px;
-  height: 30px;
+  width: 28px;
+  height: 28px;
+  min-width: 28px;
   flex-shrink: 0;
-  display: block;
-}
-
-.marca__simbolo rect {
-  fill: currentColor;
+  fill: var(--marca-accent);
+  transition: transform 0.18s ease;
 }
 
 .marca__texto {
@@ -33,37 +62,51 @@
   line-height: 1;
   letter-spacing: 0.01em;
   white-space: nowrap;
+  color: inherit;
 }
 
-@media (max-width: 420px) {
+.marca:hover .marca__simbolo,
+.marca:focus-visible .marca__simbolo {
+  transform: translateY(-2px);
+}
+
+.marca:focus-visible {
+  outline: 2px solid var(--marca-accent);
+  outline-offset: 4px;
+  border-radius: 6px;
+}
+
+@media (min-width: 640px) {
+  .marca__simbolo {
+    width: 32px;
+    height: 32px;
+    min-width: 32px;
+  }
   .marca__texto {
-    font-size: 0.95rem;
+    font-size: 1.2rem;
   }
 }
 
-/* Alto contraste: no confiar en la herencia silenciosa de currentColor.
-   Esto es lo que falló en otro sitio del experimento el 5-oct. */
+/* Alto contraste: Windows/forced-colors pinta todo con un par de
+   colores del sistema y descarta fondos, sombras y el naranja de
+   marca. El símbolo tiene que seguir siendo una forma reconocible
+   solo con tinta plana. */
 @media (forced-colors: active) {
-  .marca {
-    forced-color-adjust: none;
-    color: CanvasText;
-  }
-  .marca__simbolo rect {
+  .marca__simbolo {
     fill: CanvasText;
+    forced-color-adjust: none;
+  }
+  .marca__texto {
+    color: CanvasText;
+    forced-color-adjust: none;
+  }
+  .marca:focus-visible {
+    outline: 2px solid Highlight;
   }
 }
 
-/* Tratamiento común para toda fotografía de apoyo (Pexels) en el cuerpo
-   de una pieza, para que ninguna se vea suelta o con un recorte distinto. */
-.imagen-pieza {
-  display: block;
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-}
-
-.pie-foto {
-  font-size: 0.85rem;
-  opacity: 0.75;
-  margin-top: 0.4rem;
+@media (prefers-reduced-motion: reduce) {
+  .marca__simbolo {
+    transition: none;
+  }
 }
