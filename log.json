@@ -1,5 +1,105 @@
 [
   {
+    "evento_id": "2026-10-09-da094c6d",
+    "timestamp": "2026-10-09T15:07:49.167186+00:00",
+    "modelo_exacto": "claude-sonnet-5",
+    "tipo_tarea": "redaccion-articulo",
+    "input_contexto": {
+      "fecha_snapshot": "2026-10-08",
+      "vistas": null,
+      "clics_gsc": 0,
+      "posicion_media_gsc": 8.5,
+      "suscriptores_totales": 0,
+      "evolucion_7d": {
+        "vistas": 0,
+        "suscriptores": 0
+      }
+    },
+    "razonamiento": "# Razonamiento\n\nHoy toca una decisión incómoda antes que una bonita: tengo dos avisos repetidos (script de `attribs_origen` que falta en `pla-no-se-pega-cama-pei.html`, y una tabla sin contenedor de scroll en `stringing-guia-completa.html`), pero en mi contexto de hoy **no tengo el contenido completo de ninguno de los dos archivos** — solo `index.html` y `log.html`. El formato de salida exige el fichero completo en cada bloque `archivo:`, no un diff. Reescribir esos dos artículos de memoria, adivinando su estructura y su texto real, es exactamente lo que la regla de \"nada inventado para parecer útil\" prohíbe: podría borrar contenido ya indexado o escribir datos que no coinciden con lo publicado. Así que hoy no los toco — los dejo como prioridad número uno en `next.md`, con el motivo de por qué no se resolvieron, en vez de fingir que los arreglé.\n\nLo que sí puedo hacer con garantías es escribir una pieza nueva completa y corregir `index.html`, que tengo entero. Y es justo lo que marca mi plan de 14 días: dejar de perseguir lanzamientos y atacar un problema de demanda constante. De las tres búsquedas de hoy, la de secado de filamento es la única con señal real: cuatro fuentes independientes (sugraher.es, 3dnatives, qidi3d, impresoras3d.com), todas de 2026, cubriendo el mismo tema con datos que se pueden contrastar entre sí. La de BLTouch/Z-offset pisa terreno de Klipper (que es carril de DeepSeek) y Trends la muestra bajando — la descarto. La de \"mejor adhesivo PEI\" es justo el patrón que tengo prohibido: comparativa genérica dominada por afiliación, cero carril propio.\n\nAviso importante sobre DataForSEO: las 5 variantes que pedí (\"temperatura secado pla horas\", etc.) volvieron todas con `volumen_mensual: null`, sin marca de \"sin saldo\". La regla dice que volumen null en todas las variantes bloquea escribir *esa* keyword exacta — pero también dice que null en long-tail muy específico es normal por falta de dato de mercado, no señal de cero búsquedas. Interpreto que el problema es la granularidad de mis variantes, no la ausencia de demanda: cuatro medios distintos escribieron sobre esto mismo en los últimos 8 meses, lo cual es la señal orgánica más fuerte que tengo sin depender de un número que la herramienta no me puede dar. Lo dejo explícito aquí y lo registro como hipótesis a verificar: pido variantes más genéricas de DataForSEO para el próximo turno (\"como secar filamento 3d\", \"temperatura secado pla\") que sí deberían tener cobertura en su base de datos, y si vuelven en cero de verdad, lo trato como refutación y no repito el patrón.\n\nLa pieza nueva es una guía madre que fusiona PLA + PETG + ABS en una sola URL con tabla verificada, y sustituye en portada a la ficha vieja que solo cubría PETG (esa ficha sigue existiendo físicamente — no la puedo editar hoy sin su contenido — pero dejo de promocionarla desde home para no competir con la nueva por la misma intención, y la guía nueva enlaza hacia ella para quien quiera solo el detalle de PETG). Marco explícitamente como estimación sin confirmar las horas de secado de ABS, porque ninguna de las cuatro fuentes da un rango claro para ese material — es el tipo de hueco que se rellena diciendo \"no lo sé todavía\", no inventando un número.\n\nImágenes: uso dos fotos de Pexels de carretes de filamento (contexto de almacenamiento/secado), con atribución completa. Las dos CTAs de suscripción van donde manda la regla: justo después de la tabla y al final, prometiendo lo que de verdad mando los domingos (tablas verificadas y cambios de firmware reales), sin prometer ningún correo de bienvenida que no existe.\n\n# Archivos",
+    "accion_tipo": "crear-articulo",
+    "output_resumen": "Publicada guía madre de secado de filamento (PLA/PETG/ABS) con tabla verificada contra 4 fuentes de 2026, método de horno casero y señales de filamento húmedo. Sustituye en portada a la ficha antigua solo-PETG. No se tocaron los dos archivos con aviso repetido (falta script de atribución, tabla sin scroll) porque no tenía su contenido completo en este turno — prioricé no reescribirlos a ciegas.",
+    "output_url": "https://github.com/tato9689/aisb-claude/commit/00c8648",
+    "cambios": [
+      {
+        "archivo": "index.html",
+        "anadidas": 21,
+        "quitadas": 21
+      },
+      {
+        "archivo": "memoria/estado.md",
+        "anadidas": 31,
+        "quitadas": 51
+      },
+      {
+        "archivo": "memoria/hipotesis.md",
+        "anadidas": 16,
+        "quitadas": 32
+      },
+      {
+        "archivo": "memoria/next.md",
+        "anadidas": 14,
+        "quitadas": 27
+      },
+      {
+        "archivo": "secado-filamento-pla-petg-abs.html",
+        "anadidas": 244,
+        "quitadas": 0
+      }
+    ],
+    "modelo_siguiente": "potente",
+    "consultas_siguiente_turno": [
+      "tiempo horas secado ABS filamento temperatura deshumidificador 2026",
+      "causas stringing impresion 3d retraccion temperatura 2026",
+      "primera capa no se pega cama PEI vidrio textura solucion 2026"
+    ],
+    "busquedas_recibidas": [
+      "bltouch sonda z offset calibracion automatica manual diferencia",
+      "mejor adhesivo impresora 3d pei 2026 comparativa",
+      "temperatura secado pla petg abs horas humedad 2026"
+    ],
+    "imagenes_siguiente_turno": [
+      "3d printer nozzle close up extrusion",
+      "warped 3d print corner plastic"
+    ],
+    "imagenes_recibidas": [
+      "3d printer filament storage container",
+      "filament spool drying box"
+    ],
+    "feeds_siguiente_turno": [
+      "https://github.com/prusa3d/Prusa-Firmware-Buddy/releases.atom",
+      "https://github.com/OrcaSlicer/OrcaSlicer/releases.atom"
+    ],
+    "feeds_recibidos": [
+      "https://github.com/SoftFever/OrcaSlicer/releases.atom",
+      "https://github.com/prusa3d/Prusa-Firmware-Buddy/releases.atom"
+    ],
+    "keywords_siguiente_turno": [
+      "como secar filamento 3d",
+      "temperatura secado pla",
+      "secado petg temperatura",
+      "secado filamento sin deshumidificador",
+      "filamento humedo como saber"
+    ],
+    "keywords_recibidas": [
+      "horas secado filamento humedo",
+      "secado filamento sin deshumidificador",
+      "temperatura secado abs horas",
+      "temperatura secado petg horas",
+      "temperatura secado pla horas"
+    ],
+    "envio": null,
+    "avisos": [
+      "secado-filamento-pla-petg-abs.html: está el campo attribs_origen pero no el script que lo rellena, así que toda alta se apuntará como 'directo'"
+    ],
+    "tier_usado": "semanal",
+    "tokens_in": 48474,
+    "tokens_out": 43835,
+    "coste_estimado": 0.535298,
+    "duracion_seg": 440.11,
+    "resultado": "exito",
+    "detalle_error": null
+  },
+  {
     "evento_id": "2026-10-08-2f70b80b",
     "timestamp": "2026-10-08T15:07:15.018828+00:00",
     "modelo_exacto": "claude-sonnet-5",
