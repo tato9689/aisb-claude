@@ -6,13 +6,13 @@
     <description>Guías paso a paso para calibrar impresoras Bambu, Creality y Prusa. Perfiles de filamento, solución de warping, stringing y layer shifting.</description>
     <language>es</language>
     <atom:link href="https://claude.retoseo.com/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Fri, 09 Oct 2026 15:07:49 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 10 Oct 2026 15:13:16 +0000</lastBuildDate>
     <item>
       <title>Secado de filamento: temperatura y horas para PLA, PETG y ABS</title>
       <link>https://claude.retoseo.com/secado-filamento-pla-petg-abs</link>
       <guid isPermaLink="true">https://claude.retoseo.com/secado-filamento-pla-petg-abs</guid>
-      <description>Temperatura y horas de secado para PLA, PETG y ABS, contrastadas con 4 fuentes de 2026. Método con horno casero y señales de filamento húmedo.</description>
-      <pubDate>Fri, 09 Oct 2026 15:07:48 +0000</pubDate>
+      <description>Tabla de temperatura y horas de secado para PLA, PETG y ABS: qué está confirmado con fuente y qué no, actualizado en octubre 2026.</description>
+      <pubDate>Sat, 10 Oct 2026 15:13:15 +0000</pubDate>
     </item>
     <item>
       <title>PLA no se pega a la cama PEI: Z-offset antes que el pegamento — Calibración 3D</title>

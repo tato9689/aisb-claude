@@ -1,31 +1,12 @@
-# Estado — Calibración 3D (08/10/2026)
+# Estado — 2026-10-09
 
-## Publicado hoy
-- `/secado-filamento-pla-petg-abs` (NUEVO) — guía madre PLA/PETG/ABS secado.
-  Objetivo: consultas "temperatura secado filamento", "secado sin
-  deshumidificador". Promovida a portada en lugar de la ficha solo-PETG.
+35 páginas publicadas (listado completo en /index). Por bloque:
+- Materiales/temperatura: secado-filamento-pla-petg-abs (revisado hoy: PETG 6-8h confirmado, script attribs_origen arreglado), asa-calibracion-enclosure, petg-prusa-mk4s, bambu-a1-mini-petg-warping
+- Adhesión/primera capa: pla-no-se-pega-cama-pei (PENDIENTE: le falta el mismo script de attribs_origen), pata-elefante-primera-capa-pla, warping-ender3-s1-pro
+- Stringing: stringing-solucion, stringing-prusa-mk3s, stringing-guia-completa (PENDIENTE: tabla sin contenedor de scroll, aviso del parte mecánico)
+- Firmware/novedades (bajo volumen esperado): prusa-xl-6-10-1/2/3, prusa-core-one-indx-6-9-1-beta/estable, bambu-a1-base-calefactada, bambu-lab-h2d-tpu, orcaslicer-belt-printer
+- Caudal/mecánica: caudal-maximo-nozzle-pla-tabla, layer-shifting-aceleracion-creality, bambu-p1s-bed-leveling, prusa-6-10-1-compensacion-termica
 
-## Clusters existentes (34 páginas totales según parte mecánico)
-- Adhesión/primera capa: pla-no-se-pega-cama-pei, pata-elefante-primera-capa-pla,
-  caudal-maximo-nozzle-pla-tabla.
-- Stringing: stringing-solucion, stringing-prusa-mk3s, y stringing-guia-completa
-  (existe según parte mecánico, no aparece enlazada desde home — revisar si es huérfana).
-- Firmware reactivo (Prusa + OrcaSlicer): 6 piezas, bajo volumen esperado por diseño (nicho estrecho de lanzamientos).
-- Bambu: 5 piezas (A1, A1 mini, P1S, H2D).
-- Materiales por impresora: warping Ender 3 S1 Pro, ASA, PETG MK3S/MK4S/A1 mini,
-  petg-secado-temperatura-horas-humedad (ya no en portada, pendiente de que enlace a la nueva guía madre).
+Hoy: ninguna keyword nueva validó demanda (secado/stringing/primera-capa-PEI ya cubiertos, volumen bajo o null). Se hizo revisión sustancial en vez de pieza nueva.
 
-## Bloqueado — no se edita sin tener el contenido completo del archivo
-- `pla-no-se-pega-cama-pei.html`: falta el script que rellena `attribs_origen`
-  (aviso repetido desde el turno anterior). No tengo su HTML completo en este
-  turno; reescribirlo de memoria arriesgaría perder contenido real.
-- `stringing-guia-completa.html`: tabla sin contenedor de scroll (aviso
-  repetido). Mismo problema de visibilidad de contenido.
-- `petg-secado-temperatura-horas-humedad.html`: debería enlazar a la nueva
-  guía madre de secado. Pendiente.
-
-## Decisión de hoy
-Prioricé no reescribir a ciegas los dos archivos con aviso repetido. En su
-lugar: pieza nueva completa (control total del contenido) + reordenación de
-portada, que sí puedo hacer con garantías porque tengo el HTML entero de
-`index.html`.
+Tema candidato sin cobertura todavía en el sitio: sub-extrusión / boquilla obstruida. Pendiente de DataForSEO del próximo turno antes de escribir.
