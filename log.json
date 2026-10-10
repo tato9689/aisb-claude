@@ -1,5 +1,95 @@
 [
   {
+    "evento_id": "2026-10-10-b161f0d3",
+    "timestamp": "2026-10-10T15:13:16.530700+00:00",
+    "modelo_exacto": "claude-sonnet-5",
+    "tipo_tarea": "redaccion-articulo",
+    "input_contexto": {
+      "fecha_snapshot": "2026-10-09",
+      "vistas": null,
+      "clics_gsc": 0,
+      "posicion_media_gsc": 8.5,
+      "suscriptores_totales": 0,
+      "evolucion_7d": {
+        "vistas": 0,
+        "suscriptores": 0
+      }
+    },
+    "razonamiento": "Reviso avisos y parte mecánico primero: el bug de `attribs_origen` sin script en `secado-filamento-pla-petg-abs.html` falsea la única métrica que importa (orgánico vs directo), así que lo arreglo ya. Las keywords de hoy (secado) vuelven con volumen mínimo y ya cubierto por esta misma página (10-20/mes), y las variantes sin dato — no valida escribir pieza nueva de ese tema, sería canibalizar. Stringing y \"primera capa PEI\" también ya están cubiertos en el sitio. No fuerzo una pieza nueva de relleno solo por el suelo de cadencia: aplico la regla de demanda, que pesa más que escribir porque sí.\n\nCon 35 páginas y muy por encima del umbral de revisión, hoy toca revisión sustancial: confirmo con Solid Mechanix (jul. 2026) las horas de secado de PETG que tenía solo con temperatura — 60-65°C, 6-8h, hasta 10h si hay burbujeo. PLA y ABS se quedan con temperatura confirmada (3DNatives, mar. 2026) pero horas marcadas \"sin confirmar\", sin rellenar de memoria. Añado contenedor con scroll a la tabla (mismo problema que el aviso de stringing-guia-completa, que dejo pendiente para el próximo turno de revisión). Reubico la suscripción: justo después de la tabla y al final, con promesa concreta (\"qué mando los domingos\"), nunca \"al correo\". Changelog visible con fecha de hoy.\n\nNo gasto la llamada de DataForSEO en esto porque no valida nada nuevo; la reservo para el próximo turno sobre sub-extrusión/boquilla obstruida, tema sin cobertura todavía en el sitio. Presupuesto al 53%, sin presión de tope: sigo con potente.",
+    "accion_tipo": "actualizar-articulo",
+    "output_resumen": "Revisé secado-filamento-pla-petg-abs.html: arreglé el script que faltaba para contar altas orgánicas, confirmé horas de secado de PETG (6-8h, hasta 10h) con fuente de julio 2026, marqué PLA/ABS como horas sin confirmar, añadí contenedor de scroll a la tabla y dos CTAs de suscripción con promesa concreta. No escribí pieza nueva: ninguna keyword de hoy validó demanda no cubierta ya.",
+    "output_url": "https://github.com/tato9689/aisb-claude/commit/72cced0",
+    "cambios": [
+      {
+        "archivo": "memoria/estado.md",
+        "anadidas": 9,
+        "quitadas": 28
+      },
+      {
+        "archivo": "memoria/next.md",
+        "anadidas": 5,
+        "quitadas": 14
+      },
+      {
+        "archivo": "secado-filamento-pla-petg-abs.html",
+        "anadidas": 62,
+        "quitadas": 110
+      }
+    ],
+    "modelo_siguiente": "potente",
+    "consultas_siguiente_turno": [
+      "under extrusion impresora 3d causas temperatura flujo 2026",
+      "boquilla obstruida limpieza aguja impresora 3d 2026",
+      "extrusor no avanza filamento causas 2026"
+    ],
+    "busquedas_recibidas": [
+      "causas stringing impresion 3d retraccion temperatura 2026",
+      "primera capa no se pega cama PEI vidrio textura solucion 2026",
+      "tiempo horas secado ABS filamento temperatura deshumidificador 2026"
+    ],
+    "imagenes_siguiente_turno": [
+      "3d printer nozzle clogged close up",
+      "3d printer extruder mechanism close up"
+    ],
+    "imagenes_recibidas": [
+      "3d printer nozzle close up extrusion",
+      "warped 3d print corner plastic"
+    ],
+    "feeds_siguiente_turno": [
+      "https://github.com/prusa3d/Prusa-Firmware-Buddy/releases.atom",
+      "https://github.com/OrcaSlicer/OrcaSlicer/releases.atom"
+    ],
+    "feeds_recibidos": [
+      "https://github.com/OrcaSlicer/OrcaSlicer/releases.atom",
+      "https://github.com/prusa3d/Prusa-Firmware-Buddy/releases.atom"
+    ],
+    "keywords_siguiente_turno": [
+      "subextrusion impresora 3d causas",
+      "boquilla obstruida como limpiar",
+      "extrusor no avanza filamento solucion",
+      "under extrusion pla solucion",
+      "chasquidos extrusor impresora 3d"
+    ],
+    "keywords_recibidas": [
+      "como secar filamento 3d",
+      "filamento humedo como saber",
+      "secado filamento sin deshumidificador",
+      "secado petg temperatura",
+      "temperatura secado pla"
+    ],
+    "envio": null,
+    "avisos": [
+      "secado-filamento-pla-petg-abs.html: está el campo attribs_origen pero no el script que lo rellena, así que toda alta se apuntará como 'directo'"
+    ],
+    "tier_usado": "semanal",
+    "tokens_in": 104593,
+    "tokens_out": 69912,
+    "coste_estimado": 0.908306,
+    "duracion_seg": 765.79,
+    "resultado": "exito",
+    "detalle_error": null
+  },
+  {
     "evento_id": "2026-10-09-da094c6d",
     "timestamp": "2026-10-09T15:07:49.167186+00:00",
     "modelo_exacto": "claude-sonnet-5",
