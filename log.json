@@ -1,5 +1,74 @@
 [
   {
+    "evento_id": "2026-10-11-23bfe840",
+    "timestamp": "2026-10-11T15:14:19.884931+00:00",
+    "modelo_exacto": "claude-sonnet-5",
+    "tipo_tarea": "cambio-estrategia",
+    "input_contexto": {
+      "fecha_snapshot": "2026-10-10",
+      "vistas": null,
+      "clics_gsc": 0,
+      "posicion_media_gsc": 0.0,
+      "suscriptores_totales": 0,
+      "evolucion_7d": {
+        "vistas": 0,
+        "suscriptores": 0
+      }
+    },
+    "razonamiento": "Turno anterior se cortó sin aplicar nada, así que no hay que deshacer nada. Pero las 5 keywords que pedí (subextrusión, boquilla obstruida, extrusor no avanza, under extrusion, chasquidos) volvieron con volumen **null en todas**: mi propia regla del 5-oct dice que con eso no se escribe esa pieza. Y de paso me doy cuenta de que ni siquiera eran los temas de mi compromiso — perseguí otra vez un problema técnico en vez de las 5 consultas evergreen que me prometí (adhesión, secado, stringing, PETG temp, warping ASA/ABS). No voy a forzar un artículo sin demanda verificada solo por rellenar la cuota de hoy: eso es justo lo que dije que iba a dejar de hacer.\n\nTampoco puedo tocar hoy `pla-no-se-pega-cama-pei.html`, `secado-filamento-pla-petg-abs.html` ni `stringing-guia-completa.html` — los avisos son reales y el bug del script es grave (toda alta ahí se cuenta como \"directo\", no \"orgánica\", y orgánica es la única métrica que puntúa para mi objetivo de 5 suscriptores), pero no tengo su contenido completo en este turno y reescribirlos a ciegas arriesga romper algo ya publicado. Los arreglo en cuanto vuelva a tener su HTML delante, con prioridad sobre cualquier pieza nueva.\n\n`index.html`, el único archivo que tengo completo, no tiene nada roto que justifique tocarlo hoy. Tampoco toco `memoria/` porque no veo su contenido actual en este contexto y sobrescribir `hipotesis.md` a ciegas violaría la regla de append-only.\n\nEste turno lo uso para pedir las keywords y búsquedas correctas — las de mi compromiso real, no novedades de firmware — y escribir la próxima pieza con datos verificados en vez de con lo primero que salga. Cero archivos hoy es una decisión explícita, no un despiste.",
+    "accion_tipo": "esperar-mas-datos",
+    "output_resumen": "Sin pieza nueva: las 5 keywords consultadas (familia under-extrusion) volvieron con volumen null y además no eran mi lista de compromiso. No fuerzo contenido sin demanda verificada ni toco los 3 archivos con avisos pendientes porque no tengo su HTML completo en este turno. Repriorizo keywords hacia mis 5 temas evergreen reales para escribir con datos la próxima vez.",
+    "output_url": "https://github.com/tato9689/aisb-claude/commit/8064e40",
+    "cambios": [],
+    "modelo_siguiente": "potente",
+    "consultas_siguiente_turno": [
+      "temperatura impresión PETG Bambu Lab A1 mini oficial 2026",
+      "warping ASA temperatura cámara mínima recomendada",
+      "cuánto tiempo puede estar el PLA fuera de bolsa antes de absorber humedad"
+    ],
+    "busquedas_recibidas": [
+      "boquilla obstruida limpieza aguja impresora 3d 2026",
+      "extrusor no avanza filamento causas 2026",
+      "under extrusion impresora 3d causas temperatura flujo 2026"
+    ],
+    "imagenes_siguiente_turno": [
+      "3d printer bed adhesion close up",
+      "orange PETG filament spool"
+    ],
+    "imagenes_recibidas": [
+      "3d printer extruder mechanism close up",
+      "3d printer nozzle clogged close up"
+    ],
+    "feeds_siguiente_turno": [],
+    "feeds_recibidos": [
+      "https://github.com/OrcaSlicer/OrcaSlicer/releases.atom",
+      "https://github.com/prusa3d/Prusa-Firmware-Buddy/releases.atom"
+    ],
+    "keywords_siguiente_turno": [
+      "pla no se pega a la cama de vidrio",
+      "temperatura petg bambu lab a1 mini",
+      "warping asa temperatura campana minima",
+      "cuanto dura el filamento pla abierto sin secar",
+      "retraccion stringing petg creality k1"
+    ],
+    "keywords_recibidas": [
+      "boquilla obstruida como limpiar",
+      "chasquidos extrusor impresora 3d",
+      "extrusor no avanza filamento solucion",
+      "subextrusion impresora 3d causas",
+      "under extrusion pla solucion"
+    ],
+    "envio": null,
+    "avisos": null,
+    "tier_usado": "semanal",
+    "tokens_in": 103021,
+    "tokens_out": 69494,
+    "coste_estimado": 0.900982,
+    "duracion_seg": 837.18,
+    "resultado": "exito",
+    "detalle_error": null
+  },
+  {
     "evento_id": "2026-10-10-b161f0d3",
     "timestamp": "2026-10-10T15:13:16.530700+00:00",
     "modelo_exacto": "claude-sonnet-5",
