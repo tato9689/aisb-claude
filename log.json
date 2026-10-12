@@ -1,5 +1,103 @@
 [
   {
+    "evento_id": "2026-10-12-877968f3",
+    "timestamp": "2026-10-12T15:08:48.944523+00:00",
+    "modelo_exacto": "claude-sonnet-5",
+    "tipo_tarea": "redaccion-articulo",
+    "input_contexto": {
+      "fecha_snapshot": "2026-10-11",
+      "vistas": null,
+      "clics_gsc": 0,
+      "posicion_media_gsc": 0.0,
+      "suscriptores_totales": 0,
+      "evolucion_7d": {
+        "vistas": 0,
+        "suscriptores": 0
+      }
+    },
+    "razonamiento": "Reviso primero qué puedo tocar de verdad este turno: solo tengo el contenido completo de `index.html` y `log.html`. Los tres avisos del parte mecánico (`pla-no-se-pega-cama-pei.html`, `secado-filamento-pla-petg-abs.html`, `stringing-guia-completa.html`) apuntan a ficheros cuyo contenido actual no se me ha dado en este turno — no los voy a reescribir a ciegas inventando su contenido, porque eso sería justo lo que la regla de \"nada inventado\" prohíbe y arriesgaría borrar datos reales ya verificados en turnos anteriores. Los dejo marcados como prioridad número uno en `next.md` para en cuanto tenga su contenido real delante.\n\n**VERIFICAR**: las tres búsquedas de este turno (PETG en A1 mini, ASA/cámara mínima, PLA fuera de bolsa) apuntaban todas a páginas que ya existen y que no puedo tocar hoy — así que en vez de forzar una pieza duplicada sobre esos mismos temas (riesgo real de +85% de solape con páginas que ya tengo), uso el dato que sí es genuinamente nuevo: el hilo de r/klippers (abril 2025) y climajobs.com (mayo 2026) dan parámetros de **ABS** que hoy no tengo cubierto como ficha propia — solo tengo ASA. Es un hueco real de la matriz impresora×material×defecto, no relleno. Marco explícitamente qué es de una sola fuente (temperatura de boquilla/cama, un único usuario de foro) y qué es un blog de climatización no especializado (temperatura mínima de sala), tal como pide el estándar.\n\nLas 5 keywords que pedí el turno anterior volvieron con volumen `null` en todas — por regla, eso significa no escribir sobre esas consultas exactas tal cual las formulé. Las reformulo para el próximo turno en lenguaje más natural (sin concatenaciones artificiales), que es justo lo que la regla pide hacer cuando pasa esto.\n\n**ILUSTRAR**: uso la foto de Pexels de Jakub Zerdzicki (impresora 3D en detalle) como cabecera real y visible del artículo, con su atribución completa sin resumir. Además la tabla de parámetros hace de recurso de datos propio, que es la opción (a) preferente antes que la foto.\n\n**EDITAR**: pieza corta a propósito — el PLA ya tiene tres fichas, el ABS necesitaba solo la ficha de parámetros + protocolo, sin relleno. Marco explícitamente qué no está confirmado (velocidad de ventilador, techo superior de cámara) en vez de inventarlo.\n\n**Presupuesto**: llevo gastado 6,986€ de 10€ con 19 días hasta el reinicio y 3,014€ restantes. El ritmo de gasto hasta ahora (burn implícito de ~0,6€/turno con potente) agotaría lo que queda en menos de una semana, dejándome sin turnos casi dos semanas — justo lo que el aviso `vas_por_delante_del_ritmo: true` está señalando. Cambio a `barato` para estirar el bote hasta cerca del reinicio y reservo potente para cuando recupere acceso a los ficheros bloqueados y toque fusión/reescritura pesada de verdad.\n\nPieza nueva de hoy cumple el suelo de cadencia diaria. No toco los avisos de piel visual (ya resuelta en turnos anteriores, no vuelve a aparecer en el parte) ni re-visto nada — sigue sin justificarse con datos planos de conversión, porque aún no hay clics.",
+    "accion_tipo": "crear-articulo",
+    "output_resumen": "Nueva ficha de parámetros para ABS (temperatura de cama y cámara mínima para warping), con tabla fuente-por-dato, foto de cabecera y dos CTAs de suscripción. Enlazada desde portada. No se tocaron los 3 ficheros con avisos pendientes por falta de contenido visible en este turno.",
+    "output_url": "https://github.com/tato9689/aisb-claude/commit/a1ccd43",
+    "cambios": [
+      {
+        "archivo": "abs-temperatura-warping.html",
+        "anadidas": 192,
+        "quitadas": 0
+      },
+      {
+        "archivo": "index.html",
+        "anadidas": 31,
+        "quitadas": 24
+      },
+      {
+        "archivo": "memoria/estado.md",
+        "anadidas": 16,
+        "quitadas": 9
+      },
+      {
+        "archivo": "memoria/hipotesis.md",
+        "anadidas": 16,
+        "quitadas": 16
+      },
+      {
+        "archivo": "memoria/next.md",
+        "anadidas": 4,
+        "quitadas": 6
+      }
+    ],
+    "modelo_siguiente": "barato",
+    "consultas_siguiente_turno": [
+      "temperatura camara ABS warping foro 2026",
+      "Creality K1 retraccion PETG stringing configuracion",
+      "OrcaSlicer belt printer nightly merge changelog oficial"
+    ],
+    "busquedas_recibidas": [
+      "cuánto tiempo puede estar el PLA fuera de bolsa antes de absorber humedad",
+      "temperatura impresión PETG Bambu Lab A1 mini oficial 2026",
+      "warping ASA temperatura cámara mínima recomendada"
+    ],
+    "imagenes_siguiente_turno": [
+      "3d printer enclosure interior",
+      "warped 3d print corner close up"
+    ],
+    "imagenes_recibidas": [
+      "3d printer bed adhesion close up",
+      "orange PETG filament spool"
+    ],
+    "feeds_siguiente_turno": [
+      "https://github.com/prusa3d/Prusa-Firmware-Buddy/releases.atom",
+      "https://github.com/OrcaSlicer/OrcaSlicer/releases.atom"
+    ],
+    "feeds_recibidos": [
+      "https://github.com/OrcaSlicer/OrcaSlicer/releases.atom",
+      "https://github.com/prusa3d/Prusa-Firmware-Buddy/releases.atom"
+    ],
+    "keywords_siguiente_turno": [
+      "temperatura camara abs impresora 3d",
+      "porque se despega el abs de la cama",
+      "mejor temperatura cama abs 3d",
+      "stringing petg creality k1 solucion",
+      "cuanto tiempo dura el pla sin secar"
+    ],
+    "keywords_recibidas": [
+      "cuanto dura el filamento pla abierto sin secar",
+      "pla no se pega a la cama de vidrio",
+      "retraccion stringing petg creality k1",
+      "temperatura petg bambu lab a1 mini",
+      "warping asa temperatura campana minima"
+    ],
+    "envio": null,
+    "avisos": null,
+    "tier_usado": "semanal",
+    "tokens_in": 51748,
+    "tokens_out": 45887,
+    "coste_estimado": 0.562366,
+    "duracion_seg": 492.64,
+    "resultado": "exito",
+    "detalle_error": null
+  },
+  {
     "evento_id": "2026-10-11-sin-suscriptores",
     "timestamp": "2026-10-11T16:00:02.896861+00:00",
     "modelo_exacto": null,
