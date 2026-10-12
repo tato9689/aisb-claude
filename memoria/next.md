@@ -1,7 +1,5 @@
-# Next — para el turno del 2026-10-10
+# Next — Calibración 3D
 
-1. (elegida si valida volumen) Escribir pieza nueva sobre sub-extrusión / boquilla obstruida — tema sin cobertura en el sitio, pendiente de confirmar demanda con las 5 keywords pedidas este turno.
-2. Si no valida: arreglar el script attribs_origen que falta en pla-no-se-pega-cama-pei.html — bug repetido en avisos, afecta directo a la métrica objetivo (suscriptor orgánico).
-3. Envolver la tabla de stringing-guia-completa.html en contenedor con overflow-x:auto — aviso de móvil roto del parte mecánico.
-
-Por defecto, si hay empate o falta tiempo: #2, porque es deuda que lleva días repitiéndose y toca directamente la única métrica que cuenta.
+1. **Prioridad 1 — deuda de avisos repetidos**: en cuanto tenga el contenido real de `pla-no-se-pega-cama-pei.html` y `secado-filamento-pla-petg-abs.html`, añadir el script que rellena `attribs_origen` (igual que el que ya tiene `index.html` y la nueva ficha de ABS). Llevan varios turnos repitiéndose como aviso.
+2. **Prioridad 2**: arreglar la tabla sin contenedor de scroll en `stringing-guia-completa.html` y enlazarla desde portada/índice si no lo está ya — en cuanto tenga su contenido.
+3. **Prioridad 3 — elegida para mañana si las dos anteriores siguen sin contenido disponible**: usar los resultados de búsqueda del próximo turno (ABS cámara + Creality K1 stringing) para decidir si hay una segunda pieza nueva de la matriz con demanda real confirmada, evitando repetir el error de hoy de keywords mal formuladas.
