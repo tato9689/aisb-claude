@@ -1,112 +1,91 @@
-/* ============================================================
-   SISTEMA DE MARCA — Calibración 3D
-   ------------------------------------------------------------
-   Icono: 4 barras ascendentes (mismo trazo que /favicon.svg).
-   Representa calibración progresiva — no es un círculo genérico.
+/*
+  === SISTEMA DE MARCA — Calibración 3D ===
+  Símbolo: "torre de temperatura" en barras ascendentes — el mismo objeto
+  que el diagrama fundacional #1 de este nicho (torre de calibración por
+  temperatura). No es un icono genérico: es el gráfico que el lector de
+  impresión 3D ya reconoce de su propio slicer.
 
-   Reglas que vive este fichero, documentadas aquí porque no hay
-   todavía una página /sistema que hable específicamente de la
-   marca (si la hago en un turno futuro, este comentario se mueve
-   allí sin cambiar el criterio):
-
-   1. El símbolo nunca usa un color fijo ajeno al modo de color:
-      claro, oscuro (prefers-color-scheme) y alto contraste
-      (forced-colors) tienen su propia regla, nunca "lo que
-      quede" del navegador.
-   2. Tamaño mínimo 28px en móvil (el mínimo exigido es 24px),
-      32px desde 640px. Ni el símbolo ni el texto se ocultan en
-      ningún breakpoint — eso fue justo lo que rompía la marca
-      hasta el 2026-10-07.
-   3. El nombre del sitio es texto real (.marca__texto), nunca
-      parte del SVG: lo lee un lector de pantalla y lo encuentra
-      un Ctrl+F.
-   4. Variables con scope local a .marca, no a :root global,
-      porque este fichero se escribió sin tener delante el
-      contenido de piel.css. Si piel.css ya define sus propios
-      tokens de color, no hay colisión posible: los nombres aquí
-      son --marca-accent / --marca-accent-oscuro, deliberadamente
-      distintos. Pendiente: auditar y unificar en un turno futuro
-      que sí tenga piel.css en contexto.
-   ============================================================ */
+  Reglas que este fichero existe para cumplir (ver base_comun.md, "Tu logo"):
+  - El símbolo nunca usa un color fijo que dependa de que el fondo sea claro.
+  - Nunca depende de un relleno de fondo para leerse.
+  - En forced-colors (alto contraste), usa CanvasText, no colores propios.
+  - El nombre del sitio va siempre en texto real al lado del símbolo.
+  - Símbolo >= 24px de alto en móvil (aquí: 28px móvil, 32px desktop).
+*/
 
 .marca {
-  --marca-accent: #d9480f;        /* contraste ~4.6:1 sobre fondo claro */
-  --marca-accent-oscuro: #ff9f5a; /* contraste >3:1 sobre fondo oscuro */
-
   display: inline-flex;
   align-items: center;
-  gap: 0.65rem;
+  gap: 0.6rem;
   text-decoration: none;
   color: inherit;
-  padding: 0.25rem 0.1rem;
-}
-
-@media (prefers-color-scheme: dark) {
-  .marca {
-    --marca-accent: var(--marca-accent-oscuro);
-  }
+  font-weight: 700;
+  line-height: 1;
 }
 
 .marca__simbolo {
   width: 28px;
   height: 28px;
-  min-width: 28px;
   flex-shrink: 0;
-  fill: var(--marca-accent);
-  transition: transform 0.18s ease;
-}
-
-.marca__texto {
-  font-weight: 700;
-  font-size: 1.05rem;
-  line-height: 1;
-  letter-spacing: 0.01em;
-  white-space: nowrap;
-  color: inherit;
-}
-
-.marca:hover .marca__simbolo,
-.marca:focus-visible .marca__simbolo {
-  transform: translateY(-2px);
-}
-
-.marca:focus-visible {
-  outline: 2px solid var(--marca-accent);
-  outline-offset: 4px;
-  border-radius: 6px;
+  overflow: visible;
 }
 
 @media (min-width: 640px) {
   .marca__simbolo {
     width: 32px;
     height: 32px;
-    min-width: 32px;
-  }
-  .marca__texto {
-    font-size: 1.2rem;
   }
 }
 
-/* Alto contraste: Windows/forced-colors pinta todo con un par de
-   colores del sistema y descarta fondos, sombras y el naranja de
-   marca. El símbolo tiene que seguir siendo una forma reconocible
-   solo con tinta plana. */
-@media (forced-colors: active) {
-  .marca__simbolo {
-    fill: CanvasText;
-    forced-color-adjust: none;
+/* El símbolo hereda el color de texto del header: funciona igual en claro
+   y en oscuro sin declarar dos paletas. Antes de este fichero, los <rect>
+   sin fill caían al negro por defecto del SVG y en fondo oscuro se perdían. */
+.marca__simbolo rect {
+  fill: currentColor;
+}
+
+.marca__texto {
+  display: inline-block;
+  font-size: 1.05rem;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+}
+
+/* Solo se reduce el tamaño, nunca se oculta: el símbolo solo no es marca. */
+@media (max-width: 420px) {
+  .marca__texto {
+    font-size: 0.95rem;
   }
+}
+
+.marca__simbolo,
+.marca__texto {
+  transition: opacity 0.15s ease;
+}
+
+.marca:hover .marca__simbolo,
+.marca:focus-visible .marca__simbolo {
+  opacity: 0.82;
+}
+
+.marca:hover .marca__texto,
+.marca:focus-visible .marca__texto {
+  text-decoration: underline;
+  text-underline-offset: 0.22em;
+}
+
+/* Alto contraste (Windows forced-colors, y equivalentes móviles): el
+   navegador quita fondos, sombras y la mayoría de colores de autor. Si el
+   símbolo dependiera de un color propio aquí, desaparecería entero — como
+   pasó de verdad el 2026-10-05 en otro sitio del experimento. */
+@media (forced-colors: active) {
+  .marca,
   .marca__texto {
     color: CanvasText;
     forced-color-adjust: none;
   }
-  .marca:focus-visible {
-    outline: 2px solid Highlight;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .marca__simbolo {
-    transition: none;
+  .marca__simbolo rect {
+    fill: CanvasText;
+    forced-color-adjust: none;
   }
 }

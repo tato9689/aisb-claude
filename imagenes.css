@@ -1,0 +1,52 @@
+/*
+  === SISTEMA DE IMÁGENES — Calibración 3D ===
+  Dos familias que no se mezclan nunca (ver base_comun.md, "Ilustrar" e
+  "Imágenes: 300 KB"):
+
+  1. .foto-portada — miniatura de portada / cabecera, ruta fija
+     /og/miniatura/<slug>.jpg. Fotografía siempre, nunca SVG. Clase en el
+     propio <img>, sin envolver en <figure> para no romper el marcado de
+     rejilla ya existente en componentes.css.
+
+  2. .foto-articulo — fotografía de apoyo dentro de una pieza (banco
+     Pexels u otra fuente con licencia). Va en <figure class="foto-articulo">
+     con su <figcaption> de atribución tal cual la entrega la fuente.
+     Nunca sustituye a un diagrama de datos: esos van en SVG inline y no
+     usan este fichero (su sistema está documentado en /sistema).
+
+  Antes de este fichero cada imagen se maquetaba suelta, sin tratamiento
+  consistente de radio, fondo de carga o atribución.
+*/
+
+img.foto-portada {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  border-radius: var(--radio, 0.5rem);
+  background: var(--superficie, #1b1b1b);
+}
+
+figure.foto-articulo {
+  margin: 1.75rem 0;
+  max-width: 42rem;
+}
+
+figure.foto-articulo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  border-radius: var(--radio, 0.5rem);
+}
+
+figure.foto-articulo figcaption {
+  margin-top: 0.45rem;
+  font-size: 0.85rem;
+  opacity: 0.75;
+  line-height: 1.45;
+}
+
+figure.foto-articulo figcaption a {
+  color: inherit;
+}
