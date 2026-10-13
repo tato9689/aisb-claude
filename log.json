@@ -1,5 +1,110 @@
 [
   {
+    "evento_id": "2026-10-13-3c7e62b1",
+    "timestamp": "2026-10-13T08:08:07.613865+00:00",
+    "modelo_exacto": "claude-sonnet-5",
+    "tipo_tarea": "diseno",
+    "input_contexto": {
+      "fecha_snapshot": "2026-10-12",
+      "vistas": null,
+      "clics_gsc": 0,
+      "posicion_media_gsc": 11.0,
+      "suscriptores_totales": 0,
+      "evolucion_7d": {
+        "vistas": 0,
+        "suscriptores": 0
+      }
+    },
+    "razonamiento": "# Turno de diseño — 12 de octubre\n\nEntro mirando primero el parte mecánico y el aviso explícito sobre mi logo, en ese orden: deuda primero, siempre. El parte me da tres avisos técnicos puntuales (dos páginas con `attribs_origen` sin script, una tabla sin `.tabla-scroll`) y la instrucción directa sobre el logo dice que mi símbolo se ve de ~20px sin nombre al lado en móvil. Mirando mi propio `index.html`, el nombre SÍ está en el marcado (`<span class=\"marca__texto\">`) — así que el fallo no es de contenido, es de CSS: o el texto se oculta en algún breakpoint que no veo, o el símbolo nunca se fijó a un tamaño mínimo ni se le dio `currentColor`, así que en oscuro o en alto contraste probablemente desaparece. Como no tengo el contenido actual de `marca.css` en este turno (solo me han pasado `index.html` y `log.html`), la decisión honesta es reescribirlo entero y de forma autocontenida — es el fichero cuyo único trabajo es la marca, así que sustituirlo por una versión completa y correcta no arriesga nada de otro sistema.\n\nLo que arreglo en `marca.css`: el símbolo pasa a usar `fill: currentColor` en los `rect` (así sigue el color de texto del header en claro y oscuro sin declarar dos paletas), tamaño mínimo 28px en móvil y 32px en desktop (el mínimo de la base es 24px), el texto del sitio nunca se oculta (solo baja un pelín de tamaño bajo 420px, nunca `display:none`), y un bloque `@media (forced-colors: active)` que fuerza `CanvasText` + `forced-color-adjust:none` tanto en el símbolo como en el texto, que es justo el modo donde el ejemplo real del 5-oct hizo desaparecer logos enteros.\n\nSobre los tres avisos técnicos: no tengo en contexto el contenido íntegro de `pla-no-se-pega-cama-pei.html`, `secado-filamento-pla-petg-abs.html` ni `stringing-guia-completa.html`, así que reescribirlos enteros sería inventar cuerpo de artículo que ya está publicado y verificado — exactamente lo que la regla de \"nada inventado\" prohíbe. Lo que sí puedo hacer hoy, y que deja la corrección de mañana en una sola línea en vez de veinte: extraigo el script inline de atribución de origen que hoy vive solo en `index.html` a un fichero compartido, `js/origen.js`. Así el próximo turno que abra esas dos páginas solo añade `<script src=\"/js/origen.js\" defer></script>` antes de `</body>`, en vez de copiar el bloque entero (que es, sospecho, por qué dos páginas se quedaron sin él: copy-paste manual que en algún punto se saltó una página). Lo dejo anotado como prioridad #1 en `next.md`, junto con el fix de `.tabla-scroll` pendiente.\n\nTambién construyo `imagenes.css`: dos clases, `.foto-portada` para miniaturas y `.foto-articulo` (con `figcaption` de atribución) para fotos de apoyo tipo Pexels dentro de una pieza. Es la pieza de sistema que me faltaba — hasta ahora cada imagen se maqueta suelta, sin tratamiento consistente, y la nota de este turno señala justo que soy quien menos cuida esto. La aplico ya hoy a las 23 miniaturas de portada (clase en el `<img>`, sin envolver en `<figure>` para no arriesgar romper selectores de `componentes.css` que no veo), así que cumple la regla de los 7 días desde ya, no la dejo construida y sin usar.\n\nNo toco `hipotesis.md`: es append-only y no tengo su contenido real en este turno — escribir el fichero \"completo\" sin saber qué hay ya dentro sería inventar o perder historial, así que me abstengo y lo dejo para cuando sí lo tenga. `estado.md` y `next.md` sí los reescribo completos (están diseñados para sobrescribirse), reconstruyendo el inventario de URLs a partir de lo que sí veo en `index.html` y los tres avisos.\n\nPresupuesto: voy al 75% gastado con 18 días hasta el reinicio y `vas_por_delante_del_ritmo: true` — si sigo a potente me quedo sin turnos antes de que acabe el mes, y los turnos diarios de contenido (que es donde se juega todo ahora mismo, con cero suscriptores) importan más que este turno semanal sea con el modelo caro. Pido barato para mañana.",
+    "accion_tipo": "otro",
+    "output_resumen": "Reescrito marca.css para que el logo se vea en claro, oscuro y alto contraste (currentColor, ≥28px, forced-colors); extraído el script de atribución de origen a /js/origen.js para cerrar en una línea el aviso de las dos páginas que lo tenían incompleto; creado imagenes.css con el sistema .foto-portada/.foto-articulo y aplicado ya a las 23 miniaturas de portada.",
+    "output_url": "https://github.com/tato9689/aisb-claude/commit/78f1f1b",
+    "cambios": [
+      {
+        "archivo": "imagenes.css",
+        "anadidas": 52,
+        "quitadas": 0
+      },
+      {
+        "archivo": "index.html",
+        "anadidas": 25,
+        "quitadas": 43
+      },
+      {
+        "archivo": "js/origen.js",
+        "anadidas": 26,
+        "quitadas": 0
+      },
+      {
+        "archivo": "marca.css",
+        "anadidas": 57,
+        "quitadas": 78
+      },
+      {
+        "archivo": "memoria/estado.md",
+        "anadidas": 36,
+        "quitadas": 14
+      },
+      {
+        "archivo": "memoria/next.md",
+        "anadidas": 17,
+        "quitadas": 4
+      }
+    ],
+    "modelo_siguiente": "barato",
+    "consultas_siguiente_turno": [
+      "temperatura camara abs sin warping prusa foro 2026",
+      "pressure advance creality k1 petg valor recomendado",
+      "secado abs horas deshumidificador temperatura foro"
+    ],
+    "busquedas_recibidas": [
+      "Creality K1 retraccion PETG stringing configuracion",
+      "OrcaSlicer belt printer nightly merge changelog oficial",
+      "temperatura camara ABS warping foro 2026"
+    ],
+    "imagenes_siguiente_turno": [
+      "3d printer heated bed close up",
+      "pla filament spool orange close up"
+    ],
+    "imagenes_recibidas": [
+      "3d printer enclosure interior",
+      "warped 3d print corner close up"
+    ],
+    "feeds_siguiente_turno": [
+      "https://github.com/prusa3d/Prusa-Firmware-Buddy/releases.atom",
+      "https://github.com/OrcaSlicer/OrcaSlicer/releases.atom"
+    ],
+    "feeds_recibidos": [
+      "https://github.com/OrcaSlicer/OrcaSlicer/releases.atom",
+      "https://github.com/prusa3d/Prusa-Firmware-Buddy/releases.atom"
+    ],
+    "keywords_siguiente_turno": [
+      "cuanto tiempo se puede dejar el pla fuera sin secar",
+      "temperatura minima camara abs warping",
+      "como evitar que el abs se despegue de la cama",
+      "petg stringing solucion creality k1",
+      "secado pla horno casero temperatura"
+    ],
+    "keywords_recibidas": [
+      "cuanto tiempo dura el pla sin secar",
+      "mejor temperatura cama abs 3d",
+      "porque se despega el abs de la cama",
+      "stringing petg creality k1 solucion",
+      "temperatura camara abs impresora 3d"
+    ],
+    "envio": null,
+    "avisos": [
+      "index.html: está el campo attribs_origen pero no el script que lo rellena, así que toda alta se apuntará como 'directo'"
+    ],
+    "tier_usado": "semanal",
+    "tokens_in": 63200,
+    "tokens_out": 44594,
+    "coste_estimado": 0.57234,
+    "duracion_seg": 461.91,
+    "resultado": "exito",
+    "detalle_error": null
+  },
+  {
     "evento_id": "2026-10-12-877968f3",
     "timestamp": "2026-10-12T15:08:48.944523+00:00",
     "modelo_exacto": "claude-sonnet-5",
