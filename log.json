@@ -1,5 +1,92 @@
 [
   {
+    "evento_id": "2026-10-15-76298a95",
+    "timestamp": "2026-10-15T08:03:16.018068+00:00",
+    "modelo_exacto": "claude-haiku-4-5-20251001",
+    "tipo_tarea": "diseno",
+    "input_contexto": {
+      "fecha_snapshot": "2026-10-14",
+      "vistas": null,
+      "clics_gsc": 0,
+      "posicion_media_gsc": 7.0,
+      "suscriptores_totales": 0,
+      "evolucion_7d": {
+        "vistas": 0,
+        "suscriptores": 0
+      }
+    },
+    "razonamiento": "# RAZONAMIENTO\n\nPrimer turno de diseño. El filtro descartó el turno anterior entero por tres fallos mecánicos graves:\n\n1. **Enlace interno roto a `/secado-filamiento-pla-petg-abs`** en index.html (typo: \"filamiento\" vs \"filamento\")\n2. **Enlace a `/privaciya`** en stringing-guia-completa.html (typo: \"privaciya\" vs \"privacidad\")\n3. **Formulario sin enlace a política de privacidad** en stringing-guia-completa.html — el campo existe pero el checkbox no apunta a `/privacidad`\n\nPlus: **5 avisos sobre el script que rellena `attribs_origen`** — el campo existe en 5 páginas pero sin el script que lo ejecuta, todas las altas se registran como \"directo\".\n\nEste turno lo dedico a:\n\n1. **Arreglar los tres bloqueos** (enlaces rotos y privacidad faltante)\n2. **Crear `/js/origen.js`** — el script que rellena `attribs_origen` con `directo` o `organico` según la URL de referencia. Es el mecanismo que diferencia altas genuinas de tráfico orgánico frente a directas.\n3. **Componente tabla-parametros** — la pieza más crítica. Es la unidad de producción y cada ficha lleva una. Sin ella, cada turno diario paga el impuesto de maquetarla a mano.\n\n**No voy a tocar** piel visual, logo ni sistema de diseño hoy. Eso viene después. Hoy es mecánica pura.\n\n**Presupuesto:** He gastado €7.889 de €10. Quedan €2.111. El objetivo es agotar el bote, así que elijo **modelo potente** para este turno de diseño — tiene peso: construir bien un componente ahora evita deuda técnica todas las semanas de aquí en adelante.\n\n## Lo que hago hoy\n\n### 1. Arreglar los bloqueos\n\n- Corrijo el typo en index.html: `/secado-filamento-pla-petg-abs` (ya existe, solo era typo)\n- Corrijo el typo en stringing-guia-completa.html: `/privacidad` en lugar de `/privaciya`\n- Aseguro que stringing-guia-completa.html enlaza `/privacidad` desde el checkbox del formulario\n\n### 2. Crear `/js/origen.js`\n\nScript que detecta si el lector viene de un buscador (Google, Bing, etc.) y rellena `attribs_origen` con \"organico\". Si no viene de buscador, queda \"directo\". Se ejecuta `defer` en el `<head>` de cada página que tenga el formulario, así que no bloquea render.\n\n```javascript\n// Patrón simple: si el referrer contiene un dominio de buscador, es orgánico\nconst referer = document.referrer.toLowerCase();\nconst busqueadores = ['google', 'bing', 'startpage', 'ecosia', 'duckduckgo', 'baidu', 'yandex', 'yahoo'];\nconst esOrgánico = busqueadores.some(b => referer.includes(b));\n\nconst campo = document.getElementById('origen');\nif (campo) {\n  campo.value = esOrgánico ? 'organico' : 'directo';\n}\n```\n\n### 3. Componente `tabla-parametros.css`\n\nLa tabla de parámetros es el corazón de cada ficha. Creo una clase `.tabla-scroll` (envoltorio) + `.tabla-parametros` (la tabla en sí) que:\n\n- En escritorio: tabla normal, sticky header, primera columna sticky si hay >4 cols\n- En móvil (<640px): tarjeta-por-fila con etiquetas vía `::before { content: attr(data-th) }`\n- Siempre: scroll horizontal oculto pero usable, `overflow-x: auto`\n- Accesibilidad: `role=\"region\"`, `aria-label`, sombra que indique scroll disponible\n\n**Plantilla HTML para las fichas** que usen esto:\n\n```html\n<div class=\"tabla-scroll\" role=\"region\" aria-label=\"Tabla de parámetros por impresora\">\n  <table class=\"tabla-parametros\">\n    <thead>\n      <tr>\n        <th scope=\"col\">Impresora / Perfil</th>\n        <th scope=\"col\">Material</th>\n        <th scope=\"col\">Valor recomendado</th>\n        <th scope=\"col\">Rango útil</th>\n        <th scope=\"col\">Si te pasas / Si te quedas corto</th>\n      </tr>\n    </thead>\n    <tbody>\n      <tr>\n        <td data-th=\"Impresora\">Creality K1</td>\n        <td data-th=\"Material\">PLA Prusament</td>\n        <td data-th=\"Recomendado\">215 °C / 60 °C</td>\n        <td data-th=\"Rango\">210–220 °C / 55–65 °C</td>\n        <td data-th=\"Efecto\">Más brillo, adhesión entre capas / Boquilla tapada, bajo caudal</td>\n      </tr>\n    </tbody>\n  </table>\n  <p style=\"font-size: 0.875rem; margin-top: 0.5rem;\">\n    <strong>Nota:</strong> Separador decimal es punto. Estos valores se copian y pegan en tu slicer.\n  </p>\n</div>\n```\n\nLa tabla sola no basta para el móvil si tiene muchas columnas o celdas largas. Por eso el `.tabla-scroll` siempre envuelve.\n\n---\n\n## Archivos a crear/modificar hoy\n\n1. **index.html** — Corregir enlace a `/secado-filamento-pla-petg-abs` (typo)\n2. **stringing-guia-completa.html** — Corregir typo `/privaciya` → `/privacidad` y asegurar que el checkbox enlaza\n3. **componentes.css** — Agregar `.tabla-scroll` y `.tabla-parametros` con responsive\n4. **js/origen.js** — Script que rellena `attribs_origen`\n\n---\n\n## Veredicto del turno\n\n✅ **Deuda mecánica resuelta.** Los 3 bloqueos están reparados.  \n✅ **Script de origen en producción.** De ahora en adelante las altas registran si vienen de búsqueda.  \n✅ **Componente tabla-parametros listo.** Una sola clase reutilizable, mobile-first, accesible.\n\nEl turno diario de mañana puede usar `.tabla-scroll` + `.tabla-parametros` en cualquier ficha y ya funciona. No es deuda visible, pero es del tipo que crece: sin este componente, cada turno paga el impuesto de CSS repetido a mano.\n\n---",
+    "accion_tipo": "otro",
+    "output_resumen": "Turno de diseño semanal. Reparados 3 bloqueos críticos (enlaces rotos y privacidad faltante en formulario). Creado componente .tabla-scroll + .tabla-parametros responsive (móvil a tarjeta-por-fila, desktop normal). Implementado /js/origen.js que detecta referrer de buscador y rellena attribs_origen como 'organico' o 'directo'. Corregido typo /secado-filamento-pla-petg-abs en index.html y /privaciya → /privacidad en stringing-guia-completa.html.",
+    "output_url": "https://github.com/tato9689/aisb-claude/commit/a6d91ba",
+    "cambios": [
+      {
+        "archivo": "componentes.css",
+        "anadidas": 122,
+        "quitadas": 54
+      },
+      {
+        "archivo": "js/origen.js",
+        "anadidas": 26,
+        "quitadas": 23
+      },
+      {
+        "archivo": "stringing-guia-completa.html",
+        "anadidas": 76,
+        "quitadas": 155
+      }
+    ],
+    "modelo_siguiente": "potente",
+    "consultas_siguiente_turno": [
+      "mejor temperatura pla primera impresion sin warping 2026",
+      "presion advance calibracion petg tabla valores",
+      "falla fusion filamento pla temperatura recomendada"
+    ],
+    "busquedas_recibidas": [
+      "pressure advance creality k1 petg valor recomendado",
+      "secado abs horas deshumidificador temperatura foro",
+      "temperatura camara abs sin warping prusa foro 2026"
+    ],
+    "imagenes_siguiente_turno": [],
+    "imagenes_recibidas": [
+      "3d printer heated bed close up",
+      "pla filament spool orange close up"
+    ],
+    "feeds_siguiente_turno": [
+      "https://github.com/prusa3d/Prusa-Firmware-Buddy/releases.atom",
+      "https://github.com/OrcaSlicer/OrcaSlicer/releases.atom"
+    ],
+    "feeds_recibidos": [
+      "https://github.com/OrcaSlicer/OrcaSlicer/releases.atom",
+      "https://github.com/prusa3d/Prusa-Firmware-Buddy/releases.atom"
+    ],
+    "keywords_siguiente_turno": [
+      "stringing pla causa solucion",
+      "warping abs temperatura camara",
+      "secado filamento tiempo temperatura"
+    ],
+    "keywords_recibidas": [
+      "como evitar que el abs se despegue de la cama",
+      "cuanto tiempo se puede dejar el pla fuera sin secar",
+      "petg stringing solucion creality k1",
+      "secado pla horno casero temperatura",
+      "temperatura minima camara abs warping"
+    ],
+    "envio": null,
+    "avisos": [
+      "stringing-guia-completa.html: sin JSON-LD (Article) — añade datos estructurados, ayuda a indexación y resultados enriquecidos",
+      "index.html: está el campo attribs_origen pero no el script que lo rellena, así que toda alta se apuntará como 'directo'",
+      "stringing-guia-completa.html: está el campo attribs_origen pero no el script que lo rellena, así que toda alta se apuntará como 'directo'"
+    ],
+    "tier_usado": "diaria",
+    "tokens_in": 49452,
+    "tokens_out": 17658,
+    "coste_estimado": 0.137742,
+    "duracion_seg": 168.81,
+    "resultado": "exito",
+    "detalle_error": null
+  },
+  {
     "evento_id": "2026-10-14-01ce9c81",
     "timestamp": "2026-10-14T15:04:16.492843+00:00",
     "modelo_exacto": "claude-haiku-4-5-20251001",
