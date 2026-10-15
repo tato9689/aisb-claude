@@ -1,105 +1,173 @@
-/* Componente tabla-scroll: envoltorio con overflow horizontal seguro en móvil */
+/* Tabla de parámetros — componente reutilizable */
 
 .tabla-scroll {
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
   max-width: 100%;
   margin: 1.5rem 0;
-  border-radius: 0.25rem;
+  border-radius: var(--radius, 6px);
   box-shadow: inset -1px 0 0 rgba(0, 0, 0, 0.1);
+  position: relative;
 }
 
-.tabla-scroll:focus-within {
-  outline: 2px solid var(--accent, #2563eb);
-  outline-offset: 2px;
+@media (prefers-color-scheme: dark) {
+  .tabla-scroll {
+    box-shadow: inset -1px 0 0 rgba(255, 255, 255, 0.1);
+  }
 }
 
-.tabla-scroll table {
+.tabla-parametros {
   border-collapse: collapse;
   min-width: 34rem;
   width: 100%;
+  font-size: 0.9375rem;
+  line-height: 1.5;
 }
 
-.tabla-scroll th,
-.tabla-scroll td {
-  padding: 0.75rem;
-  text-align: left;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-}
-
-.tabla-scroll th {
-  background-color: var(--bg-subtle, #f9fafb);
-  font-weight: 600;
+.tabla-parametros thead {
+  background-color: rgba(0, 0, 0, 0.04);
   position: sticky;
   top: 0;
   z-index: 10;
 }
 
-.tabla-scroll tbody tr:hover {
-  background-color: var(--bg-hover, #f3f4f6);
+@media (prefers-color-scheme: dark) {
+  .tabla-parametros thead {
+    background-color: rgba(255, 255, 255, 0.06);
+  }
 }
 
-.tabla-scroll tbody tr:last-child td {
+.tabla-parametros th {
+  text-align: left;
+  padding: 0.75rem;
+  font-weight: 600;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  color: inherit;
+}
+
+@media (prefers-color-scheme: dark) {
+  .tabla-parametros th {
+    border-bottom-color: rgba(255, 255, 255, 0.1);
+  }
+}
+
+.tabla-parametros td {
+  padding: 0.75rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  vertical-align: top;
+}
+
+@media (prefers-color-scheme: dark) {
+  .tabla-parametros td {
+    border-bottom-color: rgba(255, 255, 255, 0.05);
+  }
+}
+
+.tabla-parametros tbody tr:last-child td {
   border-bottom: none;
 }
 
-/* Responsivo: en pantallas pequeñas, opción de tarjeta por fila */
-@media (max-width: 640px) {
-  .tabla-scroll table,
-  .tabla-scroll thead,
-  .tabla-scroll tbody,
-  .tabla-scroll th,
-  .tabla-scroll td,
-  .tabla-scroll tr {
-    display: block;
-    width: 100%;
+.tabla-parametros tbody tr:hover {
+  background-color: rgba(0, 0, 0, 0.02);
+}
+
+@media (prefers-color-scheme: dark) {
+  .tabla-parametros tbody tr:hover {
+    background-color: rgba(255, 255, 255, 0.04);
+  }
+}
+
+/* Responsive: tarjeta por fila en móvil */
+@media (max-width: 639px) {
+  .tabla-parametros thead {
+    position: static;
+    background-color: transparent;
   }
 
-  .tabla-scroll thead {
+  .tabla-parametros th {
     display: none;
   }
 
-  .tabla-scroll tbody tr {
+  .tabla-parametros tr {
+    display: block;
     margin-bottom: 1rem;
     border: 1px solid rgba(0, 0, 0, 0.1);
-    border-radius: 0.25rem;
+    border-radius: var(--radius, 6px);
     overflow: hidden;
   }
 
-  .tabla-scroll td {
-    padding-left: 50%;
-    position: relative;
-    min-height: 1.5rem;
+  @media (prefers-color-scheme: dark) {
+    .tabla-parametros tr {
+      border-color: rgba(255, 255, 255, 0.1);
+    }
+  }
+
+  .tabla-parametros td {
+    display: block;
+    padding: 0.5rem 0.75rem;
     border: none;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
   }
 
-  .tabla-scroll td:last-child {
-    border-bottom: none;
+  @media (prefers-color-scheme: dark) {
+    .tabla-parametros td {
+      border-top-color: rgba(255, 255, 255, 0.05);
+    }
   }
 
-  /* Mostrar el encabezado de columna vía ::before */
-  .tabla-scroll td[data-th]::before {
-    content: attr(data-th);
-    position: absolute;
-    left: 0.75rem;
-    top: 0.75rem;
+  .tabla-parametros td:first-child {
+    border-top: none;
+    padding-top: 0.75rem;
     font-weight: 600;
-    width: calc(50% - 1.5rem);
-    word-break: break-word;
+  }
+
+  .tabla-parametros td::before {
+    content: attr(data-th);
+    display: inline-block;
+    font-weight: 600;
+    min-width: 7rem;
+    margin-right: 0.5rem;
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    .tabla-parametros td::before {
+      color: rgba(255, 255, 255, 0.6);
+    }
   }
 }
 
-/* Accesibilidad: región anunciada */
+/* Accesibilidad */
 .tabla-scroll[role="region"] {
-  position: relative;
+  outline: none;
 }
 
-.tabla-scroll[role="region"]::after {
-  content: "Scroll horizontal disponible";
-  position: absolute;
-  right: -999px;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
+.tabla-scroll[role="region"]:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+
+/* Pre / código con scroll */
+pre, code {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+pre {
+  margin: 1.5rem 0;
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.04);
+  border-radius: var(--radius, 6px);
+  border-left: 3px solid rgba(0, 0, 0, 0.1);
+  line-height: 1.4;
+  font-size: 0.875rem;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+@media (prefers-color-scheme: dark) {
+  pre {
+    background-color: rgba(255, 255, 255, 0.04);
+    border-left-color: rgba(255, 255, 255, 0.1);
+  }
 }

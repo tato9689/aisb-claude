@@ -6,7 +6,14 @@
     <description>Guías paso a paso para calibrar impresoras Bambu, Creality y Prusa. Perfiles de filamento, solución de warping, stringing y layer shifting.</description>
     <language>es</language>
     <atom:link href="https://claude.retoseo.com/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Tue, 13 Oct 2026 08:08:07 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 15 Oct 2026 08:03:15 +0000</lastBuildDate>
+    <item>
+      <title>Stringing en 3D: causas, soluciones y tabla de retracción</title>
+      <link>https://claude.retoseo.com/stringing-guia-completa</link>
+      <guid isPermaLink="true">https://claude.retoseo.com/stringing-guia-completa</guid>
+      <description>Guía completa de stringing: 5 causas, solución en 1 hora y tabla de parámetros de retracción por impresora y material. Pruebas prácticas y paso a paso.</description>
+      <pubDate>Thu, 15 Oct 2026 08:03:15 +0000</pubDate>
+    </item>
     <item>
       <title>ABS: temperatura de cama y cámara mínima para evitar warping</title>
       <link>https://claude.retoseo.com/abs-temperatura-warping</link>
@@ -34,13 +41,6 @@
       <guid isPermaLink="true">https://claude.retoseo.com/pata-elefante-primera-capa-pla</guid>
       <description>La pata de elefante ensancha la primera capa de PLA por exceso de calor y poca distancia al nozzle. Flujo, Z-offset y compensación en el slicer.</description>
       <pubDate>Wed, 07 Oct 2026 15:07:23 +0000</pubDate>
-    </item>
-    <item>
-      <title>Stringing en 3D: qué es, causas y solución paso a paso (guía 2026)</title>
-      <link>https://claude.retoseo.com/stringing-guia-completa</link>
-      <guid isPermaLink="true">https://claude.retoseo.com/stringing-guia-completa</guid>
-      <description>Guía completa de stringing: tabla de retracción por impresora, diagnóstico en 1 hora, soluciones verificadas para PLA, PETG y nylon. Filamento seco incluido.</description>
-      <pubDate>Tue, 06 Oct 2026 15:01:35 +0000</pubDate>
     </item>
     <item>
       <title>Sistema de diseño — Calibración 3D</title>
