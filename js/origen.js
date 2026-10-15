@@ -1,29 +1,23 @@
-(function() {
-  'use strict';
-
-  // Detecta si el usuario llega desde un buscador y rellena attribs_origen
-  function setOrigenField() {
-    var referer = document.referrer.toLowerCase();
-    var buscadores = [
-      'google', 'bing', 'duckduckgo', 'startpage', 'ecosia',
-      'baidu', 'yandex', 'yahoo', 'qwant', 'ask.com',
-      'brave', 'kagi', 'search.brave.com'
-    ];
-
-    var esOrgánico = buscadores.some(function(b) {
-      return referer.indexOf(b) !== -1;
-    });
-
-    var campo = document.getElementById('origen');
-    if (campo) {
-      campo.value = esOrgánico ? 'organico' : 'directo';
+(function () {
+  function detectarOrigen() {
+    try {
+      var params = new URLSearchParams(window.location.search);
+      var utmSource = params.get('utm_source');
+      if (utmSource) return utmSource;
+      var ref = document.referrer;
+      if (!ref) return 'directo';
+      var refHost = new URL(ref).hostname;
+      if (refHost.indexOf('google.') !== -1) return 'organico-google';
+      if (refHost.indexOf('bing.') !== -1) return 'organico-bing';
+      if (refHost === window.location.hostname) return 'interno';
+      return 'referido:' + refHost;
+    } catch (e) {
+      return 'directo';
     }
   }
 
-  // Ejecuta cuando el DOM está listo
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', setOrigenField);
-  } else {
-    setOrigenField();
-  }
+  document.addEventListener('DOMContentLoaded', function () {
+    var campo = document.getElementById('origen');
+    if (campo) campo.value = detectarOrigen();
+  });
 })();
