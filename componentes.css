@@ -1,173 +1,139 @@
-/* Tabla de parámetros — componente reutilizable */
-
+/* Tablas con scroll en móvil */
 .tabla-scroll {
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
-  max-width: 100%;
   margin: 1.5rem 0;
-  border-radius: var(--radius, 6px);
-  box-shadow: inset -1px 0 0 rgba(0, 0, 0, 0.1);
-  position: relative;
 }
 
-@media (prefers-color-scheme: dark) {
-  .tabla-scroll {
-    box-shadow: inset -1px 0 0 rgba(255, 255, 255, 0.1);
-  }
-}
-
-.tabla-parametros {
+.tabla-scroll table {
+  min-width: 100%;
   border-collapse: collapse;
-  min-width: 34rem;
-  width: 100%;
-  font-size: 0.9375rem;
-  line-height: 1.5;
+  font-size: 0.95rem;
 }
 
-.tabla-parametros thead {
-  background-color: rgba(0, 0, 0, 0.04);
-  position: sticky;
-  top: 0;
-  z-index: 10;
-}
-
-@media (prefers-color-scheme: dark) {
-  .tabla-parametros thead {
-    background-color: rgba(255, 255, 255, 0.06);
-  }
-}
-
-.tabla-parametros th {
+.tabla-scroll th,
+.tabla-scroll td {
+  padding: 0.75rem;
   text-align: left;
-  padding: 0.75rem;
+  border-bottom: 1px solid var(--borde, #e5e7eb);
+}
+
+.tabla-scroll th {
+  background-color: var(--fondo-tabla, #f9fafb);
   font-weight: 600;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  color: inherit;
+  color: var(--texto-fuerte, #111827);
 }
 
-@media (prefers-color-scheme: dark) {
-  .tabla-parametros th {
-    border-bottom-color: rgba(255, 255, 255, 0.1);
+.tabla-scroll tr:hover {
+  background-color: var(--fondo-hover, #f3f4f6);
+}
+
+/* En pantalla grande, quitar scroll y mostrar tabla completa */
+@media (min-width: 768px) {
+  .tabla-scroll {
+    overflow-x: visible;
+    margin: 2rem 0;
+  }
+  
+  .tabla-scroll table {
+    font-size: 1rem;
   }
 }
 
-.tabla-parametros td {
+/* Formulario de suscripción */
+.formulario-suscripcion {
+  background-color: var(--fondo-formulario, #f0f9ff);
+  padding: 1.5rem;
+  border-radius: var(--radio, 8px);
+  margin: 2rem 0;
+  border-left: 4px solid var(--acento, #0284c7);
+}
+
+.formulario-suscripcion h2 {
+  font-size: 1.25rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.formulario-suscripcion p {
+  font-size: 0.95rem;
+  color: var(--texto-secundario, #6b7280);
+  margin-bottom: 1.5rem;
+}
+
+.formulario-suscripcion label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: var(--texto, #1f2937);
+}
+
+.formulario-suscripcion input[type="email"] {
+  width: 100%;
   padding: 0.75rem;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-  vertical-align: top;
+  border: 1px solid var(--borde, #d1d5db);
+  border-radius: var(--radio, 6px);
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  .tabla-parametros td {
-    border-bottom-color: rgba(255, 255, 255, 0.05);
-  }
-}
-
-.tabla-parametros tbody tr:last-child td {
-  border-bottom: none;
-}
-
-.tabla-parametros tbody tr:hover {
-  background-color: rgba(0, 0, 0, 0.02);
-}
-
-@media (prefers-color-scheme: dark) {
-  .tabla-parametros tbody tr:hover {
-    background-color: rgba(255, 255, 255, 0.04);
-  }
-}
-
-/* Responsive: tarjeta por fila en móvil */
-@media (max-width: 639px) {
-  .tabla-parametros thead {
-    position: static;
-    background-color: transparent;
-  }
-
-  .tabla-parametros th {
-    display: none;
-  }
-
-  .tabla-parametros tr {
-    display: block;
-    margin-bottom: 1rem;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    border-radius: var(--radius, 6px);
-    overflow: hidden;
-  }
-
-  @media (prefers-color-scheme: dark) {
-    .tabla-parametros tr {
-      border-color: rgba(255, 255, 255, 0.1);
-    }
-  }
-
-  .tabla-parametros td {
-    display: block;
-    padding: 0.5rem 0.75rem;
-    border: none;
-    border-top: 1px solid rgba(0, 0, 0, 0.05);
-  }
-
-  @media (prefers-color-scheme: dark) {
-    .tabla-parametros td {
-      border-top-color: rgba(255, 255, 255, 0.05);
-    }
-  }
-
-  .tabla-parametros td:first-child {
-    border-top: none;
-    padding-top: 0.75rem;
-    font-weight: 600;
-  }
-
-  .tabla-parametros td::before {
-    content: attr(data-th);
-    display: inline-block;
-    font-weight: 600;
-    min-width: 7rem;
-    margin-right: 0.5rem;
-    color: rgba(0, 0, 0, 0.6);
-  }
-
-  @media (prefers-color-scheme: dark) {
-    .tabla-parametros td::before {
-      color: rgba(255, 255, 255, 0.6);
-    }
-  }
-}
-
-/* Accesibilidad */
-.tabla-scroll[role="region"] {
+.formulario-suscripcion input[type="email"]:focus {
   outline: none;
+  border-color: var(--acento, #0284c7);
+  box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.1);
 }
 
-.tabla-scroll[role="region"]:focus-visible {
-  outline: 2px solid currentColor;
-  outline-offset: 2px;
+.formulario-suscripcion input[type="checkbox"] {
+  margin-right: 0.5rem;
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
 }
 
-/* Pre / código con scroll */
-pre, code {
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
+.formulario-suscripcion label[for="consentimiento"] {
+  display: inline;
+  font-weight: normal;
+  margin: 0;
 }
 
-pre {
-  margin: 1.5rem 0;
-  padding: 1rem;
-  background-color: rgba(0, 0, 0, 0.04);
-  border-radius: var(--radius, 6px);
-  border-left: 3px solid rgba(0, 0, 0, 0.1);
-  line-height: 1.4;
-  font-size: 0.875rem;
-  white-space: pre-wrap;
-  word-wrap: break-word;
+.formulario-suscripcion button {
+  background-color: var(--acento, #0284c7);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: var(--radio, 6px);
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.2s;
+  width: 100%;
 }
 
-@media (prefers-color-scheme: dark) {
-  pre {
-    background-color: rgba(255, 255, 255, 0.04);
-    border-left-color: rgba(255, 255, 255, 0.1);
-  }
+.formulario-suscripcion button:hover {
+  background-color: var(--acento-hover, #0369a1);
+}
+
+.formulario-suscripcion button:active {
+  background-color: var(--acento-active, #0c5aa3);
+}
+
+/* Bloque de llamada dentro del artículo */
+.cta-suscripcion {
+  background: linear-gradient(135deg, var(--cta-bg-1, #dbeafe) 0%, var(--cta-bg-2, #e0e7ff) 100%);
+  border-left: 4px solid var(--acento, #0284c7);
+  padding: 1.5rem;
+  margin: 2rem 0;
+  border-radius: var(--radio, 8px);
+}
+
+.cta-suscripcion h3 {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  font-size: 1.1rem;
+}
+
+.cta-suscripcion p {
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
 }

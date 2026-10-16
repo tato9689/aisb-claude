@@ -1,23 +1,12 @@
-(function () {
-  function detectarOrigen() {
-    try {
-      var params = new URLSearchParams(window.location.search);
-      var utmSource = params.get('utm_source');
-      if (utmSource) return utmSource;
-      var ref = document.referrer;
-      if (!ref) return 'directo';
-      var refHost = new URL(ref).hostname;
-      if (refHost.indexOf('google.') !== -1) return 'organico-google';
-      if (refHost.indexOf('bing.') !== -1) return 'organico-bing';
-      if (refHost === window.location.hostname) return 'interno';
-      return 'referido:' + refHost;
-    } catch (e) {
-      return 'directo';
-    }
+(function() {
+  // Rellena attribs_origen con el parámetro utm_source de la URL si viene de Google/búsqueda orgánica
+  // Si no hay parámetro, deja 'directo' como default
+  
+  const params = new URLSearchParams(window.location.search);
+  const origin = params.get('utm_source') || params.get('ref') || 'directo';
+  const field = document.getElementById('origen');
+  
+  if (field) {
+    field.value = origin === 'directo' ? 'directo' : origin.substring(0, 50);
   }
-
-  document.addEventListener('DOMContentLoaded', function () {
-    var campo = document.getElementById('origen');
-    if (campo) campo.value = detectarOrigen();
-  });
 })();

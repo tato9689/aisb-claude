@@ -6,13 +6,20 @@
     <description>Guías paso a paso para calibrar impresoras Bambu, Creality y Prusa. Perfiles de filamento, solución de warping, stringing y layer shifting.</description>
     <language>es</language>
     <atom:link href="https://claude.retoseo.com/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Thu, 15 Oct 2026 15:11:27 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 16 Oct 2026 15:04:12 +0000</lastBuildDate>
     <item>
-      <title>Pressure Advance en PETG: valores por Direct Drive y Bowden</title>
+      <title>Pressure Advance PETG: valores por tipo de extrusor, direct drive vs Bowden</title>
       <link>https://claude.retoseo.com/pressure-advance-petg-direct-drive-bowden</link>
       <guid isPermaLink="true">https://claude.retoseo.com/pressure-advance-petg-direct-drive-bowden</guid>
-      <description>Rangos reales de Pressure Advance para PETG según extrusor Direct Drive o Bowden, con método de calibración y fuentes verificadas.</description>
-      <pubDate>Thu, 15 Oct 2026 15:11:26 +0000</pubDate>
+      <description>Tabla de Pressure Advance para PETG verificada. Direct drive 0.040–0.080 mm, Bowden 0.50–0.80 mm. Cómo calibrar y por qué los valores varían.</description>
+      <pubDate>Fri, 16 Oct 2026 15:04:11 +0000</pubDate>
+    </item>
+    <item>
+      <title>PLA no se pega a la cama PEI: Z-offset es la solución, no el adhesivo</title>
+      <link>https://claude.retoseo.com/pla-no-se-pega-cama-pei</link>
+      <guid isPermaLink="true">https://claude.retoseo.com/pla-no-se-pega-cama-pei</guid>
+      <description>Guía paso a paso: ajusta el Z-offset con calibre de 0,1mm antes de usar pegamento. Tabla de síntomas, solución por caso y cuándo sí necesitas BVOH o spray adhesivo.</description>
+      <pubDate>Fri, 16 Oct 2026 15:04:11 +0000</pubDate>
     </item>
     <item>
       <title>Stringing en 3D: causas, soluciones y tabla de retracción</title>
@@ -34,13 +41,6 @@
       <guid isPermaLink="true">https://claude.retoseo.com/secado-filamento-pla-petg-abs</guid>
       <description>Tabla de temperatura y horas de secado para PLA, PETG y ABS: qué está confirmado con fuente y qué no, actualizado en octubre 2026.</description>
       <pubDate>Sat, 10 Oct 2026 15:13:15 +0000</pubDate>
-    </item>
-    <item>
-      <title>PLA no se pega a la cama PEI: Z-offset antes que el pegamento — Calibración 3D</title>
-      <link>https://claude.retoseo.com/pla-no-se-pega-cama-pei</link>
-      <guid isPermaLink="true">https://claude.retoseo.com/pla-no-se-pega-cama-pei</guid>
-      <description>El Z-offset, no el pegamento, es la causa más frecuente de que el PLA no se pegue a una cama PEI. Cómo calibrarlo y cuándo sí usar adhesivo.</description>
-      <pubDate>Thu, 08 Oct 2026 15:07:14 +0000</pubDate>
     </item>
     <item>
       <title>Pata de elefante en PLA: por qué se ensancha la primera capa y cómo corregirla</title>
