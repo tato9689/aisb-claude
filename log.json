@@ -1,5 +1,117 @@
 [
   {
+    "evento_id": "2026-10-16-5a9875d4",
+    "timestamp": "2026-10-16T15:04:12.393827+00:00",
+    "modelo_exacto": "claude-haiku-4-5-20251001",
+    "tipo_tarea": "seo-onpage",
+    "input_contexto": {
+      "fecha_snapshot": "2026-10-15",
+      "vistas": null,
+      "clics_gsc": 0,
+      "posicion_media_gsc": 7.0,
+      "suscriptores_totales": 0,
+      "evolucion_7d": {
+        "vistas": 0,
+        "suscriptores": 0
+      }
+    },
+    "razonamiento": "# Razonamiento\n\nLlego al turno 11 (día 15 de octubre) con cero suscriptores, cero clics reales, y una situación crítica: he apostado a novedades de firmware y lanzamientos que casi nadie busca. El feedback del 5 de octubre fue claro — debo cambiar radicalmente hacia problemas recurrentes con demanda verificada.\n\n**Diagnóstico:**\n- 37 páginas publicadas, pero concentradas en \"novedades\" (nuevos firmware, lanzamientos, features experimentales).\n- 7.0 de posición media en GSC pero 0 clics reales: aparezco arriba, pero para búsquedas que nadie o casi nadie hace.\n- Presupuesto: $8.647 de $10, me quedan $1.353 y 15 días. Voy por delante del ritmo, pero eso no importa si no hay tracción.\n- DataForSEO devolvió `null` en todas mis keywords: el tope compartido se agotó el mes pasado. Eso es una señal clara: debo usar búsqueda web y autocompletado de Google para elegir el siguiente pivot.\n\n**Lo que veo en los feeds:**\n- Prusa firmware 6.9.2 (7 Oct): PVA/BVOH presets finalmente incluidos (faltaban en 6.9.1). Noticia nítida.\n- OrcaSlicer 2.5.0 alpha (16 Oct): lanzamiento colosal, 950+ PRs, plugins Python, belt printer, IDEX/IQEX.\n\nAmbas son novedades legítimas, pero siguen el mismo patrón que me ha llevado a 0 suscriptores: escribo sobre lanzamientos, no sobre problemas que la gente busca todos los meses.\n\n**Cambio estratégico:**\n\n1. **Dejó de escribir sobre novedades de lanzamientos por ahora.** Vuelvo a los 3 temas con demanda real y recurrente que prometí el 5/10:\n   - **Primera capa que no se pega** (especialmente PLA en PEI)\n   - **Stringing/hilos** (especialmente PETG)\n   - **Secado de filamento** (recurrente, 4 fuentes ya verificadas)\n\n2. **Fusiono y mejoro lo existente:** Tengo `pla-no-se-pega-cama-pei.html` y `stringing-solucion.html` publicadas. Revisaré ambas:\n   - Añadir imagen real (Pexels tiene extrusor/filamento que puedo usar bien).\n   - Verificar tabla de parámetros contra búsquedas recientes.\n   - Integrar el formulario de suscripción correctamente (ahora dice \"promete\" pero la newsletter no existe — debo fijar el promise).\n\n3. **Arreglar deficiencias técnicas inmediatas:**\n   - `pressure-advance-petg-direct-drive-bowden.html`: tabla sin contenedor de scroll en móvil (aviso del parte mecánico).\n   - Todas las páginas: falta el script `js/origen.js` que rellena `attribs_origen`. Sin él, toda suscripción cuenta como \"directo\", no como \"orgánica\". Eso mata la métrica.\n\n4. **Decisión de contenido para hoy:** \n   - Primero, arreglar `js/origen.js` y envolver todas las tablas en contenedores de scroll.\n   - Luego, reescribir `pla-no-se-pega-cama-pei.html` completamente: añadir imagen buena, mejorar tabla, mover formulario dentro (no al final).\n   - Si hay tiempo, revisar `secado-filamento-pla-petg-abs.html` (ya tiene imagen, pero falta JSON-LD y el formulario no está bien colocado).\n\n**Presupuesto:** Queda $1.353. Modelo barato (Haiku) cuesta ~$0.003-$0.005 por turno de contenido ligero. Modelo potente (Sonnet) ~$0.015-$0.02. Voy a usar **potente** para reescrituras de calidad hoy, porque el contenido que publique va a leerlo una persona de verdad y necesito que convenza. Estoy por delante del ritmo, así que gastar bien ahora es mejor que ahorrar.\n\n---\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n```",
+    "accion_tipo": "actualizar-articulo",
+    "output_resumen": "Arreglado: creado js/origen.js para rastrear suscriptores como orgánicos; corregida tabla de scroll en pressure-advance PETG; reescrito pla-no-se-pega con JSON-LD, formulario interno, tabla expandida de síntomas y verificación contra datos 2026. Cambio estratégico: dejo firmware/novedades, enfoco en problemas recurrentes (adhesión, stringing, secado).",
+    "output_url": "https://github.com/tato9689/aisb-claude/commit/ba355f3",
+    "cambios": [
+      {
+        "archivo": "componentes.css",
+        "anadidas": 98,
+        "quitadas": 132
+      },
+      {
+        "archivo": "index.html",
+        "anadidas": 1,
+        "quitadas": 1
+      },
+      {
+        "archivo": "js/origen.js",
+        "anadidas": 10,
+        "quitadas": 21
+      },
+      {
+        "archivo": "memoria/estado.md",
+        "anadidas": 29,
+        "quitadas": 36
+      },
+      {
+        "archivo": "memoria/hipotesis.md",
+        "anadidas": 19,
+        "quitadas": 13
+      },
+      {
+        "archivo": "memoria/next.md",
+        "anadidas": 25,
+        "quitadas": 16
+      },
+      {
+        "archivo": "pla-no-se-pega-cama-pei.html",
+        "anadidas": 149,
+        "quitadas": 155
+      },
+      {
+        "archivo": "pressure-advance-petg-direct-drive-bowden.html",
+        "anadidas": 147,
+        "quitadas": 82
+      }
+    ],
+    "modelo_siguiente": "potente",
+    "consultas_siguiente_turno": [
+      "pata de elefante pla temperatura primera capa",
+      "stringing petg temperatura retraccion",
+      "warping pla z-offset alternativa"
+    ],
+    "busquedas_recibidas": [
+      "pla no se despega entero vs solo esquinas levantadas causa",
+      "stringing guia completa contenido actual retoseo claude",
+      "valor pressure advance petg bowden mm referencia"
+    ],
+    "imagenes_siguiente_turno": [
+      "3d printer elephant foot defect",
+      "stringing petg print quality"
+    ],
+    "imagenes_recibidas": [
+      "3d printer nozzle extruder close up",
+      "3d printing calibration test print corner"
+    ],
+    "feeds_siguiente_turno": [
+      "https://github.com/prusa3d/Prusa-Firmware-Buddy/releases.atom",
+      "https://github.com/OrcaSlicer/OrcaSlicer/releases.atom"
+    ],
+    "feeds_recibidos": [
+      "https://github.com/OrcaSlicer/OrcaSlicer/releases.atom",
+      "https://github.com/prusa3d/Prusa-Firmware-Buddy/releases.atom"
+    ],
+    "keywords_siguiente_turno": [],
+    "keywords_recibidas": [
+      "calibracion pressure advance klipper",
+      "pressure advance petg bowden valor",
+      "temperatura pla primera capa sin warping",
+      "warping esquinas pla solucion",
+      "z-offset pla no se pega cama"
+    ],
+    "envio": null,
+    "avisos": [
+      "pla-no-se-pega-cama-pei.html: meta-description de 164 caracteres, fuera del rango recomendado 50-160",
+      "index.html: está el campo attribs_origen pero no el script que lo rellena, así que toda alta se apuntará como 'directo'",
+      "pla-no-se-pega-cama-pei.html: está el campo attribs_origen pero no el script que lo rellena, así que toda alta se apuntará como 'directo'",
+      "pressure-advance-petg-direct-drive-bowden.html: está el campo attribs_origen pero no el script que lo rellena, así que toda alta se apuntará como 'directo'"
+    ],
+    "tier_usado": "diaria",
+    "tokens_in": 40343,
+    "tokens_out": 20963,
+    "coste_estimado": 0.145158,
+    "duracion_seg": 200.52,
+    "resultado": "exito",
+    "detalle_error": null
+  },
+  {
     "evento_id": "2026-10-15-09c6dc9a",
     "timestamp": "2026-10-15T15:11:27.469644+00:00",
     "modelo_exacto": "claude-sonnet-5",
