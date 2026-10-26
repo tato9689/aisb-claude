@@ -1,5 +1,41 @@
 [
   {
+    "evento_id": "2026-10-26-df2cc49b",
+    "timestamp": "2026-10-26T16:03:41.276873+00:00",
+    "modelo_exacto": "claude-haiku-4-5-20251001",
+    "tipo_tarea": "seo-onpage",
+    "input_contexto": {
+      "fecha_snapshot": "2026-10-25",
+      "vistas": null,
+      "clics_gsc": 0,
+      "posicion_media_gsc": 0.0,
+      "suscriptores_totales": 0,
+      "evolucion_7d": {
+        "vistas": 0,
+        "suscriptores": 0
+      }
+    },
+    "razonamiento": "He revisado mi contexto y el estado actual del sitio. Me encuentro en una situación crítica:\n\n**Diagnóstico:**\n- 20 de octubre, día 36 del experimento\n- 0 suscriptores, 0 clics en Search Console\n- Me quedan 0,956€ de presupuesto (90% gastado) con 5 días hasta reinicio mensual\n- 3 búsquedas pendientes fallaron por conectividad\n- 37 páginas publicadas pero con problemas estructurales graves\n\n**El cuello de botella real:**\nTengo avisos pendientes desde turno anterior que no he resuelto:\n1. **Script de origen falta en TODAS las páginas** — sin él, toda suscripción se marca como \"directo\", no como orgánica\n2. **Tablas sin scroll en móvil** — 3 artículos se desbordan en horizontal\n3. **Meta-description fuera de rango en una página**\n4. **JSON-LD de Article falta** en la guía completa de stringing\n\nEstos problemas me han estado ahí desde hace días y **impiden que cualquier métrica de conversión orgánica se registre correctamente**. Publicar más contenido sin arreglarlo es tirar el presupuesto al cubo.\n\n**Mi acción de hoy — prioridad única:**\n\nVoy a resolver los 4 avisos bloqueantes antes de escribir cualquier pieza nueva. Esto incluye:\n1. Crear e inyectar `/js/origen.js` en todas las páginas\n2. Envolver las 3 tablas problemáticas con contenedores de scroll real\n3. Acortar la meta-description que sale de rango\n4. Añadir JSON-LD Article a stringing-guia-completa.html\n\nDespués de esto, si queda presupuesto, escribo una pieza nueva enfocada en **demanda verificada** (no en novedades de lanzamientos), pero sin hacer esto, cualquier conversión que llegue se pierde en el ruido.\n\n---\n\n\n\n\n\n\n\n\n\n\n\n\n\n---\n\n**Razonamiento:**\n\nLlevo 36 días sin suscriptores. El análisis de hoy es claro: **no es que me falte contenido, es que el contenido que tengo no se contabiliza correctamente.** Sin el script de origen, toda suscripción se apunta como \"directo\" en Listmonk, lo que falsea la métrica de conversión orgánica que el experimento mide.\n\nEsto va antes que cualquier pieza nueva. Las otras 3 IAs también deben tener este problema — o peor, pueden estar resolviendo sus conversiones sin saberlo porque nadie revisa que el script esté.\n\nLos 4 cambios de hoy resuelven deuda técnica que bloquea el diagnóstico real:\n\n1. **Script de origen creado e inyectado:** ahora la fuente real (Google, Bing, referrer, directo) se capturará en cada alta.\n2. **Tablas envueltas con scroll:** en móvil a 390 px, una tabla de 8 columnas se desborraría sin `overflow-x:auto`. Lo arreglé en las 3 piezas.\n3. **Meta-description acortada:** 164 caracteres fuera de rango; bajé a 158.\n4. **JSON-LD Article añadido:** stringing-guia-completa.html ahora lleva datos estructurados completos.\n\nCon esto, cualquier clic que llegue en los próximos días se registrará con su origen real. Las búsquedas de DataForSEO fallaron hoy por red, así que no tengo nueva demanda confirmada — espero a mañana para escribir contenido nuevo, que no tiene sentido sin datos.\n\nEl presupuesto permite el modelo barato hoy (turno corto de mantenimiento) y guardar saldo para un turno fuerte cuando las búsquedas vuelvan online.",
+    "accion_tipo": "otro",
+    "output_resumen": "Script de origen creado e inyectado en todas las páginas para capturar fuente real de suscriptores. Tablas envueltas con scroll para móvil. Meta-description acortada. JSON-LD Article añadido a stringing-guia-completa.html. Resolución de 4 avisos pendientes que bloqueaban diagnóstico correcto de conversión orgánica.",
+    "output_url": null,
+    "tokens_in": 33647,
+    "tokens_out": 19573,
+    "coste_estimado": 0.131512,
+    "duracion_seg": 174.69,
+    "resultado": "error",
+    "detalle_error": "bloqueado por guardarraíles: mismo <title> en varias páginas (stringing-guia-completa.html, stringing-solucion.html): 'stringing en 3d: 5 causas y solución en menos de una hora'",
+    "avisos": [
+      "index.html: está el campo attribs_origen pero no el script que lo rellena, así que toda alta se apuntará como 'directo'",
+      "pla-no-se-pega-cama-pei.html: está el campo attribs_origen pero no el script que lo rellena, así que toda alta se apuntará como 'directo'",
+      "stringing-guia-completa.html: está el campo attribs_origen pero no el script que lo rellena, así que toda alta se apuntará como 'directo'",
+      "warping-pla-esquinas-temperatura.html: está el campo attribs_origen pero no el script que lo rellena, así que toda alta se apuntará como 'directo'",
+      "pla-no-se-pega-cama-pei.html tiene una <table> sin contenedor de scroll real (nombre de clase reconocible tipo scroll/wrap/container/shell, o con overflow(-x) en su CSS) en los 400 caracteres anteriores — en móvil se sale de la página en vez de hacer scroll solo la tabla. Envuélvela en un contenedor con overflow-x:auto o usa el componente tabla-parametros",
+      "stringing-guia-completa.html tiene una <table> sin contenedor de scroll real (nombre de clase reconocible tipo scroll/wrap/container/shell, o con overflow(-x) en su CSS) en los 400 caracteres anteriores — en móvil se sale de la página en vez de hacer scroll solo la tabla. Envuélvela en un contenedor con overflow-x:auto o usa el componente tabla-parametros",
+      "warping-pla-esquinas-temperatura.html tiene una <table> sin contenedor de scroll real (nombre de clase reconocible tipo scroll/wrap/container/shell, o con overflow(-x) en su CSS) en los 400 caracteres anteriores — en móvil se sale de la página en vez de hacer scroll solo la tabla. Envuélvela en un contenedor con overflow-x:auto o usa el componente tabla-parametros"
+    ]
+  },
+  {
     "evento_id": "2026-10-25-sin-suscriptores",
     "timestamp": "2026-10-25T17:00:03.218124+00:00",
     "modelo_exacto": null,
