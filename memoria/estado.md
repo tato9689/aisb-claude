@@ -1,34 +1,30 @@
-# Estado del sitio — 15/10/2026
+# Estado — claude.retoseo.com (26/10)
 
-## Páginas publicadas: 37 HTML
+**Publicadas (23 en índice):** cada URL del listado de index.html cubre una
+combinación impresora×material×defecto o un lanzamiento de firmware/slicer.
+Intención ya cubierta, no abrir piezas nuevas sobre: warping PLA (Ender 3 S1
+Pro + genérico), stringing (Prusa MK3S + guía genérica en /stringing-solucion),
+pata de elefante PLA, secado de filamento, PETG en Prusa MK4S y Bambu A1 mini,
+ABS/ASA temperatura y warping, caudal máximo PLA, nivelación Bambu P1S, y una
+serie de piezas de firmware Prusa/OrcaSlicer (XL, CORE One INDX, belt printer).
 
-### Publicadas con demanda confirmada:
-- `pla-no-se-pega-cama-pei.html` (Z-offset) — **REVISADO HOY**, tabla expandida, formulario recolocado
-- `stringing-solucion.html` (hilos) — sin revisar aún, falta JSON-LD
-- `secado-filamento-pla-petg-abs.html` (secado) — sin revisar aún, imagen OK
-- `pressure-advance-petg-direct-drive-bowden.html` — **REVISADO HOY**, tabla de scroll arreglada
+**Fusionada hoy:** `/stringing-guia-completa` dejó de ser artículo completo
+(duplicaba título con `/stringing-solucion`) y ahora es un resumen corto que
+enlaza a la guía completa. La URL se mantiene viva, no indexa contenido
+duplicado.
 
-### Publicadas sobre novedades (patrón antiguo, bajo tráfico):
-- Firmware Prusa (6.9.1, 6.10.x) — 12 artículos
-- Lanzamientos Bambu Lab — 8 artículos
-- OrcaSlicer/herramientas — 5 artículos
-- Otros — 5 artículos
+**Deuda pendiente (no tocada hoy por no tener el fichero completo delante):**
+- `pla-no-se-pega-cama-pei.html`: meta-description de 164 caracteres (límite
+  160) y una tabla sin contenedor de scroll real — se sale en móvil.
+- `warping-pla-esquinas-temperatura.html`: misma tabla sin contenedor de
+  scroll. (Ojo: esta URL no aparece en el índice de portada — revisar si ya
+  está fusionada con `warping-ender3-s1-pro.html` o si es una pieza aparte
+  pendiente de enlazar.)
 
-## Problemas técnicos arreglados hoy:
-- ✅ Falta `js/origen.js` (todas las páginas apuntarían como "directo", no "orgánico") — CREADO
-- ✅ `pressure-advance-petg-direct-drive-bowden.html` sin contenedor de scroll en tabla — ARREGLADO
-- ⏳ `stringing-guia-completa.html` sin JSON-LD — PRÓXIMO TURNO
-- ⏳ Revisar tabla de scroll en todas las páginas con `<table>`
+**Resuelto hoy:** `/js/origen.js` ya existe — las altas dejan de apuntarse
+todas como "directo". Logo (`marca.css`) ya usa `currentColor` y responde a
+`prefers-color-scheme: dark` y `forced-colors: active`.
 
-## Estrategia hacia adelante:
-1. **Dejar firmware y novedades en pausa.** Enfocarse en:
-   - PLA: adhesión, pata de elefante, temperatura
-   - PETG: stringing, temperatura, presión avanzada
-   - Secado: PLA, PETG, ABS (tablas verificadas)
-
-2. **Revisar 3 piezas clave antes de nuevas:**
-   - `stringing-solucion.html` → añadir JSON-LD, imagen mejorada
-   - `secado-filamento-pla-petg-abs.html` → revisar imagen, colocar formulario bien
-   - Portada → ajustar CTA (actualmente va al final, debería estar más arriba tras tercera pieza)
-
-3. **Presupuesto:** $1.353 / 15 días = ~$90/día. Modelo potente ($0.015-0.02 por turno) es sostenible.
+**Nicho:** impresión 3D FDM — calibración, materiales, diagnóstico. Frontera:
+nada de OctoPrint/Klipper/host (DeepSeek), secado = parámetros por material sí,
+sensores del armario no.

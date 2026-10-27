@@ -1,91 +1,80 @@
-/*
-  === SISTEMA DE MARCA — Calibración 3D ===
-  Símbolo: "torre de temperatura" en barras ascendentes — el mismo objeto
-  que el diagrama fundacional #1 de este nicho (torre de calibración por
-  temperatura). No es un icono genérico: es el gráfico que el lector de
-  impresión 3D ya reconoce de su propio slicer.
-
-  Reglas que este fichero existe para cumplir (ver base_comun.md, "Tu logo"):
-  - El símbolo nunca usa un color fijo que dependa de que el fondo sea claro.
-  - Nunca depende de un relleno de fondo para leerse.
-  - En forced-colors (alto contraste), usa CanvasText, no colores propios.
-  - El nombre del sitio va siempre en texto real al lado del símbolo.
-  - Símbolo >= 24px de alto en móvil (aquí: 28px móvil, 32px desktop).
-*/
+/* marca.css — logo del sitio: símbolo + nombre en texto real.
+   Tiene que leerse en claro, oscuro y alto contraste sin depender
+   de que otros ficheros definan variables de color. Por eso cada
+   var() lleva su propio fallback seguro. */
 
 .marca {
   display: inline-flex;
   align-items: center;
   gap: 0.6rem;
   text-decoration: none;
-  color: inherit;
-  font-weight: 700;
-  line-height: 1;
+  color: var(--color-texto, #111827);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
 }
 
 .marca__simbolo {
   width: 28px;
   height: 28px;
   flex-shrink: 0;
-  overflow: visible;
+  color: var(--color-acento, #1d4ed8);
 }
 
-@media (min-width: 640px) {
-  .marca__simbolo {
-    width: 32px;
-    height: 32px;
-  }
-}
-
-/* El símbolo hereda el color de texto del header: funciona igual en claro
-   y en oscuro sin declarar dos paletas. Antes de este fichero, los <rect>
-   sin fill caían al negro por defecto del SVG y en fondo oscuro se perdían. */
 .marca__simbolo rect {
   fill: currentColor;
 }
 
 .marca__texto {
-  display: inline-block;
-  font-size: 1.05rem;
-  letter-spacing: 0.01em;
-  white-space: nowrap;
+  font-weight: 700;
+  font-size: 1.1rem;
+  letter-spacing: -0.01em;
+  color: var(--color-texto, #111827);
 }
 
-/* Solo se reduce el tamaño, nunca se oculta: el símbolo solo no es marca. */
-@media (max-width: 420px) {
+@media (min-width: 480px) {
+  .marca__simbolo {
+    width: 32px;
+    height: 32px;
+  }
   .marca__texto {
-    font-size: 0.95rem;
+    font-size: 1.2rem;
   }
 }
 
-.marca__simbolo,
-.marca__texto {
-  transition: opacity 0.15s ease;
-}
-
-.marca:hover .marca__simbolo,
-.marca:focus-visible .marca__simbolo {
-  opacity: 0.82;
-}
-
-.marca:hover .marca__texto,
-.marca:focus-visible .marca__texto {
+.marca:hover .marca__texto {
   text-decoration: underline;
-  text-underline-offset: 0.22em;
+  text-underline-offset: 3px;
 }
 
-/* Alto contraste (Windows forced-colors, y equivalentes móviles): el
-   navegador quita fondos, sombras y la mayoría de colores de autor. Si el
-   símbolo dependiera de un color propio aquí, desaparecería entero — como
-   pasó de verdad el 2026-10-05 en otro sitio del experimento. */
+.marca:focus-visible {
+  outline: 2px solid var(--color-acento, #1d4ed8);
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
+@media (prefers-color-scheme: dark) {
+  .marca,
+  .marca__texto {
+    color: var(--color-texto-oscuro, #f3f4f6);
+  }
+  .marca__simbolo {
+    color: var(--color-acento-oscuro, #93c5fd);
+  }
+}
+
 @media (forced-colors: active) {
   .marca,
   .marca__texto {
     color: CanvasText;
     forced-color-adjust: none;
   }
+  .marca__simbolo {
+    color: CanvasText;
+    forced-color-adjust: none;
+  }
   .marca__simbolo rect {
     fill: CanvasText;
-    forced-color-adjust: none;
+  }
+  .marca:focus-visible {
+    outline: 2px solid CanvasText;
   }
 }

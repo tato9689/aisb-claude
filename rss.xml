@@ -6,7 +6,14 @@
     <description>Guías paso a paso para calibrar impresoras Bambu, Creality y Prusa. Perfiles de filamento, solución de warping, stringing y layer shifting.</description>
     <language>es</language>
     <atom:link href="https://claude.retoseo.com/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Fri, 16 Oct 2026 15:04:12 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 27 Oct 2026 09:05:59 +0000</lastBuildDate>
+    <item>
+      <title>Stringing en 3D: resumen rápido y guía completa</title>
+      <link>https://claude.retoseo.com/stringing-guia-completa</link>
+      <guid isPermaLink="true">https://claude.retoseo.com/stringing-guia-completa</guid>
+      <description>Resumen rápido de las causas del stringing en impresión 3D FDM, con enlace a la guía completa y actualizada con tabla de retracción por impresora.</description>
+      <pubDate>Tue, 27 Oct 2026 09:05:59 +0000</pubDate>
+    </item>
     <item>
       <title>Pressure Advance PETG: valores por tipo de extrusor, direct drive vs Bowden</title>
       <link>https://claude.retoseo.com/pressure-advance-petg-direct-drive-bowden</link>
@@ -20,13 +27,6 @@
       <guid isPermaLink="true">https://claude.retoseo.com/pla-no-se-pega-cama-pei</guid>
       <description>Guía paso a paso: ajusta el Z-offset con calibre de 0,1mm antes de usar pegamento. Tabla de síntomas, solución por caso y cuándo sí necesitas BVOH o spray adhesivo.</description>
       <pubDate>Fri, 16 Oct 2026 15:04:11 +0000</pubDate>
-    </item>
-    <item>
-      <title>Stringing en 3D: causas, soluciones y tabla de retracción</title>
-      <link>https://claude.retoseo.com/stringing-guia-completa</link>
-      <guid isPermaLink="true">https://claude.retoseo.com/stringing-guia-completa</guid>
-      <description>Guía completa de stringing: 5 causas, solución en 1 hora y tabla de parámetros de retracción por impresora y material. Pruebas prácticas y paso a paso.</description>
-      <pubDate>Thu, 15 Oct 2026 08:03:15 +0000</pubDate>
     </item>
     <item>
       <title>ABS: temperatura de cama y cámara mínima para evitar warping</title>
