@@ -1,5 +1,103 @@
 [
   {
+    "evento_id": "2026-10-27-6e2dae07",
+    "timestamp": "2026-10-27T09:05:59.772237+00:00",
+    "modelo_exacto": "claude-sonnet-5",
+    "tipo_tarea": "diseno",
+    "input_contexto": {
+      "fecha_snapshot": "2026-10-26",
+      "vistas": null,
+      "clics_gsc": 0,
+      "posicion_media_gsc": 1.0,
+      "suscriptores_totales": 0,
+      "evolucion_7d": {
+        "vistas": 0,
+        "suscriptores": 0
+      }
+    },
+    "razonamiento": "Fixing the blocker first, then the two avisos I can resolve safely this session without guessing at files I can't see in full.\n\n**Bloqueo (duplicado de `<title>`):** `stringing-guia-completa.html` y `stringing-solucion.html` compiten por la misma consulta con el mismo título. `stringing-solucion.html` es la que está en mi índice de portada (posición 20, con tráfico potencial ya indexado); `stringing-guia-completa.html` es la huérfana. Aplico la regla de concentrar antes que dispersar: convierto la huérfana en un resumen corto que apunta a la guía completa, con título y meta-description propios, su propia imagen (de banco, con atribución) y JSON-LD de Article — eso de paso resuelve el aviso de \"sin JSON-LD\" que tenía pendiente. No hay redirección 301 porque el sitio es estático; el enlace hace el trabajo. `accion_tipo: podar-articulo` porque eso es exactamente lo que hago: podar una pieza duplicada en favor de la que ya tiene URL con más opciones de posicionar.\n\n**Aviso recurrente (`attribs_origen` sin script):** index.html y varias fichas más ya referencian `/js/origen.js` en el HTML, pero ese fichero no existe en el repo — por eso toda alta se registra como \"directo\" y pierdo la señal de qué es orgánico de verdad, que es la única métrica que cuenta para el objetivo de los 5 suscriptores. Lo creo hoy: lee `utm_source` si existe, si no mira `document.referrer` contra dominios de buscadores (orgánico), redes sociales o interno, y cae a \"directo\" solo si de verdad no hay rastro. Con un solo fichero resuelvo el aviso en todas las páginas que ya tienen el `<script>` apuntando ahí, sin tocar el HTML de piezas cuyo contenido no tengo delante hoy — prefiero no reescribir una ficha entera a ciegas y arriesgarme a romper algo que ya está indexado.\n\n**Tu logo (encargo explícito de hoy):** el símbolo actual son cuatro `<rect>` sin `fill`, lo que en modo oscuro probablemente se ve negro sobre fondo oscuro (invisible) y en alto contraste depende de nada garantizado. Reescribo `marca.css` con `currentColor` en los rects, tokens propios con fallback seguro (no dependo de variables que no sé si `piel.css` define), reglas explícitas para `prefers-color-scheme: dark` y `forced-colors: active` con `CanvasText`, tamaño mínimo 28px (por encima del mínimo de 24px exigido) y foco visible. No declaro ninguna tipografía de Google Fonts nueva porque no puedo garantizar que esté cargada en las páginas que no veo hoy — uso pila de sistema, que es la opción segura según la propia regla de \"si declaras una tipografía, tienes que cargarla\".\n\n**Lo que dejo pendiente y por qué:** `pla-no-se-pega-cama-pei.html` (meta-description de 164 caracteres, tabla sin scroll) y `warping-pla-esquinas-temperatura.html` (tabla sin scroll) necesitan edición quirúrgica sobre contenido real que no tengo delante en este turno; tocarlos sin verlos enteros es más probable que rompa algo a que lo arregle. Los dejo anotados en `next.md` como primera tarea del próximo turno de contenido, que si cuadra con el objetivo de los 5 suscriptores puede hacerse como turno de mantenimiento rápido antes de cualquier pieza nueva.\n\n**Presupuesto:** quedan 0.834 € de 10 € y el tope se resetea en 4 días — voy muy por encima del 80% gastado, así que pido `barato` para el próximo turno por decisión propia antes de que el sistema me lo imponga; no tiene sentido forzar más gasto potente con tan poco margen cuando lo urgente de hoy (blocker + dos ficheros chicos) no exige mucho razonamiento complejo.",
+    "accion_tipo": "podar-articulo",
+    "output_resumen": "Arreglado el bloqueo de título duplicado fusionando stringing-guia-completa.html en un resumen que enlaza a stringing-solucion.html. Creado /js/origen.js para que las altas dejen de apuntarse como 'directo'. Reescrito marca.css para que el logo se vea en claro, oscuro y alto contraste.",
+    "output_url": "https://github.com/tato9689/aisb-claude/commit/496bab1",
+    "cambios": [
+      {
+        "archivo": "js/origen.js",
+        "anadidas": 66,
+        "quitadas": 10
+      },
+      {
+        "archivo": "marca.css",
+        "anadidas": 39,
+        "quitadas": 50
+      },
+      {
+        "archivo": "memoria/estado.md",
+        "anadidas": 25,
+        "quitadas": 29
+      },
+      {
+        "archivo": "memoria/next.md",
+        "anadidas": 15,
+        "quitadas": 25
+      },
+      {
+        "archivo": "stringing-guia-completa.html",
+        "anadidas": 58,
+        "quitadas": 98
+      }
+    ],
+    "modelo_siguiente": "barato",
+    "consultas_siguiente_turno": [
+      "pressure advance bowden petg valor recomendado 2026",
+      "temperatura petg bambu a1 mini actualizacion",
+      "warping asa temperatura camara minima verificado"
+    ],
+    "busquedas_recibidas": [
+      "pata de elefante pla temperatura primera capa",
+      "stringing petg temperatura retraccion",
+      "warping pla z-offset alternativa"
+    ],
+    "imagenes_siguiente_turno": [
+      "3d printer calibration close up",
+      "3d printer nozzle extrusion detail"
+    ],
+    "imagenes_recibidas": [
+      "3d printer elephant foot defect",
+      "stringing petg print quality"
+    ],
+    "feeds_siguiente_turno": [
+      "https://github.com/prusa3d/Prusa-Firmware-Buddy/releases.atom",
+      "https://github.com/OrcaSlicer/OrcaSlicer/releases.atom"
+    ],
+    "feeds_recibidos": [
+      "https://github.com/OrcaSlicer/OrcaSlicer/releases.atom",
+      "https://github.com/prusa3d/Prusa-Firmware-Buddy/releases.atom"
+    ],
+    "keywords_siguiente_turno": [
+      "pressure advance bowden petg valor",
+      "temperatura petg bambu a1 mini",
+      "warping asa temperatura camara",
+      "retraccion petg direct drive",
+      "temperatura secado petg horas"
+    ],
+    "keywords_recibidas": [
+      "calibracion pressure advance klipper",
+      "pressure advance petg bowden valor",
+      "temperatura pla primera capa sin warping",
+      "warping esquinas pla solucion",
+      "z-offset pla no se pega cama"
+    ],
+    "envio": null,
+    "avisos": null,
+    "tier_usado": "semanal",
+    "tokens_in": 64159,
+    "tokens_out": 29808,
+    "coste_estimado": 0.426398,
+    "duracion_seg": 322.21,
+    "resultado": "exito",
+    "detalle_error": null
+  },
+  {
     "evento_id": "2026-10-26-df2cc49b",
     "timestamp": "2026-10-26T16:03:41.276873+00:00",
     "modelo_exacto": "claude-haiku-4-5-20251001",
