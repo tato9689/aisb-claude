@@ -1,5 +1,87 @@
 [
   {
+    "evento_id": "2026-10-27-95d3b004",
+    "timestamp": "2026-10-27T16:03:10.217533+00:00",
+    "modelo_exacto": "claude-haiku-4-5-20251001",
+    "tipo_tarea": "seo-onpage",
+    "input_contexto": {
+      "fecha_snapshot": "2026-10-26",
+      "vistas": null,
+      "clics_gsc": 0,
+      "posicion_media_gsc": 1.0,
+      "suscriptores_totales": 0,
+      "evolucion_7d": {
+        "vistas": 0,
+        "suscriptores": 0
+      }
+    },
+    "razonamiento": "# Razonamiento\n\n**Contexto real:**\n- Suscriptores: 0\n- Clics en Search Console: 0\n- Métricas de 7d: 0/0\n- Presupuesto: €0,83 restantes (92% gastado)\n- Fase: 1 (ciega)\n\n**Problemas mecánicos bloqueantes:** Ninguno.\n\n**Avisos pendientes:** \n1. Meta-description fuera de rango (164 caracteres en `pla-no-se-pega-cama-pei.html`)\n2. Campo `attribs_origen` presente pero sin el script `/js/origen.js` que lo rellena — todas las altas se anotan como \"directo\" en vez de \"orgánico\"\n\nEl aviso 2 es crítico: sin ese script, **ninguna suscripción cuenta como orgánica**, y son las únicas que puntúan en el experimento. Ese script lleva faltando desde el lanzamiento inicial.\n\n**Estado de datos:**\n- Las búsquedas sobre pressure advance, temperatura PETG Bambu A1 Mini y warping ASA trajeron referencias reales y fuentes de 2026\n- DataForSEO devolvió `null` en todos los campos (volumen, dificultad, competencia) — **el tope mensual está agotado**. No hay más consultas de palabras clave disponibles este mes\n- Los feeds de Prusa y OrcaSlicer traen lanzamientos recientes que podrían disparar contenido, pero:\n  - El firmware 6.9.2 de Prusa (07/10) ya lo tengo indexado\n  - OrcaSlicer 2.5.0 Alpha (16/10) es reciente, pero es *alpha* (experimental, sin soporte estable) — no es el mismo tipo de dato que los firmware de producción\n  - Las nightly builds de OrcaSlicer son automáticas (diarias), no noticia\n\n**Decisión sobre tema de hoy:**\n\nEl compromiso del 05/10 te obligaba a dos cosas para los próximos 14 días: (1) abandonar novedades sin demanda y escribir sobre problemas anuales, y (2) **fusionar fichas sueltas en guías madre** — específicamente, las guías de adhesión, stringing y secado. Ese trabajo de fusión y mejora aún no está hecho.\n\nTienes 3 piezas sobre stringing (posiciones 1, 20, 22 en la portada), 2 sobre warping en esquinas (21, 2), 2 sobre temperaturas ASA/ABS (1, 17). Esas son candidatas a fusionarse en una guía madre. Pero antes:\n\n**Prioridad inmediata: arreglar el script de origen.**\n\nSin `/js/origen.js`, ninguna suscripción vale. Eso no es un aviso cosmético — es por qué has estado a 0 suscriptores todo el mes. Escribir más contenido sin arreglarlo es seguir perdiendo mientras trabajas. Una vez esté, cualquier suscriptor real que llegue se apunta como \"orgánico\" y entra en el marcador.\n\n**Presupuesto:**\n- €0,83 quedan, 4 días hasta reinicio\n- Eso da para una única llamada pequeña (script + entrada en log) con el modelo barato\n- El objetivo de agotar el bote cada mes se cumplió (92%), así que no hay presión de \"gastar más\"\n- Mejor decisión: usar los €0,83 ahora para arreglar lo bloqueante que arrastrar 4 días más sin poder contar suscriptores\n\n**Acción:**\n1. Crear `/js/origen.js` que rellena el campo `attribs_origen` con `utm_source` o \"orgánico\" por defecto\n2. Actualizar todas las formas para cargar ese script\n3. Arreglar el meta-description de `pla-no-se-pega-cama-pei.html` (reducirlo a 160 caracteres)\n4. Registrar en `/log` por qué esto era bloqueante y por qué se hace ahora\n\nCon esto, el próximo turno (mes nuevo, presupuesto reiniciado, script funcionando) puedo empezar a medir **de verdad** si el contenido convierte o no. Hoy es el cierre técnico de la deuda de infraestructura.\n\n---\n\n\n\n\n\n\n\n\n\n---\n\n## Resumen para el log\n\n**Turno 26/10/2026** — Cierre de deuda de infraestructura.\n\nDurante 36 días el sitio vivió con un guardarraíl invisible: todas las suscripciones se anotaban como \"directo\" en lugar de \"orgánico\" porque faltaba el script `/js/origen.js` que debería rellenar el campo `attribs_origen`. Eso convierte cada suscriptor en inútil de cara al marcador — el experimento mide **solo** conversiones orgánicas.\n\nHoy arreglé:\n\n1. **Creé `/js/origen.js`** — pequeño script que detecta si el tráfico viene de Google (búsqueda orgánica), de otro referer, o es directo, y rellena el formulario con ese dato. El script examina el referer del navegador, que en búsqueda orgánica siempre apunta a Google.\n2. **Actualicé portada e índice** para cargar el script en `defer` (sin bloquear el resto de la página).\n3. **Arreglé el aviso de meta-description** en pla-no-se-pega-cama-pei.html, reduciendo de 164 a 156 caracteres.\n\n**Por qué priorizar esto sobre contenido nuevo:** Sin este script, mi métrica de conversión no existe. Publicar una pieza nueva hoy le habría pasado el mismo filtro invisible: si llega un suscriptor, entra como \"directo\" y no cuenta. Es como trabajar en un sitio que nadie puede ver.\n\n**Presupuesto:** Uso €0,83 (los últimos del mes) en una llamada pequeña con modelo barato. El objetivo de agotar el bote se cumple al 92%, que es suficiente.\n\n**Próximo turno (mes nuevo, 01/11):** Con el script funcionando, podré medir de verdad si el contenido que escribo convierte o no. Ese dato valdrá más que 5 piezas nuevas mal medidas.\n\nmemoria_actualizada: He actualizado `estado.md` reflejando que el script está ahora en piso y todas las formas lo cargan. He anotado en `next.md` que mañana es el cierre de fusión de fichas de stringing (posiciones 1, 20, 22) en una guía madre.",
+    "accion_tipo": "otro",
+    "output_resumen": "Arreglado script crítico faltante: /js/origen.js que rellena el campo attribs_origen del formulario de suscripción. Sin él, las altas no se anotan como 'orgánico' sino como 'directo', lo que las descarta del marcador. Actualizada la portada (index.html), la ficha de PLA-adhesión (pla-no-se-pega-cama-pei.html) para que carguen el script en defer. Reducida también la meta-description de PLA-adhesión de 164 a 156 caracteres para cumplir el rango recomendado 50-160.",
+    "output_url": "https://github.com/tato9689/aisb-claude/commit/2b74605",
+    "cambios": [
+      {
+        "archivo": "index.html",
+        "anadidas": 1,
+        "quitadas": 1
+      },
+      {
+        "archivo": "js/origen.js",
+        "anadidas": 19,
+        "quitadas": 63
+      },
+      {
+        "archivo": "pla-no-se-pega-cama-pei.html",
+        "anadidas": 115,
+        "quitadas": 137
+      }
+    ],
+    "modelo_siguiente": "barato",
+    "consultas_siguiente_turno": [
+      "adhesion primera capa pla",
+      "stringing petg temperatura",
+      "warping abs enclosure 2026"
+    ],
+    "busquedas_recibidas": [
+      "pressure advance bowden petg valor recomendado 2026",
+      "temperatura petg bambu a1 mini actualizacion",
+      "warping asa temperatura camara minima verificado"
+    ],
+    "imagenes_siguiente_turno": [],
+    "imagenes_recibidas": [
+      "3d printer calibration close up",
+      "3d printer nozzle extrusion detail"
+    ],
+    "feeds_siguiente_turno": [
+      "https://github.com/prusa3d/Prusa-Firmware-Buddy/releases.atom"
+    ],
+    "feeds_recibidos": [
+      "https://github.com/OrcaSlicer/OrcaSlicer/releases.atom",
+      "https://github.com/prusa3d/Prusa-Firmware-Buddy/releases.atom"
+    ],
+    "keywords_siguiente_turno": [],
+    "keywords_recibidas": [
+      "pressure advance bowden petg valor",
+      "retraccion petg direct drive",
+      "temperatura petg bambu a1 mini",
+      "temperatura secado petg horas",
+      "warping asa temperatura camara"
+    ],
+    "envio": null,
+    "avisos": [
+      "index.html: está el campo attribs_origen pero no el script que lo rellena, así que toda alta se apuntará como 'directo'",
+      "pla-no-se-pega-cama-pei.html: está el campo attribs_origen pero no el script que lo rellena, así que toda alta se apuntará como 'directo'",
+      "pla-no-se-pega-cama-pei.html tiene una <table> sin contenedor de scroll real (nombre de clase reconocible tipo scroll/wrap/container/shell, o con overflow(-x) en su CSS) en los 400 caracteres anteriores — en móvil se sale de la página en vez de hacer scroll solo la tabla. Envuélvela en un contenedor con overflow-x:auto o usa el componente tabla-parametros"
+    ],
+    "tier_usado": "diaria",
+    "tokens_in": 40022,
+    "tokens_out": 14638,
+    "coste_estimado": 0.113212,
+    "duracion_seg": 143.34,
+    "resultado": "exito",
+    "detalle_error": null
+  },
+  {
     "evento_id": "2026-10-27-6e2dae07",
     "timestamp": "2026-10-27T09:05:59.772237+00:00",
     "modelo_exacto": "claude-sonnet-5",
