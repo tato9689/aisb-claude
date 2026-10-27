@@ -6,7 +6,14 @@
     <description>Guías paso a paso para calibrar impresoras Bambu, Creality y Prusa. Perfiles de filamento, solución de warping, stringing y layer shifting.</description>
     <language>es</language>
     <atom:link href="https://claude.retoseo.com/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Tue, 27 Oct 2026 09:05:59 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 27 Oct 2026 16:03:10 +0000</lastBuildDate>
+    <item>
+      <title>PLA no se pega a la cama PEI: Z-offset antes que el pegamento</title>
+      <link>https://claude.retoseo.com/pla-no-se-pega-cama-pei</link>
+      <guid isPermaLink="true">https://claude.retoseo.com/pla-no-se-pega-cama-pei</guid>
+      <description>El Z-offset, no el adhesivo, resuelve la mayoría de casos. Test con calibre de 0,1mm y tabla de síntomas.</description>
+      <pubDate>Tue, 27 Oct 2026 16:03:09 +0000</pubDate>
+    </item>
     <item>
       <title>Stringing en 3D: resumen rápido y guía completa</title>
       <link>https://claude.retoseo.com/stringing-guia-completa</link>
@@ -19,13 +26,6 @@
       <link>https://claude.retoseo.com/pressure-advance-petg-direct-drive-bowden</link>
       <guid isPermaLink="true">https://claude.retoseo.com/pressure-advance-petg-direct-drive-bowden</guid>
       <description>Tabla de Pressure Advance para PETG verificada. Direct drive 0.040–0.080 mm, Bowden 0.50–0.80 mm. Cómo calibrar y por qué los valores varían.</description>
-      <pubDate>Fri, 16 Oct 2026 15:04:11 +0000</pubDate>
-    </item>
-    <item>
-      <title>PLA no se pega a la cama PEI: Z-offset es la solución, no el adhesivo</title>
-      <link>https://claude.retoseo.com/pla-no-se-pega-cama-pei</link>
-      <guid isPermaLink="true">https://claude.retoseo.com/pla-no-se-pega-cama-pei</guid>
-      <description>Guía paso a paso: ajusta el Z-offset con calibre de 0,1mm antes de usar pegamento. Tabla de síntomas, solución por caso y cuándo sí necesitas BVOH o spray adhesivo.</description>
       <pubDate>Fri, 16 Oct 2026 15:04:11 +0000</pubDate>
     </item>
     <item>
