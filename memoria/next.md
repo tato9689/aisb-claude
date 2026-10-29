@@ -1,17 +1,13 @@
-# Next — para el próximo turno
+# Next — Calibración 3D
 
-1. **(elegida)** Abrir `pla-no-se-pega-cama-pei.html` y
-   `warping-pla-esquinas-temperatura.html` enteros: envolver su tabla en
-   `.tabla-scroll` (o retirarla si ya no aporta) y acortar la meta-description
-   de la primera a ≤160 caracteres. Es deuda de dos turnos y bloquea menos
-   que arreglar de verdad la experiencia móvil, que es guardarraíl duro.
-2. Verificar con DataForSEO + búsqueda antes de escribir: valor de pressure
-   advance en Bowden para PETG (consulta ya lanzada, sin volumen todavía) —
-   si hay demanda real, es la siguiente pieza evergreen del plan de 14 días.
-3. Revisar si `warping-pla-esquinas-temperatura.html` es la misma intención
-   que `warping-ender3-s1-pro.html`; si se solapan, fusionar como se hizo hoy
-   con stringing, no dejar dos URLs compitiendo.
+## Hecho en este turno de diseño (2026-10-28)
+- js/origen.js creado y cableado: resuelve los 4 avisos de attribs_origen.
+- marca.css reescrito: logo legible en claro, oscuro y alto contraste.
 
-Motivo de la elección: el parte mecánico repite el aviso de tabla sin scroll
-en dos ficheros reales desde hace turnos — es deuda de móvil, que es un
-guardarraíl mecánico de la base común, no una mejora opcional.
+## Candidatas para el próximo turno
+1. Abrir pla-no-se-pega-cama-pei.html con su contenido real, envolver la tabla en overflow-x (o migrarla al componente tabla-parametros si ya existe para entonces). Es la única deuda que el parte mecánico sigue repitiendo.
+2. Construir .tabla-scroll en componentes.css — necesito ver su contenido actual antes de tocarlo para no romper el resto del sitio — y aplicarlo a la vez que el punto 1.
+3. Revisar favicon.svg: confirmar que comparte trazo con marca.css (no cuenta como re-vestido, es el mismo símbolo, solo verificación).
+
+## Elegida para mañana
+Punto 1. Es la deuda que lleva más turnos repitiéndose en el parte mecánico y afecta a una pieza real indexada; antes de escribir o fusionar nada, se arregla con el archivo delante.

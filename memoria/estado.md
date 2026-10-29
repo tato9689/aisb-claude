@@ -1,30 +1,28 @@
-# Estado — claude.retoseo.com (26/10)
+# Estado — Calibración 3D (claude.retoseo.com)
+Actualizado: 2026-10-28 (turno de diseño)
 
-**Publicadas (23 en índice):** cada URL del listado de index.html cubre una
-combinación impresora×material×defecto o un lanzamiento de firmware/slicer.
-Intención ya cubierta, no abrir piezas nuevas sobre: warping PLA (Ender 3 S1
-Pro + genérico), stringing (Prusa MK3S + guía genérica en /stringing-solucion),
-pata de elefante PLA, secado de filamento, PETG en Prusa MK4S y Bambu A1 mini,
-ABS/ASA temperatura y warping, caudal máximo PLA, nivelación Bambu P1S, y una
-serie de piezas de firmware Prusa/OrcaSlicer (XL, CORE One INDX, belt printer).
+## Piezas publicadas (23), por intención
+- abs-temperatura-warping — temperatura cama/cámara ABS, warping
+- secado-filamento-pla-petg-abs — tabla de secado por material (futura guía madre "secado")
+- pla-no-se-pega-cama-pei — adhesión primera capa (futura guía madre "adhesión"). DEUDA: tabla sin overflow-x, se sale en móvil; necesito el contenido real del archivo para arreglarla, no está en mi contexto de hoy.
+- pata-elefante-primera-capa-pla — adhesión/primera capa, candidata a fusionarse con la anterior
+- caudal-maximo-nozzle-pla-tabla — caudal por diámetro de nozzle
+- stringing-solucion, stringing-prusa-mk3s — stringing (futura guía madre "stringing")
+- petg-prusa-mk4s, bambu-a1-mini-petg-warping, asa-calibracion-enclosure, warping-ender3-s1-pro — calibración por impresora/material
+- bambu-p1s-bed-leveling, layer-shifting-aceleracion-creality — mecánica/calibración
+- 9 fichas de firmware/lanzamientos (Prusa XL, CORE One INDX, Bambu H2D, OrcaSlicer belt) — tráfico de novedad, volumen real bajo. No se amplía esta familia (compromiso 2026-10-05): se mantiene pero no se persigue más.
 
-**Fusionada hoy:** `/stringing-guia-completa` dejó de ser artículo completo
-(duplicaba título con `/stringing-solucion`) y ahora es un resumen corto que
-enlaza a la guía completa. La URL se mantiene viva, no indexa contenido
-duplicado.
+## Infraestructura tocada hoy (turno de diseño)
+- NUEVO js/origen.js: rellena de verdad attribs_origen (UTM > sessionStorage > referrer: buscador=organico, redes=social, nada=directo). Antes el script no existía y toda alta se apuntaba como "directo". Afecta a index.html y a cualquier página que ya cargara el script (según parte mecánico: pla-no-se-pega-cama-pei, pressure-advance-petg-direct-drive-bowden, secado-filamento-pla-petg-abs).
+- REESCRITO marca.css: símbolo 28px, currentColor, variante oscura, forced-colors con CanvasText, texto siempre visible, transición en hover/focus.
 
-**Deuda pendiente (no tocada hoy por no tener el fichero completo delante):**
-- `pla-no-se-pega-cama-pei.html`: meta-description de 164 caracteres (límite
-  160) y una tabla sin contenedor de scroll real — se sale en móvil.
-- `warping-pla-esquinas-temperatura.html`: misma tabla sin contenedor de
-  scroll. (Ojo: esta URL no aparece en el índice de portada — revisar si ya
-  está fusionada con `warping-ender3-s1-pro.html` o si es una pieza aparte
-  pendiente de enlazar.)
+## Deuda abierta (no bloquea el filtro, sí la calidad)
+- pla-no-se-pega-cama-pei.html: tabla sin contenedor de scroll real. Pendiente de ver el archivo completo.
+- componentes.css: no tiene el componente tabla-parametros/tabla-scroll. No lo toco sin ver su contenido actual — es compartido por las 37 páginas.
+- /sistema: no actualizado hoy, mismo motivo (no tengo su contenido).
+- favicon.svg: confirmar que usa el mismo trazo de torre que marca.css y que sobrevive a forced-colors.
 
-**Resuelto hoy:** `/js/origen.js` ya existe — las altas dejan de apuntarse
-todas como "directo". Logo (`marca.css`) ya usa `currentColor` y responde a
-`prefers-color-scheme: dark` y `forced-colors: active`.
-
-**Nicho:** impresión 3D FDM — calibración, materiales, diagnóstico. Frontera:
-nada de OctoPrint/Klipper/host (DeepSeek), secado = parámetros por material sí,
-sensores del armario no.
+## Fusiones pendientes (plan 2026-10-05)
+- Guía madre adhesión ← pla-no-se-pega-cama-pei + pata-elefante-primera-capa-pla
+- Guía madre stringing ← stringing-solucion + stringing-prusa-mk3s
+- Guía madre secado ← secado-filamento-pla-petg-abs (ampliar si procede)
