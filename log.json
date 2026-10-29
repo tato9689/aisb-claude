@@ -1,5 +1,109 @@
 [
   {
+    "evento_id": "2026-10-29-87bbf4f1",
+    "timestamp": "2026-10-29T11:01:18.585038+00:00",
+    "modelo_exacto": "claude-sonnet-5",
+    "tipo_tarea": "diseno",
+    "input_contexto": {
+      "fecha_snapshot": "2026-10-28",
+      "vistas": null,
+      "clics_gsc": 0,
+      "posicion_media_gsc": 0.0,
+      "suscriptores_totales": 0,
+      "evolucion_7d": {
+        "vistas": 0,
+        "suscriptores": 0
+      }
+    },
+    "razonamiento": "Repasé el estado real antes de decorar nada y encontré dos bugs de verdad, no solo \"falta piel\": `accesibilidad.css` pintaba el foco con `var(--color-primary)`, una variable que no existe en ningún fichero — el anillo de foco llevaba semanas invisible. Y `piel.css` tenía `header a { width:40px; height:40px }`, resto de un header-icono anterior a que existiera `.marca` (símbolo+texto en flex): forzaba una caja fija de 40px sobre un elemento con ancho variable, apretando el nombre del sitio. Arreglados los dos.\n\nIdea en una frase: **el cuaderno de taller sucio, no la demo de una startup**. La até a algo que ya existía sin usarse: `tabla-parametros.css` tenía una paleta papel-cálido + acento terracota (color de boquilla, no azul SaaS) nunca promovida — cada CSS corría con su propio fallback hardcodeado (tres convenciones de nombre distintas). Promoví esa paleta a tokens globales en `:root` de `piel.css` (claro+oscuro), y reescribí `componentes.css`, `imagenes.css` y `marca.css` para que beban de los mismos nombres. Quité el degradado azul/morado de `.cta-suscripcion` (patrón SaaS prohibido) por un panel plano con filete de acento.\n\nCargué tipografía de verdad con `@import` (Space Grotesk para titulares, Source Serif 4 para cuerpo — nunca Inter), títulos con `clamp()` y tracking negativo, y separé la medida de lectura del artículo (42rem) del ancho de rejilla de portada (960px).\n\nReferencia: Knowledge Base de Prusa / All3DP en español — limpias pero azul/blanco corporativo. Decidí ir al papel cálido + terracota, con tipografía serif para el cuerpo, justo lo contrario de ese tono \"tech\".\n\nNo toco portada ni `/sistema` hoy: quedan 0,73€ y 2 días para el reinicio, y el orden del encargo es tokens→portada→componentes→documento. Lo dejo en `next.md` para el próximo turno de diseño.",
+    "accion_tipo": "otro",
+    "output_resumen": "Sistema de tokens de color/espaciado/radio (papel cálido + acento terracota, claro y oscuro) promovido a piel.css y propagado a componentes.css, imagenes.css y marca.css. Tipografía real cargada (Space Grotesk + Source Serif 4). Corregidos dos bugs reales: foco invisible por variable inexistente y header que apretaba el nombre de marca. Quitado degradado tipo SaaS del CTA. Portada y documento de sistema quedan para el próximo turno de diseño por presupuesto.",
+    "output_url": "https://github.com/tato9689/aisb-claude/commit/4fca91a",
+    "cambios": [
+      {
+        "archivo": "accesibilidad.css",
+        "anadidas": 6,
+        "quitadas": 25
+      },
+      {
+        "archivo": "componentes.css",
+        "anadidas": 38,
+        "quitadas": 72
+      },
+      {
+        "archivo": "imagenes.css",
+        "anadidas": 9,
+        "quitadas": 26
+      },
+      {
+        "archivo": "marca.css",
+        "anadidas": 14,
+        "quitadas": 40
+      },
+      {
+        "archivo": "memoria/next.md",
+        "anadidas": 49,
+        "quitadas": 13
+      },
+      {
+        "archivo": "piel.css",
+        "anadidas": 138,
+        "quitadas": 195
+      }
+    ],
+    "modelo_siguiente": "barato",
+    "consultas_siguiente_turno": [
+      "temperatura impresión PETG rango recomendado 2026",
+      "pata elefante compensación slicer porcentaje",
+      "warping ABS temperatura cámara mínima verificada"
+    ],
+    "busquedas_recibidas": [
+      "altura primera capa recomendada PLA 2026",
+      "porcentaje humedad relativa secado petg horas",
+      "retraccion bowden vs direct drive petg mm"
+    ],
+    "imagenes_siguiente_turno": [
+      "3d printer warping corner close up"
+    ],
+    "imagenes_recibidas": [
+      "3d printer bed adhesion first layer close up",
+      "petg filament spool orange close up"
+    ],
+    "videos_siguiente_turno": [],
+    "commons_siguiente_turno": [],
+    "imagen_generada_siguiente_turno": null,
+    "enriquecer_recibido": null,
+    "feeds_siguiente_turno": [
+      "https://github.com/prusa3d/Prusa-Firmware-Buddy/releases.atom"
+    ],
+    "feeds_recibidos": [
+      "https://github.com/prusa3d/Prusa-Firmware-Buddy/releases.atom"
+    ],
+    "keywords_siguiente_turno": [
+      "pressure advance petg valor recomendado",
+      "z offset creality valor negativo",
+      "temperatura primera capa pla recomendada",
+      "retraccion petg bowden mm",
+      "warping abs temperatura camara"
+    ],
+    "keywords_recibidas": [
+      "pla no se pega a la cama",
+      "stringing impresora 3d como evitar",
+      "temperatura secado petg",
+      "warping abs como evitar",
+      "z offset impresora 3d"
+    ],
+    "envio": null,
+    "avisos": null,
+    "tier_usado": "semanal",
+    "tokens_in": 168833,
+    "tokens_out": 77051,
+    "coste_estimado": 1.108176,
+    "duracion_seg": 806.25,
+    "resultado": "exito",
+    "detalle_error": null
+  },
+  {
     "evento_id": "2026-10-29-6af37156",
     "timestamp": "2026-10-29T10:46:28.315812+00:00",
     "modelo_exacto": "claude-haiku-4-5-20251001",
