@@ -23,7 +23,7 @@
     "url": "https://claude.retoseo.com/pla-no-se-pega-cama-pei",
     "image": "https://claude.retoseo.com/og/miniatura/pla-no-se-pega-cama-pei.jpg",
     "datePublished": "2026-09-25",
-    "dateModified": "2026-10-26",
+    "dateModified": "2026-10-28",
     "author": {
       "@type": "Organization",
       "name": "Calibración 3D"
@@ -87,48 +87,51 @@
 
       <section>
         <h2>Tabla de síntomas y ajustes</h2>
-        <table>
-          <thead>
-            <tr>
-              <th>Síntoma</th>
-              <th>Causa probable</th>
-              <th>Z-offset actual</th>
-              <th>Ajuste</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Filamento raspa la cama, nozzle gotea</td>
-              <td>Muy bajo</td>
-              <td>0,00 o negativo</td>
-              <td>Sube +0,1 a +0,2 mm</td>
-            </tr>
-            <tr>
-              <td>Línea fina pero compacta, pega bien</td>
-              <td>Óptimo</td>
-              <td>~–0,3 a –0,5 mm*</td>
-              <td>Sin cambio</td>
-            </tr>
-            <tr>
-              <td>Línea gruesa y aplastada, pega demasiado</td>
-              <td>Muy bajo</td>
-              <td>–0,6 o inferior</td>
-              <td>Sube +0,1 mm</td>
-            </tr>
-            <tr>
-              <td>No pega, filamento suelta a las 2 líneas</td>
-              <td>Muy alto</td>
-              <td>–0,1 o superior</td>
-              <td>Baja –0,1 mm</td>
-            </tr>
-            <tr>
-              <td>Piezas pegadas solo en el centro</td>
-              <td>Cama desnivelada + Z alto</td>
-              <td>Variable por zona</td>
-              <td>Nivela con sensores primero, luego Z-offset</td>
-            </tr>
-          </tbody>
-        </table>
+        <div class="tabla-scroll" tabindex="0" role="region" aria-label="Tabla de síntomas de Z-offset y ajustes recomendados">
+          <table>
+            <caption class="vo">Síntomas de adhesión, causas probables y ajustes de Z-offset</caption>
+            <thead>
+              <tr>
+                <th scope="col">Síntoma</th>
+                <th scope="col">Causa probable</th>
+                <th scope="col">Z-offset actual</th>
+                <th scope="col">Ajuste</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-th="Síntoma">Filamento raspa la cama, nozzle gotea</td>
+                <td data-th="Causa probable">Muy bajo</td>
+                <td data-th="Z-offset actual">0,00 o negativo</td>
+                <td data-th="Ajuste">Sube +0,1 a +0,2 mm</td>
+              </tr>
+              <tr>
+                <td data-th="Síntoma">Línea fina pero compacta, pega bien</td>
+                <td data-th="Causa probable">Óptimo</td>
+                <td data-th="Z-offset actual">~–0,3 a –0,5 mm*</td>
+                <td data-th="Ajuste">Sin cambio</td>
+              </tr>
+              <tr>
+                <td data-th="Síntoma">Línea gruesa y aplastada, pega demasiado</td>
+                <td data-th="Causa probable">Muy bajo</td>
+                <td data-th="Z-offset actual">–0,6 o inferior</td>
+                <td data-th="Ajuste">Sube +0,1 mm</td>
+              </tr>
+              <tr>
+                <td data-th="Síntoma">No pega, filamento suelta a las 2 líneas</td>
+                <td data-th="Causa probable">Muy alto</td>
+                <td data-th="Z-offset actual">–0,1 o superior</td>
+                <td data-th="Ajuste">Baja –0,1 mm</td>
+              </tr>
+              <tr>
+                <td data-th="Síntoma">Piezas pegadas solo en el centro</td>
+                <td data-th="Causa probable">Cama desnivelada + Z alto</td>
+                <td data-th="Z-offset actual">Variable por zona</td>
+                <td data-th="Ajuste">Nivela con sensores primero, luego Z-offset</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
         <p><em>* Los números negativos son típicos en Prusa y Creality: significa el nozzle está ligeramente por debajo de la posición de referencia teórica. No es un error.</em></p>
       </section>
 
@@ -160,7 +163,7 @@
         </ul>
       </section>
 
-      <p><em>Última revisión: 26/10/2026</em></p>
+      <p><em>Última revisión: 28/10/2026. Cambios: tabla envuelta correctamente en contenedor de scroll con atributos de accesibilidad para móvil.</em></p>
 
       <section aria-labelledby="suscripcion-heading">
         <h2 id="suscripcion-heading">Recibe más como esto</h2>
