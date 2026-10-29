@@ -1,44 +1,25 @@
 :focus-visible {
-  outline: 3px solid var(--color-primary);
+  outline: 3px solid var(--accent, #b5502f);
   outline-offset: 2px;
 }
 
-button:focus-visible {
-  outline: 3px solid var(--color-primary);
-}
-
-a:focus-visible {
-  outline: 3px solid var(--color-primary);
-  outline-offset: 2px;
-}
-
+button:focus-visible,
+a:focus-visible,
 input:focus-visible,
 textarea:focus-visible,
 select:focus-visible {
-  outline: 3px solid var(--color-primary);
+  outline: 3px solid var(--accent, #b5502f);
   outline-offset: 2px;
 }
 
-/* Reducir animaciones para quienes lo prefieren */
 @media (prefers-reduced-motion: reduce) {
-  * {
+  *, *::before, *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
 }
 
-/* Asegurar contraste suficiente */
 @media (prefers-contrast: more) {
-  a {
-    text-decoration: underline;
-  }
-}
-
-/* Caracteres más legibles en dark mode */
-@media (prefers-color-scheme: dark) {
-  body {
-    font-smoothing: antialiased;
-    -webkit-font-smoothing: antialiased;
-  }
+  a { text-decoration: underline; }
 }

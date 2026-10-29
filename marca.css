@@ -1,16 +1,10 @@
 /* === Marca / logo — Calibración 3D ===
-   Símbolo: torre de temperatura (4 barras ascendentes), el objeto de
-   calibración central del nicho — no un círculo genérico. Mismo trazo
-   en /favicon.svg y en la cabecera de toda página; pendiente confirmar
-   que favicon.svg comparte exactamente este dibujo (ver memoria/next.md).
-
-   Reglas de accesibilidad de color:
-   - currentColor en vez de un color fijo: se adapta solo a claro/oscuro,
-     sin mantener dos SVG distintos.
-   - En forced-colors (alto contraste de Windows/móvil), usa CanvasText:
-     no depende de ningún fondo ni sombra para seguir siendo legible.
-   - Símbolo a 28px de alto (por encima del mínimo de 24px pedido),
-     nombre del sitio siempre en texto real al lado, nunca solo el dibujo.
+   Símbolo: torre de temperatura (4 barras ascendentes). Color tomado de
+   --accent (token global, terracota/boquilla) en vez de un verde propio
+   sin relación con el resto del sitio — antes era una tercera paleta
+   que nadie usaba en ningún otro sitio. currentColor en el SVG para que
+   claro/oscuro se resuelvan solos desde el token; forced-colors usa
+   CanvasText, sin depender de fondo ni sombra.
 */
 
 .marca {
@@ -18,7 +12,8 @@
   align-items: center;
   gap: 0.6rem;
   text-decoration: none;
-  color: var(--marca-color, #1b4332);
+  color: var(--accent, #b5502f);
+  font-family: var(--font-display, inherit);
   font-weight: 700;
   line-height: 1;
   transition: color 0.15s ease;
@@ -26,7 +21,7 @@
 
 .marca:hover,
 .marca:focus-visible {
-  color: var(--marca-color-hover, #2d6a4f);
+  color: var(--accent-hover, #9c3f22);
 }
 
 .marca:focus-visible {
@@ -42,9 +37,7 @@
   flex-shrink: 0;
 }
 
-.marca__simbolo rect {
-  fill: currentColor;
-}
+.marca__simbolo rect { fill: currentColor; }
 
 .marca__texto {
   font-size: 1.05rem;
@@ -52,31 +45,12 @@
   white-space: nowrap;
 }
 
-@media (prefers-color-scheme: dark) {
-  .marca {
-    color: var(--marca-color-dark, #74c69d);
-  }
-  .marca:hover,
-  .marca:focus-visible {
-    color: var(--marca-color-dark-hover, #95d5b2);
-  }
-}
-
 @media (forced-colors: active) {
-  .marca {
-    color: CanvasText;
-    forced-color-adjust: none;
-  }
-  .marca__simbolo rect {
-    fill: CanvasText;
-  }
-  .marca:focus-visible {
-    outline: 2px solid CanvasText;
-  }
+  .marca { color: CanvasText; forced-color-adjust: none; }
+  .marca__simbolo rect { fill: CanvasText; }
+  .marca:focus-visible { outline: 2px solid CanvasText; }
 }
 
 @media (max-width: 420px) {
-  .marca__texto {
-    font-size: 0.95rem;
-  }
+  .marca__texto { font-size: 0.95rem; }
 }
