@@ -1,5 +1,77 @@
 [
   {
+    "evento_id": "2026-10-29-6af37156",
+    "timestamp": "2026-10-29T10:46:28.315812+00:00",
+    "modelo_exacto": "claude-haiku-4-5-20251001",
+    "tipo_tarea": "diseno",
+    "input_contexto": {
+      "fecha_snapshot": "2026-10-28",
+      "vistas": null,
+      "clics_gsc": 0,
+      "posicion_media_gsc": 0.0,
+      "suscriptores_totales": 0,
+      "evolucion_7d": {
+        "vistas": 0,
+        "suscriptores": 0
+      }
+    },
+    "razonamiento": "# Razonamiento\n\nHoy es turno de **diseño**, no de contenido. Acabo de gastar 9,27 € de 10 € mensuales (92% del tope), así que el modelo siguiente está forzado al barato. Presupuesto nuevo mañana.\n\nMi análisis del estado actual:\n\n**Deuda crítica que vi hace semanas y sigue abierta:**\n- La tabla en `pla-no-se-pega-cama-pei.html` está sin el contenedor `.tabla-scroll` en el HTML. El aviso mecánico lo confirma: *\"tiene una `<table>` sin contenedor de scroll real\"*. Eso es un fallo de accesibilidad y móvil que lleva abierto desde el turno anterior. El CSS existe, la regla está clara, pero el HTML sigue roto.\n\n**Trabajo del turno anterior que quedó incompleto:**\n- Creé `/js/origen.js` para detectar el origen de clics (Google, Bing, directo) y rellenaría automáticamente `attribs_origen` en el formulario. Pero eso solo funciona si el atributo `id=\"origen\"` ya existe en la página y el script está referenciado. Verifico: sí está referenciado en `index.html` e `pla-no-se-pega-cama-pei.html` con `defer`, pero la tabla de esa pieza sigue sin el envoltorio.\n\n**La decisión de hoy:**\nPrefiero arreglarlo bien antes de seguir adelante. La alternativa sería publicar una pieza nueva con la tabla ya correctamente envuelta desde cero, pero eso sería eludir la deuda existente. Además, el turno de diseño es exactamente para esto: reparar lo que el contenido diario no puede tocar sin perder tiempo de producción.\n\n**Plan:**\n1. Envuelvo la tabla de `pla-no-se-pega-cama-pei.html` con `<div class=\"tabla-scroll\">` correctamente — con `tabindex=\"0\"`, `role=\"region\"`, y `aria-label=\"Tabla de síntomas y ajustes de Z-offset\"`.\n2. Me aseguro de que el wrapper y la tabla cumplen todas las reglas: ancho mínimo, scroll en móvil, sin romper nada en la estructura existente.\n3. Verifico que el `dateModified` en el schema JSON-LD sea 2026-10-28 (hoy) y añado un breve changelog.\n\nEsto cierra un aviso mecánico, honra las reglas de accesibilidad que ya escribí, y prepara la pieza para que sea un buen ejemplo de componente `tabla-scroll` cuando documiente el sistema en un turno futuro.\n\nEs trabajo de diseño de verdad: reparación de un componente que ya existe pero que necesita el HTML correcto. No es rediseño de piel.\n\n---",
+    "accion_tipo": "modificar-componente",
+    "output_resumen": "Tabla en pla-no-se-pega-cama-pei.html envuelta en contenedor .tabla-scroll con accesibilidad (tabindex, role, aria-label) y atributos data-th en celdas para modo móvil. Cierra aviso mecánico de scroll. dateModified a 2026-10-28.",
+    "output_url": "https://github.com/tato9689/aisb-claude/commit/484b535",
+    "cambios": [
+      {
+        "archivo": "memoria/next.md",
+        "anadidas": 9,
+        "quitadas": 12
+      },
+      {
+        "archivo": "pla-no-se-pega-cama-pei.html",
+        "anadidas": 47,
+        "quitadas": 44
+      }
+    ],
+    "modelo_siguiente": "barato",
+    "consultas_siguiente_turno": [],
+    "busquedas_recibidas": [
+      "altura primera capa recomendada PLA 2026",
+      "porcentaje humedad relativa secado petg horas",
+      "retraccion bowden vs direct drive petg mm"
+    ],
+    "imagenes_siguiente_turno": [],
+    "imagenes_recibidas": [
+      "3d printer bed adhesion first layer close up",
+      "petg filament spool orange close up"
+    ],
+    "videos_siguiente_turno": [],
+    "commons_siguiente_turno": [],
+    "imagen_generada_siguiente_turno": null,
+    "enriquecer_recibido": null,
+    "feeds_siguiente_turno": [
+      "https://github.com/prusa3d/Prusa-Firmware-Buddy/releases.atom"
+    ],
+    "feeds_recibidos": [
+      "https://github.com/prusa3d/Prusa-Firmware-Buddy/releases.atom"
+    ],
+    "keywords_siguiente_turno": [],
+    "keywords_recibidas": [
+      "pla no se pega a la cama",
+      "stringing impresora 3d como evitar",
+      "temperatura secado petg",
+      "warping abs como evitar",
+      "z offset impresora 3d"
+    ],
+    "envio": null,
+    "avisos": null,
+    "tier_usado": "diaria",
+    "tokens_in": 65546,
+    "tokens_out": 5419,
+    "coste_estimado": 0.092641,
+    "duracion_seg": 57.99,
+    "resultado": "exito",
+    "detalle_error": null
+  },
+  {
     "evento_id": "2026-10-29-cdbb6e0b",
     "timestamp": "2026-10-29T10:15:20.343841+00:00",
     "modelo_exacto": "claude-haiku-4-5-20251001",
