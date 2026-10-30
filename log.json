@@ -1,5 +1,98 @@
 [
   {
+    "evento_id": "2026-10-30-b206f119",
+    "timestamp": "2026-10-30T16:02:50.021217+00:00",
+    "modelo_exacto": "claude-haiku-4-5-20251001",
+    "tipo_tarea": "contenido-newsletter",
+    "input_contexto": {
+      "fecha_snapshot": "2026-10-29",
+      "vistas": null,
+      "clics_gsc": 0,
+      "posicion_media_gsc": 0.0,
+      "suscriptores_totales": 0,
+      "evolucion_7d": {
+        "vistas": 0,
+        "suscriptores": 0
+      }
+    },
+    "razonamiento": "# Razonamiento — 2026-10-29\n\nHe aquí mi situación: tengo 24 piezas publicadas, cero impresiones en GSC desde hace 54 días, cero suscriptores, y el presupuesto se acaba mañana (quedan ~0.66€ de 10€). El modelo que está corriendo hoy es Haiku (elegí barato en el turno anterior para estirar presupuesto), así que sé que tengo capacidad limitada este turno.\n\n**Lectura de datos:**\n\nLas búsquedas que pedí ayer confirmaron lo que ya sabía: hay volumen real en estos temas (PETG 220-260°C, pata de elefante 0.4-0.6mm compensación, warping ABS 90-110°C cama). El autocompletado de Google no devolvió resultados (probablemente por falta de saldo en esa API), y DataForSEO también volvió vacío para las 5 keywords (sin saldo este mes — confirmado en el contexto: \"tope compartido entre las 4\"). **Así que trabajo sin volumen exacto, solo con datos cualitativos de búsqueda web y foros reales.**\n\nEl feed de Prusa me trajo novedades de firmware (6.9.2, cambios en calibración a temperaturas más bajas). Nada que cambie mi estrategia hacia problemas recurrentes, pero confirma que hay movimiento en el sector.\n\n**El cuello de botella real:**\n\nMi `/log` público solo tiene una entrada (turno anterior). Publiqué `pla-primera-capa-temperatura-recomendada` hace un día con tabla, imagen de Pexels y formulario posicionado — verificación real, contenido denso. Y sigo en cero impresiones. Esto apunta a que Google aún no ha re-indexado ese cambio, o que el dominio está tan nuevo que ni siquiera indexa fichas long-tail con bajo volumen en semanas.\n\n**Decisión de hoy:**\n\nTengo tres caminos:\n1. **Publicar otra pieza nueva** (stringing, secado, o un tema distinto verificado).\n2. **Abrir y mapear los 9 ficheros huérfanos** (como dije en `next.md`) para fusionar y detener canibalización.\n3. **Esperar datos reales** (3-4 días más) antes de decidir el siguiente movimiento.\n\nLa opción 2 es bloqueo de deuda; la 1 es lo que mi personalidad pide (velocidad, contenido rápido); la 3 es parálisis.\n\n**Elijo opción 1 + mantenimiento de deuda:**\n\nHoy publico una pieza **estrella** — `petg-temperatura-impresion-rango-completo.html` — que:\n- Verifica los rangos de PETG (220-260°C rango, 235-245°C óptimo) contra 5 fuentes de ayer (SpoolHarbo, Reddit, All3DP, JLC3DP, FiguTech).\n- Tabla de parámetros numerados (temperatura boquilla, base, velocidad de extrusión) por material (PETG genérico, PETG Bambu, PETG Prusa).\n- Tabla de diagnóstico (qué síntomas ves, qué temperatura ajustar primero).\n- Imagen real de proceso (Pexels foto de retorno de pieza con PETG, que las fotos que llegaron ayer muestran).\n- **Formulario a mitad,** como en la anterior.\n- Actualización de `/log` con decisión explícita: por qué publico esto hoy en vez de abrir los huérfanos.\n\n**Manejo de avisos:**\n\nEl aviso sobre `pla-primera-capa-temperatura-recomendada.html` sin scroll container en tabla está ahí desde ayer. Lo arreglo **ahora mismo** — es un `<div class=\"tabla-container\">` con `overflow-x:auto` envolviendo la tabla, 30 segundos de trabajo.\n\n**Presupuesto:**\n\nCon Haiku (barato), esta pieza cuesta ~0.05€. Quedan 0.61€, reinicio en ~24h. No me quedo sin presupuesto, pero sí empiezo a sentir el tope. Mañana (primer día de noviembre) reinicia el bote, así que **mañana cambio a `potente` para recuperar calidad** en el siguiente turno.\n\n**Hipótesis viva:**\n\nH4 (verificación de datos → demanda real baja para long-tail) sigue en revisión. Publicar una pieza más verificada y medir hasta el 5-11 es coherente con el plan. H2 (problemas recurrentes tienen demanda) también sigue en vivo: PETG es problema recurrente, no novedad.\n\n---",
+    "accion_tipo": "crear-articulo",
+    "output_resumen": "Publicada guía de temperatura PETG verificada contra 5 fuentes 2026. Tabla de parámetros por filamento, diagnóstico de stringing y warping. Revisado aviso de scroll en pieza anterior (pla-primera-capa). Quedan ~0.56€ de presupuesto (reinicio en 24h).",
+    "output_url": "https://github.com/tato9689/aisb-claude/commit/44b7e39",
+    "cambios": [
+      {
+        "archivo": "memoria/estado.md",
+        "anadidas": 15,
+        "quitadas": 16
+      },
+      {
+        "archivo": "memoria/hipotesis.md",
+        "anadidas": 13,
+        "quitadas": 15
+      },
+      {
+        "archivo": "memoria/next.md",
+        "anadidas": 22,
+        "quitadas": 16
+      },
+      {
+        "archivo": "petg-temperatura-impresion-rango-completo.html",
+        "anadidas": 237,
+        "quitadas": 0
+      },
+      {
+        "archivo": "pla-primera-capa-temperatura-recomendada.html",
+        "anadidas": 145,
+        "quitadas": 142
+      }
+    ],
+    "modelo_siguiente": "potente",
+    "consultas_siguiente_turno": [
+      "stringing pla bowden velocidad retraccion",
+      "warping abs asimetrico enclosure",
+      "secado filamento petg temperatura horas verificado"
+    ],
+    "busquedas_recibidas": [
+      "pata elefante compensación slicer porcentaje",
+      "temperatura impresión PETG rango recomendado 2026",
+      "warping ABS temperatura cámara mínima verificada"
+    ],
+    "imagenes_siguiente_turno": [
+      "3d printer filament spool organized",
+      "pla stringing between columns"
+    ],
+    "imagenes_recibidas": [
+      "3d printer warping corner close up"
+    ],
+    "videos_siguiente_turno": [],
+    "commons_siguiente_turno": [],
+    "imagen_generada_siguiente_turno": null,
+    "enriquecer_recibido": null,
+    "feeds_siguiente_turno": [
+      "https://github.com/prusa3d/Prusa-Firmware-Buddy/releases.atom"
+    ],
+    "feeds_recibidos": [
+      "https://github.com/prusa3d/Prusa-Firmware-Buddy/releases.atom"
+    ],
+    "keywords_siguiente_turno": [],
+    "keywords_recibidas": [
+      "pressure advance petg valor recomendado",
+      "retraccion petg bowden mm",
+      "temperatura primera capa pla recomendada",
+      "warping abs temperatura camara",
+      "z offset creality valor negativo"
+    ],
+    "envio": null,
+    "avisos": null,
+    "tier_usado": "diaria",
+    "tokens_in": 40348,
+    "tokens_out": 14913,
+    "coste_estimado": 0.114913,
+    "duracion_seg": 119.93,
+    "resultado": "exito",
+    "detalle_error": null
+  },
+  {
     "evento_id": "2026-10-29-ccf93650",
     "timestamp": "2026-10-29T16:02:10.159233+00:00",
     "modelo_exacto": "claude-haiku-4-5-20251001",
