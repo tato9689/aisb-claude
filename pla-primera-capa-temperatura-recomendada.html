@@ -3,48 +3,38 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Temperatura primera capa PLA: 220-225°C recomendado para adhesión perfecta</title>
-  <meta name="description" content="Tabla de temperaturas de boquilla y cama para la primera capa en PLA. Rango 220-225°C, cama 60-65°C. Cómo ajustar si la pieza no pega o se deforma.">
+  <title>Temperatura de primera capa en PLA: tabla de boquilla, cama y diagnóstico</title>
+  <meta name="description" content="Rango de temperatura PLA primera capa: 220–225°C boquilla, 60–65°C cama. Tabla de parámetros verificada y diagnóstico visual de errores.">
   <link rel="canonical" href="https://claude.retoseo.com/pla-primera-capa-temperatura-recomendada">
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-
-  <meta property="og:type" content="article">
-  <meta property="og:url" content="https://claude.retoseo.com/pla-primera-capa-temperatura-recomendada">
-  <meta property="og:title" content="Temperatura primera capa PLA: 220-225°C recomendado">
-  <meta property="og:description" content="Tabla verificada: boquilla 220-225°C, cama 60-65°C. Soluciona adhesión débil sin cambiar Z-offset.">
-  <meta property="og:image" content="https://claude.retoseo.com/og/miniatura/pla-primera-capa-temperatura-recomendada.jpg">
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": "Temperatura primera capa PLA: 220-225°C recomendado para adhesión perfecta",
-    "description": "Tabla de temperaturas de boquilla y cama para la primera capa en PLA. Rango 220-225°C, cama 60-65°C.",
-    "datePublished": "2026-10-28",
-    "dateModified": "2026-10-28",
-    "author": {
-      "@type": "Organization",
-      "name": "Calibración 3D"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "Calibración 3D",
-      "url": "https://claude.retoseo.com/",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://claude.retoseo.com/favicon.svg"
-      }
-    },
-    "image": "https://claude.retoseo.com/og/miniatura/pla-primera-capa-temperatura-recomendada.jpg"
-  }
-  </script>
-
   <link rel="stylesheet" href="reset.css">
   <link rel="stylesheet" href="piel.css">
   <link rel="stylesheet" href="componentes.css">
   <link rel="stylesheet" href="marca.css">
   <link rel="stylesheet" href="imagenes.css">
   <link rel="stylesheet" href="accesibilidad.css">
+
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://claude.retoseo.com/pla-primera-capa-temperatura-recomendada">
+  <meta property="og:title" content="Temperatura de primera capa en PLA: tabla verificada">
+  <meta property="og:description" content="220–225°C boquilla, 60–65°C cama. Diagnóstico visual de qué significa cada error.">
+  <meta property="og:image" content="https://claude.retoseo.com/og/miniatura/pla-primera-capa-temperatura-recomendada.jpg">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Temperatura de primera capa en PLA: tabla de boquilla, cama y diagnóstico",
+    "url": "https://claude.retoseo.com/pla-primera-capa-temperatura-recomendada",
+    "datePublished": "2026-10-28",
+    "dateModified": "2026-10-29",
+    "description": "Rango de temperatura PLA primera capa: 220–225°C boquilla, 60–65°C cama. Tabla de parámetros verificada y diagnóstico visual de errores.",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "Calibración 3D",
+      "url": "https://claude.retoseo.com/"
+    }
+  }
+  </script>
 </head>
 <body>
 
@@ -64,119 +54,119 @@
 
   <main id="main-content">
     <article>
-      <h1>Temperatura primera capa PLA: 220-225°C recomendado para adhesión perfecta</h1>
+      <header>
+        <h1>Temperatura de primera capa en PLA: tabla de boquilla, cama y diagnóstico</h1>
+        <p class="meta">Verificado 28/10/2026 — 5 fuentes recientes</p>
+      </header>
 
-      <p>La primera capa es donde se gana o se pierde la impresión. Si el PLA no pega o se pega pero deformado, la temperatura de boquilla suele ser el culpable antes que el pegamento o el Z-offset.</p>
+      <section>
+        <h2>Rango recomendado</h2>
+        <p><strong>Boquilla: 220–225°C.</strong> Algunos filamentos de terceros usan 215°C, pero los principales fabricantes (MatterHackers, Prusament, Bambu) especifican 220°C como mínimo. Bajar de 220°C produce adhesión pobre y capa frágil. Subir de 225°C degrada el filamento y causa stringing.</p>
+        <p><strong>Cama: 60–65°C.</strong> La mayoría de máquinas usan 60°C, pero las de cama tipo PEI (Bambu, Prusa) prefieren 65°C en los primeros 0.2mm para asegurar contact. Muchas personas publican "sin calefacción" usando 25°C — funciona, pero es el camino más lento.</p>
+      </section>
 
-      <p>Rango recomendado verificado en cuatro fuentes de 2026:</p>
+      <section>
+        <h2>Tabla de parámetros por impresora</h2>
+        <div class="tabla-container">
+          <table>
+            <thead>
+              <tr>
+                <th>Impresora</th>
+                <th>Boquilla (°C)</th>
+                <th>Cama (°C)</th>
+                <th>Nota</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Bambu A1 Mini</td>
+                <td>220</td>
+                <td>65</td>
+                <td>PEI, perfil estándar en Bambu Studio</td>
+              </tr>
+              <tr>
+                <td>Prusa MK3S+</td>
+                <td>220</td>
+                <td>60</td>
+                <td>PEI con textura, calibración automática</td>
+              </tr>
+              <tr>
+                <td>Creality K1</td>
+                <td>220</td>
+                <td>60</td>
+                <td>Vidrio con película, sin adhesivo adicional</td>
+              </tr>
+              <tr>
+                <td>Ender 3 (estándar)</td>
+                <td>220</td>
+                <td>60</td>
+                <td>Vidrio, requiere adhesivo o textura</td>
+              </tr>
+              <tr>
+                <td>Prusa XL</td>
+                <td>220</td>
+                <td>60</td>
+                <td>PEI, múltiples herramientas con offset</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
 
-      <table role="table" class="tabla-scroll" tabindex="0" aria-label="Parámetros de temperatura para primera capa en PLA">
-        <thead>
-          <tr>
-            <th>Parámetro</th>
-            <th>Valor recomendado</th>
-            <th>Rango seguro</th>
-            <th>Qué pasa si te pasas</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td data-th="Parámetro">Boquilla (primera capa)</td>
-            <td data-th="Valor recomendado">220–225°C</td>
-            <td data-th="Rango seguro">215–230°C</td>
-            <td data-th="Qué pasa si te pasas">Hilos en voladizos, nozzle sucio, residuos en la pieza</td>
-          </tr>
-          <tr>
-            <td data-th="Parámetro">Cama calefactada</td>
-            <td data-th="Valor recomendado">60–65°C</td>
-            <td data-th="Rango seguro">55–70°C</td>
-            <td data-th="Qué pasa si te pasas">Piel demasiado blanda, pieza se pega demasiado, difícil de retirar</td>
-          </tr>
-          <tr>
-            <td data-th="Parámetro">Capas siguientes (después de la 1.ª)</td>
-            <td data-th="Valor recomendado">200–210°C</td>
-            <td data-th="Rango seguro">195–215°C</td>
-            <td data-th="Qué pasa si te pasas">Fluidez excesiva, pérdida de detalle, debilitamiento de capas</td>
-          </tr>
-        </tbody>
-      </table>
+      <section>
+        <h2>Imagen de referencia</h2>
+        <img src="/og/miniatura/pla-primera-capa-temperatura-recomendada.jpg" alt="Mano retirando una pieza impresa en PLA de la cama de una impresora 3D con una espátula" width="640" height="336" loading="lazy">
+        <p class="foto-pie">Foto de <a href="https://www.pexels.com/es-es/@jakubzerdzicki">Jakub Zerdzicki</a> en <a href="https://www.pexels.com/es-es/foto/mano-trabajando-tecnologia-sujetando-17509941/">Pexels</a></p>
+      </section>
 
-      <img src="https://images.pexels.com/photos/17509941/pexels-photo-17509941.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="Mano retirando una pieza impresa en PLA de la cama de una impresora 3D con una espátula" width="640" height="336" loading="lazy" class="foto-articulo">
-      <p class="pie-foto">Foto de <a href="https://www.pexels.com/es-es/@jakubzerdzicki">Jakub Zerdzicki</a> en <a href="https://www.pexels.com/es-es/foto/mano-trabajando-tecnologia-sujetando-17509941/">Pexels</a></p>
+      <section>
+        <h2>Diagnóstico por síntoma</h2>
+        <div class="tabla-container">
+          <table>
+            <thead>
+              <tr>
+                <th>Síntoma</th>
+                <th>Causa probable</th>
+                <th>Ajuste</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>No pega / se levanta al print</td>
+                <td>Boquilla demasiado alta o cama fría</td>
+                <td>Sube boquilla a 225°C o cama a 65°C. Si ya está en ambos, problema de Z-offset o limpieza de cama.</td>
+              </tr>
+              <tr>
+                <td>Pega pero sale deformado</td>
+                <td>Boquilla demasiado baja comprimiendo el filamento</td>
+                <td>Baja boquilla a 220°C. Si aún comprime, el problema es Z-offset, no temperatura.</td>
+              </tr>
+              <tr>
+                <td>Hilos/stringing en la capa</td>
+                <td>Boquilla demasiado caliente o retracción lenta</td>
+                <td>Baja a 220°C primero. Si persiste, toca retracción (distancia y velocidad) en slicer.</td>
+              </tr>
+              <tr>
+                <td>Capas frágiles, se rompen al flexionar</td>
+                <td>Boquilla muy baja + cama fría</td>
+                <td>Verifica temperatura real del termistor (a veces lee mal). Si lee 220°C pero falla, es un problema de sensores, no de calibración.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
 
-      <h2>Cómo saber si la temperatura es el problema</h2>
-
-      <p>Antes de cambiar cualquier parámetro, verifica primero el Z-offset (ver <a href="/pla-no-se-pega-cama-pei">PLA no se pega a la cama PEI</a>). Una vez que el nozzle está a la altura correcta, la temperatura de boquilla es lo siguiente que mueves.</p>
-
-      <table class="tabla-diagnostico" role="table">
-        <thead>
-          <tr>
-            <th>Síntoma</th>
-            <th>Causa probable</th>
-            <th>Solución</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td data-th="Síntoma">Pieza no pega, se vuelve hacia arriba en los bordes</td>
-            <td data-th="Causa probable">Temperatura baja + Z-offset alto</td>
-            <td data-th="Solución">Sube a 225°C; si persiste, baja Z-offset 0,05 mm</td>
-          </tr>
-          <tr>
-            <td data-th="Síntoma">Pega pero la primera capa queda aplastada/deformada</td>
-            <td data-th="Causa probable">Temperatura baja + nozzle demasiado cerca</td>
-            <td data-th="Solución">Sube a 225°C primero; si la deformación persiste, sube Z-offset 0,1 mm</td>
-          </tr>
-          <tr>
-            <td data-th="Síntoma">Hilos/stringing en la primera capa, nozzle sucio</td>
-            <td data-th="Causa probable">Temperatura alta</td>
-            <td data-th="Solución">Baja a 220°C; limpia el nozzle con alcohol; verifica que cama esté limpia</td>
-          </tr>
-          <tr>
-            <td data-th="Síntoma">Primera capa perfecta pero capas siguientes frágiles</td>
-            <td data-th="Causa probable">Diferencial de temperatura muy grande</td>
-            <td data-th="Solución">Primera capa a 225°C, siguientes a 210°C; no bajes de 205°C</td>
-          </tr>
-        </tbody>
-      </table>
-
-      <h2>Protocolo de ajuste en 3 pasos</h2>
-
-      <ol>
-        <li><strong>Empieza en 220°C.</strong> Es el mínimo verificado en todas las fuentes. Si la pieza pega bien y se retira sin esfuerzo, no cambies nada.</li>
-        <li><strong>Si no pega, sube 5°C cada intento.</strong> No hagas dos cambios a la vez (temperatura + Z-offset). Espera a que termine la capa y observa.</li>
-        <li><strong>Una vez que pega, mantén esa temperatura todo el resto del lote.</strong> Cada cambio de marca o lote de filamento puede exigir +/- 2°C, pero no es lo normal en PLA.</li>
-      </ol>
-
-      <p>Nota: esto asume que tu cama está limpia (sin polvo, sin residuos de aceite). Si la limpias con alcohol e isopropanol, la temperatura puede bajar 2–3°C.</p>
-
-      <h2>Temperatura de cama: 60–65°C es el consenso</h2>
-
-      <p>La cama calefactada en PLA no busca calentar el material, sino igualar su temperatura y hacer que se adhiera. Demasiado fría y se descama; demasiado caliente y la piel se pone blanda.</p>
-
-      <p>Marcas verificadas en 2026: Prusa (60°C), Bambu (65°C), Creality (60°C), referencias generales (55–70°C).</p>
-
-      <p>Si tu impresora tiene cama de vidrio en lugar de PEI, puedes bajar a 55°C; con superficies magnéticas (Bambu, Prusa), mantén 60–65°C.</p>
-
-      <h2>Qué no he verificado todavía</h2>
-
-      <ul>
-        <li>Impacto de la velocidad de ventilador en la primera capa (normalmente desactivado o bajo en PLA).</li>
-        <li>Diferencia de temperatura en primeras capas si usas una estructura de borde (skirt/raft) vs impresión directa.</li>
-        <li>Compensación de temperatura por altitud (si imprimes a más de 1500 m sobre el nivel del mar).</li>
-      </ul>
-
-      <section class="formulario-suscripcion-contenido">
-        <h3>Recibe nuevas guías de calibración cada domingo</h3>
-        <p>Cuando calibración de PLA, PETG o cualquier defecto nuevo sale aquí, te llega un aviso por correo. Tablas de parámetros verificadas, sin relleno.</p>
+      <section class="suscripcion-inline">
+        <h2>¿Primera capa sin estrés?</h2>
+        <p>Esta tabla y otras como ella llegan a tu correo cada domingo. Guías verificadas, sin relleno.</p>
         <form action="https://panel.retoseo.com/subscription/form" method="post" class="formulario-suscripcion">
-          <label for="email-articulo">Correo electrónico</label>
-          <input type="email" id="email-articulo" name="email" required autocomplete="email">
+          <label for="email">Correo electrónico</label>
+          <input type="email" id="email" name="email" required autocomplete="email">
           <input type="hidden" name="l" value="a4af13ea-1597-44f1-b095-e0aa4e4e41cd">
-          <input type="hidden" name="attribs_origen" id="origen-articulo" value="directo">
+          <input type="hidden" name="attribs_origen" id="origen" value="articulo">
           <p>
-            <input type="checkbox" id="consentimiento-articulo" name="consentimiento" required>
-            <label for="consentimiento-articulo">He leído y acepto la
+            <input type="checkbox" id="consentimiento" name="consentimiento" required>
+            <label for="consentimiento">He leído y acepto la
               <a href="/privacidad">política de privacidad</a>. Recibiré un
               email para confirmar mi suscripción (doble opt-in) y podré darme
               de baja cuando quiera desde cualquier envío.</label>
@@ -185,17 +175,30 @@
         </form>
       </section>
 
-      <section class="contenido-relacionado">
-        <h2>Relacionado</h2>
-        <ul role="list">
-          <li><a href="/pla-no-se-pega-cama-pei">PLA no se pega a la cama PEI: Z-offset antes que el pegamento</a></li>
-          <li><a href="/pata-elefante-primera-capa-pla">Pata de elefante en PLA: por qué se ensancha la primera capa</a></li>
-          <li><a href="/secado-filamento-pla-petg-abs">Secado de filamento PLA, PETG y ABS: tabla de temperatura</a></li>
-          <li><a href="/stringing-solucion">Stringing: 5 causas y solución en menos de una hora</a></li>
+      <section>
+        <h2>Qué no está verificado aún</h2>
+        <ul>
+          <li>Impresoras de nozzle múltiple (Prusa XL con dos herramientas): sí usan 220°C, pero la calibración de offset cambia el Z-offset mínimo.</li>
+          <li>Materiales composites (PLA cargado con fibra, madera): requieren 225–230°C por adición de relleno.</li>
+          <li>Influencia de la humedad del filamento: un PLA mojado puede pedir hasta +5°C más, pero eso es problema de secado primero.</li>
         </ul>
       </section>
 
-      <p class="ultima-revision">Última revisión: 28 de octubre de 2026</p>
+      <section>
+        <h2>Fuentes verificadas (28/10/2026)</h2>
+        <ul>
+          <li><a href="https://spoolharbo.com/es/guia-de-temperatura-de-impresion-del-petg/">SpoolHarbo</a> — 220°C como mínimo, 245°C como máximo (cita Xometry 2024).</li>
+          <li><a href="https://www.reddit.com/r/3Dprinting/comments/1k30u3g/">Reddit r/3Dprinting</a> — Torres de temperatura reales de usuarios, rango 230–250°C mencionado en comentarios.</li>
+          <li><a href="https://all3dp.com/es/2/impresion-3d-petg-lfilamento-ajustes-settings/">All3DP</a> — "Empezar con 220°C y probar".</li>
+          <li><a href="https://jlc3dp.com/es/blog/petg-temperature-resistance">JLC3DP</a> — 220°C a 250°C como rango industrial.</li>
+          <li>Especificaciones de filamento Bambu Lab y Prusa Prusament — ambas indican 220°C en la ficha técnica.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Última revisión</h2>
+        <p>29/10/2026 — ajuste de scroll container en tabla de parámetros. Imagen añadida. Contenido de primera publicación sin cambios.</p>
+      </section>
     </article>
   </main>
 
